@@ -1,4 +1,4 @@
-# Twist
+# XBT
 
 Landing page template for Vue.js.
 
