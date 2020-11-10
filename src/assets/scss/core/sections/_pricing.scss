@@ -1,0 +1,142 @@
+.pricing {
+
+	.section-inner {
+		padding-top: $pricing--padding-t__mobile;
+		padding-bottom: $pricing--padding-b__mobile;
+	}
+
+	.section-header {
+		padding-bottom: $pricing-header--padding__mobile;
+	}
+
+	.tiles-wrap {
+		@if ( $pricing-items--padding__mobile != null ) {
+			margin-right: -($pricing-items--padding__mobile / 2);
+			margin-left: -($pricing-items--padding__mobile / 2);
+			margin-top: -($pricing-items--padding__mobile / 2);
+
+			&:last-of-type {
+				margin-bottom: -($pricing-items--padding__mobile / 2);
+			}
+
+			&:not(:last-of-type) {
+				margin-bottom: ($pricing-items--padding__mobile / 2);
+			}
+		}
+
+		&.push-left {
+
+			&::after {
+				flex-basis: $pricing-item--width;
+				max-width: $pricing-item--width;
+				@if ( $pricing-items--padding__mobile != null ) {
+					padding-left: $pricing-items--padding__mobile / 2;
+					padding-right: $pricing-items--padding__mobile / 2;
+				}
+			}
+		}
+	}
+
+	.tiles-item {
+		flex-basis: $pricing-item--width;
+		max-width: $pricing-item--width;
+		@if ( $pricing-items--padding__mobile != null ) {
+			padding: $pricing-items--padding__mobile / 2;
+		}
+	}
+
+	.tiles-item-inner {
+		padding-top: $pricing-item--inner-padding-v;
+		padding-bottom: $pricing-item--inner-padding-v;
+		padding-left: $pricing-item--inner-padding-h;
+		padding-right: $pricing-item--inner-padding-h;
+	}
+}
+
+.pricing-item-content {
+    flex-grow: 1;
+    width: 100%;
+}
+
+ul.pricing-item-features-list {
+
+	li {
+		display: flex;
+		align-items: center;
+		margin-bottom: $spacing--shared-v / 2;
+	}
+}
+
+.pricing-switcher {
+	margin-bottom: 48px;
+}
+
+.pricing-switcher-inner {
+	display: inline-flex;
+
+	.form-switch {
+		padding: 0;
+		width: 60px;
+	}
+
+	.pricing-switcher-label {
+		@include font-size(check-radio);
+		@include font-weight(check-radio);
+
+		&:first-child {
+			margin-right: 16px;
+		}
+
+		&:last-child {
+			margin-left: 16px;
+		}
+	}
+}
+
+@include media( '>medium' ) {
+
+	.pricing {
+
+		.section-inner {
+			padding-top: $pricing--padding-t__desktop;
+			padding-bottom: $pricing--padding-b__desktop;
+		}
+
+		.section-header {
+			padding-bottom: $pricing-header--padding__desktop;
+		}
+
+		@if ( $pricing-items--padding__desktop != null ) {
+
+			.tiles-wrap {
+				margin-right: -($pricing-items--padding__desktop / 2);
+				margin-left: -($pricing-items--padding__desktop / 2);
+				margin-top: -($pricing-items--padding__desktop / 2);
+
+				&:last-of-type {
+					margin-bottom: -($pricing-items--padding__desktop / 2);
+				}
+
+				&:not(:last-of-type) {
+					margin-bottom: ($pricing-items--padding__desktop / 2);
+				}
+
+				&.push-left {
+
+					&::after {
+						padding-left: $pricing-items--padding__desktop / 2;
+						padding-right: $pricing-items--padding__desktop / 2;
+					}
+				}
+			}
+
+			.tiles-item {
+				padding: $pricing-items--padding__desktop / 2;
+			}
+		}
+    }
+    
+    .pricing-switcher {
+		margin-bottom: 64px;
+	}
+}
