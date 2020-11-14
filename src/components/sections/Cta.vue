@@ -15,12 +15,12 @@
                 ]">
                 <div class="cta-slogan reveal-from-left">
                     <h3 class="m-0">
-                        Nisi porta lorem mollis aliquam ut.
+                        Become a part of XBT community today!
                     </h3>
                 </div>
                 <div class="cta-action reveal-from-right">
                     <c-button tag="a" color="primary" wide-mobile href="#">
-                        Get started
+                        Buy XBT
                     </c-button>
                 </div>
             </div>

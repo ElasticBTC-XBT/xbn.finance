@@ -1,0 +1,18 @@
+@include media( '<=medium' ) {
+
+	.features-split {
+
+		.split-wrap {
+
+			&.invert-mobile {
+
+				.split-item {
+
+					.split-item-image {
+						margin-bottom: 48px;
+					}
+				}
+			}
+		}
+	}
+}
