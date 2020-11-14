@@ -19,9 +19,9 @@
                     </h3>
                 </div>
                 <div class="cta-action reveal-from-right">
-                    <c-button tag="a" color="primary" wide-mobile href="#">
-                        Buy XBT
-                    </c-button>
+                  <c-button tag="a" color="primary" wide-mobile target="_blank" href="https://app.uniswap.org/#/swap?inputCurrency=WBTC&outputCurrency=0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8">
+                    Buy XBT
+                  </c-button>
                 </div>
             </div>
         </div>
