@@ -60,11 +60,13 @@
 
 <script>
 import CLogo from '@/components/layout/partials/Logo.vue'
+import CButton from '@/components/elements/Button.vue'
 
 export default {
   name: 'CHeader',
   components: {
-    CLogo
+    CLogo,
+    CButton
   },
   props: {
     active: Boolean,

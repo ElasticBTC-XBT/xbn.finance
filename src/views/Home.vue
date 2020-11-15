@@ -6,7 +6,7 @@
     <c-features-split invert-mobile image-fill class="illustration-section-05"/>
     <c-generic-section top-divider>
       <div class="container-xs">
-        <c-section-header :data="genericSection04Header" class="center-content"/>
+        <c-section-header class="center-content"/>
         <c-accordion>
           <c-accordion-item v-for="(faq, index) in faqData" :key="index" :title="`${faq.title}?`" :active="index===0">
             {{ faq.answer }}
@@ -31,6 +31,7 @@ import CGenericSection from '@/components/sections/GenericSection.vue'
 import CAccordion from '@/components/elements/Accordion.vue'
 import CAccordionItem from '@/components/elements/AccordionItem.vue'
 import CTestimonial from '@/components/sections/Testimonial.vue'
+import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
 
 export default {
   name: 'Home',
@@ -39,6 +40,7 @@ export default {
     CFeaturesSplit,
     CFeaturesTiles,
     // CPricing,
+    CSectionHeader,
     CGenericSection,
     CAccordion,
     CAccordionItem,

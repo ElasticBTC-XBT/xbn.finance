@@ -15,7 +15,7 @@
 <!--                </a>-->
 <!--            </li>-->
             <li>
-                <a href="https://twitter.com/">
+                <a href="https://twitter.com/elasticbitcoin" target="_blank">
                     <svg
                         width="16"
                         height="16"
@@ -28,8 +28,8 @@
                 </a>
             </li>
             <li>
-                <a href="https://github.com/">
-                    <svg   width="16"
+                <a href="https://github.com/ElasticBTC-XBT/" target="_blank">
+                    <svg width="16"
                            height="16"
                            role="img"
                            viewBox="0 0 24 24"
