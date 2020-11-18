@@ -37,8 +37,9 @@
                         </div>
                         <div class="hero-figure is-3d split-item-image illustration-element-01 reveal-scale-up">
                             <c-image
+                                id="big-banner-logo"
                                 class="has-shadow"
-                                :src="require('@/assets/images/hero.jpg')"
+                                :src="require('@/assets/images/xbt-logo.png')"
                                 alt="Hero image"
                                 :width="528"
                                 :height="396" />
@@ -64,3 +65,8 @@ export default {
   mixins: [SectionSplitProps]
 }
 </script>
+<style>
+#big-banner-logo{
+  box-shadow: none!important;
+}
+</style>

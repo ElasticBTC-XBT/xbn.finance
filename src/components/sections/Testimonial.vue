@@ -195,7 +195,7 @@ export default {
           avatar: require('@/assets/images/james.png'),
           name: "James The First",
           title: "Strategist",
-          description: ""
+          description: "20 years experience in software engineering. Smart contract builder, crypto-asset trading bot developer. Serial entrepreneur who enjoys the rolling coaster of building new things!"
         },
         {
           avatar: require('@/assets/images/erik.png'),
@@ -207,13 +207,13 @@ export default {
           avatar: require('@/assets/images/alan.png'),
           name: 'Alan The Achiever',
           title: 'Tech Lead',
-          description: 'Joined crypto in 2015. 3 years exp in smart contract developing. Top dApp builder in Blockstack App Mining. Co-Founder in multiple businesses with revenue 2k/month. Work hard. Have fun. Make history.'
+          description: 'Joined crypto in 2010. 3 years exp in smart contract developing. Top DApp builder in Blockstack App Mining. Co-Founder in multiple businesses with revenue 2k/month. Work hard. Have fun. Getting things done.'
         },
         {
           avatar: require('@/assets/images/jayce.png'),
           name: "Jayce EE",
-          title: "Blockchain Expert",
-          description: ""
+          title: "Expert Blockchain Developer",
+          description: "A blockchain rocker since 2010, love building new things."
         }
       ]
     }
