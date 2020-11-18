@@ -18,12 +18,12 @@
                     :class="[
                         pushLeft && 'push-left',
                     ]">
-                    <div class="tiles-item reveal-scale-up">
+                    <div v-for="member in teamData" :key="member.name" class="tiles-item reveal-scale-up">
                         <div class="tiles-item-inner">
                             <div class="team-item-header">
                                 <div class="team-item-image mb-24 illustration-element-06">
                                     <c-image
-                                        :src="require('@/assets/images/team-member-01.jpg')"
+                                        :src="member.avatar"
                                         alt="Team member 01"
                                         :width="180"
                                         :height="180" />
@@ -31,142 +31,144 @@
                             </div>
                             <div class="team-item-content">
                                 <h5 class="team-item-name mt-0 mb-4">
-                                    Markus Hasinika
+                                  {{ member.name }}
                                 </h5>
                                 <div class="team-item-role text-xs fw-500 mb-8">
-                                    Founder & CEO
+                                  {{ member.title }}
                                 </div>
                                 <p class="m-0 text-sm">
-                                    Magnis dis parturient montes nascetur. Quam quisque id diam vel quam ultricies leo integer.
+                                  {{
+                                    member.description
+                                  }}
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="tiles-item reveal-scale-up" data-reveal-delay="200">
-                        <div class="tiles-item-inner">
-                            <div class="team-item-header">
-                                <div class="team-item-image mb-24 illustration-element-07">
-                                    <c-image
-                                        :src="require('@/assets/images/team-member-02.jpg')"
-                                        alt="Team member 02"
-                                        :width="180"
-                                        :height="180" />
-                                </div>
-                            </div>
-                            <div class="team-item-content">
-                                <h5 class="team-item-name mt-0 mb-4">
-                                    Markus Hasinika
-                                </h5>
-                                <div class="team-item-role text-xs fw-500 mb-8">
-                                    Founder & CEO
-                                </div>
-                                <p class="m-0 text-sm">
-                                    Magnis dis parturient montes nascetur. Quam quisque id diam vel quam ultricies leo integer.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="tiles-item reveal-scale-up" data-reveal-delay="200">-->
+<!--                        <div class="tiles-item-inner">-->
+<!--                            <div class="team-item-header">-->
+<!--                                <div class="team-item-image mb-24 illustration-element-07">-->
+<!--                                    <c-image-->
+<!--                                        :src="require('@/assets/images/team-member-02.jpg')"-->
+<!--                                        alt="Team member 02"-->
+<!--                                        :width="180"-->
+<!--                                        :height="180" />-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="team-item-content">-->
+<!--                                <h5 class="team-item-name mt-0 mb-4">-->
+<!--                                    Markus Hasinika-->
+<!--                                </h5>-->
+<!--                                <div class="team-item-role text-xs fw-500 mb-8">-->
+<!--                                    Founder & CEO-->
+<!--                                </div>-->
+<!--                                <p class="m-0 text-sm">-->
+<!--                                    Magnis dis parturient montes nascetur. Quam quisque id diam vel quam ultricies leo integer.-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="tiles-item reveal-scale-up" data-reveal-delay="400">
-                        <div class="tiles-item-inner">
-                            <div class="team-item-header">
-                                <div class="team-item-image mb-24 illustration-element-06">
-                                    <c-image
-                                        :src="require('@/assets/images/team-member-03.jpg')"
-                                        alt="Team member 03"
-                                        :width="180"
-                                        :height="180" />
-                                </div>
-                            </div>
-                            <div class="team-item-content">
-                                <h5 class="team-item-name mt-0 mb-4">
-                                    Markus Hasinika
-                                </h5>
-                                <div class="team-item-role text-xs fw-500 mb-8">
-                                    Founder & CEO
-                                </div>
-                                <p class="m-0 text-sm">
-                                    Magnis dis parturient montes nascetur. Quam quisque id diam vel quam ultricies leo integer.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="tiles-item reveal-scale-up" data-reveal-delay="400">-->
+<!--                        <div class="tiles-item-inner">-->
+<!--                            <div class="team-item-header">-->
+<!--                                <div class="team-item-image mb-24 illustration-element-06">-->
+<!--                                    <c-image-->
+<!--                                        :src="require('@/assets/images/team-member-03.jpg')"-->
+<!--                                        alt="Team member 03"-->
+<!--                                        :width="180"-->
+<!--                                        :height="180" />-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="team-item-content">-->
+<!--                                <h5 class="team-item-name mt-0 mb-4">-->
+<!--                                    Markus Hasinika-->
+<!--                                </h5>-->
+<!--                                <div class="team-item-role text-xs fw-500 mb-8">-->
+<!--                                    Founder & CEO-->
+<!--                                </div>-->
+<!--                                <p class="m-0 text-sm">-->
+<!--                                    Magnis dis parturient montes nascetur. Quam quisque id diam vel quam ultricies leo integer.-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="tiles-item reveal-scale-up">
-                        <div class="tiles-item-inner">
-                            <div class="team-item-header">
-                                <div class="team-item-image mb-24 illustration-element-06">
-                                    <c-image
-                                        :src="require('@/assets/images/team-member-04.jpg')"
-                                        alt="Team member 01"
-                                        :width="180"
-                                        :height="180" />
-                                </div>
-                            </div>
-                            <div class="team-item-content">
-                                <h5 class="team-item-name mt-0 mb-4">
-                                    Markus Hasinika
-                                </h5>
-                                <div class="team-item-role text-xs fw-500 mb-8">
-                                    Founder & CEO
-                                </div>
-                                <p class="m-0 text-sm">
-                                    Magnis dis parturient montes nascetur. Quam quisque id diam vel quam ultricies leo integer.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="tiles-item reveal-scale-up">-->
+<!--                        <div class="tiles-item-inner">-->
+<!--                            <div class="team-item-header">-->
+<!--                                <div class="team-item-image mb-24 illustration-element-06">-->
+<!--                                    <c-image-->
+<!--                                        :src="require('@/assets/images/team-member-04.jpg')"-->
+<!--                                        alt="Team member 01"-->
+<!--                                        :width="180"-->
+<!--                                        :height="180" />-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="team-item-content">-->
+<!--                                <h5 class="team-item-name mt-0 mb-4">-->
+<!--                                    Markus Hasinika-->
+<!--                                </h5>-->
+<!--                                <div class="team-item-role text-xs fw-500 mb-8">-->
+<!--                                    Founder & CEO-->
+<!--                                </div>-->
+<!--                                <p class="m-0 text-sm">-->
+<!--                                    Magnis dis parturient montes nascetur. Quam quisque id diam vel quam ultricies leo integer.-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="tiles-item reveal-scale-up" data-reveal-delay="200">
-                        <div class="tiles-item-inner">
-                            <div class="team-item-header">
-                                <div class="team-item-image mb-24 illustration-element-07">
-                                    <c-image
-                                        :src="require('@/assets/images/team-member-05.jpg')"
-                                        alt="Team member 05"
-                                        :width="180"
-                                        :height="180" />
-                                </div>
-                            </div>
-                            <div class="team-item-content">
-                                <h5 class="team-item-name mt-0 mb-4">
-                                    Markus Hasinika
-                                </h5>
-                                <div class="team-item-role text-xs fw-500 mb-8">
-                                    Founder & CEO
-                                </div>
-                                <p class="m-0 text-sm">
-                                    Magnis dis parturient montes nascetur. Quam quisque id diam vel quam ultricies leo integer.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="tiles-item reveal-scale-up" data-reveal-delay="200">-->
+<!--                        <div class="tiles-item-inner">-->
+<!--                            <div class="team-item-header">-->
+<!--                                <div class="team-item-image mb-24 illustration-element-07">-->
+<!--                                    <c-image-->
+<!--                                        :src="require('@/assets/images/team-member-05.jpg')"-->
+<!--                                        alt="Team member 05"-->
+<!--                                        :width="180"-->
+<!--                                        :height="180" />-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="team-item-content">-->
+<!--                                <h5 class="team-item-name mt-0 mb-4">-->
+<!--                                    Markus Hasinika-->
+<!--                                </h5>-->
+<!--                                <div class="team-item-role text-xs fw-500 mb-8">-->
+<!--                                    Founder & CEO-->
+<!--                                </div>-->
+<!--                                <p class="m-0 text-sm">-->
+<!--                                    Magnis dis parturient montes nascetur. Quam quisque id diam vel quam ultricies leo integer.-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="tiles-item reveal-scale-up" data-reveal-delay="400">
-                        <div class="tiles-item-inner">
-                            <div class="team-item-header">
-                                <div class="team-item-image mb-24 illustration-element-06">
-                                    <c-image
-                                        :src="require('@/assets/images/team-member-06.jpg')"
-                                        alt="Team member 06"
-                                        :width="180"
-                                        :height="180" />
-                                </div>
-                            </div>
-                            <div class="team-item-content">
-                                <h5 class="team-item-name mt-0 mb-4">
-                                    Markus Hasinika
-                                </h5>
-                                <div class="team-item-role text-xs fw-500 mb-8">
-                                    Founder & CEO
-                                </div>
-                                <p class="m-0 text-sm">
-                                    Magnis dis parturient montes nascetur. Quam quisque id diam vel quam ultricies leo integer.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="tiles-item reveal-scale-up" data-reveal-delay="400">-->
+<!--                        <div class="tiles-item-inner">-->
+<!--                            <div class="team-item-header">-->
+<!--                                <div class="team-item-image mb-24 illustration-element-06">-->
+<!--                                    <c-image-->
+<!--                                        :src="require('@/assets/images/team-member-06.jpg')"-->
+<!--                                        alt="Team member 06"-->
+<!--                                        :width="180"-->
+<!--                                        :height="180" />-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="team-item-content">-->
+<!--                                <h5 class="team-item-name mt-0 mb-4">-->
+<!--                                    Markus Hasinika-->
+<!--                                </h5>-->
+<!--                                <div class="team-item-role text-xs fw-500 mb-8">-->
+<!--                                    Founder & CEO-->
+<!--                                </div>-->
+<!--                                <p class="m-0 text-sm">-->
+<!--                                    Magnis dis parturient montes nascetur. Quam quisque id diam vel quam ultricies leo integer.-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
@@ -191,7 +193,33 @@ export default {
         title: 'Our story - Lorem ipsum is placeholder text.',
         paragraph:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-      }
+      },
+      teamData: [
+        {
+          avatar: require('@/assets/images/alan.png'),
+          name: 'Alan The Achiever',
+          title: 'Engineering Lead',
+          description: 'Joined crypto in 2015. 3 years exp in smart contract developing. Top dApp builder in Blockstack App Mining. Co-Founders in multiple business with revenue 2k/month. Work hard. Have fun. Make history.'
+        },
+        {
+          avatar: require('@/assets/images/james.png'),
+          name: "James The First",
+          title: "Strategist",
+          description: ""
+        },
+        {
+          avatar: require('@/assets/images/erik.png'),
+          name: "Philip Erik",
+          title: "Community Manager",
+          description: "Forex trader from 2008. Crushed by Financial crisis and still kept walking. Crypto trader and enthusiast from 2014. Mined ETH back in 2016. Waves maximalist.",
+        },
+        {
+          avatar: require('@/assets/images/jayce.png'),
+          name: "Jayce EE",
+          title: "Senior Engineer",
+          description: ""
+        }
+      ]
     }
   }
 }

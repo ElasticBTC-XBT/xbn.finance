@@ -1,0 +1,16 @@
+.hero-inner {
+
+	.split-item {
+		margin-bottom: 16px;
+	}
+}
+
+@include media( '>medium' ) {
+
+	.hero-inner {
+
+		.split-item {
+			margin-bottom: 124px;
+		}
+	}
+}

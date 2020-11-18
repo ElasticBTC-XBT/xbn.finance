@@ -1,0 +1,20 @@
+.team-item-image {
+
+	&.illustration-element-06 {
+
+		img {
+			border-top-right-radius: 100px;
+		}
+	}
+
+	&.illustration-element-07 {
+
+		img {
+			border-top-left-radius: 100px;
+		}
+	}
+}
+
+.team-item-role {
+	color: get-color( primary, 2);
+}
