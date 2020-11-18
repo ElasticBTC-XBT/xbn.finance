@@ -22,10 +22,10 @@
                     <div class="split-item reveal-scale-up">
                         <div class="split-item-content center-content-mobile">
                             <h3 class="mt-0 mb-16">
-                                Lorem ipsum dolor sit
+                                Adaptive Supply
                             </h3>
                             <p class="m-0">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                The number of XBT you own change everyday so that the price of XBT will reach BTC price in 30 days. Your percent ownership of the XBT network remains fixed no matter how supply changes.
                             </p>
                         </div>
                         <div
@@ -42,10 +42,10 @@
                     <div class="split-item reveal-scale-up">
                         <div class="split-item-content center-content-mobile">
                             <h3 class="mt-0 mb-16">
-                                Lorem ipsum dolor sit
+                                Risk diversification
                             </h3>
                             <p class="m-0">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                This reduce risk of correlation of Altcoins (such as ETH, LINK...) and Bitcoin in your porfolio because their is 30 days lag between XBT's and BTC's prices.
                             </p>
                         </div>
                         <div
@@ -62,10 +62,10 @@
                     <div class="split-item reveal-scale-up">
                         <div class="split-item-content center-content-mobile">
                             <h3 class="mt-0 mb-16">
-                                Lorem ipsum dolor sit
+                                A trading instrument
                             </h3>
                             <p class="m-0">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                As a trading instrument, XBT has many advantages, own XBT you can catch the hype of Bitcoin's price growth, but also reduce the risk when Bitcoin takes quick dive because of lag factor.
                             </p>
                         </div>
                         <div
@@ -99,9 +99,9 @@ export default {
   data() {
     return {
       sectionHeader: {
-        title: 'Bold startup toolkit',
+        title: 'Learn about XBT',
         paragraph:
-          'Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.'
+          'XBT is a cryptocurrency like Bitcoin, its price target of Bitcoin and its supply change daily'
       }
     }
   }

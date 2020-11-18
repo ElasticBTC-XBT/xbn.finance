@@ -21,21 +21,24 @@
                     <div class="split-item">
                         <div class="hero-content split-item-content center-content-mobile">
                             <h1 class="mt-0 mb-16 reveal-from-left">
-                                Landing template for startups
+                                XBT · Elastic Bitcoin with Adaptive Supply
                             </h1>
                             <p class="mt-0 mb-24 reveal-from-left" data-reveal-delay="200">
-                                Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.
+                               <em>Why choose stable coins which are inflated?</em>
+                                <br/>
+                                <br/>
+                                It's time to know about XBT, it's stabilized to Bitcoin's price by utilized the power of Ethereum's Smart Contract to adjust supply based on market condition.
                             </p>
                             <div class="reveal-from-left" data-reveal-delay="400">
-                                <c-button tag="a" color="primary" wide-mobile href="#">
-                                    Get started
-                                </c-button>
+                              <c-button tag="a" color="primary" wide-mobile target="_blank" href="https://app.uniswap.org/#/swap?inputCurrency=WBTC&outputCurrency=0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8">
+                                Buy XBT
+                              </c-button>
                             </div>
                         </div>
                         <div class="hero-figure is-3d split-item-image illustration-element-01 reveal-scale-up">
                             <c-image
                                 class="has-shadow"
-                                :src="require('@/assets/images/hero-image.svg')"
+                                :src="require('@/assets/images/hero.jpg')"
                                 alt="Hero image"
                                 :width="528"
                                 :height="396" />

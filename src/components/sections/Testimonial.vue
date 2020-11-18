@@ -1,6 +1,7 @@
 <template>
     <section
         class="testimonial section"
+
         :class="[
             hasBgColor && 'has-bg-color',
             invertColor && 'invert-color'
@@ -18,40 +19,14 @@
                     :class="[
                         pushLeft && 'push-left',
                     ]">
-                    <div class="tiles-item reveal-scale-up">
-                        <div class="tiles-item-inner has-shadow">
-                            <div class="testimonial-item-header">
-                                <div class="testimonial-item-image">
-                                    <c-image
-                                        :src="require('@/assets/images/testimonial-image-01.png')"
-                                        alt="Testimonial image 01"
-                                        :width="56"
-                                        :height="56" />
-                                </div>
-                            </div>
-                            <div class="testimonial-item-content">
-                                <p class="text-sm mb-0">
-                                    — Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
-                                </p>
-                            </div>
-                            <div class="testimonial-item-footer h6 mt-32 mb-0 pt-24 has-top-divider">
-                                <span class="testimonial-item-name">
-                                    Erika Muliawan
-                                </span>
-                                <span class="text-color-low"> - </span>
-                                <span class="testimonial-item-link text-xs">
-                                    <a href="#">AppName</a>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="tiles-item reveal-scale-up" data-reveal-delay="200">
+
+                    <div v-for="member in teamData" :key="member.name" class="tiles-item reveal-scale-up" data-reveal-delay="200">
                         <div class="tiles-item-inner has-shadow">
                             <div class="testimonial-item-header">
                                 <div class="testimonial-item-image">
                                     <c-image
-                                        :src="require('@/assets/images/testimonial-image-02.png')"
+                                        :src="member.avatar"
                                         alt="Testimonial image 02"
                                         :width="56"
                                         :height="56" />
@@ -59,50 +34,137 @@
                             </div>
                             <div class="testimonial-item-content">
                                 <p class="text-sm mb-0">
-                                    — Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
+                                    — {{
+                                    member.description
+                                  }}
                                 </p>
                             </div>
                             <div
                                 class="testimonial-item-footer h6 mt-32 mb-0 pt-24 has-top-divider">
                                 <span class="testimonial-item-name">
-                                    Erika Muliawan
+                                    {{member.name}}
                                 </span>
                                 <span class="text-color-low"> - </span>
                                 <span class="testimonial-item-link text-xs">
-                                    <a href="#">AppName</a>
+                                    <a href="#">{{ member.title }}</a>
                                 </span>
                             </div>
                         </div>
                     </div>
+<!--                    <div class="tiles-item reveal-scale-up">-->
+<!--                        <div class="tiles-item-inner has-shadow">-->
+<!--                            <div class="testimonial-item-header">-->
+<!--                                <div class="testimonial-item-image">-->
+<!--                                    <c-image-->
+<!--                                            :src="require('@/assets/images/testimonial-image-01.png')"-->
+<!--                                            alt="Testimonial image 01"-->
+<!--                                            :width="56"-->
+<!--                                            :height="56" />-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="testimonial-item-content">-->
+<!--                                <p class="text-sm mb-0">-->
+<!--                                    — Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                            <div class="testimonial-item-footer h6 mt-32 mb-0 pt-24 has-top-divider">-->
+<!--                                <span class="testimonial-item-name">-->
+<!--                                    Gail Wynand-->
+<!--                                </span>-->
+<!--                                <span class="text-color-low"> - </span>-->
+<!--                                <span class="testimonial-item-link text-xs">-->
+<!--                                    <a href="#">Strategist</a>-->
+<!--                                </span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="tiles-item reveal-scale-up" data-reveal-delay="400">-->
+<!--                        <div class="tiles-item-inner has-shadow">-->
+<!--                            <div class="testimonial-item-header">-->
+<!--                                <div class="testimonial-item-image">-->
+<!--                                    <c-image-->
+<!--                                        :src="require('@/assets/images/testimonial-image-03.png')"-->
+<!--                                        alt="Testimonial image 03"-->
+<!--                                        :width="56"-->
+<!--                                        :height="56" />-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="testimonial-item-content">-->
+<!--                                <p class="text-sm mb-0">-->
+<!--                                    — Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                            <div-->
+<!--                                class="testimonial-item-footer h6 mt-32 mb-0 pt-24 has-top-divider">-->
+<!--                                <span class="testimonial-item-name">-->
+<!--                                    James Simons-->
+<!--                                </span>-->
+<!--                                <span class="text-color-low"> - </span>-->
+<!--                                <span class="testimonial-item-link text-xs">-->
+<!--                                    <a href="#">XBT Fund Manager</a>-->
+<!--                                </span>-->
+<!--                            </div>-->
 
-                    <div class="tiles-item reveal-scale-up" data-reveal-delay="400">
-                        <div class="tiles-item-inner has-shadow">
-                            <div class="testimonial-item-header">
-                                <div class="testimonial-item-image">
-                                    <c-image
-                                        :src="require('@/assets/images/testimonial-image-03.png')"
-                                        alt="Testimonial image 03"
-                                        :width="56"
-                                        :height="56" />
-                                </div>
-                            </div>
-                            <div class="testimonial-item-content">
-                                <p class="text-sm mb-0">
-                                    — Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.
-                                </p>
-                            </div>
-                            <div
-                                class="testimonial-item-footer h6 mt-32 mb-0 pt-24 has-top-divider">
-                                <span class="testimonial-item-name">
-                                    Erika Muliawan
-                                </span>
-                                <span class="text-color-low"> - </span>
-                                <span class="testimonial-item-link text-xs">
-                                    <a href="#">AppName</a>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="tiles-item reveal-scale-up" data-reveal-delay="400">-->
+<!--                        <div class="tiles-item-inner has-shadow">-->
+<!--                            <div class="testimonial-item-header">-->
+<!--                                <div class="testimonial-item-image">-->
+<!--                                    <c-image-->
+<!--                                            :src="require('@/assets/images/testimonial-image-03.png')"-->
+<!--                                            alt="Testimonial image 03"-->
+<!--                                            :width="56"-->
+<!--                                            :height="56" />-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="testimonial-item-content">-->
+<!--                                <p class="text-sm mb-0">-->
+<!--                                    — Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                            <div-->
+<!--                                    class="testimonial-item-footer h6 mt-32 mb-0 pt-24 has-top-divider">-->
+<!--                                <span class="testimonial-item-name">-->
+<!--                                    To Be Hired-->
+<!--                                </span>-->
+<!--                                <span class="text-color-low"> - </span>-->
+<!--                                <span class="testimonial-item-link text-xs">-->
+<!--                                    <a href="#">Alliance Director</a>-->
+<!--                                </span>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="tiles-item reveal-scale-up" data-reveal-delay="400">-->
+<!--                        <div class="tiles-item-inner has-shadow">-->
+<!--                            <div class="testimonial-item-header">-->
+<!--                                <div class="testimonial-item-image">-->
+<!--                                    <c-image-->
+<!--                                            :src="require('@/assets/images/testimonial-image-03.png')"-->
+<!--                                            alt="Testimonial image 03"-->
+<!--                                            :width="56"-->
+<!--                                            :height="56" />-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="testimonial-item-content">-->
+<!--                                <p class="text-sm mb-0">-->
+<!--                                    — Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum cillum dolore eu fugiat.-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                            <div-->
+<!--                                    class="testimonial-item-footer h6 mt-32 mb-0 pt-24 has-top-divider">-->
+<!--                                <span class="testimonial-item-name">-->
+<!--                                    To Be Hired-->
+<!--                                </span>-->
+<!--                                <span class="text-color-low"> - </span>-->
+<!--                                <span class="testimonial-item-link text-xs">-->
+<!--                                    <a href="#">Community Manager</a>-->
+<!--                                </span>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
@@ -124,9 +186,36 @@ export default {
   data() {
     return {
       sectionHeader: {
-        title: 'Testimonials - Lorem ipsum is placeholder text commonly used.',
-        paragraph: ''
-      }
+        title: 'XBT Foundation Team',
+        paragraph: 'The XBT Foundation (XF) is a non-profit organization dedicated to supporting XBT and related technologies, their role is not to control but contribue to XBT\'s growth' +
+            '<br/> <em>The team will be remained anonymous for various privacy reasons.</em>'
+      },
+      teamData: [
+        {
+          avatar: require('@/assets/images/james.png'),
+          name: "James The First",
+          title: "Strategist",
+          description: ""
+        },
+        {
+          avatar: require('@/assets/images/erik.png'),
+          name: "Philip Erik",
+          title: "Community Manager",
+          description: "Forex trader from 2008. Crushed by Financial crisis and still kept walking. Crypto trader and enthusiast from 2014. Mined ETH back in 2016. Waves maximalist.",
+        },
+        {
+          avatar: require('@/assets/images/alan.png'),
+          name: 'Alan The Achiever',
+          title: 'Tech Lead',
+          description: 'Joined crypto in 2015. 3 years exp in smart contract developing. Top dApp builder in Blockstack App Mining. Co-Founder in multiple businesses with revenue 2k/month. Work hard. Have fun. Make history.'
+        },
+        {
+          avatar: require('@/assets/images/jayce.png'),
+          name: "Jayce EE",
+          title: "Blockchain Expert",
+          description: ""
+        }
+      ]
     }
   }
 }

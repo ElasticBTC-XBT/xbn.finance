@@ -3,10 +3,10 @@
         <h1 class="m-0">
             <router-link to="/">
                 <c-image
-                    :src="require('@/assets/images/logo.svg')"
-                    alt="Twist"
-                    :width="32"
-                    :height="32" />
+                    :src="require('@/assets/images/xbt-logo.png')"
+                    alt="XBT"
+                    :width="48"
+                    :height="48" />
             </router-link>
         </h1>
     </div>

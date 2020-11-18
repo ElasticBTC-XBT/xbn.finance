@@ -6,7 +6,7 @@
                     <div class="footer-blocks">
                         <div class="footer-block reveal-from-bottom" data-reveal-offset="0">
                             <c-logo class="mb-16" />
-                            <div class="footer-copyright">&copy; 2019 Twist, all rights reserved</div>
+                            <div class="footer-copyright">&copy; 2020 XBT, all rights reserved</div>
                         </div>
                         <div class="footer-block reveal-from-bottom" data-reveal-offset="0" data-reveal-delay="100">
                             <div class="footer-block-title">Company</div>

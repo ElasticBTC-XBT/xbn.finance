@@ -44,9 +44,12 @@
                             </li>
                         </ul>
                         <ul v-if="!hideSignin" class="list-reset header-nav-right">
-                            <li>
-                                <router-link to="/signup/" class="button button-primary button-sm">Trade XBT</router-link>
-                            </li>
+<!--                            <li>-->
+<!--                                <router-link to="/signup/" class="button button-primary button-sm">Trade XBT</router-link>-->
+                              <c-button tag="a" class="button button-primary button-sm" color="primary" wide-mobile target="_blank" href="https://app.uniswap.org/#/swap?inputCurrency=WBTC&outputCurrency=0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8">
+                                Buy XBT
+                              </c-button>
+<!--                            </li>-->
                         </ul>
                     </div>
                 </nav>
@@ -57,11 +60,13 @@
 
 <script>
 import CLogo from '@/components/layout/partials/Logo.vue'
+import CButton from '@/components/elements/Button.vue'
 
 export default {
   name: 'CHeader',
   components: {
-    CLogo
+    CLogo,
+    CButton
   },
   props: {
     active: Boolean,
