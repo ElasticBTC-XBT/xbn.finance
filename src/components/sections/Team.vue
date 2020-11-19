@@ -199,7 +199,7 @@ export default {
           avatar: require('@/assets/images/alan.png'),
           name: 'Alan The Achiever',
           title: 'Engineering Lead',
-          description: 'Joined crypto in 2015. 3 years exp in smart contract developing. Top dApp builder in Blockstack App Mining. Co-Founders in multiple business with revenue 2k/month. Work hard. Have fun. Make history.'
+          description: 'Joined crypto in 2015. 3 years exp in smart contract developing. Top dApp builder in Blockstack App Mining. Work hard. Have fun. Make history.'
         },
         {
           avatar: require('@/assets/images/james.png'),

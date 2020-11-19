@@ -207,7 +207,7 @@ export default {
           avatar: require('@/assets/images/alan.png'),
           name: 'Alan The Achiever',
           title: 'Tech Lead',
-          description: 'Joined crypto in 2010. 3 years exp in smart contract developing. Top DApp builder in Blockstack App Mining. Co-Founder in multiple businesses with revenue 2k/month. Work hard. Have fun. Getting things done.'
+          description: 'Joined crypto in 2010. 3 years exp in smart contract developing. Top DApp builder in Blockstack App Mining. Co-Founder in multiple businesses with gross revenue 20k/month. Work hard. Have fun. Getting things done.'
         },
         {
           avatar: require('@/assets/images/jayce.png'),

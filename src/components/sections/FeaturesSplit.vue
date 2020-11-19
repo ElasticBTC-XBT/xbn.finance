@@ -32,7 +32,7 @@
                             class="split-item-image is-3d illustration-element-03"
                             :class="imageFill && 'split-item-image-fill'">
                             <c-image
-                                :src="require('@/assets/images/xbt-logo.png')"
+                                :src="require('@/assets/images/adaptive-suppy.png')"
                                 alt="Features split image 01"
                                 :width="528"
                                 :height="396" />
@@ -52,7 +52,7 @@
                             class="split-item-image is-3d illustration-element-04"
                             :class="imageFill && 'split-item-image-fill'">
                             <c-image
-                                :src="require('@/assets/images/xbt-logo.png')"
+                                :src="require('@/assets/images/risk-diversification.png')"
                                 alt="Features split image 02"
                                 :width="528"
                                 :height="396" />
@@ -72,7 +72,7 @@
                             class="split-item-image is-3d illustration-element-05"
                             :class="imageFill && 'split-item-image-fill'">
                             <c-image
-                                :src="require('@/assets/images/xbt-logo.png')"
+                                :src="require('@/assets/images/trading-instrument.png')"
                                 alt="Features split image 03"
                                 :width="528"
                                 :height="396" />
