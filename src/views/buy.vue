@@ -27,7 +27,7 @@
                   Buy with WBTC
                 </c-button>
                 <c-button tag="a" color="primary" wide-mobile href="https://app.uniswap.org/#/swap?inputCurrency=0xdac17f958d2ee523a2206206994597c13d831ec7&outputCurrency=0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8">
-                  Buy with WBTC
+                  Buy with USDT
                 </c-button>
               </div>
             </div>
