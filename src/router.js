@@ -2,7 +2,10 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Secondary from './views/Secondary.vue';
-import Login from './views/Login.vue';
+import Basic from './views/basic.vue';
+import BuyXBT from './views/buy.vue';
+import Economics from './views/economics.vue';
+import Technology from './views/technology.vue';
 import Staking from './views/staking.vue';
 import Signup from './views/Signup.vue';
 import Learn from './views/learn.vue';
@@ -24,11 +27,25 @@ export default new Router({
       path: '/secondary',
       name: 'secondary',
       component: Secondary
+    },{
+      path: '/buy',
+      name: 'buy',
+      component: BuyXBT
     },
     {
-      path: '/login',
-      name: 'login',
-      component: Login
+      path: '/basics',
+      name: 'basics',
+      component: Basic
+    },
+    {
+      path: '/technology',
+      name: 'technology',
+      component: Technology
+    },
+    {
+      path: '/economics',
+      name: 'economics',
+      component: Economics
     },
     {
       path: '/staking',
