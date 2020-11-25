@@ -56,10 +56,12 @@ export default {
         }, {
           "title": "When was the Uniswap launch",
           "answer": "Monday 3rd August 2020"
-        }, {
-          "title": "Who is the team/devs",
-          "answer": "The team is anonymous, but a short introduction of every member is available on the website"
-        }, {
+        },
+        // {
+        //   "title": "Who is the team/devs",
+        //   "answer": "The team is anonymous, but a short introduction of every member is available on the website"
+        // },
+        {
           "title": "When is the whitepaper ready",
           "answer": "Currently in peer review with our advisory team."
         }, {

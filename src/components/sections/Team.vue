@@ -199,18 +199,21 @@ export default {
           avatar: require('@/assets/images/james.jpg'),
           name: "James T. Carter",
           title: "Strategist",
+          contact: "https://www.linkedin.com/in/james-t-carter-357093200/",
           description: "20 years experience in software engineering. Smart contract builder, crypto-asset trading bot developer. Serial entrepreneur who enjoys the rolling coaster of building new things!"
         },
         {
           avatar: require('@/assets/images/erik.png'),
-          name: "Philip Erik",
-          title: "Richard McClure",
+          name: "R. McClure",
+          title: "Community Manager",
+          contact: "https://www.linkedin.com/in/richard-mcclure-bab622200/",
           description: "Forex trader from 2008. Crushed by Financial crisis and still kept walking. Crypto trader and enthusiast from 2014. Mined ETH back in 2016. Waves maximalist.",
         },
         {
           avatar: require('@/assets/images/kholsa.png'),
           name: 'Kabir Khosla',
           title: 'Tech Lead',
+          contact: "https://www.linkedin.com/in/kabir-khosla-2841a1200/",
           description: 'Joined crypto in 2010. 3 years exp in smart contract developing. Top DApp builder in Blockstack App Mining. Co-Founder in multiple businesses with gross revenue 20k/month. Work hard. Have fun. Getting things done.'
         },
         // {
