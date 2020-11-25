@@ -5,7 +5,9 @@ Vue.use(Fragment.Plugin);
 
 import Vue2TouchEvents from 'vue2-touch-events';
 Vue.use(Vue2TouchEvents);
+import vuetimeline from "@growthbunker/vuetimeline"
 
+Vue.use(vuetimeline)
 import App from './App.vue';
 import router from './router';
 
