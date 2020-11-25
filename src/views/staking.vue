@@ -27,7 +27,6 @@ import CLayout from '@/layouts/LayoutDefault.vue'
 // import sections
 import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
 import {SectionProps} from '@/utils/SectionProps.js'
-import moment from 'moment';
 import 'moment-countdown';
 export default {
   name: 'Login',
