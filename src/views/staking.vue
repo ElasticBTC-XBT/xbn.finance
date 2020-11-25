@@ -14,7 +14,7 @@
                     bottomDivider && 'has-bottom-divider'
                 ]">
           <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
-          <h4 class="center-content">{{ date }}</h4>
+          <div id="container" class="flex-center"></div>
         </div>
       </div>
     </section>
@@ -48,20 +48,27 @@ export default {
     }
   },
   mounted() {
-    this.initTimer().bind(this)
-  },
-  beforeDestroy() {
-    clearInterval(this.timer);
+    this.initTimerV2().bind(this)
   },
   methods: {
-    initTimer() {
-      this.timer = setInterval(updateTime.bind(this), 100);
-      updateTime();
-
-      function updateTime() {
-        this.date = moment(this.deadline).countdown(new Date()).toString(); //=> '26 years, 9 months, and 4 days'
-      }
-    }
+    initTimerV2(){
+      // eslint-disable-next-line no-undef
+      var cd = new Countdown({
+        cont: document.querySelector('#container'),
+        date: this.deadline.getTime(),
+        outputTranslation: {
+          year: 'Years',
+          week: 'Weeks',
+          day: 'Days',
+          hour: 'Hours',
+          minute: 'Minutes',
+          second: 'Seconds',
+        },
+        endCallback: null,
+        outputFormat: 'week|day|hour|minute|second',
+      });
+      cd.start();
+    },
   }
 }
 </script>
