@@ -60,7 +60,7 @@
               description="Team is working on a research about how elastic supply model would affect crypto space"
               category="Research"
               icon="code"
-              color="grey"
+              color="white"
               is-last
           />
         </div>
