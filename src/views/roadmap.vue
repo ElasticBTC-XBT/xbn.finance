@@ -60,7 +60,7 @@
               description="Team is working on a research about how elastic supply model would affect crypto space"
               category="Research"
               icon="code"
-              color="white"
+              color="grey"
               is-last
           />
         </div>
@@ -94,3 +94,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.gb-vue-timeline-update__center {
+ margin-top: 3px
+}
+</style>
