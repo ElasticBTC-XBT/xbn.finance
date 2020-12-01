@@ -196,32 +196,40 @@ export default {
       },
       teamData: [
         {
-          avatar: require('@/assets/images/james.jpg'),
-          name: "James T. Carter",
-          title: "Strategist",
-          contact: "https://www.linkedin.com/in/james-t-carter-357093200/",
+          avatar: require('@/assets/images/PhiNguyen.jpeg'),
+          name: "Phi Nguyen",
+          title: "Founder & CEO",
+          contact: "https://www.linkedin.com/in/philiperik/",
           description: "20 years experience in software engineering. Smart contract builder, crypto-asset trading bot developer. Serial entrepreneur who enjoys the rolling coaster of building new things!"
         },
         {
-          avatar: require('@/assets/images/erik.png'),
-          name: "R. McClure",
-          title: "Community Manager",
-          contact: "https://www.linkedin.com/in/richard-mcclure-bab622200/",
-          description: "Forex trader from 2008. Crushed by Financial crisis and still kept walking. Crypto trader and enthusiast from 2014. Mined ETH back in 2016. Waves maximalist.",
+          avatar: require('@/assets/images/ToanVo.jpeg'),
+          name: "Toan Vo",
+          title: "Data Engineer",
+          contact: "https://www.linkedin.com/in/toanalien/",
+          description: "Experienced Software Engineer with a demonstrated history of working in the internet industry. Skilled in Linux, Python, AWS. Strong engineering professional with a Engineer's degree focused in Computer Software Engineering from University of Information Technology.",
         },
         {
-          avatar: require('@/assets/images/kholsa.png'),
-          name: 'Kabir Khosla',
-          title: 'Tech Lead',
-          contact: "https://www.linkedin.com/in/kabir-khosla-2841a1200/",
-          description: 'Joined crypto in 2010. 3 years exp in smart contract developing. Top DApp builder in Blockstack App Mining. Co-Founder in multiple businesses with gross revenue 20k/month. Work hard. Have fun. Getting things done.'
+          avatar: require('@/assets/images/TamNguyen.jpeg'),
+          name: 'Tam Nguyen',
+          title: 'Blockchain Developer ',
+          contact: "https://www.linkedin.com/in/tamnguyenngoc/",
+          description: 'I have a great passion for product development'
         },
-        // {
-        //   avatar: require('@/assets/images/jayce.png'),
-        //   name: "Jayce EE",
-        //   title: "Senior Engineer",
-        //   description: ""
-        // }
+        {
+          avatar: require('@/assets/images/TuanTruong.jpeg'),
+          name: "Tuan Truong",
+          title: "Product Designer",
+          contact: 'https://www.linkedin.com/in/tnvtuan/',
+          description: "The expectation of customers on the product design is increasing rapidly in terms of quality and timely manner. My goal is to meet customer demands with user-friendly an modern design by expertising strong UX UI design, user centered design and software testing."
+        },
+        {
+          avatar: require('@/assets/images/jayce.png'),
+          name: "Khang Tran",
+          title: "DApps Specialist",
+          contact: 'https://www.linkedin.com/in/khangtrandinh/',
+          description: "Joined software engineering for 5 years. Doing full-stack stuffs: mobile, backend, frontend, and DevOps development. My lifetime goal is to become a human-expert in my own life journey. Have been fallen in love with bootstrapped startups and cryptocurrency. Currently, I'm running a business with my friends @ activators.dev and doing dApp specialist @ elasticbitcoin.org"
+        }
       ]
     }
   }
