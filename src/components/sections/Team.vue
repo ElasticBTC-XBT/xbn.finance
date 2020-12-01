@@ -224,7 +224,7 @@ export default {
           description: "The expectation of customers on the product design is increasing rapidly in terms of quality and timely manner. My goal is to meet customer demands with user-friendly an modern design by expertising strong UX UI design, user centered design and software testing."
         },
         {
-          avatar: require('@/assets/images/jayce.png'),
+          avatar: require('@/assets/images/KhangTran.jpg'),
           name: "Khang Tran",
           title: "DApps Specialist",
           contact: 'https://www.linkedin.com/in/khangtrandinh/',
