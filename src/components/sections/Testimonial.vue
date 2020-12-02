@@ -218,7 +218,7 @@ export default {
           name: "Toan Vo",
           title: "Data Engineer",
           contact: "https://www.linkedin.com/in/toanalien/",
-          description: "Experienced Software Engineer with a demonstrated history of working in the internet industry. Skilled in Linux, Python, AWS. Strong engineering professional with a Engineer's degree focused in Computer Software Engineering from University of Information Technology.",
+          description: "I lead and provide everything data. Tailored. Scalable. Automated.",
         },
         {
           avatar: require('@/assets/images/TamNguyen.jpeg'),
