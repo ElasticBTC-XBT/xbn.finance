@@ -19,7 +19,7 @@
                     </h3>
                 </div>
                 <div class="cta-action reveal-from-right">
-                  <c-button tag="a" color="primary" wide-mobile target="_blank" href="/buy">
+                  <c-button tag="a" color="primary" wide-mobile href="/buy">
                     Buy XBT
                   </c-button>
                 </div>

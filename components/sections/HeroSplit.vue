@@ -30,7 +30,7 @@
                                 It's time to know about XBT, it's stabilized to Bitcoin's price by utilized the power of Ethereum's Smart Contract to adjust supply based on market condition.
                             </p>
                             <div class="reveal-from-left" data-reveal-delay="400">
-                              <c-button tag="a" color="primary" wide-mobile target="_blank" href="/buy">
+                              <c-button tag="a" color="primary" wide-mobile href="/buy">
                                 Buy XBT
                               </c-button>
                             </div>
