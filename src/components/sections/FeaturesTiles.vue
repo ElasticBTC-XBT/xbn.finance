@@ -25,8 +25,8 @@
                                     <c-image
                                         :src="item.image"
                                         alt="item.title"
-                                        :width="72"
-                                        :height="72" />
+                                        :width="120"
+                                        :height="120" />
                                 </div>
                             </div>
                             <div class="features-tiles-item-content">
@@ -65,32 +65,32 @@ export default {
       },
       sectionDataUpper: [
         {
-          image: require('@/assets/images/feature-tile-icon-01.svg'),
+          image: require('@/assets/images/elasticbitcoin-A-NEW-DEFI-PROTOCOL.png'),
           title: 'A new DeFi protocol',
           description: 'XBT is a DeFi protocol with an elastic supply model. This means that the total supply of XBT is constantly changing.'
         },
         {
-          image: require('@/assets/images/feature-tile-icon-02.svg'),
+          image: require('@/assets/images/elasticbitcoin-RANDOMIZED-REBASING.png'),
           title: 'Randomized rebasing',
           description: 'XBT reaches a supply-price equilibrium with its randomized rebasing. As a result, the volatility is in the token supply, not the price.'
         },
         {
-          image: require('@/assets/images/feature-tile-icon-03.svg'),
+          image: require('@/assets/images/elasticbitcoin-PRICE-TARGET-OF-1-BTC.png'),
           title: 'Price target of $1 BTC',
           description: 'is designed to maintain its base price target of $1 BTC with a CPI inflation adjustment.'
         },
         {
-          image: require('@/assets/images/feature-tile-icon-04.svg'),
+          image: require('@/assets/images/elasticbitcoin-HOLDINGS-RISE-WITH-MARKET-CAP.png'),
           title: 'Holdings rise with market cap',
           description: 'Holders of the coin own a percentage of the network. Their holdings rise in value as market cap rises.'
         },
         {
-          image: require('@/assets/images/feature-tile-icon-05.svg'),
+          image: require('@/assets/images/elasticbitcoin-A-REBASE-EVENT.png'),
           title: 'A rebase event',
           description: 'Rebase is the event of adjusting the balance of all wallets based on the current price of the coin related to the target price.'
         },
         {
-          image: require('@/assets/images/feature-tile-icon-06.svg'),
+          image: require('@/assets/images/elasticbitcoin-REBASE-LAG-FACTOR.png'),
           title: 'Rebase lag factor',
           description: 'The Rebase Lag Factor helps to smooth changes in supply. A lower Lag Factor means faster adjustments.'
         },
