@@ -19,14 +19,14 @@
                         pushLeft && 'push-left',
                     ]">
           <div v-for="(item, index) in sectionDataUpper" :key="index" class="tiles-item">
-            <div class="tiles-item-inner flex-center">
-              <div class="features-tiles-item-header">
+            <div class="tiles-item-inner">
+              <div class="features-tiles-item-header center-content">
                 <div class="mb-12 reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="200">
                   <c-image
                       :src="item.image"
                       alt="item.title"
-                      :width="200"
-                      :height="200"/>
+                      :width="160"
+                      :height="160"/>
                 </div>
               </div>
               <div class="features-tiles-item-content center-content">
@@ -102,8 +102,11 @@ export default {
 
 
 <style scoped>
-.flex-center {
-  display: flex;
-  align-items: center;
+@media (min-width: 641px){
+  .features-tiles .tiles-item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
+
 </style>
