@@ -29,10 +29,10 @@
                             </p>
                         </div>
                         <div
-                            class="split-item-image is-3d illustration-element-03"
+                            class="split-item-image  illustration-element-03"
                             :class="imageFill && 'split-item-image-fill'">
                             <c-image
-                                :src="require('@/assets/images/adaptive-suppy.png')"
+                                :src="require('@/assets/images/elasticbitcoin-Adaptive Supply.svg')"
                                 alt="Features split image 01"
                                 :width="528"
                                 :height="396" />
@@ -49,10 +49,10 @@
                             </p>
                         </div>
                         <div
-                            class="split-item-image is-3d illustration-element-04"
+                            class="split-item-image  illustration-element-04"
                             :class="imageFill && 'split-item-image-fill'">
                             <c-image
-                                :src="require('@/assets/images/risk-diversification.png')"
+                                :src="require('@/assets/images/elasticbitcoin-Risk-diversification.svg')"
                                 alt="Features split image 02"
                                 :width="528"
                                 :height="396" />
@@ -69,10 +69,10 @@
                             </p>
                         </div>
                         <div
-                            class="split-item-image is-3d illustration-element-05"
+                            class="split-item-image  illustration-element-05"
                             :class="imageFill && 'split-item-image-fill'">
                             <c-image
-                                :src="require('@/assets/images/trading-instrument.png')"
+                                :src="require('@/assets/images/elasticbitcoin-A-trading-instrument.svg')"
                                 alt="Features split image 03"
                                 :width="528"
                                 :height="396" />
