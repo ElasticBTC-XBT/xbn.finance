@@ -30,9 +30,9 @@
                 </div>
               </div>
               <div class="features-tiles-item-content center-content">
-                <h5- class="mt-0 mb-8 reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="300">
+                <h5 class="mt-0 mb-8 reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="300">
                   {{ item.title }}
-                </h5->
+                </h5>
                 <p class="m-0 text-sm reveal-from-right" data-reveal-container=".tiles-item" data-reveal-delay="400">
                   {{ item.description }}
                 </p>
