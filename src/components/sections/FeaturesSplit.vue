@@ -1,91 +1,94 @@
 <template>
-    <section
-        class="features-split section"
-        :class="[
+  <section
+      class="features-split section"
+      :class="[
             hasBgColor && 'has-bg-color',
             invertColor && 'invert-color'
         ]">
-        <div class="container">
-            <div
-                class="features-split-inner section-inner"
-                :class="[
+    <div class="container">
+      <div
+          class="features-split-inner section-inner"
+          :class="[
                     topDivider && 'has-top-divider',
                     bottomDivider && 'has-bottom-divider'
                 ]">
-                <c-section-header :data="sectionHeader" class="center-content" />
-                <div
-                    class="split-wrap"
-                    :class="[
+        <c-section-header :data="sectionHeader" class="center-content"/>
+        <div
+            class="split-wrap"
+            :class="[
                         invertMobile && 'invert-mobile',
                         invertDesktop && 'invert-desktop'
                     ]">
-                    <div class="split-item reveal-scale-up">
-                        <div class="split-item-content center-content-mobile">
-                            <h3 class="mt-0 mb-16">
-                                Adaptive Supply
-                            </h3>
-                            <p class="m-0">
-                                The number of XBT you own change everyday so that the price of XBT will reach BTC price in 30 days. Your percent ownership of the XBT network remains fixed no matter how supply changes.
-                            </p>
-                        </div>
-                        <div
-                            class="split-item-image  illustration-element-03"
-                            :class="imageFill && 'split-item-image-fill'">
-                            <c-image
-                                :src="require('@/assets/images/elasticbitcoin-Adaptive Supply.svg')"
-                                alt="Features split image 01"
-                                :width="528"
-                                :height="396" />
-                        </div>
-                    </div>
-
-                    <div class="split-item reveal-scale-up">
-                        <div class="split-item-content center-content-mobile">
-                            <h3 class="mt-0 mb-16">
-                                Risk diversification
-                            </h3>
-                            <p class="m-0">
-                                This reduce risk of correlation of Altcoins (such as ETH, LINK...) and Bitcoin in your porfolio because their is 30 days lag between XBT's and BTC's prices.
-                            </p>
-                        </div>
-                        <div
-                            class="split-item-image  illustration-element-04"
-                            :class="imageFill && 'split-item-image-fill'">
-                            <c-image
-                                :src="require('@/assets/images/elasticbitcoin-Risk-diversification.svg')"
-                                alt="Features split image 02"
-                                :width="528"
-                                :height="396" />
-                        </div>
-                    </div>
-
-                    <div class="split-item reveal-scale-up">
-                        <div class="split-item-content center-content-mobile">
-                            <h3 class="mt-0 mb-16">
-                                A trading instrument
-                            </h3>
-                            <p class="m-0">
-                                As a trading instrument, XBT has many advantages, own XBT you can catch the hype of Bitcoin's price growth, but also reduce the risk when Bitcoin takes quick dive because of lag factor.
-                            </p>
-                        </div>
-                        <div
-                            class="split-item-image  illustration-element-05"
-                            :class="imageFill && 'split-item-image-fill'">
-                            <c-image
-                                :src="require('@/assets/images/elasticbitcoin-A-trading-instrument.svg')"
-                                alt="Features split image 03"
-                                :width="528"
-                                :height="396" />
-                        </div>
-                    </div>
-                </div>
+          <div class="split-item reveal-scale-up">
+            <div class="split-item-content center-content-mobile">
+              <h3 class="mt-0 mb-16">
+                Adaptive Supply
+              </h3>
+              <p class="m-0">
+                The number of XBT you own change everyday so that the price of XBT will reach BTC price in 30 days. Your
+                percent ownership of the XBT network remains fixed no matter how supply changes.
+              </p>
             </div>
+            <div
+                class="split-item-image"
+                :class="imageFill && 'split-item-image-fill'">
+              <c-image
+                  :src="require('@/assets/images/elasticbitcoin-Adaptive Supply.svg')"
+                  alt="Features split image 01"
+                  :width="528"
+                  :height="396"/>
+            </div>
+          </div>
+
+          <div class="split-item reveal-scale-up">
+            <div class="split-item-content center-content-mobile">
+              <h3 class="mt-0 mb-16">
+                Risk diversification
+              </h3>
+              <p class="m-0">
+                This reduce risk of correlation of Altcoins (such as ETH, LINK...) and Bitcoin in your porfolio because
+                their is 30 days lag between XBT's and BTC's prices.
+              </p>
+            </div>
+            <div
+                class="split-item-image"
+                :class="imageFill && 'split-item-image-fill'">
+              <c-image
+                  :src="require('@/assets/images/elasticbitcoin-Risk-diversification.svg')"
+                  alt="Features split image 02"
+                  :width="528"
+                  :height="396"/>
+            </div>
+          </div>
+
+          <div class="split-item reveal-scale-up">
+            <div class="split-item-content center-content-mobile">
+              <h3 class="mt-0 mb-16">
+                A trading instrument
+              </h3>
+              <p class="m-0">
+                As a trading instrument, XBT has many advantages, own XBT you can catch the hype of Bitcoin's price
+                growth, but also reduce the risk when Bitcoin takes quick dive because of lag factor.
+              </p>
+            </div>
+            <div
+                class="split-item-image"
+                :class="imageFill && 'split-item-image-fill'">
+              <c-image
+                  :src="require('@/assets/images/elasticbitcoin-A-trading-instrument.svg')"
+                  alt="Features split image 03"
+                  :width="528"
+                  :height="396"/>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
-import { SectionSplitProps } from '@/utils/SectionProps.js'
+import {SectionSplitProps} from '@/utils/SectionProps.js'
 import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
 import CImage from '@/components/elements/Image.vue'
 
@@ -101,7 +104,7 @@ export default {
       sectionHeader: {
         title: 'Learn about XBT',
         paragraph:
-          'XBT is a cryptocurrency like Bitcoin, its price target of Bitcoin and its supply change daily'
+            'XBT is a cryptocurrency like Bitcoin, its price target of Bitcoin and its supply change daily'
       }
     }
   }
@@ -110,6 +113,17 @@ export default {
 
 <style scoped>
 .split-item-image > img {
-  box-shadow: none!important;
+  box-shadow: none !important;
 }
+
+@media (max-width: 640px) {
+  .features-split .split-wrap.invert-mobile .split-item .split-item-image {
+    margin-bottom: 32px;
+  }
+
+  .split-item {
+    margin-bottom: 32px
+  }
+}
+
 </style>
