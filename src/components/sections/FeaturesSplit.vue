@@ -124,6 +124,10 @@ export default {
   .split-item {
     margin-bottom: 32px
   }
+
+  .section-header {
+    margin-bottom: 32px
+  }
 }
 
 </style>
