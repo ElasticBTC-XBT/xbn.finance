@@ -60,7 +60,7 @@ export default {
   data() {
     return {
       sectionHeader: {
-        title: '',
+        title: 'What is Elastic Bitcoin (XBT)?',
         paragraph: ''
       },
       sectionDataUpper: [
