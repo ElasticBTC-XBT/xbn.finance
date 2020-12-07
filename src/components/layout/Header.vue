@@ -135,3 +135,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+nav.header-nav li > a {
+  font-weight: 600!important;
+}
+</style>

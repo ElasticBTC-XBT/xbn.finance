@@ -10,12 +10,11 @@
         <c-accordion>
           <c-accordion-item v-for="(faq, index) in faqData" :key="index" :title="`${faq.title}?`" :active="index===0">
             <span v-html="faq.answer"></span>
-            
+
           </c-accordion-item>
         </c-accordion>
       </div>
     </c-generic-section>
-    <c-cta top-divider bottom-divider split/>
   </fragment>
 </template>
 
@@ -27,7 +26,6 @@ import CHeroSplit from '@/components/sections/HeroSplit.vue'
 import CFeaturesSplit from '@/components/sections/FeaturesSplit.vue'
 import CFeaturesTiles from '@/components/sections/FeaturesTiles.vue'
 // import CPricing from '@/components/sections/Pricing.vue'
-import CCta from '@/components/sections/Cta.vue'
 import CGenericSection from '@/components/sections/GenericSection.vue'
 import CAccordion from '@/components/elements/Accordion.vue'
 import CAccordionItem from '@/components/elements/AccordionItem.vue'
@@ -46,7 +44,6 @@ export default {
     CAccordion,
     CAccordionItem,
     CTestimonial,
-    CCta
   },
   data() {
     return {
@@ -54,7 +51,7 @@ export default {
         {
           "title": "When was the XBT pairs launched in Uniswap",
           "answer": "11/11/2020"
-        }, 
+        },
         // {
         //   "title": "Who is the team/devs",
         //   "answer": "The team is anonymous, but a short introduction of every member is available on the website"

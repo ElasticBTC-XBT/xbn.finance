@@ -261,7 +261,6 @@ import CLayout from '@/layouts/LayoutDefault.vue'
 // import sections
 import {SectionProps} from '@/utils/SectionProps.js'
 import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
-
 import CButton from '@/components/elements/Button.vue'
 import CGenericSection from '@/components/sections/GenericSection.vue'
 
