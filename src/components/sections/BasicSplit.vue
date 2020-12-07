@@ -84,23 +84,19 @@ export default {
       sectionContents: [
         {
           image: require('@/assets/images/adaptive-suppy.png'),
-          title: "The number of XBT you own can change each day",
-          description: "The AMPL protocol automatically adjusts supply in response to demand. When price is high, wallet balances increase. When price is low, wallet balances decrease."
+          title: "We can have Bitcoin on Ethereum Network without collateral.",
+          description: "That's true yet very impressive, now you have Bitcoin on Ethereum network without centralized collateral like WBTC. The XBT protocol automatically adjusts supply in response to demand. When price is high, wallet balances increase. When price is low, wallet balances decrease."
         },
         {
           image: require('@/assets/images/risk-diversification.png'),
-          title: "But you can never be diluted by supply inflation",
-          description: "XBT is non-dilutive. Supply adjustments are applied universally and proportionally across every wallet’s balance. This means your percent ownership of the network remains fixed."
+          title: "With XBT, we can have unlimited, not 21 millions, Bitcoin",
+          description: "There are only 21 millions bitcoins but XBT is unlimited, there will be enough XBT for everyone in the earth to own 1 $XBT and 1 $XBT still equal to 1 Bitcoin. Spend a second to think how wonderful it is."
         },
+        
         {
           image: require('@/assets/images/trading-instrument.png'),
-          title: "This Solves The Diversification Problem",
-          description: "Today's cryptocurrenices are dangerously correlated. AMPL's unique incentives allow it to decouple from Bitcoin's price pattern. This reduces systematic risk by adding diversity to a homogeneous ecosystem."
-        },
-        {
-          image: require('@/assets/images/trading-instrument.png'),
-          title: "This Solves The Inelasticity Problem",
-          description: "Like precious metals, today's fixed supply cryptocurrencies are vulnerable to sudden shocks in demand and cannot be used to denominate complex contracts. As a result, sophisticated economies cannot be built upon them. AMPL is the simplest direct solution to the supply inelasticity problem."
+          title: "XBT helps stablizing Bitcoin while contributes to its growth",
+          description: "As XBT grows, its price is not only stablized Bitcoin price, but also it helps stablizing Bitcoin stable because of its elastic & scalable supply. So, when there a lot of demand for bitcoin, XBT can increase supply to meed demand and vice versa."
         },
       ]
     }

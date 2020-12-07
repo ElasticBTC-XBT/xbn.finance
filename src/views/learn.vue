@@ -20,15 +20,18 @@
             <div class="container-xs">
               <c-section-header :data="genericSection01Header" class="center-content"/>
               <div class="button-group">
-                <c-button tag="a" color="primary" wide-mobile href="/basics">
+                    <router-link to="/basics/">
+                <c-button tag="a" color="primary" wide-mobile>
                   Basics
-                </c-button>
-                <c-button tag="a" color="primary" wide-mobile href="/technology">
+                </c-button></router-link>
+                    <router-link to="/technology/">
+                <c-button tag="a" color="primary" wide-mobile>
                   Technology
-                </c-button>
+                </c-button></router-link>
+                 <router-link to="/economics/">
                 <c-button tag="a" color="primary" wide-mobile href="/economics">
                   Economics
-                </c-button>
+                </c-button></router-link>
               </div>
             </div>
           </c-generic-section>
