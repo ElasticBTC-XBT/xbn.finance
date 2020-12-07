@@ -16,48 +16,82 @@
                     bottomDivider && 'has-bottom-divider'
                 ]">
           <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
+          
+             <!-- Another update -->
           <vue-timeline-update
-              :date="new Date('2021-04-31')"
-              title="Publish papers"
-              description="Rollout papers for public"
-              category="announcement"
+              :date="new Date('2020-05-05')"
+              title="Testnet launch"
+              description="XBT has been launched internally for testnet"
+              category="development"
               icon="code"
-              color="white"
+              color="green"
           />
 
           <vue-timeline-update
-              :date="new Date('2021-01-31')"
-              title="Enable Staking"
-              description="Enable staking for XBT liquidity tokens"
-              category="announcement"
-              icon="code"
-              color="white"
-          />
-
-          <vue-timeline-update
-              :date="new Date('2020-12-08')"
+              :date="new Date('2020-11-11')"
               title="Public launch"
-              description="Officially launched on Uniswap"
+              description="XBT Pairs launched on Uniswap"
+              category="launch"
+              icon="code"
+              color="green"
+          />
+
+          
+          <vue-timeline-update
+              :date="new Date('2020-12-12')"
+              title="Public launch"
+              description="Officially launched"
               category="announcement"
               icon="code"
               color="green"
           />
 
-          <!-- Another update -->
+          
           <vue-timeline-update
-              :date="new Date('2019-09-22')"
-              title="Testnet launch"
-              description="XBT has been launched internally for testnet"
-              category="announcement"
+              :date="new Date('2021-01-31')"
+              title="Enable Staking"
+              description="Enable staking for XBT liquidity tokens"
+              category="development"
+              icon="code"
+              color="white"
+          />
+          <vue-timeline-update
+              :date="new Date('2021-03-01')"
+              title="Publish white papers"
+              description="Rollout papers for public"
+              category="research"
               icon="code"
               color="white"
           />
 
+            <vue-timeline-update
+              :date="new Date('2021-04-17')"
+              title="Public launch"
+              description="XBT Fund launching"
+              category="launch"
+              icon="code"
+              color="while"
+          />
+
+            <vue-timeline-update
+              :date="new Date('2020-05-15')"
+              title="Public launch"
+              description="XBT Games launching"
+              category="launch"
+              icon="code"
+              color="while"
+          />
+
+
+
+
+
+       
           <!-- Yet another update -->
           <vue-timeline-update
-              :date="new Date('2018-06-30')"
+              :date="new Date('2021-06-30')"
               title="Academic Research"
-              description="Team is working on a research about how elastic supply model would affect crypto space"
+              description="Team is working on a research about how elastic supply model would affect crypto space and what are best approaches to improve its ecosystem"
               category="Research"
               icon="code"
               color="white"
