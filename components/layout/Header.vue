@@ -37,11 +37,11 @@
                                 <router-link to="/staking/">Staking</router-link>
                             </li>
                             <li>
-                              
+
                                 <router-link to="/cryptounicorns/">Cryptounicorns</router-link>
                             </li>
                             <li>
-                                <router-link to="/xbt-investment-fund/">Investment Fund</router-link>
+                                <router-link to="/xbt-investment-fund/">XBT Fund</router-link>
                             </li>
                         </ul>
                         <ul v-if="!hideSignin" class="list-reset header-nav-right">
