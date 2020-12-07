@@ -92,11 +92,11 @@ export default {
           title: "With XBT, we can have unlimited, not 21 millions, Bitcoin",
           description: "There are only 21 millions bitcoins but XBT is unlimited, there will be enough XBT for everyone in the earth to own 1 $XBT and 1 $XBT still equal to 1 Bitcoin. Spend a second to think how wonderful it is."
         },
-        
+
         {
           image: require('@/assets/images/trading-instrument.png'),
           title: "XBT helps stablizing Bitcoin while contributes to its growth",
-          description: "As XBT grows, its price is not only stablized Bitcoin price, but also it helps stablizing Bitcoin stable because of its elastic & scalable supply. So, when there a lot of demand for bitcoin, XBT can increase supply to meed demand and vice versa."
+          description: "As XBT grows, not only its price is stablized to Bitcoin price, but also it helps Bitcoin stable because of its elastic & scalable supply. So, when there is a lot of demand for bitcoin, XBT can increase its supply to meet demand and vice versa."
         },
       ]
     }

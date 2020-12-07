@@ -16,8 +16,8 @@
                     bottomDivider && 'has-bottom-divider'
                 ]">
           <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
-          
-             <!-- Another update -->
+
+          <!-- Another update -->
           <vue-timeline-update
               :date="new Date('2020-05-05')"
               title="Testnet launch"
@@ -36,7 +36,6 @@
               color="green"
           />
 
-          
           <vue-timeline-update
               :date="new Date('2020-12-12')"
               title="Public launch"
@@ -46,7 +45,6 @@
               color="green"
           />
 
-          
           <vue-timeline-update
               :date="new Date('2021-01-31')"
               title="Enable Staking"
@@ -64,7 +62,7 @@
               color="white"
           />
 
-            <vue-timeline-update
+          <vue-timeline-update
               :date="new Date('2021-04-17')"
               title="Public launch"
               description="XBT Fund launching"
@@ -73,7 +71,7 @@
               color="while"
           />
 
-            <vue-timeline-update
+          <vue-timeline-update
               :date="new Date('2020-05-15')"
               title="Public launch"
               description="XBT Games launching"
@@ -82,11 +80,6 @@
               color="while"
           />
 
-
-
-
-
-       
           <!-- Yet another update -->
           <vue-timeline-update
               :date="new Date('2021-06-30')"
@@ -131,6 +124,6 @@ export default {
 
 <style>
 .gb-vue-timeline-update__center {
- margin-top: 3px
+  margin-top: 3px
 }
 </style>
