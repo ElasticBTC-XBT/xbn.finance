@@ -57,31 +57,31 @@ export default {
         //   "answer": "The team is anonymous, but a short introduction of every member is available on the website"
         // },
         {
-          "title": "When is the whitepaper published?",
+          "title": "When is the whitepaper published",
           "answer": "It is finalizeding and currently in peer review with our advisory team. It will be published in Q1/2021"
         }, {
           "title": "What is the total supply",
           "answer": "The total supply changes constantly. You can see the current supply here: <a href='https://etherscan.io/token/0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8'>here</a>"
         }, {
-          "title": "Has the smart contract been released?",
+          "title": "Has the smart contract been released",
           "answer": "Yes, you can find it <a href='https://github.com/ElasticBTC-XBT/elastic-bitcoin-xbt-contract'>here</a>"
         }, {
-          "title": "When will XBT appear on CoinGecko and Coin Market Cap?",
+          "title": "When will XBT appear on CoinGecko and Coin Market Cap",
           "answer": "We are applying for Coingecko and we are waiting for their approval. After we list XBT on another exchange we will be on Coin Market Cap"
         }, {
-          "title": "Are team wallets locked?",
+          "title": "Are team wallets locked",
           "answer": "Yes, they are locked in a time released contract. They will be unlocked at a rate of 1% each week."
         }, {
-          "title": "Is Uniswap liquidity locked?",
+          "title": "Is Uniswap liquidity locked",
           "answer": "Yes, it is locked through Unicrypt. You can find more information on <a href='https://www.dextools.io/app/uniswap/pair-explorer/0x080cf470ea91532bf5e313acc60c4b0d029409d4'>Dextools</a>"
         }, {
-          "title": "How does the rebase work?",
+          "title": "How does the rebase work",
           "answer": "The rebase happens randomly after 24 hours since the last rebase. The rebase alters every wallets balance by a calculated percentage. If the price is above $BTC 1.05 the rebase is positive and balances increase; if the price is below $BTC 0.95 the rebase is negative and balances decrease.The rebase automatically changes the balance in your wallet. You do not have to stake or do anything. Every wallet where you have access to your private keys is supported"
         }, {
-          "title": "How can user balances change without a transaction?",
+          "title": "How can user balances change without a transaction",
           "answer": "All wallets are updated with a single transaction using Scalar Contract Variables. Your wallet balance is your private supply multiplied by the global split ratio. The more or less it is split, the more or less your balance will be dynamically updated."
         }, {
-          "title": "Can a rebase happen multiple times in one day?",
+          "title": "Can a rebase happen multiple times in one day",
           "answer": "No"
         }, {
           "title": "How is the rebase calculated",
