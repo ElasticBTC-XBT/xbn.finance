@@ -24,14 +24,16 @@
                                 XBT · Elastic Bitcoin with Adaptive Supply
                             </h1>
                             <p class="mt-0 mb-24 reveal-from-left" data-reveal-delay="200">
-                               <em>Why choose stable coins which are inflated?</em>
+                               <em>A rebasing bitcoin cryptocurrency run on ethereum network.</em>
                                 <br/>
                                 <br/>
                                 It's time to know about XBT, it's stabilized to Bitcoin's price by utilized the power of Ethereum's Smart Contract to adjust supply based on market condition.
+                                <br/>
+                                Price of $XBT will be equal to $BTC after 100 days rebasing. 
                             </p>
                             <div class="reveal-from-left" data-reveal-delay="400">
                               <c-button tag="a" color="primary" wide-mobile href="/buy">
-                                Buy XBT
+                                Buy XBT now
                               </c-button>
                             </div>
                         </div>

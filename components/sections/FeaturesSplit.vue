@@ -25,7 +25,7 @@
                                 Adaptive Supply
                             </h3>
                             <p class="m-0">
-                                The number of XBT you own change everyday so that the price of XBT will reach BTC price in 30 days. Your percent ownership of the XBT network remains fixed no matter how supply changes.
+                                The number of XBT you own change everyday so that the price of XBT will reach BTC price in 100 days. Your percent ownership of the XBT network remains fixed no matter how supply changes.
                             </p>
                         </div>
                         <div
@@ -101,7 +101,7 @@ export default {
       sectionHeader: {
         title: 'Learn about XBT',
         paragraph:
-          'XBT is a cryptocurrency like Bitcoin, its price target of Bitcoin and its supply change daily'
+          'XBT is a cryptocurrency like Bitcoin which runs on Ethereum network, its price target of Bitcoin and its supply change daily'
       }
     }
   }

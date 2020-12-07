@@ -24,7 +24,7 @@
                                 XBT · Elastic Bitcoin with Adaptive Supply
                             </h1>
                             <p class="mt-0 mb-24 reveal-from-left" data-reveal-delay="200">
-                               <em>Why choose stable coins which are inflated?</em>
+                               <em>A rebasing bitcoin run on ethereum network.</em>
                                 <br/>
                                 <br/>
                                 It's time to know about XBT, it's stabilized to Bitcoin's price by utilized the power of Ethereum's Smart Contract to adjust supply based on market condition.
