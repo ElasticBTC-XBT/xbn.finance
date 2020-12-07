@@ -46,7 +46,7 @@
                         <ul v-if="!hideSignin" class="list-reset header-nav-right">
 <!--                            <li>-->
 <!--                                <router-link to="/signup/" class="button button-primary button-sm">Trade XBT</router-link>-->
-                              <c-button tag="a" class="button button-primary button-sm" color="primary" wide-mobile target="_blank" href="/buy">
+                              <c-button tag="a" class="button button-primary button-sm" color="primary" wide-mobile href="/buy">
                                 Buy XBT
                               </c-button>
 <!--                            </li>-->

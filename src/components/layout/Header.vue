@@ -44,7 +44,7 @@
                             </li>
                         </ul>
                         <ul class="list-reset header-nav-right">
-                          <c-button tag="a" class="button button-primary button-sm" color="primary" wide-mobile target="_blank" href="/buy">
+                          <c-button tag="a" class="button button-primary button-sm" color="primary" wide-mobile href="/buy">
                             Buy XBT
                           </c-button>
                         </ul>
