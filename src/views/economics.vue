@@ -23,9 +23,10 @@
             <div class="container-xs">
 
               <h4>How it works</h4>
-              <p>
+              <p> As a fork from AMPL, XBT works very similar to it, information from this page are copied, then modified from AMPL.  <br/><br/>
+
                 Varying economic circumstances like recessions, booms, and technological advances, affect how much
-                currency people want to hold. In the case of fixed supply currencies like gold, silver, and Bitcoin,
+                a currency people want to hold. In the case of fixed supply currencies like gold, silver, and Bitcoin,
                 these changes in demand are expressed entirely by changes in the value of the currency.
               </p>
               <p>
@@ -44,10 +45,15 @@
                 Today XBT’s unique volatility pattern makes it a valuable new building block for decentralized finance.
                 Tomorrow XBT can be a better Bitcoin.
               </p>
+
+              <p> You can read more about how an elastic supply coin works from 
+                <a href="https://www.ampleforth.org/economics/">
+                AMPL</a>
+                </p>
             </div>
           </c-generic-section>
 
-          <c-generic-section top-divider>
+          <!-- <c-generic-section top-divider>
             <div class="container-xs">
               <h4>1. Macroeconomics</h4>
               <p>
@@ -228,7 +234,7 @@
                 </c-accordion-item>
               </c-accordion>
             </div>
-          </c-generic-section>
+          </c-generic-section> -->
 
           <c-generic-section top-divider>
             <div class="center-content">
@@ -280,7 +286,7 @@ export default {
     return {
       sectionHeader: {
         title: 'Economics',
-        paragraph: "XBT diversifies a dangerously correlated ecosystem."
+        paragraph: "XBT’s unique volatility pattern makes it a valuable new building block for decentralized finance and XBT can be even a better Bitcoin."
       },
       faqData: [{
         "title": "Rules over Discretion",

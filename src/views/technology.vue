@@ -23,6 +23,9 @@
             <div class="container-xs">
 
               <h4>How it works</h4>
+
+                            <p> As a fork from AMPL, XBT works very similar to it, information from this page are copied, then modified from AMPL<br/>
+
               <p>
                 XBT's smart contract design allows the increase and decrease of supply to be automatically executed
                 without any need for a transfer between peers, and without the need for a bank.
@@ -123,7 +126,7 @@ export default {
     return {
       sectionHeader: {
         title: 'Technology',
-        paragraph: "XBT combines the best of Bitcoin and stablecoins. It is a new decentralized primitive."
+        paragraph: "XBT combines the best of Bitcoin and Smart Contract on Ethereum network."
       },
       faqData: [{
         "title": "Algorithmic",
