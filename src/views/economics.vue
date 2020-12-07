@@ -46,7 +46,7 @@
                 Tomorrow XBT can be a better Bitcoin.
               </p>
 
-              <p> You can read more about how an elastic supply coin works from 
+              <p> You can read more about how an elastic supply coin works from
                 <a href="https://www.ampleforth.org/economics/">
                 AMPL</a>
                 </p>
@@ -261,19 +261,13 @@ import CLayout from '@/layouts/LayoutDefault.vue'
 // import sections
 import {SectionProps} from '@/utils/SectionProps.js'
 import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
-import CImage from '@/components/elements/Image.vue'
 
-import CAccordion from '@/components/elements/Accordion.vue'
-import CAccordionItem from '@/components/elements/AccordionItem.vue'
 import CButton from '@/components/elements/Button.vue'
 import CGenericSection from '@/components/sections/GenericSection.vue'
 
 export default {
   name: 'Login',
   components: {
-    CImage,
-    CAccordion,
-    CAccordionItem,
     CGenericSection,
     CSectionHeader,
     CButton
