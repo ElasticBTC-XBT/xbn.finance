@@ -19,16 +19,16 @@
           <c-generic-section top-divider>
             <div class="container-xs">
               <h4>About XBT Governance</h4>
-              <p>
+              <p>XBT learns Governacen model from AMPL and will upgrade when needed. <br/><br/>
                 The XBT protocol is governed through a series of sequential steps, each representing increasing levels
-                of consensus from the community. Proposals and ideas are surfaced on the discord or our public forum,
+                of consensus from the community. Proposals and ideas are surfaced on the Telegram or Twitter,
                 and are finalised when they are deployed onchain. The progression of increasingly binding consensus can
                 be seen below.
               </p>
               <h4>Discussion</h4>
               <p>
                 The highest level discussions may surface ideas in many places including (but not limited to) the
-                #governance channel on discord, AmplTalk Forum, social media, or community DAOs. When it appears that
+                Telegram and Twitter/Reddit. When it appears that
                 there is enough general support, a champion may formalize the idea by submitting an Ampleforth
                 Improvement Proposal (AIP) or Configuration Change Proposal (ACCP).
               </p>
@@ -37,15 +37,14 @@
               </h4>
               <p>
                 AIPs and ACCPs are formal documents that describe the proposed change to the protocol or protocol
-                configuration. https://aips.ampleforth.org/.
+                configuration.
               </p>
               <h4>
                 Targeted Discussion
               </h4>
               <p>
                 Each proposal has a dedicated github issue where outcome-driven discussion takes place. The goal at this
-                step is to finalize any unresolved issues and formalize offchain consensus.
-                https://github.com/ampleforth/AIPs/issues.
+                step is to finalize any unresolved issues and formalize offchain consensus. Everything will be documented at XBT Github https://github.com/ElasticBTC-XBT/
               </p>
               <h4>
                 Onchain Signaling
@@ -53,7 +52,7 @@
               <p>
                 If the previous step did not arrive at obvious consensus, sentiment may be gathered in a non-binding way
                 via onchain signaling from token holders. This provides more insight into the likelihood of the outcome
-                of the final binding vote. https://snapshot.page/#/ampleforth.
+                of the final binding vote. 
               </p>
               <h4>
                 Technical Development
