@@ -90,7 +90,7 @@ export default {
           "title": "What is the lag factor",
           "answer": "A randomized, curved lag factor is used to calculate supply increases and decreases when a rebase happens. This makes rebase events more unpredictable. The curve allows supply to increase at a faster rate when the total market cap is low. The lag factor depends on the total supply. The higher the supply is, the higher is the possible lag factor. Minimum is 6 and maximum is 100."
         }, {
-          "title": "What is the XBT LP Stakeking",
+          "title": "What is the XBT LP Staking",
           "answer": "The XBT LP Staking offers a solution to incentive liquidity provision on Uniswap. Once you have provided liquidity for XBT on Uniswap, you will receive UNI-V2 tokens, which you can stake on the XBT Staking dashboard. Depending on the amount of staked tokens and the duration of your stake, you will receive a share of the XBT ecosystem pool.The pool is unlocked over time and distributed to each staker according to his weight in the network."
         }
       ]
