@@ -87,7 +87,7 @@ a {
 	&.func-link {
 		@include anchor-aspect(func-link);
 		@include font-weight(func-link);
-		text-transform: $link-func--transform;		
+		text-transform: $link-func--transform;
 	}
 }
 
@@ -214,7 +214,7 @@ strong {
 
 		&.func-link {
 			@include anchor-aspect(func-link, inverse);
-		}		
+		}
 	}
 
 	h1, h2, h3, h4, h5, h6,
@@ -248,11 +248,11 @@ strong {
 	.h4-mobile {
 		@include font-size(h4);
 	}
-	
+
 	.h5-mobile {
 		@include font-size(base);
 	}
-	
+
 	.h6-mobile {
 		@include font-size(sm);
 	}
@@ -282,13 +282,13 @@ strong {
 	h4,
 	.h4 {
 		@include font-size(h4-desktop);
-	}	
+	}
 
 	h5,
 	.h5 {
 		@include font-size(base-desktop);
 	}
-	
+
 	h6,
 	.h6,
 	small,

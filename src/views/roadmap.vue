@@ -8,7 +8,7 @@
             hasBgColor && 'has-bg-color',
             invertColor && 'invert-color'
         ]">
-      <div class="container">
+      <div class="container flex-center">
         <div
             class="signin-inner section-inner"
             :class="[
@@ -23,8 +23,8 @@
               title="Testnet launch"
               description="XBT has been launched internally for testnet"
               category="development"
-              icon="code"
-              color="green"
+              color="orange"
+              class="active"
           />
 
           <vue-timeline-update
@@ -32,8 +32,8 @@
               title="Public launch"
               description="XBT Pairs launched on Uniswap"
               category="launch"
-              icon="code"
-              color="green"
+              color="orange"
+              class="active"
           />
 
           <vue-timeline-update
@@ -41,8 +41,8 @@
               title="Public launch"
               description="Officially launched"
               category="announcement"
-              icon="code"
-              color="green"
+              color="orange"
+              class="active"
           />
 
           <vue-timeline-update
@@ -50,16 +50,15 @@
               title="Enable Staking"
               description="Enable staking for XBT liquidity tokens"
               category="development"
-              icon="code"
-              color="white"
+              color="black"
           />
+
           <vue-timeline-update
               :date="new Date('2021-03-01')"
               title="Publish white papers"
               description="Rollout papers for public"
               category="research"
-              icon="code"
-              color="white"
+              color="black"
           />
 
           <vue-timeline-update
@@ -67,8 +66,7 @@
               title="Public launch"
               description="XBT Fund launching"
               category="launch"
-              icon="code"
-              color="while"
+              color="black"
           />
 
           <vue-timeline-update
@@ -76,8 +74,7 @@
               title="Public launch"
               description="XBT Games launching"
               category="launch"
-              icon="code"
-              color="while"
+              color="black"
           />
 
           <!-- Yet another update -->
@@ -86,11 +83,10 @@
               title="Academic Research"
               description="Team is working on a research about how elastic supply model would affect crypto space and what are best approaches to improve its ecosystem"
               category="Research"
-              icon="code"
-              color="white"
-              is-last
+              color="black"
           />
         </div>
+        <img class="roadmap-pic" :src="require('@/assets/images/roadmap-page.png')" />
       </div>
     </section>
   </div>
@@ -123,7 +119,114 @@ export default {
 </script>
 
 <style>
+
+@media (min-width: 641px) {
+  .gb-base-badge {
+    padding-bottom: 8px!important;
+  }
+}
+
+@media (max-width: 640px) {
+  .gb-vue-timeline-update__ago {
+    margin-left: 16px;
+  }
+
+  .gb-vue-timeline-content__right {
+    margin-top: 0!important;
+  }
+
+  .gb-base-badge {
+    padding-bottom: 0!important;
+  }
+}
+
+.roadmap-pic {
+  margin-top: 160px;
+  width: 40%;
+  margin-left: 32px;
+}
+
+.active .gb-vue-timeline-update__line {
+  background-color: orange !important;
+}
+
+.gb-vue-timeline-update--dark .gb-vue-timeline-update__center .gb-vue-timeline-update__line {
+  width: 2px !important;
+}
+
+.gb-vue-timeline-update--dark .gb-vue-timeline-update__center .gb-vue-timeline-update__bullet {
+  box-shadow: none !important;
+}
+
+.gb-vue-timeline-update {
+  font-family: inherit !important;
+}
+
+.gb-vue-timeline-update__description {
+  color: #aca8a8 !important;
+}
+
+.gb-vue-timeline-content__right {
+  padding: 16px 12px;
+  background: #fff;
+  border-radius: 8px;
+  z-index: 99;
+  position: relative;
+  margin-top: -8px;
+}
+
+.gb-vue-timeline-update .gb-vue-timeline-update__left {
+  text-align: center !important;
+}
+
+.gb-vue-timeline-update .gb-vue-timeline-update__right {
+  box-shadow: 0px 16px 21px -23px #18191a;
+  flex: 1;
+  margin-bottom: 40px;
+  padding-bottom: 0 !important;
+}
+
+.gb-vue-timeline-update__ago {
+  margin-right: 6px;
+  width: 100%;
+  color: #1b2431!important;
+}
+
+.gb-vue-timeline-update .gb-vue-timeline-update__center {
+  margin-left: 18px !important;
+}
+
+.gb-vue-timeline-update h1, .gb-vue-timeline-update h2 {
+  margin: 0;
+}
+
 .gb-vue-timeline-update__center {
   margin-top: 3px
+}
+
+.gb-vue-timeline-update__meta {
+  width: 100%;
+}
+
+.gb-vue-timeline-update .gb-vue-timeline-update__right .gb-vue-timeline-update__information .gb-vue-timeline-update__meta {
+  margin: 0 !important;
+  display: block !important;
+}
+
+.gb-vue-timeline-update--dark .gb-vue-timeline-update__right .gb-vue-timeline-update__information .gb-vue-timeline-update__meta .gb-vue-timeline-update__category {
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.gb-base-badge {
+  border-radius: 5px !important;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  font-family: inherit !important;
 }
 </style>
