@@ -155,7 +155,7 @@ export default {
 }
 
 .roadmap-pic {
-  margin-top: 160px;
+  margin-top: 140px;
   width: 50%;
   margin-left: 32px;
 }
