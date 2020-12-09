@@ -138,6 +138,13 @@ export default {
   .gb-base-badge {
     padding-bottom: 0!important;
   }
+
+  .roadmap-pic {
+    margin-top: 0px!important;
+    width: 100% !important;
+    margin-left: 0!important;
+    margin-bottom: 48px
+  }
 }
 
 .roadmap-pic {
@@ -170,7 +177,7 @@ export default {
   padding: 16px 12px;
   background: #fff;
   border-radius: 8px;
-  z-index: 99;
+  z-index: 1;
   position: relative;
   margin-top: -8px;
 }
@@ -180,7 +187,7 @@ export default {
 }
 
 .gb-vue-timeline-update .gb-vue-timeline-update__right {
-  box-shadow: 0px 16px 21px -23px #18191a;
+  box-shadow: 0px 8px 21px -23px #18191a;
   flex: 1;
   margin-bottom: 40px;
   padding-bottom: 0 !important;
