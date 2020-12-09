@@ -248,4 +248,8 @@ export default {
   align-items: center;
   font-family: inherit !important;
 }
+
+article.gb-vue-timeline-update:last-child .gb-vue-timeline-update__line {
+  display: none;
+}
 </style>
