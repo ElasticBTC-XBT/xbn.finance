@@ -15,6 +15,8 @@
                     topDivider && 'has-top-divider',
                     bottomDivider && 'has-bottom-divider'
                 ]">
+          <img class="roadmap-pic-mobile" :src="require('@/assets/images/roadmap-page.png')" />
+
           <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
 
           <!-- Another update -->
@@ -139,18 +141,27 @@ export default {
     padding-bottom: 0!important;
   }
 
-  .roadmap-pic {
+  .roadmap-pic-mobile {
     margin-top: 0px!important;
     width: 100% !important;
     margin-left: 0!important;
-    margin-bottom: 48px
+    margin-bottom: 48px;
+    display: inherit!important;
+  }
+
+  .roadmap-pic {
+    display: none;
   }
 }
 
 .roadmap-pic {
   margin-top: 160px;
-  width: 40%;
+  width: 50%;
   margin-left: 32px;
+}
+
+.roadmap-pic-mobile {
+  display: none;
 }
 
 .active .gb-vue-timeline-update__line {
@@ -187,7 +198,8 @@ export default {
 }
 
 .gb-vue-timeline-update .gb-vue-timeline-update__right {
-  box-shadow: 0px 8px 21px -23px #18191a;
+  /*box-shadow: 0px 8px 21px -23px #18191a;*/
+  box-shadow: 0px 0px 50px 0px rgba(11, 11, 12, 0.05);
   flex: 1;
   margin-bottom: 40px;
   padding-bottom: 0 !important;
