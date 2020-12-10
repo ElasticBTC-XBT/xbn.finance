@@ -72,7 +72,7 @@
           />
 
           <vue-timeline-update
-              :date="new Date('2020-05-15')"
+              :date="new Date('2021-05-15')"
               title="Public launch"
               description="XBT Games launching"
               category="launch"
