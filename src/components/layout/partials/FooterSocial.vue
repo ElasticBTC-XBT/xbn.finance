@@ -48,7 +48,8 @@
 </template>
 
 <script>
+
 export default {
-  name: 'CFooterSocial'
+  name: 'CFooterSocial',
 }
 </script>

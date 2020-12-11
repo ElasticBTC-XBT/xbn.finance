@@ -1,58 +1,58 @@
 <template>
-    <header class="site-header">
-        <div class="container">
-            <div class="site-header-inner" :class="bottomDivider && 'has-bottom-divider'">
-                <c-logo />
-                <button
-                    v-if="!hideNav"
-                    ref="hamburger"
-                    class="header-nav-toggle"
-                    aria-controls="primary-menu"
-                    :aria-expanded="isActive ? 'true' : 'false'"
-                    @click="isActive ? closeMenu() : openMenu()">
-                    <span class="screen-reader">Menu</span>
-                    <span class="hamburger">
+  <header class="site-header">
+    <div class="container">
+      <div class="site-header-inner" :class="bottomDivider && 'has-bottom-divider'">
+        <c-logo/>
+        <button
+            v-if="!hideNav"
+            ref="hamburger"
+            class="header-nav-toggle"
+            aria-controls="primary-menu"
+            :aria-expanded="isActive ? 'true' : 'false'"
+            @click="isActive ? closeMenu() : openMenu()">
+          <span class="screen-reader">Menu</span>
+          <span class="hamburger">
                         <span class="hamburger-inner"></span>
                     </span>
-                </button>
-                <nav
-                    v-if="!hideNav"
-                    ref="nav"
-                    class="header-nav"
-                    :class="{ 'is-active': isActive }">
-                    <div class="header-nav-inner">
-                        <ul
-                            class="list-reset text-xxs"
-                            :class="navPosition && `header-nav-${navPosition}`">
-                            <li>
-                                <router-link to="/learn/">Learn</router-link>
-                            </li>
-                            <li>
-                                <router-link to="/governance/">Governance</router-link>
-                            </li>
-                            <li>
-                                <router-link to="/roadmap/">Roadmap</router-link>
-                            </li>
-                            <li>
-                                <router-link to="/staking/">Staking</router-link>
-                            </li>
-                            <li>
-                                <router-link to="/cryptounicorns/">Cryptounicorns</router-link>
-                            </li>
-                            <li>
-                                <router-link to="/xbt-investment-fund/">Investment Fund</router-link>
-                            </li>
-                        </ul>
-                        <ul class="list-reset header-nav-right">
-                          <c-button tag="a" class="button button-primary button-sm" color="primary" wide-mobile href="/buy">
-                            Buy XBT
-                          </c-button>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </header>
+        </button>
+        <nav
+            v-if="!hideNav"
+            ref="nav"
+            class="header-nav"
+            :class="{ 'is-active': isActive }">
+          <div class="header-nav-inner">
+            <ul
+                class="list-reset text-xxs"
+                :class="navPosition && `header-nav-${navPosition}`">
+              <li @click="closeMenu">
+                <router-link to="/learn/">Learn</router-link>
+              </li>
+              <li @click="closeMenu">
+                <router-link to="/governance/">Governance</router-link>
+              </li>
+              <li @click="closeMenu">
+                <router-link to="/roadmap/">Roadmap</router-link>
+              </li>
+              <li @click="closeMenu">
+                <router-link to="/staking/">Staking</router-link>
+              </li>
+              <li @click="closeMenu">
+                <router-link to="/cryptounicorns/">Cryptounicorns</router-link>
+              </li>
+              <li @click="closeMenu">
+                <router-link to="/xbt-investment-fund/">Investment Fund</router-link>
+              </li>
+            </ul>
+            <ul class="list-reset header-nav-right">
+              <c-button tag="a" class="button button-primary button-sm" color="primary" wide-mobile href="/buy">
+                Buy XBT
+              </c-button>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
 </template>
 
 <script>
@@ -115,9 +115,9 @@ export default {
     clickOutside(e) {
       if (!this.$refs.nav) return
       if (
-        !this.isActive ||
-        this.$refs.nav.contains(e.target) ||
-        e.target === this.$refs.hamburger
+          !this.isActive ||
+          this.$refs.nav.contains(e.target) ||
+          e.target === this.$refs.hamburger
       )
         return
       this.closeMenu()
@@ -138,6 +138,6 @@ export default {
 
 <style scoped>
 nav.header-nav li > a {
-  font-weight: 600!important;
+  font-weight: 600 !important;
 }
 </style>

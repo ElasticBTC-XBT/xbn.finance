@@ -29,7 +29,7 @@
               </p>
             </div>
             <div
-                class="split-item-image is-3d illustration-element-03"
+                class="split-item-image illustration-element-03"
                 :class="imageFill && 'split-item-image-fill'">
               <c-image
                   :src="item.image"
@@ -83,18 +83,18 @@ export default {
       },
       sectionContents: [
         {
-          image: require('@/assets/images/adaptive-suppy.png'),
+          image: require('@/assets/images/basic-learn-icon-01.svg'),
           title: "We can have Bitcoin on Ethereum Network without collateral.",
           description: "That's true yet very impressive, now you have Bitcoin on Ethereum network without centralized collateral like WBTC. The XBT protocol automatically adjusts supply in response to demand. When price is high, wallet balances increase. When price is low, wallet balances decrease."
         },
         {
-          image: require('@/assets/images/risk-diversification.png'),
+          image: require('@/assets/images/basic-learn-icon-02.svg'),
           title: "With XBT, we can have unlimited, not 21 millions, Bitcoin",
           description: "There are only 21 millions bitcoins but XBT is unlimited, there will be enough XBT for everyone in the earth to own 1 $XBT and 1 $XBT still equal to 1 Bitcoin. Spend a second to think how wonderful it is."
         },
 
         {
-          image: require('@/assets/images/trading-instrument.png'),
+          image: require('@/assets/images/basic-learn-icon-03.svg'),
           title: "XBT helps stablizing Bitcoin while contributes to its growth",
           description: "As XBT grows, not only its price is stablized to Bitcoin price, but also it helps Bitcoin stable because of its elastic & scalable supply. So, when there is a lot of demand for bitcoin, XBT can increase its supply to meet demand and vice versa."
         },

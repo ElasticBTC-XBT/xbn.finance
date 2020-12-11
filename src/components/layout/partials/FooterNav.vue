@@ -1,6 +1,6 @@
 <template>
   <nav class="footer-nav">
-    <ul class="list-reset">
+    <ul class="list-reset finance-listing">
       <li>
         <a href="https://etherscan.io/token/0x64fB96d0395f6bf105F35233911e3dF2C5bf4Ce8" target="_blank"
            class="flex-center">
@@ -66,6 +66,29 @@
 
           <span class="ml-4">Uniswap</span>
         </a>
+
+      </li>
+      <li>
+        <a data-control-name="nav.homepage" href="https://team.finance/view-coin/0x64fB96d0395f6bf105F35233911e3dF2C5bf4Ce8?name=Elastic%20Bitcoin&symbol=XBT" target="_blank"
+           class="mg-t-8 ember-view">
+          <c-image
+              :src="require('@/assets/images/token-logo.jpg')"
+              alt="Features split image 01"
+              :height="24"
+          />
+          <span class="ml-8">Team Lock</span>
+        </a>
+      </li>
+      <li>
+        <a data-control-name="nav.homepage" href="https://v2.unicrypt.network/pair/0x080cf470ea91532bf5e313acc60c4b0d029409d4" target="_blank"
+           class="mg-t-8 ember-view">
+          <c-image
+              :src="require('@/assets/images/black_wings.7e08b933.svg')"
+              alt="Features split image 01"
+              :height="24"
+          />
+          <span class="ml-8">Unicrypt</span>
+        </a>
       </li>
 
     </ul>
@@ -95,9 +118,12 @@ export default {
   .footer-nav li {
     margin-bottom: 16px;
   }
+
   .footer-nav li svg, .footer-nav li img {
     margin: 0;
   }
 }
-
+img {
+  height: 24px;
+}
 </style>

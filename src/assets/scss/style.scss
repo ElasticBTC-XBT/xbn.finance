@@ -166,3 +166,13 @@
 .countDown__cont {
 	font-family: inherit!important;
 }
+
+.button-group > a {
+  text-decoration: none!important;
+}
+
+@media (max-width: 640px) {
+ .body-wrap {
+   padding-bottom: 48px;
+ }
+}
