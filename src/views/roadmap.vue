@@ -18,7 +18,15 @@
           <img class="roadmap-pic-mobile" :src="require('@/assets/images/roadmap-page.png')" />
 
           <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
-
+          <!-- Yet another update -->
+          <vue-timeline-update
+              :date="new Date('2020-03-30')"
+              title="Academic Research"
+              description="The team conducted researches on how elastic supply model would affect crypto space and what are best approaches to improve its ecosystem"
+              category="Research"
+              color="orange"
+              class="active"
+          />
           <!-- Another update -->
           <vue-timeline-update
               :date="new Date('2020-05-05')"
@@ -50,15 +58,15 @@
           <vue-timeline-update
               :date="new Date('2021-01-31')"
               title="Enable Staking"
-              description="Enable staking for XBT liquidity tokens"
+              description="Enable staking XBT liquidity tokens"
               category="development"
               color="black"
           />
 
           <vue-timeline-update
               :date="new Date('2021-03-01')"
-              title="Publish white papers"
-              description="Rollout papers for public"
+              title="Publish whitepaper"
+              description="The team will launch XBT Whitepaper for public audiences"
               category="research"
               color="black"
           />
@@ -66,7 +74,7 @@
           <vue-timeline-update
               :date="new Date('2021-04-17')"
               title="Public launch"
-              description="XBT Fund launching"
+              description="Launch XBT Foundation Fund"
               category="launch"
               color="black"
           />
@@ -74,17 +82,26 @@
           <vue-timeline-update
               :date="new Date('2021-05-15')"
               title="Public launch"
-              description="XBT Games launching"
+              description="Launch games which are built on top of XBT"
               category="launch"
               color="black"
           />
 
           <!-- Yet another update -->
           <vue-timeline-update
-              :date="new Date('2021-06-30')"
-              title="Academic Research"
-              description="Team is working on a research about how elastic supply model would affect crypto space and what are best approaches to improve its ecosystem"
-              category="Research"
+              :date="new Date('2022-01-30')"
+              title="Launch on top exchanges"
+              description="The team aims to launch XBT on top exchanges, which helps increase mass adoption for XBT"
+              category="Growth"
+              color="black"
+          />
+
+          <!-- Yet another update -->
+          <vue-timeline-update
+              :date="new Date('2022-12-30')"
+              title="Launch on Tron Chain and Binance Chain"
+              description="XBT will become a multi-chain system with its unique elastic-supply model"
+              category="Growth"
               color="black"
           />
         </div>
