@@ -1,0 +1,351 @@
+{
+  "header": {
+    "learn": "Learn",
+    "governance": "Governance",
+    "roadmap": "Roadmap",
+    "staking": "Staking",
+    "cryptounicorns": "Cryptounicorns",
+    "investment_fund": "Investment Fund",
+    "buy": " Buy"
+  },
+  "home": {
+    "hero_split": {
+      "title_1": "XBT · Elastic Bitcoin with Adaptive Supply",
+      "desc_1": "A rebasing bitcoin cryptocurrency runs on ethereum network.",
+      "desc_2": "It's time to know about XBT, it's stabilized to Bitcoin's price by utilized the power of Ethereum's Smart Contract to adjust supply based on market condition.",
+      "desc_3": "Price of $XBT will be equal to $BTC after 100 days rebasing.",
+      "buy_xbt": "Buy XBT now"
+    },
+    "features_tiles": {
+      "section_header_title": "What is Elastic Bitcoin (XBT)?",
+      "section_data_upper": {
+        "item_1": {
+          "title": "A special DeFi protocol",
+          "desc": "XBT is forked from $AMPL, a DeFi protocol with an elastic supply model. The total supply of XBT is constantly changing every day."
+        },
+        "item_2": {
+          "title": "Rebasing is randomized",
+          "desc": "To avoid price manipulation, XBT rebasing is randomized with lag factor. XBT will reach a supply-price equilibrium, the volatility is in the token supply, not the price."
+        },
+        "item_3": {
+          "title": "Price target of 1 $BTC",
+          "desc": "$XBT is designed to maintain its base price target of 1 $BTC after 100 days."
+        },
+        "item_4": {
+          "title": "With more holders, XBT is still equal to $BTC but has the bigger market cap",
+          "desc": "XBT Holders own a percentage of the network. Their holding values rise as market cap rises."
+        },
+        "item_5": {
+          "title": "What is a rebase event?",
+          "desc": "A rebase event is the event of adjusting the balance of all wallets based on the current price of the coin related to the target price of 1 bitcoin"
+        },
+        "item_6": {
+          "title": "What is rebase lag factor?",
+          "desc": "The Rebase Lag Factor helps to smooth changes, a lower Lag Factor means faster adjustments and vise versa"
+        }
+      }
+    },
+    "testimonial": {
+      "section_header": {
+        "title": "XBT Foundation Team",
+        "paragraph": "The XBT Foundation (XF) is a non-profit organization dedicated to supporting XBT and related technologies, their role is not to control but contribue to XBT's growth"
+      },
+      "team_data": {
+        "item_1": {
+          "desc": "20 years experience in software engineering. Smart contract builder, crypto-asset trading bot developer. Serial entrepreneur who enjoys the rolling coaster of building new things!"
+        },
+        "item_2": {
+          "desc": "I lead and provide everything data. Tailored. Scalable. Automated."
+        },
+        "item_3": {
+          "desc": "I have a great passion for product development"
+        },
+        "item_4": {
+          "desc": "The expectation of customers on the product design is increasing rapidly in terms of quality and timely manner. My goal is to meet customer demands with user-friendly an modern design by expertising strong UX UI design, user centered design and software testing."
+        },
+        "item_5": {
+          "desc": "Joined software engineering for 5 years. Doing full-stack stuffs: mobile, backend, frontend, and DevOps development. My lifetime goal is to become a human-expert in my own life journey. Have been fallen in love with bootstrapped startups and cryptocurrency. Currently, I'm running a business with my friends @ activators.dev and doing dApp specialist @ elasticbitcoin.org"
+        }
+      }
+    },
+    "features_split": {
+      "section_header": {
+        "title": "Learn about XBT",
+        "paragraph": "XBT is a cryptocurrency like Bitcoin which runs on Ethereum network, its price target of Bitcoin and its supply change daily"
+      },
+      "title_1": "Adaptive Supply",
+      "title_2": "Risk diversification",
+      "title_3": "A trading instrument",
+      "desc_1": "The number of XBT you own change everyday so that the price of XBT will reach BTC price in 100 days. Your percent ownership of the XBT network remains fixed no matter how supply changes.",
+      "desc_2": "This reduce risk of correlation of Altcoins (such as ETH, LINK...) and Bitcoin in your porfolio because their is 30 days lag between XBT's and BTC's prices.",
+      "desc_3": "As a trading instrument, XBT has many advantages, own XBT you can catch the hype of Bitcoin's price growth, but also reduce the risk when Bitcoin takes quick dive because of lag factor."
+    },
+    "faq_data": {
+      "item_1": {
+        "title": "When was the XBT pairs launched in Uniswap",
+        "answer": "11/11/2020"
+      },
+      "item_2": {
+        "title": "When is the whitepaper published",
+        "answer": "It is finalizeding and currently in peer review with our advisory team. It will be published in Q1/2021"
+      },
+      "item_3": {
+        "title": "What is the total supply",
+        "answer": "The total supply changes constantly. You can see the current supply here: <a href='https://etherscan.io/token/0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8'>here</a>"
+      },
+      "item_4": {
+        "title": "Has the smart contract been released",
+        "answer": "Yes, you can find it <a href='https://github.com/ElasticBTC-XBT/elastic-bitcoin-xbt-contract'>here</a>"
+      },
+      "item_5": {
+        "title": "When will XBT appear on CoinGecko and Coin Market Cap",
+        "answer": "We are applying for Coingecko and we are waiting for their approval. After we list XBT on another exchange we will be on Coin Market Cap"
+      },
+      "item_6": {
+        "title": "Are team wallets locked",
+        "answer": "Yes, they are locked in a time released contract. They will be unlocked at a rate of 1% each week."
+      },
+      "item_7": {
+        "title": "Is Uniswap liquidity locked",
+        "answer": "Yes, it is locked through Unicrypt. You can find more information on <a href='https://www.dextools.io/app/uniswap/pair-explorer/0x080cf470ea91532bf5e313acc60c4b0d029409d4'>Dextools</a>"
+      },
+      "item_8": {
+        "title": "How does the rebase work",
+        "answer": "The rebase happens randomly after 24 hours since the last rebase. The rebase alters every wallets balance by a calculated percentage. If the price is above $BTC 1.05 the rebase is positive and balances increase; if the price is below $BTC 0.95 the rebase is negative and balances decrease.The rebase automatically changes the balance in your wallet. You do not have to stake or do anything. Every wallet where you have access to your private keys is supported"
+      },
+      "item_9": {
+        "title": "How can user balances change without a transaction",
+        "answer": "All wallets are updated with a single transaction using Scalar Contract Variables. Your wallet balance is your private supply multiplied by the global split ratio. The more or less it is split, the more or less your balance will be dynamically updated."
+      },
+      "item_10": {
+        "title": "Can a rebase happen multiple times in one day",
+        "answer": "No"
+      },
+      "item_11": {
+        "title": "How is the rebase calculated",
+        "answer": "(current price – base target price) * wallet balance / (base target price * lag factor)  <br/>Example: At a current price of $BTC 1.30, lag factor 10.00, the updated wallet balance would be adjusted by: (1.30 – 1) * 100 / (1 * 10) = 3 . The new wallet balance would be 103 $XBT."
+      },
+      "item_12": {
+        "title": "What is the lag factor",
+        "answer": "A randomized, curved lag factor is used to calculate supply increases and decreases when a rebase happens. This makes rebase events more unpredictable. The curve allows supply to increase at a faster rate when the total market cap is low. The lag factor depends on the total supply. The higher the supply is, the higher is the possible lag factor. Minimum is 6 and maximum is 100."
+      },
+      "item_13": {
+        "title": "What is the XBT LP Staking",
+        "answer": "The XBT LP Staking offers a solution to incentive liquidity provision on Uniswap. Once you have provided liquidity for XBT on Uniswap, you will receive UNI-V2 tokens, which you can stake on the XBT Staking dashboard. Depending on the amount of staked tokens and the duration of your stake, you will receive a share of the XBT ecosystem pool.The pool is unlocked over time and distributed to each staker according to his weight in the network."
+      }
+    }
+  },
+  "cta": {
+    "title": "Become a part of XBT community today!",
+    "buy_xbt": "Buy XBT"
+  },
+  "learn": {
+    "section_header": {
+      "title": "Learn about XBT"
+    },
+    "basic": "Basics",
+    "technology": "Technology",
+    "economics": "Economics"
+  },
+  "basic_split": {
+    "section_header": {
+      "title": "Learn about XBT",
+      "paragraph": "XBT is a cryptocurrency like Bitcoin, its price target of Bitcoin and its supply change daily"
+    },
+    "section_contents": {
+      "item_1": {
+        "title": "We can have Bitcoin on Ethereum Network without collateral.",
+        "description": "That's true yet very impressive, now you have Bitcoin on Ethereum network without centralized collateral like WBTC. The XBT protocol automatically adjusts supply in response to demand. When price is high, wallet balances increase. When price is low, wallet balances decrease."
+      },
+      "item_2": {
+        "title": "With XBT, we can have unlimited, not 21 millions, Bitcoin",
+        "description": "There are only 21 millions bitcoins but XBT is unlimited, there will be enough XBT for everyone in the earth to own 1 $XBT and 1 $XBT still equal to 1 Bitcoin. Spend a second to think how wonderful it is."
+      },
+      "item_3": {
+        "title": "XBT helps stablizing Bitcoin while contributes to its growth",
+        "description": "As XBT grows, not only its price is stablized to Bitcoin price, but also it helps Bitcoin stable because of its elastic & scalable supply. So, when there is a lot of demand for bitcoin, XBT can increase its supply to meet demand and vice versa."
+      }
+    },
+    "learn_basic": "Learn Basics",
+    "learn_technology": "Learn Technology",
+    "learn_economics": "Learn Economics"
+  },
+  "technology": {
+    "title_1": "How it works",
+    "title_2": "Information Flow",
+    "title_3": "Core Features & Capabilities",
+    "desc_1": "As a fork from AMPL, XBT works very similar to it, information from this page are copied, then modified from AMPL",
+    "desc_1_5": "XBT's smart contract design allows the increase and decrease of supply to be automatically executed without any need for a transfer between peers, and without the need for a bank.",
+    "desc_2": "The monetary protocol automatically adjusts the supply of XBT across all user wallets based on price. This means the number of XBT you own changes based on market conditions. When price is high wallet balances automatically increase. When price is low wallet balances automatically decrease. This supply adjustment operation happens once per day and is called a rebase.",
+    "desc_3": "This daily rebase operation is applied universally and proportionally across every wallet’s balance. This means XBT is non-dilutive. Like Bitcoin, if you own 1% of the overall network you will always own 1% unless you actively make a transfer.",
+    "desc_4": "At a high level, the policy contract reflects price changes in the market as supply changes in wallet balances. This in-turn incentivizes market actors to adjust price. Price informs supply algorithmically and supply informs price behaviorally, in a cycle.",
+    "section_header": {
+      "title": "Technology",
+      "paragraph": "XBT combines the best of Bitcoin and Smart Contract on Ethereum network."
+    },
+    "faq_data": {
+      "item_1": {
+        "title": "Algorithmic",
+        "description": "The protocol rules are encoded in smart contracts on Ethereum. Rules-based policies allow for predictable actions and measurable responses, and are effective checks against discretionary monetary policies."
+      },
+      "item_2": {
+        "title": "Non Dilutive",
+        "description": "If you own 1% of the network, you’ll always own 1%. No party extracts value and there are no added transaction fees."
+      },
+      "item_3": {
+        "title": "Bankless",
+        "description": "XBT is a base money, there is no notion of debt or credit in the system. It does not rely on open debt markets or lenders of last resort"
+      },
+      "item_4": {
+        "title": "Simple Incentives",
+        "description": "A simple system is transparent and easy to understand. The XBT protocol has only two rules for expansion and contraction, and depends solely on profit-seeking actors in the marketplace to reach equilibrium."
+      },
+      "item_5": {
+        "title": "Non Custodial",
+        "description": "Ownership is accounted for natively on the blockchain. No custody is taken of outside assets or collateral."
+      },
+      "item_6": {
+        "title": "Minimal Governance",
+        "description": "XBT was designed to minimize the need for governance. No governance exists within the loop of supply adjustments because there are no interest rates to adjust or markets to balance."
+      },
+      "item_7": {
+        "title": "Distinct Movement Pattern",
+        "description": "XBT’s novel protocol rules lead to unique incentives and a distinct volatility fingerprint. XBT offers a way to diversify risk in a dangerously correlated ecosystem."
+      },
+      "item_8": {
+        "title": "ERC-20",
+        "description": "XBT implements the ERC-20 interface and can be used with any native blockchain wallet. A standard interface allows XBT to integrate with many DeFi application platforms."
+      }
+    }
+  },
+  "economic": {
+    "title_1": "How it works",
+    "desc_1": "As a fork from AMPL, XBT works very similar to it, information from this page are copied, then modified from AMPL.",
+    "desc_2": "Varying economic circumstances like recessions, booms, and technological advances, affect how much a currency people want to hold. In the case of fixed supply currencies like gold, silver, and Bitcoin, these changes in demand are expressed entirely by changes in the value of the currency.",
+    "desc_3": "This means the volatility of demand translates into the price of anything denominated in that currency—including contracts and notably debt. For this reason, sudden shocks in demand can destabilize ecosystems supported by fixed supply assets. The greater the complexity of an ecosystem built on fixed supply assets, the greater the risk of cascading failure.",
+    "desc_4": "To address this shortcoming, we gave XBT the ability to fairly and automatically adjust its supply in response to demand, without any need for a bank. XBT was designed to be the simplest direct solution to the supply inelasticity problem that limits assets like gold and bitcoin.",
+    "desc_5": "Today XBT’s unique volatility pattern makes it a valuable new building block for decentralized finance. Tomorrow XBT can be a better Bitcoin.",
+    "desc_6": "You can read more about how an elastic supply coin works from ",
+    "section_header": {
+      "title": "Economics",
+      "paragraph": "XBT’s unique volatility pattern makes it a valuable new building block for decentralized finance and XBT can be even a better Bitcoin."
+    },
+    "faq_data": {
+      "item_1": {
+        "title": "Rules over Discretion",
+        "description": "Rules-based policies allow for predictable and measurable actions and responses. This is good for checking against discretionary economic policies."
+      },
+      "item_2": {
+        "title": "Monies over Banks",
+        "description": "Monies are simple, banks are complex. This is good for decentralizing governance."
+      },
+      "item_3": {
+        "title": "Elasticity over Inelasticity",
+        "description": "Supply elasticity allows for currencies to adapt to economic shocks. This is good for everyone."
+      }
+    }
+  },
+  "governance": {
+    "title_1": "About XBT Governance",
+    "title_2": "Discussion",
+    "title_3": "Proposals (XIPs / XCCPs)",
+    "title_4": "Targeted Discussion",
+    "title_5": "On-chain Signaling",
+    "title_6": "Technical Development",
+    "title_7": "Binding Vote / Deployment (work in progress)",
+    "desc_1": "XBT learns Governance model from AMPL and will upgrade when needed.",
+    "desc_2": "The XBT protocol is governed through a series of sequential steps, each representing increasing levels of consensus from the community. Proposals and ideas are surfaced on the Telegram or Twitter, and are finalised when they are deployed on-chain. The progression of increasingly binding consensus can be seen below.",
+    "desc_3": "The highest level discussions may surface ideas in many places including (but not limited to) the Telegram and Twitter/Reddit. When it appears that there is enough general support, a champion may formalize the idea by submitting an XBT Improvement Proposal (XIP) or Configuration Change Proposal (XCCP).",
+    "desc_4": "XIPs and XCCPs are formal documents that describe the proposed change to the protocol or protocol configuration.",
+    "desc_5": "Each proposal has a dedicated github issue where outcome-driven discussion takes place. The goal at this step is to finalize any unresolved issues and formalize off-chain consensus. Everything will be documented at XBT Github https://github.com/ElasticBTC-XBT/",
+    "desc_6": "If the previous step did not arrive at obvious consensus, sentiment may be gathered in a non-binding way via on-chain signaling from token holders. This provides more insight into the likelihood of the outcome of the final binding vote.",
+    "desc_7": "Requirements are implemented in code, launched on testnet, and audited for security.",
+    "desc_8": "System changes are currently controlled by a multi-sig contract. This will eventually be replaced by generalized voting from token holders.",
+    "section_header_title": "XBT Governance"
+  },
+  "road_map": {
+    "item_1": {
+      "title": "Academic Research",
+      "desc": "The team conducted researches on how elastic supply model would affect crypto space and what are best approaches to improve its ecosystem",
+      "category": "Research"
+    },
+    "item_2": {
+      "title": "Testnet launch",
+      "desc": "XBT has been launched internally for testnet",
+      "category": "development"
+    },
+    "item_3": {
+      "title": "Public launch",
+      "desc": "XBT Pairs launched on Uniswap",
+      "category": "launch"
+    },
+    "item_4": {
+      "title": "Public launch",
+      "desc": "Officially launched",
+      "category": "announcement"
+    },
+    "item_5": {
+      "title": "Enable Staking",
+      "desc": "Enable staking XBT liquidity tokens",
+      "category": "development"
+    },
+    "item_6": {
+      "title": "Publish whitepaper",
+      "desc": "The team will launch XBT Whitepaper for public audiences",
+      "category": "research"
+    },
+    "item_7": {
+      "title": "Public launch",
+      "desc": "Launch XBT Foundation Fund",
+      "category": "launch"
+    },
+    "item_8": {
+      "title": "Public launch",
+      "desc": "Launch games which are built on top of XBT",
+      "category": "launch"
+    },
+    "item_9": {
+      "title": "Launch on top exchanges",
+      "desc": "The team aims to launch XBT on top exchanges, which helps increase mass adoption for XBT",
+      "category": "Growth"
+    },
+    "item_10": {
+      "title": "Launch on Tron Chain and Binance Chain",
+      "desc": "XBT will become a multi-chain system with its unique elastic-supply model",
+      "category": "Growth"
+    },
+    "section_header_title": "Roadmap"
+  },
+  "staking": {
+    "section_header": {
+      "title": "Staking coming soon"
+    },
+    "years": "Years",
+    "weeks": "Weeks",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds"
+  },
+  "crypto_unicorns": {
+    "section_header": {
+      "title": "CryptoUnicorns coming soon"
+    }
+  },
+  "investment": {
+    "section_header": {
+      "title": "XBT Fund coming soon"
+    }
+  },
+  "buy": {
+    "section_header": {
+      "title": "Get XBT"
+    },
+    "buy_with_ETH": "Buy with ETH",
+    "buy_with_WBTC": "Buy with WBTC",
+    "buy_with_USDT": "Buy with USDT"
+  },
+  "footer": {
+    "copy_right": "2020 Elastic Bitcoin (XBT), all rights reserved"
+  }
+}
