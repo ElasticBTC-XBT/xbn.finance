@@ -1,0 +1,8 @@
+[build]
+  publish = "docs/"
+  command = "echo 'no build'"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
