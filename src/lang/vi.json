@@ -1,0 +1,351 @@
+{
+  "header": {
+    "learn": "Tìm hiểu",
+    "governance": "Quản Lý",
+    "roadmap": "Lộ trình",
+    "staking": "Staking",
+    "cryptounicorns": "Cryptounicorns",
+    "investment_fund": "Quỹ đầu tư",
+    "buy": "Mua"
+  },
+  "home": {
+    "hero_split": {
+      "title_1": "XBT · Bitcoin dao động với nguồn cung tương ứng",
+      "desc_1": "Một đồng tiền điện tử bitcoin tự thay đổi nguồn cung chạy trên mạng ethereum.",
+      "desc_2": "Đã đến lúc biết về XBT, đồng tiền ổn định theo giá của Bitcoin bằng cách sử dụng Hợp đồng thông minh của Ethereum để điều chỉnh nguồn cung dựa trên tình trạng thị trường.",
+      "desc_3": "Giá của $ XBT sẽ bằng $ BTC sau 100 ngày điều chỉnh nguồn cung.",
+      "buy_xbt": "Mua XBT ngay"
+    },
+    "features_tiles": {
+      "section_header_title": "Elastic Bitcoin (XBT) là gì?",
+      "section_data_upper": {
+        "item_1": {
+          "title": "Một giao thức Defi đặc biệt",
+          "desc": "XBT được phân nhánh từ $AMPL, một giao thức DeFi với mô hình nguồn cung co giãn. Tổng cung XBT luôn thay đổi hàng ngày."
+        },
+        "item_2": {
+          "title": "Rebasing ngẫu nhiên",
+          "desc": "Để tránh thao túng giá, XBT sẽ được thay đổi nguồn cung ngẫu nhiên với hệ số trễ. XBT sẽ đạt đến trạng thái cân bằng cung-giá, sự biến động nằm ở nguồn cung cấp token, không phải giá"
+        },
+        "item_3": {
+          "title": "Mục tiêu giá 1 $ BTC",
+          "desc": "$XBT được thiết kế để duy trì mục tiêu giá chuẩn là 1 $BTC sau 100 ngày."
+        },
+        "item_4": {
+          "title": "Với nhiều người nắm giữ hơn, 1 đồng XBT vẫn bằng sẽ $ BTC nhưng có vốn hóa thị trường lớn hơn",
+          "desc": "Người nắm giữ XBT sở hữu một tỷ lệ phần trăm của mạng lưới. Giá trị nắm giữ của họ tăng lên khi vốn hóa thị trường tăng."
+        },
+        "item_5": {
+          "title": "Sự kiện rebase là gì?",
+          "desc": "Sự kiện rebase là sự kiện điều chỉnh số dư của tất cả các ví dựa trên giá hiện tại của đồng tiền tương quan giá mục tiêu của 1 bitcoin"
+        },
+        "item_6": {
+          "title": "Hệ số trễ rebase là gì?",
+          "desc": "Hệ số trễ Rebase hỗ trợ những biến động được trơn tru hơn, hệ số trễ thấp hơn nghĩa là sự điều chỉnh sẽ nhanh hơn và ngược lại"
+        }
+      }
+    },
+    "testimonial": {
+      "section_header": {
+        "title": "Nhóm sáng lập XBT",
+        "paragraph": "Tổ chức XBT - là một tổ chức phi lợi nhuận chuyên trách hỗ trợ XBT và các công nghệ liên quan, vai trò của tổ chức không phải là kiểm soát mà là đóng góp vào sự tăng trưởng của XBT"
+      },
+      "team_data": {
+        "item_1": {
+          "desc": "20 năm kinh nghiệm trong lĩnh vực kỹ thuật phần mềm. Người xây dựng \"Smart contract\", nhà phát triển bot giao dịch tài sản tiền điện tử. Doanh nhân - thích thú với việc xây dựng những điều mới!"
+        },
+        "item_2": {
+          "desc": "Tôi lãnh đạo và cung cấp mọi dữ liệu. Phù hợp. Có thể mở rộng. Tự động hóa."
+        },
+        "item_3": {
+          "desc": "Tôi có một niềm đam mê lớn đối với việc phát triển sản phẩm"
+        },
+        "item_4": {
+          "desc": "Sự kỳ vọng của khách hàng vào mẫu mã sản phẩm ngày càng tăng nhanh về chất lượng và thời gian. Mục tiêu của tôi là đáp ứng nhu cầu của khách hàng với một thiết kế hiện đại thân thiện với người dùng bằng cách thử nghiệm thiết kế UX UI mạnh mẽ, thiết kế lấy người dùng làm trung tâm và thử nghiệm phần mềm."
+        },
+        "item_5": {
+          "desc": "Đã tham gia kỹ thuật phần mềm trong 5 năm. Thực hiện các nội dung fullstack: phát triển thiết bị di động, backend, frontend và DevOps. Mục tiêu cả đời của tôi là trở thành human-expert trong hành trình cuộc đời của chính mình. Đã yêu các công ty khởi nghiệp và tiền điện tử có khả năng khởi động. Hiện tại, tôi đang điều hành công việc kinh doanh với bạn bè của tôi @activator.dev và làm chuyên gia dApp @elasticbitcoin.org"
+        }
+      }
+    },
+    "features_split": {
+      "section_header": {
+        "title": "Tìm hiểu về XBT",
+        "paragraph": "XBT là một loại tiền điện tử giống như Bitcoin, mục tiêu giá của nó là Bitcoin và nguồn cung của nó thay đổi hàng ngày"
+      },
+      "title_1": "Cung cấp thích ứng",
+      "title_2": "Đa dạng hóa rủi ro",
+      "title_3": "Một công cụ giao dịch",
+      "desc_1": "Số lượng XBT bạn sở hữu thay đổi hàng ngày để giá XBT sẽ đạt đến giá BTC trong 100 ngày. Phần trăm quyền sở hữu mạng XBT của bạn vẫn cố định cho dù nguồn cung cấp thay đổi như thế nào.",
+      "desc_2": "Điều này làm giảm rủi ro về mối tương quan của các Altcoin (chẳng hạn như ETH, LINK ...) và Bitcoin trong danh mục đầu tư của bạn vì chúng có độ trễ 30 ngày giữa giá của XBT và BTC.",
+      "desc_3": "Là một công cụ giao dịch, XBT có nhiều lợi thế, sở hữu XBT, bạn có thể nắm bắt được đà tăng trưởng giá của Bitcoin, nhưng cũng giảm rủi ro khi Bitcoin lao dốc nhanh chóng vì yếu tố trễ."
+    },
+    "faq_data": {
+      "item_1": {
+        "title": "Các cặp XBT được đưa lên Uniswap khi nào?",
+        "answer": "11/11/2020"
+      },
+      "item_2": {
+        "title": "Sách trắng được xuất bản khi nào?",
+        "answer": "Nó đang được hoàn thiện và hiện đang được xem xét với nhóm cố vấn của chúng tôi. Nó sẽ được xuất bản vào Q1 / 2021"
+      },
+      "item_3": {
+        "title": "Tổng cung là bao nhiêu?",
+        "answer": "Tổng cung thay đổi liên tục. Bạn có thể xem nguồn cung hiện tại : <a href='https://etherscan.io/token/0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8'>tại đây</a>"
+      },
+      "item_4": {
+        "title": "Hợp đồng thông minh đã được phát hành chưa?",
+        "answer": "Có, bạn có thể tìm thấy nó <a href='https://github.com/ElasticBTC-XBT/elastic-bitcoin-xbt-contract'>ở đây</a>"
+      },
+      "item_5": {
+        "title": "Khi nào XBT sẽ xuất hiện trên CoinGecko và Coin Market Cap?",
+        "answer": "Chúng tôi đang đăng ký Coingecko và chúng tôi đang chờ sự chấp thuận của họ. Sau khi chúng tôi niêm yết XBT trên một sàn giao dịch khác, chúng tôi sẽ ở trên Coin Market Cap"
+      },
+      "item_6": {
+        "title": "Ví của nhóm có bị khóa không?",
+        "answer": "Có, tất cả ví đã bị khóa trong một hợp đồng được trả ra theo thời hạn. Chúng sẽ được mở khóa với tỷ lệ 1% mỗi tuần."
+      },
+      "item_7": {
+        "title": "Thanh khoản Uniswap có bị khóa không?",
+        "answer": "Có, nó bị khóa qua Unicrypt. Bạn có thể tìm thêm thông tin trên <a href='https://www.dextools.io/app/uniswap/pair-explorer/0x080cf470ea91532bf5e313acc60c4b0d029409d4'>Dextools</a>"
+      },
+      "item_8": {
+        "title": "Rebase hoạt động như thế nào?",
+        "answer": "Việc rebase ( thay đổi nguồn cung)  xảy ra ngẫu nhiên sau 24 giờ kể từ lần rebase cuối cùng. Rebase thay đổi mọi số dư trong ví theo tỷ lệ phần trăm được tính toán. Nếu giá trên $ BTC 1,05 thì rebase là dương và số dư tăng lên; nếu giá dưới $ BTC 0,95 thì rebase là số âm và số dư giảm. Rebase tự động thay đổi số dư trong ví của bạn. Bạn không phải đặt vào hoặc làm bất cứ điều gì. Mọi ví mà bạn có quyền truy cập vào và có khóa riêng đều được hỗ trợ"
+      },
+      "item_9": {
+        "title": "Làm thế nào số dư của người dùng có thể thay đổi mà không có giao dịch?",
+        "answer": "Tất cả các ví đều được cập nhật bằng một giao dịch duy nhất sử dụng Biến hợp đồng Scalar. Số dư trong ví của bạn là nguồn cung riêng của bạn nhân với tỷ lệ phân chia toàn cầu. Càng chia ít hay nhiều thì số dư của bạn càng được cập nhật biến động theo."
+      },
+      "item_10": {
+        "title": "Rebase có thể xảy ra nhiều lần trong một ngày không?",
+        "answer": "Không"
+      },
+      "item_11": {
+        "title": "Rebase được tính như thế nào?",
+        "answer": "(Giá hiện tại - giá mục tiêu cơ sở) * số dư ví / (giá mục tiêu cơ sở * hệ số trễ) <br/> Ví dụ: Với mức giá hiện tại là $BTC 1,30, hệ số trễ 10,00, số dư ví cập nhật sẽ được điều chỉnh bằng: (1,30 - 1) * 100 / (1 * 10) = 3. Số dư ví mới sẽ là 103 $XBT."
+      },
+      "item_12": {
+        "title": "Yếu tố độ trễ là gì?",
+        "answer": "Một hệ số độ trễ theo đường cong, ngẫu nhiên được sử dụng để tính toán lượng cung tăng và giảm khi xảy ra sự kiện rebase. Điều này làm cho các sự kiện rebase khó đoán hơn. Đường cong cho phép cung tăng với tốc độ nhanh hơn khi tổng vốn hóa thị trường thấp. Hệ số trễ phụ thuộc vào tổng cung. Nguồn cung càng cao thì hệ số trễ có thể xảy ra càng cao. Tối thiểu là 6 và tối đa là 100."
+      },
+      "item_13": {
+        "title": "Staking XBT LP là gì?",
+        "answer": "XBT LP Staking cung cấp một giải pháp để khuyến khích cung cấp thanh khoản trên Uniswap. Khi bạn đã cung cấp thanh khoản cho XBT trên Uniswap, bạn sẽ nhận được mã thông báo UNI-V2, bạn có thể góp vào trên dashboard XBT Staking. Tùy thuộc vào số lượng token đã đặt cược và thời gian đặt cược của bạn, bạn sẽ nhận được một phần của tổng hệ sinh thái XBT. Pool được mở khóa theo thời gian và được phân phối cho mỗi người đóng góp theo tỷ trọng của họ trong mạng lưới."
+      }
+    }
+  },
+  "cta": {
+    "title": "Hãy trở thành một phần của cộng đồng XBT ngay hôm nay!",
+    "buy_xbt": "Mua XBT"
+  },
+  "learn": {
+    "section_header": {
+      "title": "Tìm hiểu về XBT"
+    },
+    "basic": "Cơ bản",
+    "technology": "Công nghệ",
+    "economics": "Kinh tế học"
+  },
+  "basic_split": {
+    "section_header": {
+      "title": "Tìm hiểu về XBT",
+      "paragraph": "XBT là một loại tiền điện tử giống như Bitcoin, mục tiêu giá của nó là Bitcoin và nguồn cung của nó thay đổi hàng ngày"
+    },
+    "section_contents": {
+      "item_1": {
+        "title": "Chúng tôi có thể có Bitcoin trên Mạng Ethereum mà không cần bảo chứng.",
+        "description": "Điều đó là sự thật và thú vị, bạn có Bitcoin trên mạng Ethereum mà không cần tài sản thế chấp tập trung như WBTC. Giao thức XBT tự động điều chỉnh nguồn cung theo nhu cầu. Khi giá cao, số dư ví tăng lên. Khi giá thấp, số dư ví giảm."
+      },
+      "item_2": {
+        "title": "Với XBT, chúng ta có thể có không giới hạn, không phải 21 triệu, Bitcoin",
+        "description": "Chỉ có 21 triệu bitcoin nhưng số XBT là không giới hạn, sẽ có đủ XBT để mọi người trên trái đất sở hữu 1 $ XBT, và 1 $ XBT vẫn bằng 1 Bitcoin. Tuyệt vời !"
+      },
+      "item_3": {
+        "title": "XBT giúp ổn định Bitcoin trong khi góp phần vào sự tăng trưởng của nó",
+        "description": "Khi XBT phát triển, không chỉ giá của nó được ổn định với giá Bitcoin mà còn giúp Bitcoin ổn định vì nguồn cung co giãn và có thể mở rộng. Vì vậy, khi có nhiều nhu cầu về bitcoin, XBT có thể tăng cung để đáp ứng nhu cầu và ngược lại."
+      }
+    },
+    "learn_basic": "Learn Basics",
+    "learn_technology": "Learn Technology",
+    "learn_economics": "Learn Economics"
+  },
+  "technology": {
+    "title_1": "Cách thức hoạt động",
+    "title_2": "Luồng thông tin",
+    "title_3": "Các tính năng và khả năng cốt lõi",
+    "desc_1": "Là một nhánh từ AMPL, XBT hoạt động rất giống với nó, thông tin từ trang này được sử dụng lại, sau đó được sửa đổi từ AMPL",
+    "desc_1_5": "Thiết kế hợp đồng thông minh của XBT cho phép việc tăng và giảm nguồn cung được thực hiện tự động mà không cần chuyển giao ngang hàng và không cần ngân hàng.",
+    "desc_2": "Giao thức tiền tệ tự động điều chỉnh việc cung cấp XBT trên tất cả các ví của người dùng dựa trên giá cả. Điều này có nghĩa là số lượng XBT mà bạn sở hữu thay đổi dựa trên điều kiện thị trường. Khi giá cao, số dư trong ví sẽ tự động tăng. Khi giá thấp, số dư trong ví sẽ tự động giảm. Hoạt động điều chỉnh nguồn cung này diễn ra một lần mỗi ngày và được gọi là điều chỉnh nguồn cung (rebase).",
+    "desc_3": "Hoạt động rebase hàng ngày này được áp dụng phổ biến và tương ứng trên mọi số dư của ví. Điều này có nghĩa là XBT không pha loãng. Giống như Bitcoin, nếu bạn sở hữu 1% mạng lưới tổng thể, bạn sẽ luôn sở hữu 1% trừ khi bạn chủ động thực hiện chuyển khoản.",
+    "desc_4": "Ở cấp độ cao, hợp đồng chính sách phản ánh những thay đổi về giá cả trên thị trường khi nguồn cung thay đổi trong số dư của ví. Điều này lại khuyến khích các tác nhân thị trường điều chỉnh giá. Giá  đưa thông tin cho thuật toán nguồn cung và nguồn cung ảnh hưởng giá theo hành vi, theo một chu kỳ.",
+    "section_header": {
+      "title": "Công nghệ",
+      "paragraph": "XBT kết hợp những gì tốt nhất của Bitcoin và Hợp đồng thông minh trên mạng Ethereum"
+    },
+    "faq_data": {
+      "item_1": {
+        "title": "Thuật toán",
+        "description": "Các quy tắc giao thức được mã hóa trong các hợp đồng thông minh trên Ethereum. Các luật dựa trên quy tắc hoạt động cho phép các hành động có thể được dự đoán và phản hồi thì có thể đo lường được, đồng thời là biện pháp kiểm tra hiệu quả đối với các chính sách tiền tệ."
+      },
+      "item_2": {
+        "title": "Không pha loãng",
+        "description": "Nếu bạn sở hữu 1% mạng lưới, bạn sẽ luôn sở hữu 1%. Không có bên nào lấy đi giá trị và không có phí giao dịch bổ sung."
+      },
+      "item_3": {
+        "title": "Không có ngân hàng",
+        "description": "XBT là tiền cơ sở, không có khái niệm nợ hay tín dụng trong hệ thống. Nó không dựa vào thị trường nợ mở hoặc những người cho vay cuối"
+      },
+      "item_4": {
+        "title": "Động lực đơn giản",
+        "description": "Một hệ thống đơn giản là minh bạch và dễ hiểu. Giao thức XBT chỉ có hai quy tắc mở rộng và thu hẹp, và chỉ phụ thuộc vào các tác nhân tìm kiếm lợi nhuận trên thị trường để đạt được trạng thái cân bằng."
+      },
+      "item_5": {
+        "title": "Không chiếm giữ",
+        "description": "Quyền sở hữu được tính nguyên bản trên blockchain. Không có quyền giám hộ đối với tài sản bên ngoài hoặc tài sản thế chấp."
+      },
+      "item_6": {
+        "title": "Quản trị tối thiểu",
+        "description": "XBT được thiết kế để giảm thiểu nhu cầu quản trị. Không có sự quản lý nào tồn tại trong vòng lặp điều chỉnh nguồn cung vì không có lãi suất để điều chỉnh hoặc thị trường để cân bằng."
+      },
+      "item_7": {
+        "title": "Mô hình chuyển động khác biệt",
+        "description": "Các quy tắc giao thức mới của XBT dẫn đến các động lực duy nhất và dấu hiệu biến động khác biệt. XBT cung cấp một giải pháp giảm thiểu rủi ro trong một hệ sinh thái tương quan nguy hiểm của tiền điện tử."
+      },
+      "item_8": {
+        "title": "ERC-20",
+        "description": "XBT triển khai giao diện ERC-20 và có thể được sử dụng với bất kỳ ví blockchain gốc nào. Một giao diện tiêu chuẩn cho phép XBT tích hợp với nhiều nền tảng ứng dụng DeFi."
+      }
+    }
+  },
+  "economic": {
+    "title_1": "Cách hoạt động",
+    "desc_1": "Là một nhánh từ AMPL, XBT hoạt động rất giống với nó, thông tin từ trang này được lấy  sau đó được sửa đổi từ AMPL.",
+    "desc_2": "Hoàn cảnh kinh tế thay đổi như suy thoái, bùng nổ và tiến bộ công nghệ, ảnh hưởng đến nhu cầu mọi người muốn nắm giữ một loại tiền tệ. Trong trường hợp các đồng tiền cung ứng cố định như vàng, bạc và Bitcoin, những thay đổi này trong nhu cầu được thể hiện hoàn toàn bằng những thay đổi trong giá trị của tiền tệ.",
+    "desc_3": "Nghĩa là sự biến động của nhu cầu chuyển thành giá của bất kỳ thứ gì có giá trị liên quan đơn vị tiền tệ đó — bao gồm hợp đồng và đặc biệt là nợ. Vì lý do này, những cú sốc đột ngột về nhu cầu có thể làm mất ổn định hệ sinh thái xoay quanh bởi tài sản có nguồn cung cố định. Sự phức tạp của một hệ sinh thái được xây dựng trên các tài sản  có nguồn cung cố định càng lớn thì nguy cơ đổ vỡ càng lớn.",
+    "desc_4": "Để giải quyết vấn đề này, chúng tôi đã cho XBT khả năng tự động điều chỉnh nguồn cung của mình theo nhu cầu mà không cần đến ngân hàng. XBT được thiết kế để trở thành giải pháp trực tiếp đơn giản nhất cho vấn đề nguồn cung không co giãn mà đó giờ chính là hạn chể của các tài sản như vàng và bitcoin.",
+    "desc_5": "Ngày nay, mô hình biến động độc đáo của XBT khiến nó trở thành một nền tảng mới có giá trị cho tài chính phi tập trung. Ngày mai XBT có thể là một Bitcoin tốt hơn.",
+    "desc_6": "Bạn có thể đọc thêm về cách hoạt động của đồng tiền có nguồn cung đàn hồi từ ",
+    "section_header": {
+      "title": "Kinh tế học",
+      "paragraph": "Mô hình biến động độc đáo của XBT khiến nó trở thành một nền tảng mới có giá trị cho tài chính phi tập trung và XBT thậm chí có thể tốt hơn Bitcoin."
+    },
+    "faq_data": {
+      "item_1": {
+        "title": "Rules over Discretion",
+        "description": "Rules-based policies allow for predictable and measurable actions and responses. This is good for checking against discretionary economic policies."
+      },
+      "item_2": {
+        "title": "Monies over Banks",
+        "description": "Monies are simple, banks are complex. This is good for decentralizing governance."
+      },
+      "item_3": {
+        "title": "Elasticity over Inelasticity",
+        "description": "Supply elasticity allows for currencies to adapt to economic shocks. This is good for everyone."
+      }
+    }
+  },
+  "governance": {
+    "title_1": "Giới thiệu về Quản Lý XBT",
+    "title_2": "Thảo luận",
+    "title_3": "Đề xuất (XIPs / XCCPs)",
+    "title_4": "Thảo luận có mục tiêu",
+    "title_5": "Báo hiệu trên chuỗi",
+    "title_6": "Phát triển kỹ thuật",
+    "title_7": "Ràng buộc Bỏ phiếu / Triển khai (công việc đang tiến hành)",
+    "desc_1": "XBT học hỏi mô hình Quản lý từ AMPL và sẽ nâng cấp khi cần.",
+    "desc_2": "Giao thức XBT được điều chỉnh thông qua một loạt các bước, mỗi bước đại diện cho mức độ đồng thuận ngày càng tăng từ cộng đồng. Các đề xuất và ý tưởng được hiển thị trên Telegram hoặc Twitter và được hoàn thiện khi chúng được triển khai trên chuỗi. Sự tiến triển của sự đồng thuận ngày càng ràng buộc có thể được nhìn thấy dưới đây.",
+    "desc_3": "Các cuộc thảo luận cấp cao nhất có thể đưa ra các ý tưởng ở nhiều nơi, bao gồm (nhưng không giới hạn ở) Telegram và Twitter / Reddit. Khi dường như có đủ sự hỗ trợ chung, người đưa ra ý tưởng có thể hợp thức hóa ý tưởng bằng cách gửi Đề xuất cải tiến XBT (XIP) hoặc Đề xuất thay đổi cấu hình (XCCP).",
+    "desc_4": "XIP và XCCP là các tài liệu chính thức mô tả thay đổi được đề xuất đối với giao thức hoặc cấu hình giao thức.",
+    "desc_5": "Mỗi đề xuất có github dành riêng để thảo luận theo hướng dẫn đến kết quả đươc thực hiện. Mục tiêu ở bước này là hoàn thiện mọi vấn đề chưa được giải quyết và chính thức hóa sự đồng thuận ngoài chuỗi. Mọi thứ sẽ được ghi lại tại XBT Github https://github.com/ElasticBTC-XBT/",
+    "desc_6": "Nếu bước trước đó không đạt được sự đồng thuận rõ ràng, ý kiến có thể được thu thập theo cách không ràng buộc thông qua tín hiệu trên chuỗi từ chủ sở hữu token. Điều này cung cấp cái nhìn sâu hơn về khuynh hướng của cuộc bỏ phiếu ràng buộc cuối cùng.",
+    "desc_7": "Các yêu cầu được thực hiện bằng mã, khởi chạy trên testnet và được kiểm tra tính bảo mật.",
+    "desc_8": "Các thay đổi hệ thống hiện được kiểm soát bởi một hợp đồng nhiều bên ký kết. Sau này các vấn đề sẽ được thay thế bằng biểu quyết chung từ những người nắm giữ tokens",
+    "section_header_title": "Quản Lý XBT"
+  },
+  "road_map": {
+    "item_1": {
+      "title": "Nghiên cứu học thuật",
+      "desc": "Nhóm đã tiến hành các nghiên cứu về cách mô hình nguồn cung co giãn sẽ ảnh hưởng đến không gian tiền điện tử và đâu là cách tiếp cận tốt nhất để cải thiện hệ sinh thái của nó",
+      "category": "NGHIÊN CỨU"
+    },
+    "item_2": {
+      "title": "Khởi chạy Testnet",
+      "desc": "XBT đã được khởi chạy nội bộ cho testnet",
+      "category": "PHÁT TRIỂN"
+    },
+    "item_3": {
+      "title": "Ra mắt công chúng",
+      "desc": "Các cặp XBT ra mắt trên Uniswap",
+      "category": "RA MẮT"
+    },
+    "item_4": {
+      "title": "Ra mắt công chúng",
+      "desc": "Chính thức ra mắt",
+      "category": "THÔNG BÁO"
+    },
+    "item_5": {
+      "title": "Bật Staking",
+      "desc": "Cho phép staking XBT",
+      "category": "PHÁT TRIỂN"
+    },
+    "item_6": {
+      "title": "Xuất bản báo cáo chính thức",
+      "desc": "Nhóm sẽ ra mắt Whitepaper XBT cho cộng đồng công khai",
+      "category": "NGHIÊN CỨU"
+    },
+    "item_7": {
+      "title": "Ra mắt công chúng",
+      "desc": "Khởi động Quỹ XBT Foundation",
+      "category": "Khởi chạy"
+    },
+    "item_8": {
+      "title": "Ra mắt công chúng",
+      "desc": "Khởi chạy các trò chơi được xây dựng trên XBT",
+      "category": "Khởi chạy"
+    },
+    "item_9": {
+      "title": "Khởi chạy trên các sàn giao dịch hàng đầu",
+      "desc": "Nhóm nghiên cứu đặt mục tiêu ra mắt XBT trên các sàn giao dịch hàng đầu, giúp tăng lượng tính phổ biến cho XBT",
+      "category": "SỰ PHÁT TRIỂN"
+    },
+    "item_10": {
+      "title": "Khởi chạy trên Chuỗi Tron và Chuỗi Binance",
+      "desc": "XBT sẽ trở thành một hệ thống đa chuỗi với mô hình cung ứng đàn hồi độc đáo",
+      "category": "SỰ PHÁT TRIỂN"
+    },
+    "section_header_title": "Lộ trình"
+  },
+  "staking": {
+    "section_header": {
+      "title": "Staking sắp ra mắt"
+    },
+    "years": "Năm",
+    "weeks": "Tuần",
+    "days": "Ngày",
+    "hours": "Giờ",
+    "minutes": "Phút",
+    "seconds": "Giây"
+  },
+  "crypto_unicorns": {
+    "section_header": {
+      "title": "CryptoUnicorns sắp ra mắt"
+    }
+  },
+  "investment": {
+    "section_header": {
+      "title": "XBT Fund sắp ra mắt"
+    }
+  },
+  "buy": {
+    "section_header": {
+      "title": "Lấy XBT"
+    },
+    "buy_with_ETH": "Mua với ETH",
+    "buy_with_WBTC": "Mua với WBTC",
+    "buy_with_USDT": "Mua với USDT"
+  },
+  "footer": {
+    "copy_right": "2020 Elastic Bitcoin (XBT), all rights reserved"
+  }
+}
