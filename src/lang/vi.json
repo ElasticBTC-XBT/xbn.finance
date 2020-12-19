@@ -32,7 +32,7 @@
           "desc": "$XBT được thiết kế để duy trì mục tiêu giá chuẩn là 1 $BTC sau 100 ngày."
         },
         "item_4": {
-          "title": "Với nhiều người nắm giữ hơn, 1 đồng XBT vẫn bằng sẽ $ BTC nhưng có vốn hóa thị trường lớn hơn",
+          "title": "Khi có nhiều người sỡ hữu hơn, 1 đồng XBT vẫn sẽ có giá bằng 1 $BTC nhưng có vốn hóa thị trường lớn hơn.",
           "desc": "Người nắm giữ XBT sở hữu một tỷ lệ phần trăm của mạng lưới. Giá trị nắm giữ của họ tăng lên khi vốn hóa thị trường tăng."
         },
         "item_5": {
@@ -136,7 +136,7 @@
     }
   },
   "cta": {
-    "title": "Hãy trở thành một phần của cộng đồng XBT ngay hôm nay!",
+    "title": "Tham gia cộng đồng XBT ngay!",
     "buy_xbt": "Mua XBT"
   },
   "learn": {
@@ -347,5 +347,28 @@
   },
   "footer": {
     "copy_right": "2020 Elastic Bitcoin (XBT), all rights reserved"
+  },
+  "format_time": {
+    "years_past": "{year} năm trước",
+    "year_past": "{year} năm trước",
+    "months_past": "{month} tháng trước",
+    "month_past": "{month} tháng trước",
+    "weeks_past": "{week} tuần trước",
+    "week_past": "{week} tuần trước",
+    "days_past": "{day} ngày trước",
+    "day_past": "{day} ngày trước",
+    "hours_past": "{hour} giờ trước",
+    "hour_past": "{hour} giờ trước",
+    "just_now": "Ngay lúc này",
+    "years_future": "trong {year} năm",
+    "year_future": "trong {year} năm",
+    "months_future": "trong {month} tháng",
+    "month_future": "trong {month} tháng",
+    "weeks_future": "trong {week} tuần",
+    "week_future": "trong {week} tuần",
+    "days_future": "trong {day} ngày",
+    "day_future": "trong {day} ngày",
+    "hours_future": "trong {hour} giờ",
+    "hour_future": "trong {hour} giờ"
   }
 }

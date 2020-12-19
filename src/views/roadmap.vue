@@ -20,6 +20,7 @@
                     <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
                     <!-- Yet another update -->
                     <vue-timeline-update
+                            :dateString="getDateString('2020-03-30')"
                             :date="new Date('2020-03-30')"
                             :title="$t('road_map.item_1.title')"
                             :description="$t('road_map.item_1.desc')"
@@ -29,6 +30,7 @@
                     />
                     <!-- Another update -->
                     <vue-timeline-update
+                            :dateString="getDateString('2020-05-05')"
                             :date="new Date('2020-05-05')"
                             :title="$t('road_map.item_2.title')"
                             :description="$t('road_map.item_2.desc')"
@@ -38,6 +40,7 @@
                     />
 
                     <vue-timeline-update
+                            :dateString="getDateString('2020-11-11')"
                             :date="new Date('2020-11-11')"
                             :title="$t('road_map.item_3.title')"
                             :description="$t('road_map.item_3.desc')"
@@ -47,6 +50,7 @@
                     />
 
                     <vue-timeline-update
+                            :dateString="getDateString('2020-12-12')"
                             :date="new Date('2020-12-12')"
                             :title="$t('road_map.item_4.title')"
                             :description="$t('road_map.item_4.desc')"
@@ -56,6 +60,7 @@
                     />
 
                     <vue-timeline-update
+                            :dateString="getDateString('2021-01-31')"
                             :date="new Date('2021-01-31')"
                             :title="$t('road_map.item_5.title')"
                             :description="$t('road_map.item_5.desc')"
@@ -64,6 +69,7 @@
                     />
 
                     <vue-timeline-update
+                            :dateString="getDateString('2021-03-01')"
                             :date="new Date('2021-03-01')"
                             :title="$t('road_map.item_6.title')"
                             :description="$t('road_map.item_6.desc')"
@@ -72,6 +78,7 @@
                     />
 
                     <vue-timeline-update
+                            :dateString="getDateString('2021-04-17')"
                             :date="new Date('2021-04-17')"
                             :title="$t('road_map.item_7.title')"
                             :description="$t('road_map.item_7.desc')"
@@ -80,6 +87,7 @@
                     />
 
                     <vue-timeline-update
+                            :dateString="getDateString('2021-05-15')"
                             :date="new Date('2021-05-15')"
                             :title="$t('road_map.item_8.title')"
                             :description="$t('road_map.item_8.desc')"
@@ -89,6 +97,7 @@
 
                     <!-- Yet another update -->
                     <vue-timeline-update
+                            :dateString="getDateString('2022-01-30')"
                             :date="new Date('2022-01-30')"
                             :title="$t('road_map.item_9.title')"
                             :description="$t('road_map.item_9.desc')"
@@ -98,6 +107,7 @@
 
                     <!-- Yet another update -->
                     <vue-timeline-update
+                            :dateString="getDateString('2022-12-30')"
                             :date="new Date('2022-12-30')"
                             :title="$t('road_map.item_10.title')"
                             :description="$t('road_map.item_10.desc')"
@@ -133,6 +143,64 @@
                 sectionHeader: {
                     title: v.$t('road_map.section_header_title')
                 }
+            }
+        },
+        methods: {
+            getDateString(str_date) {
+                let v = this
+                let date = new Date(str_date)
+
+                let current_date = new Date()
+
+                let diffTime = null
+
+                if (date < current_date) {
+                    diffTime = Math.floor(current_date.getTime() - date.getTime());
+                } else {
+                    diffTime = Math.floor(date.getTime() - current_date.getTime());
+                }
+
+                let day = 1000 * 60 * 60 * 24
+                let hour = 1000 * 60 * 60
+
+                const diffHours = Math.floor(diffTime / hour);
+                const diffDays = Math.floor(diffTime / day);
+                const diffWeek = Math.floor(diffDays / 7);
+                const diffMonth = Math.floor(diffDays / 30);
+                const diffYear = Math.floor(diffMonth / 12);
+
+                if (date < current_date) {
+
+                    if (diffYear > 0) {
+                        return diffYear > 1 ? v.$t('format_time.years_past', {year: diffYear}) : v.$t('format_time.year_past', {year: diffYear})
+                    } else if (diffMonth > 0) {
+                        return diffMonth > 1 ? v.$t('format_time.months_past', {month: diffMonth}) : v.$t('format_time.month_past', {month: diffMonth})
+                    } else if (diffWeek > 0) {
+                        return diffWeek > 1 ? v.$t('format_time.weeks_past', {week: diffWeek}) : v.$t('format_time.week_past', {week: diffWeek})
+                    } else if (diffDays > 0) {
+                        return diffDays > 1 ? v.$t('format_time.days_past', {day: diffDays}) : v.$t('format_time.day_past', {day: diffDays})
+                    } else if (diffHours > 0) {
+                        return diffHours > 1 ? v.$t('format_time.hours_past', {hour: diffHours}) : v.$t('format_time.hour_past', {hour: diffHours})
+                    } else {
+                        return v.$t('format_time.just_now')
+                    }
+
+                } else {
+                    if (diffYear > 0) {
+                        return diffYear > 1 ? v.$t('format_time.years_future', {year: diffYear}) : v.$t('format_time.year_future', {year: diffYear})
+                    } else if (diffMonth > 0) {
+                        return diffMonth > 1 ? v.$t('format_time.months_future', {month: diffMonth}) : v.$t('format_time.month_future', {month: diffMonth})
+                    } else if (diffWeek > 0) {
+                        return diffWeek > 1 ? v.$t('format_time.weeks_future', {week: diffWeek}) : v.$t('format_time.week_future', {week: diffWeek})
+                    } else if (diffDays > 0) {
+                        return diffDays > 1 ? v.$t('format_time.days_future', {day: diffDays}) : v.$t('format_time.day_future', {day: diffDays})
+                    } else if (diffHours > 0) {
+                        return diffHours > 1 ? v.$t('format_time.hours_future', {hour: diffHours}) : v.$t('format_time.hour_future', {hour: diffHours})
+                    } else {
+                        return v.$t('format_time.just_now')
+                    }
+                }
+
             }
         }
     }

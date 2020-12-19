@@ -347,5 +347,28 @@
   },
   "footer": {
     "copy_right": "2020 Elastic Bitcoin (XBT), all rights reserved"
+  },
+  "format_time": {
+    "years_past": "{year} years ago",
+    "year_past": "{year} year ago",
+    "months_past": "{month} months ago",
+    "month_past": "{month} month ago",
+    "weeks_past": "{week} weeks ago",
+    "week_past": "{week} week ago",
+    "days_past": "{day} days ago",
+    "day_past": "{day} day ago",
+    "hours_past": "{hour} hours ago",
+    "hour_past": "{hour} hour ago",
+    "just_now": "just now",
+    "years_future": "in {year} years",
+    "year_future": "in {year} year",
+    "months_future": "in {month} months",
+    "month_future": "in {month} month",
+    "weeks_future": "in {week} weeks",
+    "week_future": "in {week} week",
+    "days_future": "in {day} days",
+    "day_future": "in {day} day",
+    "hours_future": "in {hour} hours",
+    "hour_future": "in {hour} hour"
   }
 }
