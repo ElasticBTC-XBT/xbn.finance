@@ -114,8 +114,11 @@
                             :category="$t('road_map.item_10.category')"
                             color="black"
                     />
+
+                    aa
                 </div>
                 <img class="roadmap-pic" :src="require('@/assets/images/roadmap-page.png')"/>
+
             </div>
         </section>
     </div>
