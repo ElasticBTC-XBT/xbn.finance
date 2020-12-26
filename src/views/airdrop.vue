@@ -20,7 +20,7 @@
               <c-section-header :data="genericSection01Header" class="center-content"/>
               <div class="button-group">
                 <c-button color="primary" wide-mobile target="_blank" @click="connectWallet">
-                  {{ $t('buy.buy_with_ETH') }}
+                  Connect To Wallet
                 </c-button>
                 <c-button color="primary" wide-mobile target="_blank" @click="claimAirdrop">
                   Claim
