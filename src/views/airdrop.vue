@@ -14,6 +14,7 @@
                     bottomDivider && 'has-bottom-divider'
                 ]">
           <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
+          <h1>XBT Balance: {{xbtBalance}}</h1>
           <c-generic-section top-divider class="center-content">
             <div class="container-xs">
               <c-section-header :data="genericSection01Header" class="center-content"/>
@@ -23,6 +24,9 @@
                 </c-button>
                 <c-button color="primary" wide-mobile target="_blank" @click="claimAirdrop">
                   Claim
+                </c-button>
+                <c-button color="primary" wide-mobile target="_blank" @click="getXBTBalance">
+                  Get XBT Balance
                 </c-button>
               </div>
             </div>
@@ -44,6 +48,7 @@ import CGenericSection from '@/components/sections/GenericSection.vue'
 import CButton from '@/components/elements/Button.vue'
 import {getWeb3Client} from "@/libs/web3";
 import {getAirdropContract} from "@/libs/xbt-airdrop";
+import {getXBTBalance} from "@/libs/xbt";
 
 export default {
   name: 'AirDrop',
@@ -61,10 +66,16 @@ export default {
     return {
       sectionHeader: {
         title: v.$t('buy.section_header.title')
-      }
+      },
+      xbtBalance: 0
     }
   },
   methods: {
+    async getXBTBalance(){
+      const walletClient = await getWeb3Client();
+      const receipt = await getXBTBalance(walletClient.web3Client);
+      this.$set(this, 'xbtBalance', receipt);
+    },
     async claimAirdrop() {
       const walletClient = await getWeb3Client();
       const contract = await getAirdropContract(walletClient.web3Client);
