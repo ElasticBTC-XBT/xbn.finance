@@ -40,6 +40,43 @@ const i18n = new VueI18n({
     fallbackLocale: 'en',
 })
 
+
+router.beforeEach((to, from, next) => {
+    const hasLang = to.params && to.params.lang;
+    const hadLang = from.params && from.params.lang;
+
+    // If the language hasn't changed since last route we're done
+    if (hasLang && hadLang && from.params.lang.toLowerCase() === to.params.lang.toLowerCase()) {
+        next();
+    }
+
+    // Get the save language if it exists
+    let lang = localStorage.getItem('lang_elastic') ? localStorage.getItem('lang_elastic').toLowerCase() : 'en';
+
+    // Overwrite the language with the route if there is one
+    if (hasLang) {
+        lang = to.params.lang.toLowerCase();
+    }
+
+    // Make sure the language is valid
+    if (!['vi'].includes(lang)) {
+        lang = 'en';
+    }
+
+    // Set the website language based on the URL
+    i18n.locale = lang;
+    localStorage.lang = lang;
+
+    // Redirect to a url with the language
+    if (!hasLang) {
+        if (lang != 'en')
+            return next(`/${lang}${to.fullPath}`);
+        else
+            return next();
+    }
+    return next();
+});
+
 new Vue({
     router,
     i18n,
