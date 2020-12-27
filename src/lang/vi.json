@@ -1,4 +1,19 @@
 {
+  "refresh": "Tải lại",
+  "airdrop": {
+    "share_page_title": "Nhận $XBT miễn phí. Tham gia ở đây nhé mọi người.",
+    "xbt_coming": "Chúng tôi đã gửi XBT đến ví của bạn",
+    "thank_you": "Cảm ơn bạn vì đã là 1 phần của cộng đồng XBT <3",
+    "claim_title": "Nhận XBT miễn phí",
+    "claim_description": "XBT miễn phí cho tất cả mọi người",
+    "claim_xbt": "Nhận XBT",
+    "not_participated": "Bạn chưa tham gia chương trình này",
+    "participated": "Bạn đã tham gia chương trình này",
+    "allowed_once": "Mỗi địa chỉ ví chỉ được tham gia 1 lần",
+    "balance": "Số dư XBT",
+    "contract_fund_balance": "Tổng số lượng XBT có thể nhận",
+    "next_claim": "Lần nhận tiếp theo"
+  },
   "header": {
     "learn": "Tìm hiểu",
     "governance": "Quản Lý",
