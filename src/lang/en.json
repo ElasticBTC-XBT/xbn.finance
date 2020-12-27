@@ -1,6 +1,9 @@
 {
   "refresh": "Refresh",
   "airdrop": {
+    "share_page_title": "Hey I just claimed $XBT. Check it out.",
+    "xbt_coming": "Your XBT is sent successfully",
+    "thank_you": "Thank you for being a part of XBT Community <3",
     "claim_title": "Free XBT Airdrop",
     "claim_description": "Free XBT for everyone on a first-come-first-serve basis",
     "claim_xbt": "Claim XBT",

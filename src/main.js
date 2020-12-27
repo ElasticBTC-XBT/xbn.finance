@@ -29,6 +29,9 @@ Vue.use(vuetimeline)
 
 Vue.use(VueI18n)
 
+import SweetModal from 'sweet-modal-vue/src/plugin.js';
+Vue.use(SweetModal);
+
 const messages = {
     vi: vnMessage,
     en: enMessage,

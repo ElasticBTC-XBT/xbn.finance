@@ -12146,6 +12146,11 @@ swarm-js@^0.1.40:
     tar "^4.0.2"
     xhr-request "^1.0.1"
 
+sweet-modal-vue@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/sweet-modal-vue/-/sweet-modal-vue-2.0.0.tgz#205ee28b7e5c8579e44303544b500ef7f4fcab21"
+  integrity sha512-1/F7G3I3dWU5O2RGnHEirf6zw2AeR/CdfxiIlcEjxeyxGqgPtQmhjHoHQbem6bZTg1rFS5asVCOXMrTOyZgeJg==
+
 table@4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/table/-/table-4.0.2.tgz#a33447375391e766ad34d3486e6e2aedc84d2e36"
@@ -12893,6 +12898,13 @@ vue-fragment@^1.5.1:
   resolved "https://registry.yarnpkg.com/vue-fragment/-/vue-fragment-1.5.1.tgz#44c070d55ed1e9a6c698ef57a5c83f64bb06feeb"
   integrity sha512-ig6eES6TcMBbANW71ylB+AJgRN+Zksb3f50AxjGpAk6hMzqmeuD80qeh4LJP0jVw2dMBMjgRUfIkrvxygoRgtQ==
 
+vue-goodshare@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/vue-goodshare/-/vue-goodshare-1.5.1.tgz#11f0584b64cd294265449211a08b722b73063aa9"
+  integrity sha512-yk7NjMNHurbUy7P0K8dRbLlkt8bM0Y9MBYat9UHoQ5Qurx+VijUgM0RLXMcp/1RT0RhYEfPc7Ags2uhtAHKSEg==
+  dependencies:
+    vue "^2.6.11"
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
@@ -12945,7 +12957,7 @@ vue2-touch-events@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue2-touch-events/-/vue2-touch-events-2.3.2.tgz#585941bda540da3a1e251507fa92d9c41354d661"
   integrity sha512-OTXYvgzZsvlDFlB0WqaDXIiZulJpvf+Gp9hdGO9hZUb8j5uo0SIJbr4xQ78rPZPg7rvsXWYLmUvLVro7wy3zJw==
 
-vue@^2.6.10:
+vue@^2.6.10, vue@^2.6.11:
   version "2.6.12"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.12.tgz#f5ebd4fa6bd2869403e29a896aed4904456c9123"
   integrity sha512-uhmLFETqPPNyuLLbsKz6ioJ4q7AZHzD8ZVFNATNyICSZouqP2Sz0rotWQC8UNBF6VGSCs5abnKJoStA6JbCbfg==
