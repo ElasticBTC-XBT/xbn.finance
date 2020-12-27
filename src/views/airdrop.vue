@@ -43,8 +43,6 @@
 
             <div class="mt-32">
               <vue-goodshare-facebook :quote="pageTitle" :page_title="pageTitle" :page_url="pageUrl" has_icon has_counter title_social="Facebook"/>
-              <vue-goodshare-linked-in :page_title="pageTitle" :page_url="pageUrl" has_icon has_counter title_social="LinkedIn"/>
-              <vue-goodshare-pinterest :page_title="pageTitle" :page_url="pageUrl" has_icon has_counter title_social="Pinterest"/>
               <vue-goodshare-reddit :page_title="pageTitle" :page_url="pageUrl" has_icon has_counter title_social="Reddit"/>
               <vue-goodshare-twitter :page_title="pageTitle" :page_url="pageUrl" has_icon title_social="Twitter"/>
             </div>
@@ -68,8 +66,6 @@ import {getWeb3Client} from "@/libs/web3";
 import {claimAirdrop, getParticipantStatus} from "@/libs/xbt-airdrop";
 import {getContractXBTFundBalance, getXBTBalance} from "@/libs/xbt";
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
-import VueGoodshareLinkedIn from "vue-goodshare/src/providers/LinkedIn.vue";
-import VueGoodsharePinterest from "vue-goodshare/src/providers/Pinterest.vue";
 import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
 
@@ -80,8 +76,6 @@ export default {
     CGenericSection,
     CButton,
     VueGoodshareFacebook,
-    VueGoodshareLinkedIn,
-    VueGoodsharePinterest,
     VueGoodshareReddit,
     VueGoodshareTwitter
   },
