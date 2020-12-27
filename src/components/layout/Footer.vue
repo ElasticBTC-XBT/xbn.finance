@@ -7,7 +7,7 @@
                     <div class="footer-top space-between">
 
                         <div class="icon-flag-wrapper">
-                            <a href="?lang=vi">
+                            <a @click="setLanguageToVietnamese()">
                                 <img class="icon-flag" :src="require('@/assets/images/vi-sm.png')"/>
                             </a>
 
@@ -50,7 +50,12 @@
             setLanguageToEnglish() {
                 this.$i18n.locale = 'en';
                 localStorage.setItem('lang_elastic', 'en')
-                window.location.href = '/'
+                window.location.href='/'
+            },
+            setLanguageToVietnamese() {
+                this.$i18n.locale = 'vi';
+                localStorage.setItem('lang_elastic', 'vi')
+                window.location.href='/'
             }
         }
     }

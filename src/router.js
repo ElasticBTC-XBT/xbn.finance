@@ -14,81 +14,153 @@ import Airdrop from './views/airdrop.vue';
 import Roadmap from './views/roadmap.vue';
 import XbtInvestmentFund from './views/xbt_investment_fund.vue';
 import Cryptounicorns from './views/cryptounicorns.vue';
+import App from "./App";
 
 Vue.use(Router);
 
+let routers = [
+    {
+        path: '/',
+        name: 'home',
+        components: {
+            default: Home,
+        },
+        viShort: '/vi',
+    },
+    {
+        path: '/secondary',
+        name: 'secondary',
+        components: {
+            default: Secondary,
+        },
+        viShort: '/vi/secondary',
+    },
+    {
+        path: '/airdrop',
+        name: 'airdrop',
+        components: {
+            default: Airdrop,
+        },
+        viShort: '/vi/airdrop'
+    },
+    {
+        path: '/buy',
+        name: 'buy',
+        components: {
+            default: BuyXBT,
+        },
+        viShort: '/vi/buy',
+    },
+    {
+        path: '/basics',
+        name: 'basics',
+        components: {
+            default: Basic,
+        },
+        viShort: '/vi/basics',
+    },
+    {
+        path: '/technology',
+        name: 'technology',
+        components: {
+            default: Technology,
+        },
+        viShort: '/vi/technology',
+    },
+    {
+        path: '/economics',
+        name: 'economics',
+        components: {
+            default: Economics,
+        },
+        viShort: '/vi/economics',
+    },
+    {
+        path: '/staking',
+        name: 'staking',
+        components: {
+            default: Staking,
+        },
+        viShort: '/vi/staking',
+    },
+    {
+        path: '/learn',
+        name: 'learn',
+        components: {
+            default: Learn,
+        },
+        viShort: '/vi/learn',
+    },
+    {
+        path: '/roadmap',
+        name: 'roadmap',
+        components: {
+            default: Roadmap,
+        },
+        viShort: '/vi/roadmap',
+    },
+
+    {
+        path: '/governance',
+        name: 'Governance',
+        components: {
+            default: Governance,
+        },
+        viShort: '/vi/governance',
+    },
+    {
+        path: '/cryptounicorns',
+        name: 'Cryptounicorns',
+        components: {
+            default: Cryptounicorns,
+        },
+        viShort: '/vi/cryptounicorns',
+    },
+    {
+        path: '/xbt-investment-fund',
+        name: 'XbtInvestmentFund',
+        components: {
+            default: XbtInvestmentFund,
+        },
+        viShort: '/vi/xbt-investment-fund',
+    },
+    {
+        path: '/signup',
+        name: 'signup',
+        components: {
+            default: Signup,
+        },
+        viShort: '/vi/signup',
+    },
+]
+
 export default new Router({
     routes: [
+        // All pages are preceded by /vi/
+        ...routers,
         {
-            path: '/',
-            name: 'home',
-            component: Home
-        },
-        {
-            path: '/secondary',
-            name: 'secondary',
-            component: Secondary
-        }, {
-            path: '/buy',
-            name: 'buy',
-            component: BuyXBT
-        },
-      {
-            path: '/airdrop',
-            name: 'airdrop',
-            component: Airdrop
-        },
-        {
-            path: '/basics',
-            name: 'basics',
-            component: Basic
-        },
-        {
-            path: '/technology',
-            name: 'technology',
-            component: Technology
-        },
-        {
-            path: '/economics',
-            name: 'economics',
-            component: Economics
-        },
-        {
-            path: '/staking',
-            name: 'staking',
-            component: Staking
-        },
-        {
-            path: '/learn',
-            name: 'learn',
-            component: Learn
-        },
-        {
-            path: '/roadmap',
-            name: 'roadmap',
-            component: Roadmap
+
+            path: '/:lang',
+            components: {
+                default: App,
+            },
+            children: [
+
+                // All the pages are mapped from the routes
+                ...routers.map((p) => ({
+                    path: p.path.replace(p.path.substring(0, 1), ""),
+                    alias: p.viShort,
+                    name: p.name,
+                    components: p.components,
+                })),
+
+                {
+                    path: '',
+                    redirect: {name: 'home'},
+                },
+            ],
         },
 
-        {
-            path: '/governance',
-            name: 'Governance',
-            component: Governance
-        },
-        {
-            path: '/cryptounicorns',
-            name: 'Cryptounicorns',
-            component: Cryptounicorns
-        },
-        {
-            path: '/xbt-investment-fund',
-            name: 'XbtInvestmentFund',
-            component: XbtInvestmentFund
-        },
-        {
-            path: '/signup',
-            name: 'signup',
-            component: Signup
-        }
     ],
     mode: 'history'
 });

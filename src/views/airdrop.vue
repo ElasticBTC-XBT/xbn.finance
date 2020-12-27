@@ -116,7 +116,6 @@ export default {
 
   mounted() {
     this.handleInitialStage();
-    this.$refs.success.open();
   },
 
   methods: {
