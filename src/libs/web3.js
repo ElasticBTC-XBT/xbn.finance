@@ -44,7 +44,6 @@ const bindingProviderEvents = (provider) => {
 }
 
 export const loadCacheWeb3Client = async () => {
-    console.log(process.env.VUE_APP_INFURA_ID);
     if (web3Modal.cachedProvider) {
         console.log("found cache provider, connect")
         web3Provider = await web3Modal.connect();

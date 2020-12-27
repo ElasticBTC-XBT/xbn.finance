@@ -1,4 +1,16 @@
 {
+  "refresh": "Refresh",
+  "airdrop": {
+    "claim_title": "Free XBT Airdrop",
+    "claim_description": "Free XBT for everyone on a first-come-first-serve basis",
+    "claim_xbt": "Claim XBT",
+    "not_participated": "You haven't participated this airdrop program",
+    "participated": "You already participated this airdrop program",
+    "allowed_once": "One address only participate once",
+    "balance": "Your XBT balance",
+    "contract_fund_balance": "Total available tokens to claim",
+    "next_claim": "Next claim will be available at"
+  },
   "header": {
     "learn": "Learn",
     "governance": "Governance",

@@ -1,3 +1,5 @@
+import {AirdropLander} from "@/libs/xbt-airdrop";
+
 export const XBT = {
     address: process.env.VUE_APP_XBT_CONTRACT_ADDRESS,
     jsonInterface: require('@/assets/contracts/XBT.json')
@@ -15,6 +17,12 @@ export const getXBTContract = async (web3Client) => {
     );
 }
 
+export const getContractXBTFundBalance = async (web3Client) => {
+    const contract = await getXBTContract(web3Client);
+    const balance = await contract.methods.balanceOf(AirdropLander.address).call();
+    const decimals = await contract.methods.decimals().call();
+    return balance / (10 ** decimals);
+};
 
 export const getXBTBalance = async (web3Client) => {
     const accounts = await web3Client.eth.getAccounts();
