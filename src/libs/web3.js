@@ -25,11 +25,13 @@ const bindingProviderEvents = (provider) => {
     // Subscribe to accounts change
     provider.on("accountsChanged", (accounts) => {
         console.log('accountsChanged', accounts);
+        window.location.reload()
     });
 
     // Subscribe to chainId change
     provider.on("chainChanged", (chainId) => {
         console.log('chainChanged', chainId);
+        window.location.reload()
     });
 
     // Subscribe to provider connection
@@ -40,6 +42,7 @@ const bindingProviderEvents = (provider) => {
     // Subscribe to provider disconnection
     provider.on("disconnect", ({ code, message }) => {
         console.log('disconnect', { code, message });
+        window.location.reload()
     });
 }
 
