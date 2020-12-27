@@ -30,6 +30,7 @@ Vue.use(vuetimeline)
 Vue.use(VueI18n)
 
 import SweetModal from 'sweet-modal-vue/src/plugin.js';
+
 Vue.use(SweetModal);
 
 const messages = {
@@ -54,7 +55,8 @@ router.beforeEach((to, from, next) => {
     }
 
     // Get the save language if it exists
-    let lang = localStorage.getItem('lang_elastic') ? localStorage.getItem('lang_elastic').toLowerCase() : 'en';
+    // let lang = localStorage.getItem('lang_elastic') ? localStorage.getItem('lang_elastic').toLowerCase() : 'en';
+    let lang = localStorage.lang ? localStorage.lang.toLowerCase() : 'en';
 
     // Overwrite the language with the route if there is one
     if (hasLang) {
@@ -72,11 +74,15 @@ router.beforeEach((to, from, next) => {
 
     // Redirect to a url with the language
     if (!hasLang) {
-        if (lang != 'en')
-            return next(`/${lang}${to.fullPath}`);
-        else
-            return next();
+        if (lang != 'en') return next(`/${lang}${to.fullPath}`);
+        else return next();
     }
+    // else {
+    //     if (lang == 'en') {
+    //         if (to.fullPath == '/en/' || to.fullPath == '/en') return next('/')
+    //         return next();
+    //     }
+    // }
     return next();
 });
 

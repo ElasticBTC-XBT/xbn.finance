@@ -136,8 +136,8 @@ let routers = [
 
 export default new Router({
     routes: [
-        // All pages are preceded by /vi/
         ...routers,
+        // All pages are preceded by /vi/
         {
 
             path: '/:lang',
@@ -145,7 +145,6 @@ export default new Router({
                 default: App,
             },
             children: [
-
                 // All the pages are mapped from the routes
                 ...routers.map((p) => ({
                     path: p.path.replace(p.path.substring(0, 1), ""),
@@ -153,7 +152,6 @@ export default new Router({
                     name: p.name,
                     components: p.components,
                 })),
-
                 {
                     path: '',
                     redirect: {name: 'home'},
