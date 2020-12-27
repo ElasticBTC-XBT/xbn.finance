@@ -7,11 +7,12 @@
                     <div class="footer-top space-between">
 
                         <div class="icon-flag-wrapper">
-                            <a @click="setLanguageToVietnamese()">
+
+                            <a href="/vi" @click="setToVi()">
                                 <img class="icon-flag" :src="require('@/assets/images/vi-sm.png')"/>
                             </a>
 
-                            <a @click="setLanguageToEnglish()">
+                            <a href="/" @click="setToEn()">
                                 <img class="icon-flag" :src="require('@/assets/images/en-sm.png')"/>
                             </a>
                         </div>
@@ -47,15 +48,14 @@
             }
         },
         methods: {
-            setLanguageToEnglish() {
+            setToEn() {
                 this.$i18n.locale = 'en';
-                localStorage.setItem('lang_elastic', 'en')
-                window.location.href='/'
+                localStorage.lang = 'en';
+                window.location.reload()
             },
-            setLanguageToVietnamese() {
-                this.$i18n.locale = 'vi';
-                localStorage.setItem('lang_elastic', 'vi')
-                window.location.href='/'
+
+            setToVi() {
+                window.location.reload()
             }
         }
     }

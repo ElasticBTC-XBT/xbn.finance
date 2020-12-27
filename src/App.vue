@@ -1,13 +1,12 @@
 <template>
-  <component :is="layout">
-    <router-view :layout.sync="layout"/>
-  </component>
+    <component :is="layout">
+        <router-view :layout.sync="layout"/>
+    </component>
 </template>
 
 <script>
-import {ScrollReveal} from '@/utils/ScrollReveal.js'
-import {loadCacheWeb3Client} from "@/libs/web3";
-
+    import {ScrollReveal} from '@/utils/ScrollReveal.js'
+    import {loadCacheWeb3Client} from "@/libs/web3";
 
     export default {
         name: 'App',
@@ -19,9 +18,9 @@ import {loadCacheWeb3Client} from "@/libs/web3";
         },
         methods: {},
         mounted() {
-          loadCacheWeb3Client();
+            loadCacheWeb3Client();
 
-          document.body.classList.add('is-loaded')
+            document.body.classList.add('is-loaded')
         }
     }
 </script>
