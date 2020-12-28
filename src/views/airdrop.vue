@@ -118,9 +118,8 @@ export default {
   created() {
     this.$emit('update:layout', CLayout);
 
-    this.$root.$emit('updateWalletClient', async () => {
-      await this.handleGetClient();
-      await this.handleGetInitialData();
+    this.$root.$emit('updateWalletClient', () => {
+      this.connectWallet();
     });
   },
 
