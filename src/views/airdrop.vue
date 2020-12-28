@@ -27,7 +27,7 @@
 
             <!--c-generic-section top-divider class="center-content"-->
               <div class="container-xs">
-                <div class="button-group">
+                <div style="text-align: center;">
                   <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"
                             @click="claimAirdrop">
                     {{ $t('airdrop.claim_xbt') }}
