@@ -17,8 +17,9 @@
 
           <div v-if="userAccount">
             <div class="flex-center">
-              <div>
+              <div style="text-align:center;">
                 <!--h1>{{ $t('airdrop.balance') }}: {{ xbtBalance }} XBT</h1-->
+                <img src="https://i.imgur.com/QR3UZLo.png" style="width:200px"/>
                 <p v-if="waitingTime">{{ $t('airdrop.next_claim') }}: {{ nextAvailableClaimDate }}</p>
                 <p>{{ $t('airdrop.contract_fund_balance') }}: {{ contractFundBalance }} XBT</p>
               </div>
