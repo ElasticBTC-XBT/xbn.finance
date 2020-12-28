@@ -31,9 +31,9 @@
                             @click="claimAirdrop">
                     {{ $t('airdrop.claim_xbt') }}
                   </c-button>
-                  <c-button color="primary" wide-mobile target="_blank" @click="fetchStatus">
+                  <!--c-button color="primary" wide-mobile target="_blank" @click="fetchStatus">
                     {{ $t('refresh') }}
-                  </c-button>
+                  </c-button-->
                 </div>
               </div>
             <!--/c-generic-section-->
