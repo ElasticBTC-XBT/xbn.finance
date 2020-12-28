@@ -48,20 +48,14 @@ const bindingProviderEvents = (provider) => {
     });
 }
 
-export const loadCacheWeb3Client = async () => {
-    if (web3Modal.cachedProvider) {
-        console.log("found cache provider, connect")
-        web3Provider = await web3Modal.connect();
-        bindingProviderEvents(web3Provider);
-        web3Client = new Web3(web3Provider);
-    }
-}
-
 export const getWeb3Client = async () => {
+    console.log('get client');
+
     if(!web3Provider) {
         web3Provider = await web3Modal.connect();
-        bindingProviderEvents(web3Provider);
     }
+
+    if(web3Provider) bindingProviderEvents(web3Provider);
 
     if(!web3Client) web3Client = new Web3(web3Provider);
 

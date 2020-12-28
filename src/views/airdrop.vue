@@ -26,17 +26,17 @@
             </div>
 
             <!--c-generic-section top-divider class="center-content"-->
-              <div class="container-xs">
-                <div style="text-align: center;">
-                  <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"
-                            @click="claimAirdrop">
-                    {{ $t('airdrop.claim_xbt') }}
-                  </c-button>
-                  <!--c-button color="primary" wide-mobile target="_blank" @click="fetchStatus">
-                    {{ $t('refresh') }}
-                  </c-button-->
-                </div>
+            <div class="container-xs">
+              <div style="text-align: center;">
+                <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"
+                          @click="claimAirdrop">
+                  {{ $t('airdrop.claim_xbt') }}
+                </c-button>
+                <!--c-button color="primary" wide-mobile target="_blank" @click="fetchStatus">
+                  {{ $t('refresh') }}
+                </c-button-->
               </div>
+            </div>
             <!--/c-generic-section-->
           </div>
 
@@ -51,7 +51,7 @@
               </p>
             </div>
             <div class="center-content">
-              <c-button color="primary" wide-mobile target="_blank" @click="handleInitialStage">
+              <c-button color="primary" wide-mobile target="_blank" @click="connectWallet">
                 {{ $t('connect_wallet') }}
               </c-button>
             </div>
@@ -116,11 +116,16 @@ export default {
   mixins: [SectionProps],
 
   created() {
-    this.$emit('update:layout', CLayout)
+    this.$emit('update:layout', CLayout);
+
+    this.$root.$emit('updateWalletClient', async () => {
+      await this.handleGetClient();
+      await this.handleGetInitialData();
+    });
   },
 
   data() {
-    let v = this
+    let v = this;
     return {
       sectionHeader: {
         title: v.$t('airdrop.claim_title'),
@@ -130,7 +135,8 @@ export default {
       xbtBalance: 0,
       waitingTime: 0,
       claimAmount: 0,
-      userAccount: null
+      userAccount: null,
+      walletClient: {}
     }
   },
 
@@ -151,22 +157,34 @@ export default {
   },
 
   mounted() {
-    this.handleInitialStage();
+    this.handlePageOnLoad();
   },
 
   methods: {
-    async handleInitialStage() {
+    async connectWallet() {
+      await this.handleGetClient();
+      await this.handleGetInitialData();
+    },
+
+    async handleGetClient() {
       const walletClient = await getWeb3Client();
-      if (walletClient.web3Client) {
-        const accounts = await walletClient.web3Client.eth.getAccounts();
-        this.$set(this, 'userAccount', accounts.length > 0 ? accounts[0] : null);
-        await this.fetchStatus();
+      this.$set(this, 'walletClient', walletClient);
+    },
+
+    async handleGetInitialData() {
+      const accounts = await this.walletClient.web3Client.eth.getAccounts();
+      this.$set(this, 'userAccount', accounts.length > 0 ? accounts[0] : null);
+      await this.fetchStatus();
+    },
+
+    async handlePageOnLoad() {
+      if (this.walletClient.web3Client) {
+        await this.handleGetInitialData();
       }
     },
 
     async fetchStatus() {
-      const walletClient = await getWeb3Client();
-
+      const walletClient = this.walletClient;
       // Get balance
       const receipt = await getXBTBalance(walletClient.web3Client);
       this.$set(this, 'xbtBalance', receipt);
@@ -181,7 +199,7 @@ export default {
     },
 
     async claimAirdrop() {
-      const walletClient = await getWeb3Client();
+      const walletClient = this.walletClient;
       const claimAmount = await claimAirdrop(walletClient.web3Client);
       this.$set(this, 'claimAmount', claimAmount);
       await this.fetchStatus();
@@ -189,7 +207,7 @@ export default {
     },
 
     async adjustParams() {
-      const walletClient = await getWeb3Client();
+      const walletClient = this.walletClient;
       await adjustParams(walletClient.web3Client);
       await this.fetchStatus();
       this.$refs.success.open();
