@@ -46,8 +46,8 @@
                 <a target="_blank" href="https://trustwallet.com/">Trust Wallet</a>
                 {{ $t('or') }} <a target="_blank" href="https://metamask.io/">Metamask</a></p>
               <p style="font-size: 14px">
-                {{ $t('any_questions') }} <a target="_blank"
-                                                           href="https://t.me/elasticbitcoinxbt">{{ $t('here') }}</a>
+                {{ $t('any_questions') }}
+                <a target="_blank" href="https://t.me/elasticbitcoinxbt">{{ $t('here') }}</a>
               </p>
             </div>
             <div class="center-content">
@@ -92,7 +92,7 @@ import CLayout from '@/layouts/LayoutDefault.vue'
 import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
 import {SectionProps} from '@/utils/SectionProps.js'
 import moment from 'moment';
-import CGenericSection from '@/components/sections/GenericSection.vue'
+// import CGenericSection from '@/components/sections/GenericSection.vue'
 import CButton from '@/components/elements/Button.vue'
 import {getWeb3Client} from "@/libs/web3";
 import {adjustParams, claimAirdrop, getParticipantStatus} from "@/libs/xbt-airdrop";
@@ -106,7 +106,7 @@ export default {
   name: 'AirDrop',
   components: {
     CSectionHeader,
-    CGenericSection,
+    // CGenericSection,
     CButton,
     VueGoodshareFacebook,
     VueGoodshareReddit,

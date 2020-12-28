@@ -16,6 +16,7 @@ const providerOptions = {
 };
 
 const web3Modal = new Web3Modal({
+    disableInjectedProvider: true,
     network: "mainnet", // optional
     cacheProvider: true, // optional
     providerOptions // required
