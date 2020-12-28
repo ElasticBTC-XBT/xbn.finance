@@ -18,13 +18,13 @@
           <div v-if="userAccount">
             <div class="flex-center">
               <div>
-                <h1>{{ $t('airdrop.balance') }}: {{ xbtBalance }} XBT</h1>
+                <!--h1>{{ $t('airdrop.balance') }}: {{ xbtBalance }} XBT</h1-->
                 <p v-if="waitingTime">{{ $t('airdrop.next_claim') }}: {{ nextAvailableClaimDate }}</p>
                 <p>{{ $t('airdrop.contract_fund_balance') }}: {{ contractFundBalance }} XBT</p>
               </div>
             </div>
 
-            <c-generic-section top-divider class="center-content">
+            <!--c-generic-section top-divider class="center-content"-->
               <div class="container-xs">
                 <div class="button-group">
                   <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"
@@ -36,7 +36,7 @@
                   </c-button>
                 </div>
               </div>
-            </c-generic-section>
+            <!--/c-generic-section-->
           </div>
 
           <div v-else>
