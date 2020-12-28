@@ -37,6 +37,7 @@ const bindingProviderEvents = (provider) => {
     // Subscribe to provider connection
     provider.on("connect", ({chainId}) => {
         console.log('connect', {chainId});
+        window.location.reload()
     });
 
     // Subscribe to provider disconnection

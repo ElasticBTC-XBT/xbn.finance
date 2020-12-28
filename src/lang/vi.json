@@ -1,4 +1,9 @@
 {
+  "dont_have_wallet": "Nếu bạn chưa có ví crypto, hãy tải về",
+  "or": "hoặc",
+  "hint": "Gợi ý",
+  "here": "tại đây",
+  "any_questions": "Nếu bạn có bất kỳ thắc mắc nào, hãy liên hệ chúng tôi",
   "connect_wallet": "Kết nối Ví",
   "refresh": "Tải lại",
   "airdrop": {

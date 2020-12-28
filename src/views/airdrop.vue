@@ -13,8 +13,8 @@
                     topDivider && 'has-top-divider',
                     bottomDivider && 'has-bottom-divider'
                 ]">
-
           <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
+
           <div v-if="userAccount">
             <div class="flex-center">
               <div>
@@ -39,19 +39,42 @@
             </c-generic-section>
           </div>
 
-          <div v-else class="flex-center">
-            <c-button color="primary" wide-mobile target="_blank" @click="handleInitialStage">
-              {{ $t('connect_wallet') }}
-            </c-button>
+          <div v-else>
+            <div class="center-content">
+              <p style="font-size: 14px">{{ $t('hint') }}: {{ $t('dont_have_wallet') }}
+                <a target="_blank" href="https://trustwallet.com/">Trust Wallet</a>
+                {{ $t('or') }} <a target="_blank" href="https://metamask.io/">Metamask</a></p>
+              <p style="font-size: 14px">
+                {{ $t('any_questions') }} <a target="_blank"
+                                                           href="https://t.me/elasticbitcoinxbt">{{ $t('here') }}</a>
+              </p>
+            </div>
+            <div class="center-content">
+              <c-button color="primary" wide-mobile target="_blank" @click="handleInitialStage">
+                {{ $t('connect_wallet') }}
+              </c-button>
+            </div>
           </div>
 
+
           <sweet-modal ref="success" icon="success">
+            <!--          <div class="flex-center">-->
+            <!--            <c-image-->
+            <!--                id="big-banner-logo"-->
+            <!--                class="has-shadow"-->
+            <!--                :src="require('@/assets/images/banner.png')"-->
+            <!--                alt="Hero image"-->
+            <!--                :width="72"-->
+            <!--                :height="72"/>-->
+            <!--          </div>-->
             <h1>{{ $t('airdrop.xbt_coming') }}</h1>
             {{ $t('airdrop.thank_you') }}
 
             <div class="mt-32">
-              <vue-goodshare-facebook :quote="pageTitle" :page_title="pageTitle" :page_url="pageUrl" has_icon has_counter title_social="Facebook"/>
-              <vue-goodshare-reddit :page_title="pageTitle" :page_url="pageUrl" has_icon has_counter title_social="Reddit"/>
+              <vue-goodshare-facebook :quote="pageTitle" :page_title="pageTitle" :page_url="pageUrl" has_icon
+                                      has_counter title_social="Facebook"/>
+              <vue-goodshare-reddit :page_title="pageTitle" :page_url="pageUrl" has_icon has_counter
+                                    title_social="Reddit"/>
               <vue-goodshare-twitter :page_title="pageTitle" :page_url="pageUrl" has_icon title_social="Twitter"/>
             </div>
           </sweet-modal>
@@ -71,11 +94,12 @@ import moment from 'moment';
 import CGenericSection from '@/components/sections/GenericSection.vue'
 import CButton from '@/components/elements/Button.vue'
 import {getWeb3Client} from "@/libs/web3";
-import {claimAirdrop, getParticipantStatus} from "@/libs/xbt-airdrop";
+import {adjustParams, claimAirdrop, getParticipantStatus} from "@/libs/xbt-airdrop";
 import {getContractXBTFundBalance, getXBTBalance} from "@/libs/xbt";
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
+// import CImage from '@/components/elements/Image.vue'
 
 export default {
   name: 'AirDrop',
@@ -85,7 +109,8 @@ export default {
     CButton,
     VueGoodshareFacebook,
     VueGoodshareReddit,
-    VueGoodshareTwitter
+    VueGoodshareTwitter,
+    // CImage
   },
   mixins: [SectionProps],
 
@@ -116,7 +141,8 @@ export default {
       return this.$t('airdrop.share_page_title')
     },
     nextAvailableClaimDate() {
-      return moment(this.waitingTime).lang('vi').format('llll');
+      const lang = localStorage.getItem('lang') || 'en';
+      return moment(this.waitingTime).lang(lang).format('llll');
     },
     availableToClaim() {
       return new Date() >= new Date(this.waitingTime);
@@ -130,7 +156,7 @@ export default {
   methods: {
     async handleInitialStage() {
       const walletClient = await getWeb3Client();
-      if (walletClient.web3Client){
+      if (walletClient.web3Client) {
         const accounts = await walletClient.web3Client.eth.getAccounts();
         this.$set(this, 'userAccount', accounts.length > 0 ? accounts[0] : null);
         await this.fetchStatus();
@@ -159,6 +185,13 @@ export default {
       this.$set(this, 'claimAmount', claimAmount);
       await this.fetchStatus();
       this.$refs.success.open();
+    },
+
+    async adjustParams() {
+      const walletClient = await getWeb3Client();
+      await adjustParams(walletClient.web3Client);
+      await this.fetchStatus();
+      this.$refs.success.open();
     }
   }
 }
@@ -167,5 +200,10 @@ export default {
 <style>
 .signin a {
   text-decoration: none !important;
+}
+
+.sweet-modal .sweet-box-actions .sweet-action-close:hover {
+  background: inherit !important;
+  color: #30b748 !important;
 }
 </style>

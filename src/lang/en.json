@@ -1,4 +1,9 @@
 {
+  "dont_have_wallet": "If you do not have ETH wallet, please download",
+  "or": "or",
+  "hint": "Hint",
+  "here": "here",
+  "any_questions": "If you have any questions, please ask us",
   "refresh": "Refresh",
   "connect_wallet": "Connect Wallet",
   "airdrop": {

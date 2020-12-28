@@ -7,11 +7,11 @@
                     <div class="footer-top space-between">
 
                         <div class="icon-flag-wrapper">
-                            <a @click="setLanguageToVietnamese()">
+                            <a @click="setLanguageToVietnamese()" href="javascript:void(0)" class="clickable">
                                 <img class="icon-flag" :src="require('@/assets/images/vi-sm.png')"/>
                             </a>
 
-                            <a @click="setLanguageToEnglish()">
+                            <a @click="setLanguageToEnglish()" href="javascript:void(0)" class="clickable">
                                 <img class="icon-flag" :src="require('@/assets/images/en-sm.png')"/>
                             </a>
                         </div>
