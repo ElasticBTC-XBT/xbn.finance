@@ -11,7 +11,7 @@ export const getXBTContract = async (web3Client) => {
         XBT.jsonInterface.abi,
         XBT.address,
         {
-            gas: 300000,
+            gas: 85000,
             from: accounts[0]
         }
     );
