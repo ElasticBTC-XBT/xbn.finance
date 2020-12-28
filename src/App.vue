@@ -24,9 +24,5 @@ export default {
       await callbackHandler();
     })
   },
-
-  beforeDestroy() {
-    this.$root.$off('updateWalletClient');
-  }
 }
 </script>
