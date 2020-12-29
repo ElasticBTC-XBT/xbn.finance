@@ -34,7 +34,7 @@
                                 <router-link to="/roadmap/">{{ $t("header.roadmap") }}</router-link>
                             </li>
                             <li @click="closeMenu">
-                                <router-link to="/staking/">{{ $t("header.staking") }}</router-link>
+                                <router-link to="/airdrop/">{{ $t("airdrop.airdrop") }}</router-link>
                             </li>
                             <li @click="closeMenu">
                                 <router-link to="/cryptounicorns/">{{ $t("header.cryptounicorns") }}</router-link>
