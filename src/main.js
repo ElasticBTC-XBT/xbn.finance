@@ -8,6 +8,9 @@ import Vue2TouchEvents from 'vue2-touch-events';
 
 Vue.use(Vue2TouchEvents);
 
+import VueSweetalert2 from "vue-sweetalert2";
+Vue.use(VueSweetalert2);
+
 import App from './App.vue';
 import router from './router';
 import VueI18n from 'vue-i18n'

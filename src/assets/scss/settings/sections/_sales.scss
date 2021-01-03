@@ -1,0 +1,12 @@
+// Sales (core/sections/_sales.scss) ---------------
+$sales--padding-t__mobile: 		null;		// sales, top padding (mobile)
+$sales--padding-b__mobile: 		null;		// sales, bottom padding (mobile)
+$sales--padding-t__desktop: 		null;		// sales, top padding (desktop)
+$sales--padding-b__desktop: 		112px;		// sales, bottom padding (desktop)
+$sales-header--padding__mobile: 	null;		// sales header, bottom padding (mobile)
+$sales-header--padding__desktop:	null;		// sales header, bottom padding (desktop)
+$sales-items--padding__mobile: 	null;		// padding between sales items (mobile)
+$sales-items--padding__desktop: 	null;		// padding between sales items (desktop)
+$sales-item--width: 				344px;		// sales item, width
+$sales-item--inner-padding-v: 	24px;		// sales item, inner top and bottom padding (it inherits $tiles-item--inner-padding-v unless you replace null with a new value)
+$sales-item--inner-padding-h: 	32px;		// sales item, inner left and right padding (it inherits $tiles-item--inner-padding-h unless you replace null with a new value)
