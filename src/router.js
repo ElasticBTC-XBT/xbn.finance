@@ -26,6 +26,7 @@ let routers = [
             default: Home,
         },
         viShort: '/vi',
+        krShort: '/kr',
     },
     {
         path: '/secondary',
@@ -34,6 +35,7 @@ let routers = [
             default: Secondary,
         },
         viShort: '/vi/secondary',
+        krShort: '/kr/secondary',
     },
     {
         path: '/airdrop',
@@ -41,7 +43,8 @@ let routers = [
         components: {
             default: Airdrop,
         },
-        viShort: '/vi/airdrop'
+        viShort: '/vi/airdrop',
+        krShort: '/kr/airdrop',
     },
     {
         path: '/buy',
@@ -50,6 +53,7 @@ let routers = [
             default: BuyXBT,
         },
         viShort: '/vi/buy',
+        krShort: '/kr/buy',
     },
     {
         path: '/basics',
@@ -58,6 +62,7 @@ let routers = [
             default: Basic,
         },
         viShort: '/vi/basics',
+        krShort: '/kr/basics',
     },
     {
         path: '/technology',
@@ -66,6 +71,7 @@ let routers = [
             default: Technology,
         },
         viShort: '/vi/technology',
+        krShort: '/kr/technology',
     },
     {
         path: '/economics',
@@ -74,6 +80,7 @@ let routers = [
             default: Economics,
         },
         viShort: '/vi/economics',
+        krShort: '/kr/economics',
     },
     {
         path: '/staking',
@@ -82,6 +89,7 @@ let routers = [
             default: Staking,
         },
         viShort: '/vi/staking',
+        krShort: '/kr/staking',
     },
     {
         path: '/learn',
@@ -90,6 +98,7 @@ let routers = [
             default: Learn,
         },
         viShort: '/vi/learn',
+        krShort: '/kr/learn',
     },
     {
         path: '/roadmap',
@@ -98,6 +107,7 @@ let routers = [
             default: Roadmap,
         },
         viShort: '/vi/roadmap',
+        krShort: '/kr/roadmap',
     },
 
     {
@@ -107,6 +117,7 @@ let routers = [
             default: Governance,
         },
         viShort: '/vi/governance',
+        krShort: '/kr/governance',
     },
     {
         path: '/cryptounicorns',
@@ -115,6 +126,7 @@ let routers = [
             default: Cryptounicorns,
         },
         viShort: '/vi/cryptounicorns',
+        krShort: '/kr/cryptounicorns',
     },
     {
         path: '/xbt-investment-fund',
@@ -123,6 +135,7 @@ let routers = [
             default: XbtInvestmentFund,
         },
         viShort: '/vi/xbt-investment-fund',
+        krShort: '/kr/xbt-investment-fund',
     },
     {
         path: '/signup',
@@ -131,6 +144,7 @@ let routers = [
             default: Signup,
         },
         viShort: '/vi/signup',
+        krShort: '/kr/signup',
     },
 ]
 

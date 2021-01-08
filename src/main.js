@@ -14,6 +14,7 @@ import VueI18n from 'vue-i18n'
 
 import vnMessage from './lang/vi.json'
 import enMessage from './lang/en.json'
+import krMessage from './lang/kr.json'
 
 
 import '@/assets/scss/style.scss';
@@ -36,6 +37,7 @@ Vue.use(SweetModal);
 const messages = {
     vi: vnMessage,
     en: enMessage,
+    kr: krMessage
 }
 
 const i18n = new VueI18n({
@@ -64,7 +66,7 @@ router.beforeEach((to, from, next) => {
     }
 
     // Make sure the language is valid
-    if (!['vi'].includes(lang)) {
+    if (!['vi', 'kr'].includes(lang)) {
         lang = 'en';
     }
 
