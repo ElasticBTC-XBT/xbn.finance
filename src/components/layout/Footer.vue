@@ -14,6 +14,11 @@
                             <a href="/" @click="setToEn()" class="clickable">
                                 <img class="icon-flag" :src="require('@/assets/images/en-sm.png')"/>
                             </a>
+
+                            <a href="/kr" @click="setToKr()" class="clickable">
+                                <img class="icon-flag" :src="require('@/assets/images/kr-sm.png')"/>
+                            </a>
+
                         </div>
 
                         <c-footer-social/>
@@ -54,6 +59,10 @@
             },
 
             setToVi() {
+                window.location.reload()
+            },
+
+            setToKr() {
                 window.location.reload()
             }
         }
