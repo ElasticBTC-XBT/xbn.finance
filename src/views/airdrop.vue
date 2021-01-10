@@ -133,7 +133,6 @@ export default {
       contractFundBalance: 0,
       xbtBalance: 0,
       waitingTime: 0,
-      claimAmount: 0,
       userAccount: null,
       walletClient: {}
     }
@@ -199,8 +198,7 @@ export default {
 
     async claimAirdrop() {
       const walletClient = this.walletClient;
-      const claimAmount = await claimAirdrop(walletClient.web3Client);
-      this.$set(this, 'claimAmount', claimAmount);
+      await claimAirdrop(walletClient.web3Client);
       await this.fetchStatus();
       this.$refs.success.open();
     },
