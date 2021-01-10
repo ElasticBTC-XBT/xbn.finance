@@ -1,0 +1,396 @@
+{
+  "dont_have_wallet": "암호 화폐 지갑이 없다면 다운로드하세요",
+  "or": "또는",
+  "hint": "제안",
+  "here": "여기",
+  "any_questions": "질문이 있으시면 언제든지 저희에게 연락하십시오",
+  "connect_wallet": "지갑 연결",
+  "refresh": "새로 고침",
+  "airdrop": {
+    "airdrop": "공중 투하",
+    "share_page_title": "$ XBT를 무료로 받으세요. 모두 여기에 가입하세요.",
+    "xbt_coming": "XBT를 지갑으로 보냈습니다",
+    "thank_you": "XBT 커뮤니티의 일원이되어 주셔서 감사합니다 <3",
+    "claim_title": "무료 XBT 받기",
+    "claim_description": "XBT는 모두에게 무료입니다",
+    "claim_xbt": "XBT 받기",
+    "not_participated": "이 프로그램에 가입하지 않았습니다.",
+    "participated": "이 프로그램에 참여했습니다.",
+    "allowed_once": "각 지갑 주소는 한 번만 참여할 수 있습니다.",
+    "balance": "밸런스 XBT",
+    "contract_fund_balance": "받을 수있는 총 XBT 금액",
+    "next_claim": "다음 리셉션"
+  },
+  "header": {
+    "learn": "연구",
+    "governance": "관리",
+    "roadmap": "로드맵",
+    "staking": "Staking",
+    "cryptounicorns": "Cryptounicorns",
+    "investment_fund": "투자 자금",
+    "buy": "구입"
+  },
+  "home": {
+    "hero_split": {
+      "title_1": "XBT · BITCOIN은 부패 소스와 함께 작동합니다",
+      "desc_1": "비트 코인 암호 화폐는 그 자체로 이더 리움 네트워크에서 실행되는 공급을 변경합니다.",
+      "desc_2": "이더 리움 스마트 컨트랙트를 사용하여 시장 상황에 따라 공급을 조정함으로써 비트 코인 가격을 안정화시키는 XBT에 대해 배울 때입니다.",
+      "desc_3": "$ XBT의 가격은 100 일 공급 조정 후 $ BTC와 같습니다.",
+      "buy_xbt": "지금 XBT 구매"
+    },
+    "features_tiles": {
+      "section_header_title": "Elastic Bitcoin (XBT)이란?",
+      "section_data_upper": {
+        "item_1": {
+          "title": "특별한 Defi 프로토콜",
+          "desc": "XBT는 공급 탄력성 모델이 있는 DeFi 프로토콜인 $ AMPL에서 분리되었습니다. XBT의 총 공급량은 매일 바뀝니다."
+        },
+        "item_2": {
+          "title": "랜덤 리베이스",
+          "desc": "가격 조작을 피하기 위해 XBT는 지연 계수로 무작위로 스왑됩니다. XBT는 공급 가격 균형에 도달 할 것이며 변동성은 가격이 아니라 토큰 공급에 있습니다."
+        },
+        "item_3": {
+          "title": "목표 가격 1 $ BTC",
+          "desc": "$ XBT는 100 일 후 $ 1 BTC의 표준 가격 목표를 유지하도록 설계되었습니다."
+        },
+        "item_4": {
+          "title": "더 많은 보유자의 경우 1 XBT는 1 $ BTC와 같지만 시가 총액이 더 큽니다.",
+          "desc": "XBT 보유자는 유통중인 총 XBT 수의 고정 된 비율을 소유합니다. 시가 총액이 증가함에 따라 보유 지분이 증가합니다."
+        },
+        "item_5": {
+          "title": "리베이스 이벤트란 무엇입니까?",
+          "desc": "리베이스 이벤트는 1 비트 코인의 목표 가격 대비 통화의 현재 가격을 기준으로 모든 지갑의 잔액을 조정하는 이벤트입니다."
+        },
+        "item_6": {
+          "title": "리베이스 지연 계수는 무엇입니까?",
+          "desc": "리베이스 지연 계수는 더 부드러운 변동성을 지원하고, 낮은 히스테리시스 계수는 더 빠른 수정을 의미하며 그 반대의 경우도 마찬가지입니다."
+        }
+      }
+    },
+    "testimonial": {
+      "section_header": {
+        "title": "XBT 재단 (XF)은",
+        "paragraph": "XBT 재단 (XF)은 XBT 및 관련 기술 지원에 전념하는 비영리 조직으로, 조직의 역할은 통제가 아니라 XBT의 성장에 기여하는 것입니다."
+      },
+      "team_data": {
+        "item_1": {
+          "desc": "-소프트웨어 업계에서 20 년의 경력. 스마트 계약을 구축하고 자동으로 매매하는 봇을 구축하십시오. 시작 경험과 많은 기복을 경험했습니다."
+        },
+        "item_2": {
+          "desc": "— 저는 데이터, 자동화에 열정적입니다."
+        },
+        "item_3": {
+          "desc": "— 체인 기술 및 제품에 대한 열정"
+        },
+        "item_4": {
+          "desc": "— UI와 UX를 통한 고객 경험 향상을 목표로합니다."
+        },
+        "item_5": {
+          "desc": "—저는 아주 일찍 암호 화폐와 모바일에 익숙해졌고 팀을 잘 운영합니다: @ activators.dev"
+        }
+      }
+    },
+    "features_split": {
+      "section_header": {
+        "title": "XBT에 대해 알아보기",
+        "paragraph": "XBT는 비트 코인과 같은 암호 화폐이며 가격 목표는 비트 코인이며 공급은 매일 바뀝니다."
+      },
+      "title_1": "맞춤형 소모품 수량",
+      "title_2": "리스크 다각화",
+      "title_3": "거래 도구",
+      "desc_1": "보유하고있는 XBT의 양은 매일 변경 될 수 있으므로 1 XBT의 가격은 100 일 동안 1 BTC의 가격과 동일합니다. XBT 총액 대비 보유하고있는 XBT 비율은 총 공급량이 변경 되더라도 동일하게 유지됩니다.",
+      "desc_2": "이렇게하면 XBT와 BTC 가격 사이에 30 일 지연이 있기 때문에 포트폴리오에서 알트 코인 (ETH, LINK ... 등)과 비트 코인의 상관 관계 위험이 줄어 듭니다.",
+      "desc_3": "거래 도구로서 XBT는 XBT를 소유하고있어 비트 코인의 가격 상승 모멘텀을 포착 할 수있을뿐만 아니라 늦은 요인으로 인해 비트 코인이 급격히 급락 할 위험을 줄이는 데 많은 이점이 있습니다."
+    },
+    "faq_data": {
+      "item_1": {
+        "title": "XBT 쌍은 언제 Uniswap에 게시됩니까?",
+        "answer": "2020 년 11 월 11 일 "
+      },
+      "item_2": {
+        "title": "Whitepaper는 언제 게시 되었습니까?",
+        "answer": "최종 결정 중이며 현재 자문 팀과 검토 중입니다. 2021 년 1 분기에 게시됩니다."
+      },
+      "item_3": {
+        "title": "총 공급량은 얼마입니까?",
+        "answer": "총 공급량은 지속적으로 변화하고 있습니다. 여기에서 현재 공급을 볼 수 있습니다 : <a href='https://etherscan.io/token/0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8'>여기</a>"
+      },
+      "item_4": {
+        "title": "스마트 계약이 아직 해제 되었습니까?",
+        "answer": "예, <a href='https://github.com/ElasticBTC-XBT/elastic-bitcoin-xbt-contract'>여기</a> 에서 찾을 수 있습니다."
+      },
+      "item_5": {
+        "title": "XBT는 CoinGecko 및 Coin Market Cap에 언제 표시됩니까?",
+        "answer": "우리는 CoinGeckgo에 가입하고 있으며 그들의 승인을 기다리고 있습니다. XBT를 다른 거래소에 상장하면 코인 시가 총액에 머물 것입니다."
+      },
+      "item_6": {
+        "title": "그룹 지갑이 잠겨 있습니까?",
+        "answer": "예, 계약에 잠긴 모든 지갑은 기한까지 지급됩니다. 매주 1 %의 비율로 잠금 해제됩니다."
+      },
+      "item_7": {
+        "title": "Uniswap 유동성은 잠겨 있습니까?",
+        "answer": "예, Unicrypt를 통해 잠겨 있습니다. <a href='https://www.dextools.io/app/uniswap/pair-explorer/0x080cf470ea91532bf5e313acc60c4b0d029409d4'>Dextools</a> 에서 더 많은 정보를 찾을 수 있습니다."
+      },
+      "item_8": {
+        "title": "Rebase는 어떻게 작동합니까?",
+        "answer": "리베이스는 마지막 리베이스 이후 24 시간 후에 무작위로 발생했습니다. Rebase는 계산 된 비율에 따라 지갑 잔액을 변경합니다. 가격이 $ BTC 1.05 이상이면 리베이스가 양수이고 잔액이 증가합니다. 가격이 $ BTC 0.95 미만이면 리베이스가 음수이고 잔액이 감소합니다. Rebase는 지갑 잔액을 자동으로 변경합니다. 당신은 아무것도 넣거나 할 필요가 없습니다. 액세스 권한이 있고 개인 키가있는 모든 지갑이 지원됩니다."
+      },
+      "item_9": {
+        "title": "거래없이 어떻게 사용자의 잔액을 변경할 수 있습니까?",
+        "answer": "모든 지갑은 Contract Scalar 변수를 사용하여 단일 트랜잭션으로 업데이트됩니다. 지갑의 잔액은 자신의 공급에 글로벌 분할을 곱한 것입니다. 나눌수록 잔액이 더 많이 업데이트되어 변동합니다."
+      },
+      "item_10": {
+        "title": "t리베이스가 하루에 여러 번 발생할 수 있습니까?",
+        "answer": "없습니다"
+      },
+      "item_11": {
+        "title": "Rebase는 어떻게 계산됩니까?",
+        "answer": "(현재가-기준 목표 가격) * 지갑 잔액 / (기준 목표 가격 * 지연 계수) <br/> 예 : 현재 가격이 $ BTC 1.30이고 지연 계수가 10.00 인 경우 업데이트 된 지갑 잔액은 다음과 같이 조정됩니다. (1.30-1) * 100 / (1 * 10) = 3 새 지갑 잔액은 103 $ XBT가됩니다."
+      },
+      "item_12": {
+        "title": "지연 요인은 무엇입니까?",
+        "answer": "임의의 곡선 기반 지연 계수는 리베이스 이벤트로 증가 및 감소하는 공급량을 계산하는 데 사용됩니다. 이는 리베이스 이벤트를 더 예측할 수 없게 만듭니다. 이 곡선은 총 시가 총액이 낮을 때 공급이 더 빠른 속도로 증가하도록합니다. 지연 계수는 총 공급량에 따라 다릅니다. 공급이 높을수록 지연 계수가 높아질 수 있습니다. 최소 6 개에서 최대 100 개입니다."
+      },
+      "item_13": {
+        "title": "Staking XBT LP는 무엇입니까?",
+        "answer": "XBT LP Staking은 Uniswap에서 유동성을 장려하는 솔루션을 제공합니다. Uniswap에서 XBT에 대한 유동성을 제공하면 XBT Staking 대시 보드에서 기여할 수있는 UNI-V2 토큰을 받게됩니다. 스테이 킹 된 토큰 수와 베팅 기간에 따라 전체 XBT 생태계의 일부를 받게됩니다. Pool은 시간이 지남에 따라 잠금이 해제되고 네트워크에서의 공유에 따라 각 기여자에게 배포됩니다."
+      }
+    }
+  },
+  "cta": {
+    "title": "지금 XBT 커뮤니티에 가입하세요!",
+    "buy_xbt": "XBT 구매"
+  },
+  "learn": {
+    "section_header": {
+      "title": "XBT에 대해 알아보기"
+    },
+    "basic": "기본 사상",
+    "technology": "과학 기술",
+    "economics": "경제학"
+  },
+  "basic_split": {
+    "section_header": {
+      "title": "XBT에 대해 알아보기",
+      "paragraph": "XBT는 비트 코인과 같은 암호 화폐이며 가격 목표는 비트 코인이며 공급은 매일 바뀝니다."
+    },
+    "section_contents": {
+      "item_1": {
+        "title": "우리는 보안없이 이더 리움 네트워크에서 비트 코인을 가질 수 있습니다.",
+        "description": "사실이고 새롭습니다. WBTC와 같은 중앙 집중식 담보없이 이더 리움 네트워크에 비트 코인이 있습니다. XBT 프로토콜은 수요에 따라 자동으로 공급을 조정합니다. 가격이 높으면 지갑 잔액이 증가합니다. 가격이 낮을 때 지갑 잔액이 감소될 것입니다."
+      },
+      "item_2": {
+        "title": "XBT를 사용하면 비트 코인을 2 천 1 백만이 아닌 무제한으로 가질 수 있습니다.",
+        "description": "2,100 만 비트 코인 만 있지만 XBT의 수는 무제한이며 지구상의 모든 사람이 1 $ XBT를 소유하기에 충분한 XBT가있을 것이며 1 $ XBT는 여전히 1 비트 코인과 같습니다. 굿!"
+      },
+      "item_3": {
+        "title": "XBT는 비트 코인을 안정시키는 동시에 성장에 기여합니다.",
+        "description": "XBT가 성장함에 따라 가격은 비트 코인의 가격으로 안정화 될뿐만 아니라 공급이 탄력적이고 확장 가능하기 때문에 비트 코인도 안정화됩니다. 따라서 비트 코인에 대한 수요가 많을 때 XBT는 수요를 충족시키기 위해 공급을 늘릴 수 있으며 그 반대의 경우도 마찬가지입니다."
+      }
+    },
+    "learn_basic": "기초 배우기",
+    "learn_technology": "기술 배우기",
+    "learn_economics": "경제학 배우기"
+  },
+  "technology": {
+    "title_1": "작동 원리",
+    "title_2": "정보 흐름",
+    "title_3": "핵심 기능 및 성능",
+    "desc_1": "AMPL의 분리로서 XBT는 이와 매우 유사하게 작동하며이 페이지의 정보는 재사용 된 다음 AMPL에서 수정됩니다.",
+    "desc_1_5": "XBT의 스마트 계약 설계를 통해 P2P 이체 및 은행 없이도 공급 증가 및 감소를 자동으로 수행 할 수 있습니다.",
+    "desc_2": "통화 프로토콜은 가격에 따라 모든 사용자의 지갑에서 XBT 제공을 자동으로 조정합니다. 즉, 귀하가 소유 한 XBT의 양은 시장 상황에 따라 다릅니다. 가격이 높으면 지갑의 잔액이 자동으로 증가합니다. 가격이 낮 으면 지갑 잔액이 자동으로 감소합니다. 이 공급 조정은 하루에 한 번 발생하며 rebase라고합니다.",
+    "desc_3": "이 일일 리베이스는 모든 지갑 잔액에 보편적이고 비례 적으로 적용됩니다. 이것은 XBT가 희석되지 않았 음을 의미합니다. 비트 코인과 마찬가지로 전체 네트워크의 1 %를 소유하고 있다면 이전을 시작하지 않는 한 항상 1 %를 소유하게됩니다.",
+    "desc_4": "높은 수준에서 정책 계약은 지갑 잔액의 공급 변화에 따른 시장 가격 변화를 반영합니다. 이것은 차례로 시장 행위자가 가격을 조정하도록 장려합니다. 가격은 공급 알고리즘에 정보를 제공하고 공급은 일정 기간 동안 가격 행동에 영향을 미칩니다.",
+    "section_header": {
+      "title": "기술",
+      "paragraph": "XBT는 이더 리움 네트워크에서비트 코인의 최고의 장점 및 스마트 계약을 보유하고 있습니다."
+    },
+    "faq_data": {
+      "item_1": {
+        "title": "연산",
+        "description": "프로토콜 규칙은 이더 리움 스마트 계약으로 인코딩됩니다. 규칙 기반 법률은 통화에 대한 정책에 대한 효과 측정뿐만 아니라 예측 가능하고 대응 가능한 조치를 허용합니다."
+      },
+      "item_2": {
+        "title": "희석되지 않았습니까",
+        "description": "네트워크의 1%를 소유하면 항상 1%를 소유하게됩니다. 어느 당사자도 가치를 빼앗거나 추가 거래 수수료를 받지 않습니다."
+      },
+      "item_3": {
+        "title": "은행이 없나요",
+        "description": "XBT는 기본 돈이며 시스템에 부채 또는 신용 개념이 없습니다. 공개 부채 시장이나 최종 대출 기관에 의존하지 않습니다."
+      },
+      "item_4": {
+        "title": "단순한 동기",
+        "description": "단순한 시스템은 투명하고 이해하기 쉬운 시스템입니다. XBT 프로토콜은 확장과 축소의 두 가지 규칙만 가지고 있으며 균형을 이루기 위해 시장에서 이익을 찾는 에이전트에만 의존합니다."
+      },
+      "item_5": {
+        "title": "차지하지 않습니까",
+        "description": "소유권은 블록 체인에서 고유합니다. 외부 재산이나 담보에 대한 양육권이 없습니다."
+      },
+      "item_6": {
+        "title": "최소한의 거버넌스",
+        "description": "XBT는 관리 요구를 최소화하도록 설계되었습니다. 조정할 이자율이나 균형을 맞출 시장이 없기 때문에 공급 조정 루프에는 규제가 없습니다."
+      },
+      "item_7": {
+        "title": "차동 운동 패턴",
+        "description": "XBT의 새로운 프로토콜 규칙은 고유 한 역동 성과 독특한 변동성 신호로 이어집니다. XBT는 암호 화폐의 위험한 상관 생태계에서 위험 완화 솔루션을 제공합니다."
+      },
+      "item_8": {
+        "title": "ERC-20",
+        "description": "XBT는 ERC-20 인터페이스를 구현하며 모든 기본 블록 체인 지갑과 함께 사용할 수 있습니다. 표준 인터페이스를 통해 XBT는 여러 DeFi 애플리케이션 플랫폼과 통합 할 수 있습니다."
+      }
+    }
+  },
+  "economic": {
+    "title_1": "작동 원리",
+    "desc_1": "AMPL의 브랜치로서 XBT는 이와 매우 유사하게 작동하며이 페이지의 정보를 검색한 다음 AMPL에서 수정합니다.",
+    "desc_2": "경기 침체, 호황 및 기술 발전과 같은 변화하는 경제 상황은 사람들이 통화를 보유하고 싶어하는 필요성에 영향을 미칩니다. 금,은 및 비트 코인과 같은 고정 공급 통화의 경우 이러한 수요 변화는 통화 가치의 변화로 완전히 표현됩니다.",
+    "desc_3": "수요의 변동성은 계약 및 특히 부채를 포함하여 해당 통화와 관련하여 가치있는 모든 것의 가격으로 변환됩니다. 이러한 이유로 갑작스런 수요 충격은 고정 자산 공급에 의해 돌아가는 생태계를 불안정하게 만들 수 있습니다. 고정 공급 자산에 구축 된 생태계의 복잡성이 클수록 실패의 위험이 높아집니다.",
+    "desc_4": "이를 해결하기 위해 XBT는 은행에 가지 않고 수요에 따라 공급을 자동으로 조정할 수있는 기능을 제공했습니다. XBT는 현재 금과 비트 코인과 같은 자산의 한계 인 비탄력적인 공급 문제에 대한 가장 간단한 직접적인 해결책으로 설계되었습니다.",
+    "desc_5": "오늘날 XBT의 고유 한 변동성 모델은 분산 형 금융을위한 귀중한 새로운 플랫폼이되었습니다. 내일 XBT는 더 나은 비트 코인이 될 수 있습니다.",
+    "desc_6": "AMPL에서 Elastic Supply Coin이 작동하는 방식에 대해 자세히 알아볼 수 있습니다.",
+    "section_header": {
+      "title": "경제학",
+      "paragraph": "XBT의 고유한 변동성 모델은 분산형 금융을위한 귀중한 새 플랫폼으로 만들고 XBT는 비트 코인을 능가할 수도 있습니다."
+    },
+    "faq_data": {
+      "item_1": {
+        "title": "Rules over Discretion",
+        "description": "Rules-based policies allow for predictable and measurable actions and responses. This is good for checking against discretionary economic policies."
+      },
+      "item_2": {
+        "title": "Monies over Banks",
+        "description": "Monies are simple, banks are complex. This is good for decentralizing governance."
+      },
+      "item_3": {
+        "title": "Elasticity over Inelasticity",
+        "description": "Supply elasticity allows for currencies to adapt to economic shocks. This is good for everyone."
+      }
+    }
+  },
+  "governance": {
+    "title_1": "XBT 관리 소개",
+    "title_2": "토론",
+    "title_3": "제안 (XIPs / XCCPs)",
+    "title_4": "목표를 가진 토론",
+    "title_5": "체인 신호",
+    "title_6": "기술 개발",
+    "title_7": "제약 투표 / 구현 (진행중인 작업)",
+    "desc_1": "XBT는 AMPL에서 관리 모델을 학습하고 필요에 따라 업그레이드합니다.",
+    "desc_2": "XBT 프로토콜은 일련의 단계를 통해 조정되며, 각 단계는 커뮤니티의 증가하는 합의 수준을 나타냅니다. 제안과 아이디어는 Telegram 또는 Twitter에 표시되며 체인에 배포 될 때 마무리됩니다. 점점 더 구속력이있는 합의의 진화는 아래에서 볼 수 있습니다.",
+    "desc_3": "최고 수준의 토론은 Telegram 및 Twitter / Reddit을 포함하여 (이에 국한되지 않음) 여러 곳에서 아이디어를 얻을 수 있습니다. 일반 지원이 충분하다고 생각되면 제안자는 XBT (XIP) 개선 제안 또는 XCCP 구성 변경 (XCCP) 제안을 제출하여 아이디어를 검증 할 수 있습니다.",
+    "desc_4": "XIP 및 XCCP는 프로토콜 또는 프로토콜 구성에 대한 제안 된 변경 사항을 설명하는 공식 정보입니다.",
+    "desc_5": "각 제안에는 구현되는 결과로 이어지는 지침에 따라 논의 할 자체 Github가 있습니다. 이 단계의 목표는 해결되지 않은 문제를 마무리하고 오프 체인 합의를 공식화하는 것입니다. 모든 것은 XBT Github https://github.com/ElasticBTC-XBT/에 기록됩니다.",
+    "desc_6": "이전 단계가 명확한 합의에 도달하지 못하면 토큰 보유자의 온 체인 신호를 통해 구속력이없는 방식으로 의견을 수집 할 수 있습니다. 이것은 최종 바운드 투표의 경향에 대한 더 많은 통찰력을 제공합니다.",
+    "desc_7": "요청은 코드로 이루어지고 테스트 넷에서 시작되며 보안 테스트를 거칩니다.",
+    "desc_8": "이제 시스템 변경은 다자간 계약에 의해 제어됩니다. 문제는 나중에 토큰 소유자의 일반 투표로 대체됩니다.",
+    "section_header_title": "XBT 관리"
+  },
+  "road_map": {
+    "item_1": {
+      "title": "학술 연구",
+      "desc": "이 팀은 탄력적 공급 모델이 암호 화폐 공간에 어떤 영향을 미칠지와 생태계 개선을위한 최선의 접근 방식이 무엇인지에 대한 연구를 수행했습니다.",
+      "category": "연구"
+    },
+    "item_2": {
+      "title": "테스트 넷 시작",
+      "desc": "XBT는 테스트 넷을 위해 로컬에서 시작되었습니다",
+      "category": "개발"
+    },
+    "item_3": {
+      "title": "대중에게 출시",
+      "desc": "Uniswap에서 XBT 쌍들을 출시합니다",
+      "category": "출시"
+    },
+    "item_4": {
+      "title": "대중에게 공고",
+      "desc": "본격적으로 공고합니다",
+      "category": "공고"
+    },
+    "item_5": {
+      "title": "스테이 킹 켜기",
+      "desc": "XBT 스테이 킹 허용",
+      "category": "개발"
+    },
+    "item_6": {
+      "title": "공식 보고서 발간",
+      "desc": "커뮤니티에 XBT whitepaper를 공개적으로 출시합니다.",
+      "category": "연구"
+    },
+    "item_7": {
+      "title": "대중에게 출시합니다",
+      "desc": "XBT 재단 출시",
+      "category": "시작하다"
+    },
+    "item_8": {
+      "title": "대중에게 출시합니다",
+      "desc": "XBT 기반 게임 실행",
+      "category": "시작하다"
+    },
+    "item_9": {
+      "title": "최고의 거래소에서 출시",
+      "desc": "팀은 최고의 거래소에서 XBT를 출시하여 XBT의 인기도를 높이는 것을 목표합니다.",
+      "category": "개발"
+    },
+    "item_10": {
+      "title": "트론 체인 및 바이 낸스 체인에서 출시",
+      "desc": "XBT는 고유 한 탄력적 공급 모델을 갖춘 멀티 체인 시스템이 될 것입니다.",
+      "category": "개발"
+    },
+    "section_header_title": "노선"
+  },
+  "staking": {
+    "section_header": {
+      "title": "Staking가 곧 출시됩니다"
+    },
+    "years": "년",
+    "weeks": "월",
+    "days": "일",
+    "hours": "시간",
+    "minutes": "분",
+    "seconds": "초"
+  },
+  "crypto_unicorns": {
+    "section_header": {
+      "title": "CryptoUnicorns가 곧 출시됩니다"
+    }
+  },
+  "investment": {
+    "section_header": {
+      "title": "XBT 펀드가 곧 출시됩니다"
+    }
+  },
+  "buy": {
+    "section_header": {
+      "title": "XBT 받기"
+    },
+    "buy_with_ETH": "ETH로 구매",
+    "buy_with_WBTC": "WBTC로 구매",
+    "buy_with_USDT": "USDT로 구매"
+  },
+  "footer": {
+    "copy_right": "2020 Elastic Bitcoin (XBT), all rights reserved"
+  },
+  "format_time": {
+    "years_past": "{year} 년 전",
+    "year_past": "{year} 년 전",
+    "months_past": "{month} 개월 전",
+    "month_past": "{month} 개월 전",
+    "weeks_past": "{week} 주전",
+    "week_past": "{week} 주전",
+    "days_past": "{day} 일전",
+    "day_past": "{day} 일전",
+    "hours_past": "{hour} 시간 전",
+    "hour_past": "{hour} 시간 전",
+    "just_now": "지금",
+    "years_future": "{year} 년 후",
+    "year_future": "{year} 년 후",
+    "months_future": "{month} 개월 후",
+    "month_future": "{month} 개월 후",
+    "weeks_future": "{week} 주 후",
+    "week_future": "{week} 주 후",
+    "days_future": "{day} 일 후",
+    "day_future": "{day} 일 후",
+    "hours_future": "{hour} 시간 후",
+    "hour_future": "{hour} 시간 후"
+  }
+}
