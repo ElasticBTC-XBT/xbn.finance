@@ -43,3 +43,7 @@ export const makeBid = async (web3Client, bidRate) => {
         value: web3Client.eth.toWei(bidRate)
     });
 }
+
+export const calculateExchangeAmount = (bidRate, exchangeRate) => {
+    return (bidRate * exchangeRate);
+}
