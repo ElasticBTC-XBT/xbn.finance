@@ -33,9 +33,9 @@
                             <li @click="closeMenu">
                                 <router-link to="/roadmap/">{{ $t("header.roadmap") }}</router-link>
                             </li>
-                          <li @click="closeMenu">
-                            <router-link to="/sales/">Sales</router-link>
-                          </li>
+<!--                          <li @click="closeMenu">-->
+<!--                            <router-link to="/sales/">Sales</router-link>-->
+<!--                          </li>-->
                             <li @click="closeMenu">
                                 <router-link to="/airdrop/">{{ $t("airdrop.airdrop") }}</router-link>
                             </li>

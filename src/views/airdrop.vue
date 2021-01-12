@@ -41,7 +41,20 @@
           </div>
 
           <div v-else>
-            <wallet-not-connect @connect-wallet="connectWallet"/>
+            <div class="center-content">
+              <p style="font-size: 14px">{{ $t('hint') }}: {{ $t('dont_have_wallet') }}
+                <a target="_blank" href="https://trustwallet.com/">Trust Wallet</a>
+                {{ $t('or') }} <a target="_blank" href="https://metamask.io/">Metamask</a></p>
+              <p style="font-size: 14px">
+                {{ $t('any_questions') }}
+                <a target="_blank" href="https://t.me/elasticbitcoinxbt">{{ $t('here') }}</a>
+              </p>
+            </div>
+            <div class="center-content">
+              <c-button color="primary" wide-mobile target="_blank" @click="connectWallet">
+                {{ $t('connect_wallet') }}
+              </c-button>
+            </div>
           </div>
 
 
@@ -87,13 +100,11 @@ import {getContractXBTFundBalance, getXBTBalance} from "@/libs/xbt";
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
-import WalletNotConnect from "@/components/sections/WalletNotConnect";
 // import CImage from '@/components/elements/Image.vue'
 
 export default {
   name: 'AirDrop',
   components: {
-    WalletNotConnect,
     CSectionHeader,
     // CGenericSection,
     CButton,

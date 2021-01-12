@@ -3,90 +3,115 @@
     <div class="flex-row">
       <h4>Order Book</h4>
       <div class="ml-32 flex-row">
-        <el-switch v-model="showOwnerAddress"/>
+        <el-switch v-model="showCurrentAddress"/>
         <span class="ml-8" style="font-size: 12px">Show only for my address</span>
       </div>
     </div>
     <el-table
-        :data="tableData"
+        empty-text="No data available"
+        :data="displayedData"
         height="560"
         style="width: 100%">
       <el-table-column
-          prop="address"
-          label="Timestamp">
+          prop="timeStamp"
+          label="Timestamp"
+          width="150">
+        <template slot-scope="scope">
+          {{ scope.row.timeStamp | date }}
+        </template>
       </el-table-column>
       <el-table-column
-          prop="address"
-          label="Address">
+          prop="buyerAddress"
+          label="Address"
+          width="280"
+      >
+        <template slot-scope="scope">
+          <a target="_blank"
+             :href="`https://etherscan.io/address/${scope.row.buyerAddress}`">{{
+              scope.row.buyerAddress | truncatedAddress
+            }}</a>
+        </template>
       </el-table-column>
       <el-table-column
-          prop="date"
-          label="Date"
-          width="180">
-      </el-table-column>
-      <el-table-column
-          prop="name"
+          prop="purchasedTokenAmount"
           label="Purchase Amount"
           width="180">
+        <template slot-scope="scope">
+          {{ scope.row.purchasedTokenAmount | numeral }} XBT
+        </template>
       </el-table-column>
       <el-table-column
-          prop="address"
+          prop="totalETHValue"
           label="ETH Value">
       </el-table-column>
       <el-table-column
-          prop="address"
-          label="Bonus">
+          prop="bonusWon"
+          label="Bonus"
+          width="140">
+        <template slot-scope="scope">
+          {{ scope.row.bonusWon | numeral }} XBT
+        </template>
       </el-table-column>
       <el-table-column
-          prop="address"
+          prop="price"
           label="Price">
+        <template slot-scope="scope">
+          {{ scope.row.price | numeral }}
+        </template>
       </el-table-column>
     </el-table>
-    <div class="mt-32">
-      <el-pagination
-          background
-          layout="prev, pager, next"
-          :total="1000">
-      </el-pagination>
-    </div>
+<!--    <div class="mt-32">-->
+<!--      <el-pagination-->
+<!--          background-->
+<!--          layout="prev, pager, next"-->
+<!--          :total="displayedData.length">-->
+<!--      </el-pagination>-->
+<!--    </div>-->
   </div>
 </template>
 
 <script>
+import moment from 'moment';
+import _ from "lodash";
+import * as numeral from 'numeral';
+
 export default {
   name: "SaleOrderBook",
+  props: {
+    orderBook: {
+      type: Array,
+      default: () => []
+    },
+    currentAddress: {
+      type: String,
+      default: () => ''
+    }
+  },
+  filters: {
+    numeral(val) {
+      return numeral(val).format('0,0.0');
+    },
+    date(val) {
+      return moment(val).fromNow();
+    },
+    truncatedAddress(val) {
+      return _.truncate(val || '', {
+        length: 26
+      })
+    }
+  },
   data() {
     return {
-      showOwnerAddress: false,
-      tableData: [{
-        date: '2016-05-03',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles'
-      }, {
-        date: '2016-05-02',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles'
-      }, {
-        date: '2016-05-04',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles'
-      }, {
-        date: '2016-05-01',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles'
-      }, {
-        date: '2016-05-08',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles'
-      }, {
-        date: '2016-05-06',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles'
-      }, {
-        date: '2016-05-07',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles'
-      }],
+      showCurrentAddress: false,
+      tableData: [],
+    }
+  },
+  computed: {
+    displayedData() {
+      return this.orderBook.filter(
+          order => this.showCurrentAddress === false ||
+              order.buyerAddress === this.currentAddress
+      )
     }
   }
 }
