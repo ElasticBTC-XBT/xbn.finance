@@ -13,10 +13,22 @@
                     topDivider && 'has-top-divider',
                     bottomDivider && 'has-bottom-divider'
                 ]">
-          <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
-          <c-section-header tag="p" :data="{title: 'Connected as 0x98...f19'}" class="center-content"/>
-          <sale-info />
-          <sale-input />
+          <!--          <div>-->
+          <!--            <wallet-not-connect />-->
+          <!--          </div>-->
+          <div>
+            <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
+            <c-section-header tag="p" :data="{title: 'Connected as 0x98...f19'}" class="center-content"/>
+            <div>
+              <sale-input/>
+            </div>
+            <div>
+              <sale-info/>
+            </div>
+            <div class="mb-32">
+              <sale-order-book/>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -35,13 +47,17 @@ import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
 import {SectionProps} from '@/utils/SectionProps.js'
 import SaleInfo from '@/components/sales/SaleInfo'
 import SaleInput from '@/components/sales/SaleInput'
+import SaleOrderBook from '@/components/sales/SaleOrderBook'
+import WalletNotConnect from "@/components/sections/WalletNotConnect";
 
 export default {
   name: 'Login',
   components: {
+    WalletNotConnect,
     CSectionHeader,
     SaleInfo,
-    SaleInput
+    SaleInput,
+    SaleOrderBook
   },
   mixins: [SectionProps],
   created() {

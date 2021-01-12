@@ -133,6 +133,12 @@
   align-items: flex-start;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .countDown__cont {
   font-family: inherit !important;
 }
