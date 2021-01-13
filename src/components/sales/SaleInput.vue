@@ -2,7 +2,7 @@
   <div>
     <div v-if="availableToClaim" class="exchange-token bg-white p-32 has-shadow text-center">
       <div>
-        <h4>I want to buy</h4>
+        <h4>{{$t('sale.i_want_to_buy')}}</h4>
       </div>
       <div class="mt-32">
         <div class="flex-row flex-center">
@@ -20,7 +20,7 @@
           <h2> = {{ displayedSaleRate }} XBT</h2>
         </div>
         <div class="mt-16">
-          <span style="font-size: 14px">You can buy max <strong>{{ displayedMaxBidAmount }} ETH</strong> and min <strong>{{ displayedMinBidAmount }} ETH</strong></span>
+          <span style="font-size: 14px">{{ $t('sale.you_can_buy') }} {{ $t('max') }} <strong>{{ displayedMaxBidAmount }} ETH</strong> {{$t('and')}} {{$t('min')}} <strong>{{ displayedMinBidAmount }} ETH</strong></span>
         </div>
       </div>
       <c-button :disabled="!validInput || submitted === true"
@@ -32,7 +32,7 @@
     </div>
 
     <div v-else class="exchange-token bg-white p-32 has-shadow text-center">
-      <h4>Your next available purchase</h4>
+      <h4>{{$t('sale.your_next_available_purchase')}}</h4>
       <p>{{nextAvailableClaimDate}}</p>
     </div>
   </div>
@@ -81,7 +81,7 @@ export default {
     },
     nextAvailableClaimDate() {
       const lang = localStorage.getItem('lang') || 'en';
-      return moment(this.participantWaitTime).lang(lang).format('llll');
+      return moment(this.participantWaitTime).locale(lang).format('llll');
     },
     availableToClaim() {
       return new Date() >= new Date(this.participantWaitTime);

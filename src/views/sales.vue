@@ -16,7 +16,7 @@
 
           <div v-if="userAccount">
             <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
-            <p class="center-content mt-0 mb-32">Connected as <a
+            <p class="center-content mt-0 mb-32">{{$t('sale.connected_as')}} <a
                 target="_blank"
                 :href="`https://etherscan.io/address/${userAccount}`">{{ truncatedAddress }}</a></p>
             <div>
@@ -49,8 +49,8 @@
         </div>
       </div>
       <sweet-modal ref="success" icon="success">
-        <h1>{{ $t('airdrop.xbt_coming') }}</h1>
-        {{ $t('airdrop.thank_you') }}
+        <h1>{{ $t('sale.request_sent') }}</h1>
+        {{ $t('thank_you') }}
 
         <div class="mt-32">
           <vue-goodshare-facebook :quote="pageTitle" :page_title="pageTitle" :page_url="pageUrl" has_icon
@@ -115,7 +115,7 @@ export default {
   data() {
     return {
       sectionHeader: {
-        title: 'Public Discounted Sale'
+        title: this.$t('sale.public_discounted_sale')
       },
       // sale info
       saleSupply: 0,
@@ -139,10 +139,7 @@ export default {
 
   computed: {
     pageUrl() {
-      return 'https://elasticbitcoin.org/airdrop'
-    },
-    pageTitle() {
-      return this.$t('airdrop.share_page_title')
+      return 'https://elasticbitcoin.org/sales'
     },
     truncatedAddress() {
       return _.truncate(this.userAccount || '', {

@@ -14,7 +14,7 @@
                     :height="50"
                 />
                 <div class="sales-statis">
-                  <div class="title">Current Rate</div>
+                  <div class="title">{{$t('sale.current_rate')}}</div>
                   <div class="value">1 ETH = {{ displayedSaleRate }} XBT</div>
                 </div>
                 <img
@@ -38,7 +38,7 @@
                     :height="50"
                 />
                 <div class="sales-statis">
-                  <div class="title">Your XBT Balance</div>
+                  <div class="title">{{$t('sale.your_xbt_balance')}}</div>
                   <div class="value">{{ displayedXBTBalance }} XBT</div>
                 </div>
                 <img
@@ -62,7 +62,7 @@
                     :height="50"
                 />
                 <div class="sales-statis">
-                  <div class="title">Sale Supply</div>
+                  <div class="title">{{$t('sale.sale_supply')}}</div>
                   <div class="value">{{ displayedSaleSupply }} XBT</div>
                 </div>
                 <img

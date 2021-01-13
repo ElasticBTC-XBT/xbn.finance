@@ -1,14 +1,14 @@
 <template>
   <div class="has-shadow bg-white p-32 sale-order-book">
     <div class="flex-row">
-      <h4>Order Book</h4>
+      <h4>{{$t('sale.order_book')}}</h4>
       <div class="ml-32 flex-row">
         <el-switch v-model="showCurrentAddress"/>
-        <span class="ml-8" style="font-size: 12px">Show only for my address</span>
+        <span class="ml-8" style="font-size: 12px">{{$t('sale.show_only_my_address')}}</span>
       </div>
     </div>
     <el-table
-        empty-text="No data available"
+        :empty-text="$t('sale.no_available_data')"
         :data="displayedData"
         max-height="560"
         show-summary
@@ -17,7 +17,7 @@
         style="width: 100%">
       <el-table-column
           prop="timestamp"
-          label="Timestamp"
+          :label="$t('sale.timestamp')"
           width="150">
         <template slot-scope="scope">
           {{ scope.row.timestamp | date }}
@@ -25,7 +25,7 @@
       </el-table-column>
       <el-table-column
           prop="buyerAddress"
-          label="Address"
+          :label="$t('sale.address')"
           width="280"
       >
         <template slot-scope="scope">
@@ -37,7 +37,7 @@
       </el-table-column>
       <el-table-column
           prop="purchasedTokenAmount"
-          label="Purchase Amount"
+          :label="$t('sale.purchase_amount')"
           width="180">
         <template slot-scope="scope">
           <strong
@@ -50,11 +50,11 @@
       </el-table-column>
       <el-table-column
           prop="totalETHValue"
-          label="ETH Value">
+          :label="$t('sale.eth_value')">
       </el-table-column>
       <el-table-column
           prop="bonusWon"
-          label="Bonus"
+          :label="$t('sale.bonus_won')"
           width="140">
         <template slot-scope="scope">
           <strong
@@ -67,7 +67,7 @@
       </el-table-column>
       <el-table-column
           prop="price"
-          label="Price">
+          :label="$t('sale.price')">
         <template slot-scope="scope">
           {{ scope.row.price | numeral }}
         </template>
@@ -105,7 +105,9 @@ export default {
       return numeral(val).format('0,0.0');
     },
     date(val) {
-      return moment(val).fromNow();
+      const lang = localStorage.getItem('lang') || 'en';
+
+      return moment(val).locale(lang).fromNow();
     },
     truncatedAddress(val) {
       return _.truncate(val || '', {
@@ -139,7 +141,7 @@ export default {
       const sums = [];
       columns.forEach((column, index) => {
         if (index === 0) {
-          sums[index] = 'Summaries';
+          sums[index] = this.$t('sale.summaries');
           return;
         }
         const values = data.map(item => Number(item[column.property]));
