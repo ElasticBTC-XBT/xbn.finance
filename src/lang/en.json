@@ -16,7 +16,8 @@
     "price": "Price",
     "bonus_won": "Bonus Won",
     "no_available_data": "No available data",
-    "summaries": "Summaries"
+    "summaries": "Summaries",
+    "request_sent": "Transaction submitted"
   },
   "min": "min",
   "max": "max",

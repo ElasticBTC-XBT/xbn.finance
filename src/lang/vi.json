@@ -16,7 +16,8 @@
     "price": "Giá",
     "bonus_won": "Bonus",
     "no_available_data": "Không có dữ liệu",
-    "summaries": "Tổng cộng"
+    "summaries": "Tổng cộng",
+    "request_sent": "Giao dịch đã gửi"
   },
   "min": "ít nhất",
   "max": "nhiều nhất",
