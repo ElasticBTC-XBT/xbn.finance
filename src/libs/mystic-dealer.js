@@ -60,11 +60,13 @@ export const getOrderBook = async (web3Client) => {
     const decimals = await xbtContract.methods.decimals().call();
 
     const data = await dealerContract.methods.getOrderBook().call();
-    return data.map(order => parseOrderBook(
+    const orderBook = data.map(order => parseOrderBook(
         order,
         decimals,
         (val) => Number(web3Client.utils.fromWei(val.toString(), 'ether'))
     ));
+    orderBook.sort((o1, o2) => o2.timestamp - o1.timestamp);
+    return orderBook;
 }
 
 const parseOrderBook = (orderBook, xbtDecimals, convertToEther) => {
@@ -72,7 +74,7 @@ const parseOrderBook = (orderBook, xbtDecimals, convertToEther) => {
         price,
         buyerAddress,
         bonusWon,
-        timeStamp,
+        timestamp,
         purchasedTokenAmount,
         totalETHValue
     ] = orderBook;
@@ -80,7 +82,7 @@ const parseOrderBook = (orderBook, xbtDecimals, convertToEther) => {
         price: Number(price) / (10 ** xbtDecimals),
         buyerAddress,
         bonusWon: Number(bonusWon) / (10 ** xbtDecimals),
-        timeStamp: Number(timeStamp) * 1000,
+        timestamp: Number(timestamp) * 1000,
         purchasedTokenAmount: Number(purchasedTokenAmount) / (10 ** xbtDecimals),
         totalETHValue: convertToEther(totalETHValue)
     }
@@ -92,4 +94,33 @@ export const makeBid = async (web3Client, bidRate) => {
         gas: 240000,
         value: web3Client.utils.toWei(bidRate.toString())
     });
+}
+
+const subscribeEventChange = async (web3Client, eventName, callback) => {
+    const dealerContract = await getDealerContract(web3Client);
+
+    const eventJsonInterface = web3Client.utils._.find(
+        dealerContract._jsonInterface,
+        o => o.name === eventName && o.type === 'event',
+    );
+
+    const subscription = web3Client.eth.subscribe('logs', {
+        address: MysticDealer.address,
+        topics: [eventJsonInterface.signature]
+    }, function (error, result) {
+        const eventObj = web3Client.eth.abi.decodeLog(
+            eventJsonInterface.inputs,
+            result.data,
+            result.topics.slice(1)
+        );
+
+        // console.log(`New ${eventName}!`, eventObj)
+        if (typeof callback === "function") callback(eventObj);
+    });
+
+    return () => subscription.unsubscribe();
+}
+
+export const subscribeOrderBookChange = (web3Client, callback) => {
+    return subscribeEventChange(web3Client, 'OnSuccessfulSale', callback);
 }

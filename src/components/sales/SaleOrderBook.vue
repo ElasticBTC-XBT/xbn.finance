@@ -10,14 +10,17 @@
     <el-table
         empty-text="No data available"
         :data="displayedData"
-        height="560"
+        max-height="560"
+        show-summary
+        :row-class-name="tableRowClassName"
+        :summary-method="getSummaries"
         style="width: 100%">
       <el-table-column
-          prop="timeStamp"
+          prop="timestamp"
           label="Timestamp"
           width="150">
         <template slot-scope="scope">
-          {{ scope.row.timeStamp | date }}
+          {{ scope.row.timestamp | date }}
         </template>
       </el-table-column>
       <el-table-column
@@ -37,7 +40,12 @@
           label="Purchase Amount"
           width="180">
         <template slot-scope="scope">
-          {{ scope.row.purchasedTokenAmount | numeral }} XBT
+          <strong
+              v-if="scope.row.bonusWon"
+              class="bonus-won">
+            {{ scope.row.purchasedTokenAmount | numeral }} XBT
+          </strong>
+          <span v-else>{{ scope.row.purchasedTokenAmount | numeral }} XBT</span>
         </template>
       </el-table-column>
       <el-table-column
@@ -49,7 +57,12 @@
           label="Bonus"
           width="140">
         <template slot-scope="scope">
-          {{ scope.row.bonusWon | numeral }} XBT
+          <strong
+              v-if="scope.row.bonusWon"
+              class="bonus-won">
+            {{ scope.row.bonusWon | numeral }} XBT
+          </strong>
+          <span v-else>{{ scope.row.bonusWon | numeral }} XBT</span>
         </template>
       </el-table-column>
       <el-table-column
@@ -60,13 +73,13 @@
         </template>
       </el-table-column>
     </el-table>
-<!--    <div class="mt-32">-->
-<!--      <el-pagination-->
-<!--          background-->
-<!--          layout="prev, pager, next"-->
-<!--          :total="displayedData.length">-->
-<!--      </el-pagination>-->
-<!--    </div>-->
+    <!--    <div class="mt-32">-->
+    <!--      <el-pagination-->
+    <!--          background-->
+    <!--          layout="prev, pager, next"-->
+    <!--          :total="displayedData.length">-->
+    <!--      </el-pagination>-->
+    <!--    </div>-->
   </div>
 </template>
 
@@ -113,6 +126,42 @@ export default {
               order.buyerAddress === this.currentAddress
       )
     }
+  },
+  methods: {
+    tableRowClassName({row}) {
+      if (row.bonusWon) {
+        return 'success-row';
+      }
+      return '';
+    },
+    getSummaries(param) {
+      const {columns, data} = param;
+      const sums = [];
+      columns.forEach((column, index) => {
+        if (index === 0) {
+          sums[index] = 'Summaries';
+          return;
+        }
+        const values = data.map(item => Number(item[column.property]));
+        if (!values.every(value => isNaN(value))) {
+          if (index === 2 || index === 3) {
+            const sum = values.reduce((prev, curr) => {
+              const value = Number(curr);
+              if (!isNaN(value)) {
+                return prev + curr;
+              } else {
+                return prev;
+              }
+            }, 0);
+
+            sums[index] = numeral(sum).format('0,0.00') + ` ${index === 2 ? 'XBT' : 'ETH'}`;
+          }
+        } else {
+          sums[index] = 'N/A';
+        }
+      });
+      return sums;
+    }
   }
 }
 </script>
@@ -130,6 +179,14 @@ export default {
   .el-switch.is-checked .el-switch__core {
     border-color: #F3AA43 !important;
     background-color: #F3AA43 !important;
+  }
+
+  .el-table .success-row {
+    background: #f9f4eb;
+  }
+
+  .bonus-won {
+    color: #F3AA43 !important;
   }
 }
 </style>

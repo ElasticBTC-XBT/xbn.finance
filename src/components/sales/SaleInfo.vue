@@ -89,13 +89,13 @@ export default {
   props: ['saleSupply', 'saleRate', 'xbtBalance'],
   computed: {
     displayedSaleSupply() {
-      return numeral(this.saleSupply).format('0,0')
+      return numeral(this.saleSupply).format('0,0.00')
     },
     displayedSaleRate() {
-      return numeral(this.saleRate).format('0,0')
+      return numeral(this.saleRate).format('0,0.00')
     },
     displayedXBTBalance() {
-      return numeral(this.xbtBalance).format('0,0')
+      return numeral(this.xbtBalance).format('0,0.00')
     }
   }
 }

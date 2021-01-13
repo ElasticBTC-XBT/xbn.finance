@@ -6,7 +6,14 @@
       </div>
       <div class="mt-32">
         <div class="flex-row flex-center">
-          <input v-model="ethPurchaseAmount" autofocus class="sale-input" type="number"/>
+          <input
+              v-model="ethPurchaseAmount"
+              autofocus
+              class="sale-input"
+              type="number"
+              :min="minBidAmount"
+              :max="maxBidAmount"
+          />
           <div class="currency">ETH</div>
         </div>
         <div class="mt-16">

@@ -59,15 +59,6 @@
 
 
           <sweet-modal ref="success" icon="success">
-            <!--          <div class="flex-center">-->
-            <!--            <c-image-->
-            <!--                id="big-banner-logo"-->
-            <!--                class="has-shadow"-->
-            <!--                :src="require('@/assets/images/banner.png')"-->
-            <!--                alt="Hero image"-->
-            <!--                :width="72"-->
-            <!--                :height="72"/>-->
-            <!--          </div>-->
             <h1>{{ $t('airdrop.xbt_coming') }}</h1>
             {{ $t('airdrop.thank_you') }}
 
