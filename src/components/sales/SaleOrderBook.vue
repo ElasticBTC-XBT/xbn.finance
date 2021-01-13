@@ -10,7 +10,7 @@
     <el-table
         :empty-text="$t('sale.no_available_data')"
         :data="displayedData"
-        max-height="560"
+        height="560"
         show-summary
         :row-class-name="tableRowClassName"
         :summary-method="getSummaries"
