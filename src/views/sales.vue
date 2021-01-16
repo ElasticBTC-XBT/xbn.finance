@@ -138,6 +138,9 @@ export default {
   },
 
   computed: {
+    pageTitle() {
+      return this.$t('sales.page_title')
+    },
     pageUrl() {
       return 'https://elasticbitcoin.org/sales'
     },

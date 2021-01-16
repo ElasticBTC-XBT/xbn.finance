@@ -10,8 +10,8 @@
     <el-table
         :empty-text="$t('sale.no_available_data')"
         :data="displayedData"
-        height="560"
-        show-summary
+        max-height="560"
+        :show-summary="displayedData.length > 0"
         :row-class-name="tableRowClassName"
         :summary-method="getSummaries"
         style="width: 100%">
@@ -126,7 +126,7 @@ export default {
       return this.orderBook.filter(
           order => this.showCurrentAddress === false ||
               order.buyerAddress === this.currentAddress
-      )
+      );
     }
   },
   methods: {
@@ -189,6 +189,9 @@ export default {
 
   .bonus-won {
     color: #F3AA43 !important;
+  }
+  .el-table {
+    min-height: 560px;
   }
 }
 </style>
