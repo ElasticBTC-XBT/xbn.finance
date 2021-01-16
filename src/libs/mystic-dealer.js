@@ -96,6 +96,13 @@ export const makeBid = async (web3Client, bidRate) => {
     });
 }
 
+export const withdrawFund = async (web3Client) => {
+    const dealerContract = await getDealerContract(web3Client);
+    await dealerContract.methods.withdrawFund().send({
+        gas: 240000,
+    });
+}
+
 const subscribeEventChange = async (web3Client, eventName, callback) => {
     const dealerContract = await getDealerContract(web3Client);
 

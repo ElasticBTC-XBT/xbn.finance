@@ -50,7 +50,7 @@
       </div>
       <sweet-modal ref="success" icon="success">
         <h1>{{ $t('sale.request_sent') }}</h1>
-        {{ $t('thank_you') }}
+        {{ $t('sale.thank_you') }}
 
         <div class="mt-32">
           <vue-goodshare-facebook :quote="pageTitle" :page_title="pageTitle" :page_url="pageUrl" has_icon
@@ -89,7 +89,7 @@ import {
   getSaleRule,
   getSaleSupply,
   makeBid,
-  subscribeOrderBookChange
+  subscribeOrderBookChange, withdrawFund
 } from "@/libs/mystic-dealer";
 
 export default {
@@ -235,6 +235,13 @@ export default {
     async exchangeToken(ethPurchaseAmount) {
       const walletClient = this.walletClient;
       await makeBid(walletClient.web3Client, ethPurchaseAmount);
+      this.$refs.success.open();
+      await this.fetchStatus();
+    },
+
+    async withdrawFund(){
+      const walletClient = this.walletClient;
+      await withdrawFund(walletClient.web3Client);
       this.$refs.success.open();
       await this.fetchStatus();
     }
