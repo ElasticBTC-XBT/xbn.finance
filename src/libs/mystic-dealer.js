@@ -5,13 +5,15 @@ export const MysticDealer = {
     jsonInterface: require('@/assets/contracts/MysticDealer.json')
 }
 
+const GasLimit = 100000;
+
 export const getDealerContract = async (web3Client) => {
     const accounts = await web3Client.eth.getAccounts();
     return new web3Client.eth.Contract(
         MysticDealer.jsonInterface.abi,
         MysticDealer.address,
         {
-            gas: 100000,
+            gas: GasLimit,
             from: accounts[0]
         }
     );
@@ -91,7 +93,7 @@ const parseOrderBook = (orderBook, xbtDecimals, convertToEther) => {
 export const makeBid = async (web3Client, bidRate) => {
     const dealerContract = await getDealerContract(web3Client);
     await dealerContract.methods.exchangeToken().send({
-        gas: 240000,
+        gas: GasLimit,
         value: web3Client.utils.toWei(bidRate.toString())
     });
 }
@@ -99,7 +101,7 @@ export const makeBid = async (web3Client, bidRate) => {
 export const withdrawFund = async (web3Client) => {
     const dealerContract = await getDealerContract(web3Client);
     await dealerContract.methods.withdrawFund().send({
-        gas: 240000,
+        gas: GasLimit,
     });
 }
 
