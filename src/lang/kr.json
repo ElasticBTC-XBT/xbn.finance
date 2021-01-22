@@ -6,7 +6,7 @@
     "you_can_buy": "You can buy",
     "current_rate": "Current Rate",
     "sale_supply": "Sale Supply",
-    "your_xbt_balance": "Your XBT Balance",
+    "your_xbt_balance": "Current Balance",
     "order_book": "Order Book",
     "show_only_my_address": "Show only my address",
     "timestamp": "Timestamp",
@@ -19,7 +19,8 @@
     "summaries": "Summaries",
     "request_sent": "Transaction submitted",
     "page_title": "Join $XBT public discounted sale here.",
-    "thank_you": "Thank you"
+    "thank_you": "Thank you",
+    "your_next_available_purchase": "Next sale session will be available at"
   },
   "min": "min",
   "max": "max",

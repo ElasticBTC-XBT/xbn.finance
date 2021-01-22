@@ -11,7 +11,7 @@ export const getDealerContract = async (web3Client) => {
         MysticDealer.jsonInterface.abi,
         MysticDealer.address,
         {
-            gas: 240000,
+            gas: 100000,
             from: accounts[0]
         }
     );
@@ -47,10 +47,10 @@ export const getSaleRule = async (web3Client) => {
 export const getOrderMetaOf = async (web3Client, account) => {
     const dealerContract = await getDealerContract(web3Client);
 
-    const [luckyNumber, participantWaitTime] = await dealerContract.methods.getOrderMetaOf(account).call();
+    const [participantWaitTime] = await dealerContract.methods.getOrderMetaOf(account).call();
 
     return {
-        luckyNumber: Number(luckyNumber), participantWaitTime: Number(participantWaitTime) * 1000
+        participantWaitTime: Number(participantWaitTime) * 1000
     };
 }
 

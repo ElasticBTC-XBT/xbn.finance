@@ -35,12 +35,12 @@
                   :sale-rate="saleRate"
               />
             </div>
-            <div class="mb-32 container">
-              <sale-order-book
-                  :current-address="userAccount"
-                  :order-book="orderBook"
-                  @refresh="getOrderBook"/>
-            </div>
+<!--            <div class="mb-32 container">-->
+<!--              <sale-order-book-->
+<!--                  :current-address="userAccount"-->
+<!--                  :order-book="orderBook"-->
+<!--                  @refresh="getOrderBook"/>-->
+<!--            </div>-->
           </div>
 
           <div v-else>
@@ -80,17 +80,19 @@ import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
 import {SectionProps} from '@/utils/SectionProps.js'
 import SaleInfo from '@/components/sales/SaleInfo'
 import SaleInput from '@/components/sales/SaleInput'
-import SaleOrderBook from '@/components/sales/SaleOrderBook'
+// import SaleOrderBook from '@/components/sales/SaleOrderBook'
 import WalletNotConnect from "@/components/sections/WalletNotConnect";
 import {getWeb3Client} from "@/libs/web3";
 import {
-  getOrderBook,
+  // getOrderBook,
   getOrderMetaOf,
   getSaleRule,
   getSaleSupply,
   makeBid,
-  subscribeOrderBookChange, withdrawFund
+  // subscribeOrderBookChange,
+  withdrawFund
 } from "@/libs/mystic-dealer";
+import {getXBTBalance} from "@/libs/xbt";
 
 export default {
   name: 'Login',
@@ -99,7 +101,7 @@ export default {
     CSectionHeader,
     SaleInfo,
     SaleInput,
-    SaleOrderBook,
+    // SaleOrderBook,
     VueGoodshareFacebook,
     VueGoodshareReddit,
     VueGoodshareTwitter
@@ -127,7 +129,6 @@ export default {
       xbtBalance: 0,
       userAccount: null,
       participantWaitTime: 0,
-      luckyNumber: 0,
 
       // order book
       orderBook: [],
@@ -150,9 +151,7 @@ export default {
       })
     },
     totalPurchasedXBT() {
-      return this.orderBook
-          .filter(order => order.buyerAddress === this.userAccount)
-          .reduce((accum, order) => accum + order.purchasedTokenAmount, 0);
+      return this.xbtBalance;
     }
   },
 
@@ -175,7 +174,7 @@ export default {
       const accounts = await this.walletClient.web3Client.eth.getAccounts();
       this.$set(this, 'userAccount', accounts.length > 0 ? accounts[0] : null);
       await this.fetchStatus();
-      this.subscribeOrderBook();
+      // this.subscribeOrderBook();
     },
 
     async handlePageOnLoad() {
@@ -183,24 +182,24 @@ export default {
         await this.handleGetInitialData();
       }
     },
-
-    subscribeOrderBook() {
-      const walletClient = this.walletClient.web3Client;
-
-      if (walletClient) {
-        subscribeOrderBookChange(walletClient, () => {
-          this.fetchStatus();
-        })
-      }
-    },
-
-    async getOrderBook() {
-      const walletClient = this.walletClient;
-
-      // get order book
-      const orderBook = await getOrderBook(walletClient.web3Client);
-      this.$set(this, 'orderBook', orderBook);
-    },
+    //
+    // subscribeOrderBook() {
+    //   const walletClient = this.walletClient.web3Client;
+    //
+    //   if (walletClient) {
+    //     subscribeOrderBookChange(walletClient, () => {
+    //       this.fetchStatus();
+    //     })
+    //   }
+    // },
+    //
+    // async getOrderBook() {
+    //   const walletClient = this.walletClient;
+    //
+    //   // get order book
+    //   const orderBook = await getOrderBook(walletClient.web3Client);
+    //   this.$set(this, 'orderBook', orderBook);
+    // },
 
     async getSaleInfo() {
       const walletClient = this.walletClient;
@@ -212,9 +211,8 @@ export default {
       this.$set(this, 'maxBidAmount', saleRate.maxBidAmount);
 
       // get order meta
-      const {participantWaitTime, luckyNumber} = await getOrderMetaOf(walletClient.web3Client, this.userAccount);
+      const {participantWaitTime} = await getOrderMetaOf(walletClient.web3Client, this.userAccount);
       this.$set(this, 'participantWaitTime', participantWaitTime);
-      this.$set(this, 'luckyNumber', luckyNumber);
 
       // Get sale supply
       const saleSupply = await getSaleSupply(walletClient.web3Client);
@@ -222,14 +220,14 @@ export default {
     },
 
     async fetchStatus() {
-      // const walletClient = this.walletClient;
+      const walletClient = this.walletClient;
 
       this.getSaleInfo();
-      this.getOrderBook();
+      // this.getOrderBook();
 
-      // // Get balance
-      // const xbtBalance = await getXBTBalance(walletClient.web3Client);
-      // this.$set(this, 'xbtBalance', xbtBalance);
+      // Get balance
+      const xbtBalance = await getXBTBalance(walletClient.web3Client);
+      this.$set(this, 'xbtBalance', xbtBalance);
     },
 
     async exchangeToken(ethPurchaseAmount) {
