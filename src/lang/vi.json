@@ -20,8 +20,12 @@
     "request_sent": "Giao dịch đã gửi",
     "page_title": "Tham gia phiên chào bán $XBT giảm giá tại đây nhé",
     "thank_you": "Cảm ơn bạn",
-    "your_next_available_purchase": "Phiên bán tiếp theo"
+    "your_next_available_purchase": "Phiên bán tiếp theo",
+    "sale_over": "Phiên bán đã kết thúc, cảm ơn bạn vì đã tham gia"
   },
+  "please_visit": "Hãy ghé thăm",
+  "channel": "kênh của chúng tôi",
+  "for_further_information": "để biết thêm thông tin",
   "min": "ít nhất",
   "max": "nhiều nhất",
   "and": "và",

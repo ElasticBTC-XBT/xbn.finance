@@ -20,8 +20,12 @@
     "request_sent": "Transaction submitted",
     "page_title": "Join $XBT public discounted sale here.",
     "thank_you": "Thank you",
-    "your_next_available_purchase": "Next sale session will be available at"
+    "your_next_available_purchase": "Next sale session will be available at",
+    "sale_over": "Our sale is over, thanks for your participation"
   },
+  "please_visit": "Please visit",
+  "channel": "channel",
+  "for_further_information": "for further information",
   "min": "min",
   "max": "max",
   "and": "and",

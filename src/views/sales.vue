@@ -7,44 +7,53 @@
             invertColor && 'invert-color'
         ]">
       <div class="container">
+
         <div
             class="signin-inner section-inner"
             :class="[
                     topDivider && 'has-top-divider',
                     bottomDivider && 'has-bottom-divider'
                 ]">
+          <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
 
-          <div v-if="userAccount">
-            <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
-            <p class="center-content mt-0 mb-32">{{$t('sale.connected_as')}} <a
-                target="_blank"
-                :href="`https://etherscan.io/address/${userAccount}`">{{ truncatedAddress }}</a></p>
-            <div>
-              <sale-input
-                  @on-purchase="exchangeToken"
-                  :participant-wait-time="participantWaitTime"
-                  :sale-rate="saleRate"
-                  :min-bid-amount="minBidAmount"
-                  :max-bid-amount="maxBidAmount"
-              />
+          <div v-if="!isSaleOver">
+            <div v-if="userAccount">
+              <p class="center-content mt-0 mb-32">{{ $t('sale.connected_as') }} <a
+                  target="_blank"
+                  :href="`https://etherscan.io/address/${userAccount}`">{{ truncatedAddress }}</a></p>
+              <div>
+                <sale-input
+                    @on-purchase="exchangeToken"
+                    :sale-supply="saleSupply"
+                    :participant-wait-time="participantWaitTime"
+                    :sale-rate="saleRate"
+                    :min-bid-amount="minBidAmount"
+                    :max-bid-amount="maxBidAmount"
+                />
+              </div>
+              <div>
+                <sale-info
+                    :xbt-balance="totalPurchasedXBT"
+                    :sale-supply="saleSupply"
+                    :sale-rate="saleRate"
+                />
+              </div>
+              <!--            <div class="mb-32 container">-->
+              <!--              <sale-order-book-->
+              <!--                  :current-address="userAccount"-->
+              <!--                  :order-book="orderBook"-->
+              <!--                  @refresh="getOrderBook"/>-->
+              <!--            </div>-->
             </div>
-            <div>
-              <sale-info
-                  :xbt-balance="totalPurchasedXBT"
-                  :sale-supply="saleSupply"
-                  :sale-rate="saleRate"
-              />
+
+            <div v-else>
+              <wallet-not-connect @connect-wallet="connectWallet"/>
             </div>
-<!--            <div class="mb-32 container">-->
-<!--              <sale-order-book-->
-<!--                  :current-address="userAccount"-->
-<!--                  :order-book="orderBook"-->
-<!--                  @refresh="getOrderBook"/>-->
-<!--            </div>-->
           </div>
 
           <div v-else>
-            <wallet-not-connect @connect-wallet="connectWallet"/>
+            <h1 class="center-content">{{$t('sale.sale_over')}}</h1>
+            <p class="center-content">{{$t('please_visit')}} <a href="https://t.me/elasticbitcoinxbt" target="_blank">{{$t('channel')}}</a> {{$t('for_further_information')}}</p>
           </div>
         </div>
       </div>
@@ -83,15 +92,7 @@ import SaleInput from '@/components/sales/SaleInput'
 // import SaleOrderBook from '@/components/sales/SaleOrderBook'
 import WalletNotConnect from "@/components/sections/WalletNotConnect";
 import {getWeb3Client} from "@/libs/web3";
-import {
-  // getOrderBook,
-  getOrderMetaOf,
-  getSaleRule,
-  getSaleSupply,
-  makeBid,
-  // subscribeOrderBookChange,
-  withdrawFund
-} from "@/libs/mystic-dealer";
+import {getOrderMetaOf, getSaleRule, getSaleSupply, makeBid, withdrawFund} from "@/libs/mystic-dealer";
 import {getXBTBalance} from "@/libs/xbt";
 
 export default {
@@ -139,6 +140,10 @@ export default {
   },
 
   computed: {
+    isSaleOver() {
+      const minAvailableSale = this.saleSupply / this.saleRate;
+      return minAvailableSale < this.minBidAmount;
+    },
     pageTitle() {
       return this.$t('sales.page_title')
     },
@@ -204,6 +209,10 @@ export default {
     async getSaleInfo() {
       const walletClient = this.walletClient;
 
+      // Get sale supply
+      const saleSupply = await getSaleSupply(walletClient.web3Client);
+      this.$set(this, 'saleSupply', saleSupply);
+
       // Get sale rate
       const saleRate = await getSaleRule(walletClient.web3Client);
       this.$set(this, 'saleRate', saleRate.exchangeRate);
@@ -213,10 +222,6 @@ export default {
       // get order meta
       const {participantWaitTime} = await getOrderMetaOf(walletClient.web3Client, this.userAccount);
       this.$set(this, 'participantWaitTime', participantWaitTime);
-
-      // Get sale supply
-      const saleSupply = await getSaleSupply(walletClient.web3Client);
-      this.$set(this, 'saleSupply', saleSupply);
     },
 
     async fetchStatus() {
@@ -237,7 +242,7 @@ export default {
       await this.fetchStatus();
     },
 
-    async withdrawFund(){
+    async withdrawFund() {
       const walletClient = this.walletClient;
       await withdrawFund(walletClient.web3Client);
       this.$refs.success.open();

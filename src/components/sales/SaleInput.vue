@@ -2,7 +2,7 @@
   <div>
     <div v-if="availableToClaim" class="exchange-token bg-white p-32 has-shadow text-center">
       <div>
-        <h4>{{$t('sale.i_want_to_buy')}}</h4>
+        <h4>{{ $t('sale.i_want_to_buy') }}</h4>
       </div>
       <div class="mt-32">
         <div class="flex-row flex-center">
@@ -20,7 +20,9 @@
           <h2> = {{ displayedSaleRate }} XBT</h2>
         </div>
         <div class="mt-16">
-          <span style="font-size: 14px">{{ $t('sale.you_can_buy') }} {{ $t('max') }} <strong>{{ displayedMaxBidAmount }} ETH</strong> {{$t('and')}} {{$t('min')}} <strong>{{ displayedMinBidAmount }} ETH</strong></span>
+          <span style="font-size: 14px">{{ $t('sale.you_can_buy') }} {{ $t('max') }} <strong>{{ displayedMaxBidAmount }} ETH</strong> {{ $t('and') }} {{ $t('min') }} <strong>{{
+              displayedMinBidAmount
+            }} ETH</strong></span>
         </div>
       </div>
       <c-button :disabled="!validInput || submitted === true"
@@ -32,8 +34,8 @@
     </div>
 
     <div v-else class="exchange-token bg-white p-32 has-shadow text-center">
-      <h4>{{$t('sale.your_next_available_purchase')}}</h4>
-      <p>{{nextAvailableClaimDate}}</p>
+      <h4>{{ $t('sale.your_next_available_purchase') }}</h4>
+      <p>{{ nextAvailableClaimDate }}</p>
     </div>
   </div>
 </template>
@@ -64,20 +66,28 @@ export default {
     participantWaitTime: {
       type: Number,
       default: 0
+    },
+    saleSupply: {
+      type: Number,
+      default: 0
     }
   },
   computed: {
+    actualMaxBid() {
+      const actualMaxBid = (this.saleSupply / this.saleRate);
+      return this.maxBidAmount < actualMaxBid ? this.maxBidAmount : actualMaxBid;
+    },
     displayedSaleRate() {
       return numeral(this.saleRate * this.ethPurchaseAmount).format('0,0.00')
     },
     displayedMaxBidAmount() {
-      return numeral(this.maxBidAmount).format('0,0.00')
+      return numeral(this.actualMaxBid).format('0,0.000')
     },
     displayedMinBidAmount() {
       return numeral(this.minBidAmount).format('0,0.00')
     },
     validInput() {
-      return this.ethPurchaseAmount <= this.maxBidAmount && this.ethPurchaseAmount >= this.minBidAmount;
+      return this.ethPurchaseAmount <= this.actualMaxBid && this.ethPurchaseAmount >= this.minBidAmount;
     },
     nextAvailableClaimDate() {
       const lang = localStorage.getItem('lang') || 'en';
@@ -89,12 +99,12 @@ export default {
   },
   data() {
     return {
-      ethPurchaseAmount: 0.1,
+      ethPurchaseAmount: this.minBidAmount,
       submitted: false
     }
   },
   methods: {
-    handlePurchase(){
+    handlePurchase() {
       this.submitted = true;
       this.$emit('on-purchase', this.ethPurchaseAmount);
       setTimeout(() => {
