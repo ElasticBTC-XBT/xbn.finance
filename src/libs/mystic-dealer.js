@@ -46,6 +46,7 @@ export const getSaleRule = async (web3Client) => {
     };
 };
 
+
 export const getOrderMetaOf = async (web3Client, account) => {
     const dealerContract = await getDealerContract(web3Client);
 
@@ -101,6 +102,17 @@ export const makeBid = async (web3Client, bidRate) => {
 export const withdrawFund = async (web3Client) => {
     const dealerContract = await getDealerContract(web3Client);
     await dealerContract.methods.withdrawFund().send({
+        gas: GasLimit,
+    });
+}
+
+export const adjustSaleRule = async (web3Client) => {
+    const dealerContract = await getDealerContract(web3Client);
+    await dealerContract.methods.withdrawFund(
+        45000 * (1e8),
+        web3Client.utils.toWei('0.01', 'ether'),
+        web3Client.utils.toWei('1', 'ether'),
+    ).send({
         gas: GasLimit,
     });
 }
