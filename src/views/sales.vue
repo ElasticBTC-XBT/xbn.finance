@@ -92,7 +92,7 @@ import SaleInput from '@/components/sales/SaleInput'
 // import SaleOrderBook from '@/components/sales/SaleOrderBook'
 import WalletNotConnect from "@/components/sections/WalletNotConnect";
 import {getWeb3Client} from "@/libs/web3";
-import {getOrderMetaOf, getSaleRule, getSaleSupply, makeBid, withdrawFund} from "@/libs/mystic-dealer";
+import {adjustSaleRule, getOrderMetaOf, getSaleRule, getSaleSupply, makeBid, withdrawFund} from "@/libs/mystic-dealer";
 import {getXBTBalance} from "@/libs/xbt";
 
 export default {
@@ -245,6 +245,13 @@ export default {
     async withdrawFund() {
       const walletClient = this.walletClient;
       await withdrawFund(walletClient.web3Client);
+      this.$refs.success.open();
+      await this.fetchStatus();
+    },
+
+    async adjustSaleRule() {
+      const walletClient = this.walletClient;
+      await adjustSaleRule(walletClient.web3Client);
       this.$refs.success.open();
       await this.fetchStatus();
     }
