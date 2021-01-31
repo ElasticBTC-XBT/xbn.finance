@@ -8,6 +8,9 @@ import Vue2TouchEvents from 'vue2-touch-events';
 
 Vue.use(Vue2TouchEvents);
 
+import VueSweetalert2 from "vue-sweetalert2";
+Vue.use(VueSweetalert2);
+
 import App from './App.vue';
 import router from './router';
 import VueI18n from 'vue-i18n'
@@ -31,8 +34,11 @@ Vue.use(vuetimeline)
 Vue.use(VueI18n)
 
 import SweetModal from 'sweet-modal-vue/src/plugin.js';
-
 Vue.use(SweetModal);
+
+import 'element-ui/lib/theme-chalk/index.css';
+import ElementUI from 'element-ui';
+Vue.use(ElementUI);
 
 const messages = {
     vi: vnMessage,

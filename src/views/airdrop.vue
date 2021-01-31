@@ -59,15 +59,6 @@
 
 
           <sweet-modal ref="success" icon="success">
-            <!--          <div class="flex-center">-->
-            <!--            <c-image-->
-            <!--                id="big-banner-logo"-->
-            <!--                class="has-shadow"-->
-            <!--                :src="require('@/assets/images/banner.png')"-->
-            <!--                alt="Hero image"-->
-            <!--                :width="72"-->
-            <!--                :height="72"/>-->
-            <!--          </div>-->
             <h1>{{ $t('airdrop.xbt_coming') }}</h1>
             {{ $t('airdrop.thank_you') }}
 
@@ -133,7 +124,6 @@ export default {
       contractFundBalance: 0,
       xbtBalance: 0,
       waitingTime: 0,
-      claimAmount: 0,
       userAccount: null,
       walletClient: {}
     }
@@ -199,8 +189,7 @@ export default {
 
     async claimAirdrop() {
       const walletClient = this.walletClient;
-      const claimAmount = await claimAirdrop(walletClient.web3Client);
-      this.$set(this, 'claimAmount', claimAmount);
+      await claimAirdrop(walletClient.web3Client);
       await this.fetchStatus();
       this.$refs.success.open();
     },

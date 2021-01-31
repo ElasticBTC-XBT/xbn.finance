@@ -1,6 +1,6 @@
 <template>
     <section
-        class="signin section"
+        class="sales section"
         :class="[
             hasBgColor && 'has-bg-color',
             invertColor && 'invert-color'

@@ -15,6 +15,7 @@ import Roadmap from './views/roadmap.vue';
 import XbtInvestmentFund from './views/xbt_investment_fund.vue';
 import Cryptounicorns from './views/cryptounicorns.vue';
 import App from "./App";
+import Sales from './views/sales.vue';
 
 Vue.use(Router);
 
@@ -146,6 +147,13 @@ let routers = [
         viShort: '/vi/signup',
         krShort: '/kr/signup',
     },
+    {
+        path: '/sales',
+        name: 'sales',
+        components: {
+            default: Sales,
+        },
+    }
 ]
 
 export default new Router({

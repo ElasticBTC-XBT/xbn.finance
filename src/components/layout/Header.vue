@@ -39,13 +39,15 @@
                                 </div>
 
                             </li>
-
+                          <li @click="closeMenu">
+                            <router-link to="/sales/">Sales</router-link>
+                          </li>
                             <li @click="closeMenu">
                                 <router-link to="/airdrop/">{{ $t("airdrop.airdrop") }}</router-link>
                             </li>
-                            <li @click="closeMenu">
-                                <router-link to="/cryptounicorns/">{{ $t("header.cryptounicorns") }}</router-link>
-                            </li>
+<!--                            <li @click="closeMenu">-->
+<!--                                <router-link to="/cryptounicorns/">{{ $t("header.cryptounicorns") }}</router-link>-->
+<!--                            </li>-->
                             <li @click="closeMenu">
                                 <router-link to="/xbt-investment-fund/">{{ $t("header.investment_fund") }}</router-link>
                             </li>
