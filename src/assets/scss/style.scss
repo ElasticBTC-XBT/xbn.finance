@@ -167,6 +167,19 @@
     left: 15px;
     display: none;
 
+    :after {
+      content: '';
+      position: absolute;
+      left: 10%;
+      top: 8px;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #F3AA43;
+      clear: both;
+    }
+
     ul {
       list-style-type: none;
       background: white;
@@ -176,6 +189,8 @@
       border-radius: 2px;
       margin-top: 15px;
       border-top: 3px solid #F3AA43;
+      box-shadow: 0px 0.125rem 0.75rem 0px rgba(0, 0, 0, 0.1);
+      transform-origin: center top;
 
       li {
         padding: 5px 0px 5px 0px !important;
@@ -196,7 +211,16 @@
   }
 }
 
+.crypto-listing {
+  margin-top: 10px;
+}
+
 @media (max-width: 640px) {
+
+  .footer-social ul, .footer-nav ul {
+    justify-content: center !important;
+  }
+
   .body-wrap {
     padding-bottom: 48px;
   }

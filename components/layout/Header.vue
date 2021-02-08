@@ -41,7 +41,7 @@
                                 <router-link to="/cryptounicorns/">Cryptounicorns</router-link>
                             </li>
                             <li>
-                                <router-link to="/xbt-investment-fund/">XBT Fund</router-link>
+                                <router-link to="/xbt/investment-fund/">XBT Fund</router-link>
                             </li>
                             <li>
                                 <router-link to="/sales/">Sales</router-link>

@@ -11,11 +11,16 @@ import Signup from './views/Signup.vue';
 import Learn from './views/learn.vue';
 import Governance from './views/governance.vue';
 import Airdrop from './views/airdrop.vue';
+
 import Roadmap from './views/roadmap.vue';
 import XbtInvestmentFund from './views/xbt_investment_fund.vue';
 import Cryptounicorns from './views/cryptounicorns.vue';
 import App from "./App";
 import Sales from './views/sales.vue';
+import XBNSales from './views/xbn/xbn_sales';
+import XBNAirdrop from './views/xbn/xbn_airdrop';
+import XBNLottery from './views/xbn/xbn_lottery';
+import XBNSwap from './views/xbn/xbn_swap';
 
 Vue.use(Router);
 
@@ -38,15 +43,7 @@ let routers = [
         viShort: '/vi/secondary',
         krShort: '/kr/secondary',
     },
-    {
-        path: '/airdrop',
-        name: 'airdrop',
-        components: {
-            default: Airdrop,
-        },
-        viShort: '/vi/airdrop',
-        krShort: '/kr/airdrop',
-    },
+
     {
         path: '/buy',
         name: 'buy',
@@ -130,15 +127,6 @@ let routers = [
         krShort: '/kr/cryptounicorns',
     },
     {
-        path: '/xbt-investment-fund',
-        name: 'XbtInvestmentFund',
-        components: {
-            default: XbtInvestmentFund,
-        },
-        viShort: '/vi/xbt-investment-fund',
-        krShort: '/kr/xbt-investment-fund',
-    },
-    {
         path: '/signup',
         name: 'signup',
         components: {
@@ -147,12 +135,74 @@ let routers = [
         viShort: '/vi/signup',
         krShort: '/kr/signup',
     },
+
+    // For XBT
     {
-        path: '/sales',
-        name: 'sales',
+        path: '/xbt/sales',
+        name: 'xbt_sales',
         components: {
             default: Sales,
         },
+        viShort: '/vi/xbt/sales',
+        krShort: '/kr/xbt/sales',
+    },
+    {
+        path: '/xbt/airdrop',
+        name: 'xbt_airdrop',
+        components: {
+            default: Airdrop,
+        },
+        viShort: '/vi/xbt/airdrop',
+        krShort: '/kr/xbt/airdrop',
+    },
+
+    {
+        path: '/xbt/investment-fund',
+        name: 'XbtInvestmentFund',
+        components: {
+            default: XbtInvestmentFund,
+        },
+        viShort: '/vi/xbt/investment-fund',
+        krShort: '/kr/xbt/investment-fund',
+    },
+
+
+    // For XBN
+    {
+        path: '/xbn/sales',
+        name: 'xbn_sales',
+        components: {
+            default: XBNSales,
+        },
+        viShort: '/vi/xbn/sales',
+        krShort: '/kr/xbn/sales',
+    },
+    {
+        path: '/xbn/airdrop',
+        name: 'xbn_airdrop',
+        components: {
+            default: XBNAirdrop,
+        },
+        viShort: '/vi/xbn/airdrop',
+        krShort: '/kr/xbn/airdrop',
+    },
+    {
+        path: '/xbn/lottery',
+        name: 'Xbn_lottery',
+        components: {
+            default: XBNLottery,
+        },
+        viShort: '/vi/xbn/lottery',
+        krShort: '/kr/xbn/lottery',
+    },
+    {
+        path: '/xbn/swap',
+        name: 'XbnSwap',
+        components: {
+            default: XBNSwap,
+        },
+        viShort: '/vi/xbn/swap',
+        krShort: '/kr/xbn/swap',
     }
 ]
 
