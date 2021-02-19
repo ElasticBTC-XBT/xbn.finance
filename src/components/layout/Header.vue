@@ -40,7 +40,7 @@
 
                             </li>
                           <li @click="closeMenu">
-                            <router-link to="/xbn/sales/">Sales</router-link>
+                            <router-link to="/xbn/sales/">Pre-Sale</router-link>
                           </li>
                           <li @click="closeMenu">
                             <router-link to="/xbn/airdrop/">{{ $t("airdrop.airdrop") }}</router-link>
