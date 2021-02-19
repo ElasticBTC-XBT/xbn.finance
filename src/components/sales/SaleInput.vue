@@ -99,7 +99,7 @@ export default {
   },
   data() {
     return {
-      ethPurchaseAmount: 0.01,
+      ethPurchaseAmount: 0.1,
       submitted: false
     }
   },
