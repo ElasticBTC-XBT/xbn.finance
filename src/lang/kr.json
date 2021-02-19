@@ -69,7 +69,7 @@
       "buy_xbt": "지금 XBT 구매"
     },
     "features_tiles": {
-      "section_header_title": "Elastic Bitcoin (XBT)이란?",
+      "section_header_title": "Elastic BNB  (XBT)이란?",
       "section_data_upper": {
         "item_1": {
           "title": "특별한 Defi 프로토콜",
@@ -398,7 +398,7 @@
     "buy_with_USDT": "USDT로 구매"
   },
   "footer": {
-    "copy_right": "2020 Elastic Bitcoin (XBT), all rights reserved"
+    "copy_right": "2020 Elastic BNB  (XBT), all rights reserved"
   },
   "format_time": {
     "years_past": "{year} 년 전",

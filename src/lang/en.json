@@ -62,14 +62,14 @@
   },
   "home": {
     "hero_split": {
-      "title_1": "XBT · Elastic Bitcoin with Adaptive Supply",
+      "title_1": "XBT · Elastic BNB  with Adaptive Supply",
       "desc_1": "A rebasing bitcoin cryptocurrency runs on ethereum network.",
       "desc_2": "It's time to know about XBT, it's stabilized to Bitcoin's price by utilized the power of Ethereum's Smart Contract to adjust supply based on market condition.",
       "desc_3": "Price of $XBT will be equal to $BTC after 100 days rebasing.",
       "buy_xbt": "Buy XBT now"
     },
     "features_tiles": {
-      "section_header_title": "What is Elastic Bitcoin (XBT)?",
+      "section_header_title": "What is Elastic BNB  (XBT)?",
       "section_data_upper": {
         "item_1": {
           "title": "A special DeFi protocol",
@@ -398,7 +398,7 @@
     "buy_with_USDT": "Buy with USDT"
   },
   "footer": {
-    "copy_right": "2020 Elastic Bitcoin (XBT), all rights reserved"
+    "copy_right": "2020 Elastic BNB  (XBT), all rights reserved"
   },
   "format_time": {
     "years_past": "{year} years ago",

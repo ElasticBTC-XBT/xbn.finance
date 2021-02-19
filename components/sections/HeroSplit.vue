@@ -21,7 +21,7 @@
                     <div class="split-item">
                         <div class="hero-content split-item-content center-content-mobile">
                             <h1 class="mt-0 mb-16 reveal-from-left">
-                                XBT · Elastic Bitcoin with Adaptive Supply
+                                XBT · Elastic BNB  with Adaptive Supply
                             </h1>
                             <p class="mt-0 mb-24 reveal-from-left" data-reveal-delay="200">
                                <em>A rebasing bitcoin run on ethereum network.</em>

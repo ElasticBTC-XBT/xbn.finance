@@ -39,48 +39,34 @@
                                 </div>
 
                             </li>
+                          <li @click="closeMenu">
+                            <router-link to="/xbn/sales/">Sales</router-link>
+                          </li>
+                          <li @click="closeMenu">
+                            <router-link to="/xbn/airdrop/">{{ $t("airdrop.airdrop") }}</router-link>
+                          </li>
+                          <li @click="closeMenu">
+                            <a href="https://elasticbitcoin.rog">XBT</a>
+                          </li>
 
-                            <li @click="closeMenu" class="item-header-main">
-                                <router-link to="/learn/" class="text-main">XBT</router-link>
 
-                                <div class="list-item-header-child">
-                                    <ul>
-                                        <li @click="closeMenu">
-                                            <router-link to="/xbt/sales/">Sales</router-link>
-                                        </li>
-                                        <li @click="closeMenu">
-                                            <router-link to="/xbt/airdrop/">{{ $t("airdrop.airdrop") }}</router-link>
-                                        </li>
-                                        <li @click="closeMenu">
-                                            <router-link to="/xbt/investment-fund/">
-                                                {{ $t("header.investment_fund") }}
-                                            </router-link>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li @click="closeMenu" class="item-header-main">
-                                <router-link to="/learn/" class="text-main">XBN</router-link>
+<!--                            <li @click="closeMenu" class="item-header-main">-->
+<!--                                <router-link to="/learn/" class="text-main">XBN</router-link>-->
 
-                                <div class="list-item-header-child">
-                                    <ul>
-                                        <li @click="closeMenu">
-                                            <router-link to="/xbn/swap/">SWAP</router-link>
-                                        </li>
-                                        <li @click="closeMenu">
-                                            <router-link to="/xbn/sales/">Sales</router-link>
-                                        </li>
-                                        <li @click="closeMenu">
-                                            <router-link to="/xbn/airdrop/">{{ $t("airdrop.airdrop") }}</router-link>
-                                        </li>
-                                        <li @click="closeMenu">
-                                            <router-link to="/xbn/lottery/">
-                                                Lottery
-                                            </router-link>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
+<!--                                <div class="list-item-header-child">-->
+<!--                                    <ul>-->
+<!--                                        <li @click="closeMenu">-->
+<!--                                            <router-link to="/xbn/swap/">SWAP</router-link>-->
+<!--                                        </li>-->
+<!--                                        -->
+<!--                                        <li @click="closeMenu">-->
+<!--                                            <router-link to="/xbn/lottery/">-->
+<!--                                                Lottery-->
+<!--                                            </router-link>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                            </li>-->
 
                             <!--                            <li @click="closeMenu">-->
                             <!--                                <router-link to="/cryptounicorns/">{{ $t("header.cryptounicorns") }}</router-link>-->
