@@ -15,9 +15,12 @@
                 ]">
           <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
 
+
           <div v-if="userAccount">
             <div class="flex-center">
               <div style="text-align:center;">
+
+
                 <!--h1>{{ $t('airdrop.balance') }}: {{ xbtBalance }} XBN</h1-->
                 <img src="https://i.imgur.com/QR3UZLo.png" style="width:200px; display:inline;"/>
                 <p v-if="waitingTime">{{ $t('airdrop.next_claim') }}: {{ nextAvailableClaimDate }}</p>

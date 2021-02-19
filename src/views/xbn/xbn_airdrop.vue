@@ -14,7 +14,9 @@
                     bottomDivider && 'has-bottom-divider'
                 ]">
           <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
-
+          <p style="text-align: center">
+          <b>Before claim your XBN, please retweet this <a href="https://twitter.com/elasticbitcoin/status/1362737977772834816">tweet</a></b>
+          </p>
           <div v-if="userAccount">
             <div class="flex-center">
               <div style="text-align:center;">
