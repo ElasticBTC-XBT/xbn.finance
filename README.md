@@ -1,4 +1,4 @@
-# XBT
+# XBN
 
 Landing page template for Vue.js.
 

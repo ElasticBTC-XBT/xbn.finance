@@ -99,7 +99,7 @@
                                 </span>
                                 <span class="text-color-low"> - </span>
                                 <span class="testimonial-item-link text-xs">
-                                    <a href="#">XBT Fund Manager</a>
+                                    <a href="#">XBN Fund Manager</a>
                                 </span>
                             </div>
 
@@ -184,8 +184,8 @@ export default {
   data() {
     return {
       sectionHeader: {
-        title: 'XBT Foundation Team',
-        paragraph: 'The XBT Foundation (XF) is a non-profit organization dedicated to supporting XBT and related technologies, their role is not to control but contribue to XBT\'s growth' +
+        title: 'XBN & XBT Foundation Team',
+        paragraph: 'The X-Foundation (XF) is a non-profit organization dedicated to supporting XBT & XBN and related technologies, their role is not to control but contribue to XBT & XBN\'s growth' +
             '<br/> <em>The team will be remained anonymous for various privacy reasons.</em>'
       }
     }

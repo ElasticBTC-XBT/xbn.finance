@@ -36,13 +36,13 @@
                             <li>
                                 <router-link to="/staking/">Staking</router-link>
                             </li>
-                            <li>
+<!--                            <li>-->
 
-                                <router-link to="/cryptounicorns/">Cryptounicorns</router-link>
-                            </li>
-                            <li>
-                                <router-link to="/xbt/investment-fund/">XBT Fund</router-link>
-                            </li>
+<!--                                <router-link to="/cryptounicorns/">Cryptounicorns</router-link>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <router-link to="/xbt/investment-fund/">XBT Fund</router-link>-->
+<!--                            </li>-->
                             <li>
                                 <router-link to="/sales/">Sales</router-link>
                             </li>
@@ -51,7 +51,7 @@
 <!--                            <li>-->
 <!--                                <router-link to="/signup/" class="button button-primary button-sm">Trade XBT</router-link>-->
                               <c-button tag="a" class="button button-primary button-sm" color="primary" wide-mobile href="/buy">
-                                Buy XBT
+                                Buy XBN
                               </c-button>
 <!--                            </li>-->
                         </ul>

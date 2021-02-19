@@ -21,17 +21,17 @@
                     <div class="split-item">
                         <div class="hero-content split-item-content center-content-mobile">
                             <h1 class="mt-0 mb-16 reveal-from-left">
-                                XBT · Elastic BNB  with Adaptive Supply
+                                XBN · Elastic BNB  with Adaptive Supply
                             </h1>
                             <p class="mt-0 mb-24 reveal-from-left" data-reveal-delay="200">
                                <em>A rebasing bitcoin run on ethereum network.</em>
                                 <br/>
                                 <br/>
-                                It's time to know about XBT, it's stabilized to Bitcoin's price by utilized the power of Ethereum's Smart Contract to adjust supply based on market condition.
+                                It's time to know about XBN, it's stabilized to Bitcoin's price by utilized the power of Ethereum's Smart Contract to adjust supply based on market condition.
                             </p>
                             <div class="reveal-from-left" data-reveal-delay="400">
                               <c-button tag="a" color="primary" wide-mobile href="/buy">
-                                Buy XBT
+                                Buy XBN
                               </c-button>
                             </div>
                         </div>

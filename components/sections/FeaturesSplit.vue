@@ -25,7 +25,7 @@
                                 Adaptive Supply
                             </h3>
                             <p class="m-0">
-                                The number of XBT you own change everyday so that the price of XBT will reach BTC price in 100 days. Your percent ownership of the XBT network remains fixed no matter how supply changes.
+                                The number of XBN you own change everyday so that the price of XBN will reach BTC price in 100 days. Your percent ownership of the XBN network remains fixed no matter how supply changes.
                             </p>
                         </div>
                         <div
@@ -45,7 +45,7 @@
                                 Risk diversification
                             </h3>
                             <p class="m-0">
-                                This reduce risk of correlation of Altcoins (such as ETH, LINK...) and Bitcoin in your porfolio because their is 30 days lag between XBT's and BTC's prices.
+                                This reduce risk of correlation of Altcoins (such as ETH, LINK...) and Bitcoin in your porfolio because their is 30 days lag between XBN's and BTC's prices.
                             </p>
                         </div>
                         <div
@@ -65,7 +65,7 @@
                                 A trading instrument
                             </h3>
                             <p class="m-0">
-                                As a trading instrument, XBT has many advantages, own XBT you can catch the hype of Bitcoin's price growth, but also reduce the risk when Bitcoin takes quick dive because of lag factor.
+                                As a trading instrument, XBN has many advantages, own XBN you can catch the hype of Bitcoin's price growth, but also reduce the risk when Bitcoin takes quick dive because of lag factor.
                             </p>
                         </div>
                         <div
@@ -99,9 +99,9 @@ export default {
   data() {
     return {
       sectionHeader: {
-        title: 'Learn about XBT',
+        title: 'Learn about XBN',
         paragraph:
-          'XBT is a cryptocurrency like Bitcoin which runs on Ethereum network, its price target of Bitcoin and its supply change daily'
+          'XBN is a cryptocurrency like Bitcoin which runs on Ethereum network, its price target of Bitcoin and its supply change daily'
       }
     }
   }
