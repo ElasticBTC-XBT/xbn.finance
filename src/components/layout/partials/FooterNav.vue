@@ -101,7 +101,7 @@
         <div>
             <ul class="list-reset finance-listing mt-8">
                 <li>
-                    <a href="0x547cbe0f0c25085e7015aa6939b28402eb0ccdac" target="_blank"
+                    <a href="https://bscscan.com/token/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac" target="_blank"
                        class="flex-center">
                         <c-image width="24" height="24" :src="require('@/assets/images/bscscan.png')"></c-image>
                         <span class="ml-8 mr-12">BscScan</span>
