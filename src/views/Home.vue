@@ -51,14 +51,6 @@
             return {
                 faqData: [
                     {
-                        "title": v.$t('home.faq_data.item_1.title'),
-                        "answer": v.$t('home.faq_data.item_1.answer')
-                    },
-                    // {
-                    //   "title": "Who is the team/devs",
-                    //   "answer": "The team is anonymous, but a short introduction of every member is available on the website"
-                    // },
-                    {
                         "title": v.$t('home.faq_data.item_2.title'),
                         "answer": v.$t('home.faq_data.item_2.answer')
                     }, {
