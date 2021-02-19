@@ -23,6 +23,7 @@
                 <!--h1>{{ $t('airdrop.balance') }}: {{ xbtBalance }} XBN</h1-->
                 <img src="https://i.imgur.com/QR3UZLo.png" style="width:200px; display:inline;"/>
                 <p v-if="waitingTime">{{ $t('airdrop.next_claim') }}: {{ nextAvailableClaimDate }}</p>
+                <p>You can also get XBT (ETH Network) airdrop <a href="https://elasticbitcoin.org/airdrop/">here</a> </p>
                 <p>{{ $t('airdrop.contract_fund_balance') }}: {{ contractFundBalance }} XBN</p>
               </div>
             </div>
