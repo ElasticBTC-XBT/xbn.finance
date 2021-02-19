@@ -46,7 +46,7 @@
                             <router-link to="/xbn/airdrop/">{{ $t("airdrop.airdrop") }}</router-link>
                           </li>
                           <li @click="closeMenu">
-                            <a href="https://elasticbitcoin.rog">XBT</a>
+                            <a href="https://elasticbitcoin.org">XBT</a>
                           </li>
 
 
@@ -75,7 +75,8 @@
                         </ul>
                         <ul class="list-reset header-nav-right">
                             <c-button tag="a" class="button button-primary button-sm" color="primary" wide-mobile
-                                      href="/buy">
+                                      href="/xbn/sales/"
+                            >
                                 {{ $t("header.buy") }}
                             </c-button>
                         </ul>
