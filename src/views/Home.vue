@@ -74,9 +74,6 @@
                         "title": v.$t('home.faq_data.item_6.title'),
                         "answer": v.$t('home.faq_data.item_6.answer')
                     }, {
-                        "title": v.$t('home.faq_data.item_7.title'),
-                        "answer": v.$t('home.faq_data.item_7.answer')
-                    }, {
                         "title": v.$t('home.faq_data.item_8.title'),
                         "answer": v.$t('home.faq_data.item_8.answer')
                     }, {

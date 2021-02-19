@@ -118,7 +118,7 @@
                     <!--                                </span>-->
                     <!--                                <span class="text-color-low"> - </span>-->
                     <!--                                <span class="testimonial-item-link text-xs">-->
-                    <!--                                    <a href="#">XBT Fund Manager</a>-->
+                    <!--                                    <a href="#">XBN Fund Manager</a>-->
                     <!--                                </span>-->
                     <!--                            </div>-->
 

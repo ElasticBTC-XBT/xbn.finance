@@ -12,13 +12,13 @@
     "timestamp": "Thời gian",
     "address": "Địa chỉ",
     "purchase_amount": "Số Lượng",
-    "eth_value": "Số ETH",
+    "eth_value": "Số BNB",
     "price": "Giá",
     "bonus_won": "Bonus",
     "no_available_data": "Không có dữ liệu",
     "summaries": "Tổng cộng",
     "request_sent": "Giao dịch đã gửi",
-    "page_title": "Tham gia phiên chào bán $XBT giảm giá tại đây nhé",
+    "page_title": "Tham gia phiên chào bán $XBN giảm giá tại đây nhé",
     "thank_you": "Cảm ơn bạn",
     "your_next_available_purchase": "Phiên bán tiếp theo",
     "sale_over": "Phiên bán đã kết thúc, cảm ơn bạn vì đã tham gia"
@@ -38,17 +38,17 @@
   "refresh": "Tải lại",
   "airdrop": {
     "airdrop": "Airdrop",
-    "share_page_title": "Nhận $XBT miễn phí. Tham gia ở đây nhé mọi người.",
-    "xbt_coming": "Chúng tôi đã gửi XBT đến ví của bạn",
-    "thank_you": "Cảm ơn bạn vì đã là 1 phần của cộng đồng XBT <3",
-    "claim_title": "Nhận XBT miễn phí",
-    "claim_description": "XBT miễn phí cho tất cả mọi người",
-    "claim_xbt": "Nhận XBT",
+    "share_page_title": "Nhận $XBN miễn phí. Tham gia ở đây nhé mọi người.",
+    "xbt_coming": "Chúng tôi đã gửi XBN đến ví của bạn",
+    "thank_you": "Cảm ơn bạn vì đã là 1 phần của cộng đồng XBN <3",
+    "claim_title": "Nhận XBN miễn phí",
+    "claim_description": "XBN miễn phí cho tất cả mọi người",
+    "claim_xbt": "Nhận XBN",
     "not_participated": "Bạn chưa tham gia chương trình này",
     "participated": "Bạn đã tham gia chương trình này",
     "allowed_once": "Mỗi địa chỉ ví chỉ được tham gia 1 lần",
-    "balance": "Số dư XBT",
-    "contract_fund_balance": "Tổng số lượng XBT có thể nhận",
+    "balance": "Số dư XBN",
+    "contract_fund_balance": "Tổng số lượng XBN có thể nhận",
     "next_claim": "Lần nhận tiếp theo"
   },
   "header": {
@@ -62,30 +62,30 @@
   },
   "home": {
     "hero_split": {
-      "title_1": "XBT · Bitcoin dao động với nguồn cung tương ứng",
+      "title_1": "XBN · BNB dao động với nguồn cung tương ứng",
       "desc_1": "Một đồng tiền điện tử bitcoin tự thay đổi nguồn cung chạy trên mạng ethereum.",
-      "desc_2": "Đã đến lúc biết về XBT, đồng tiền ổn định theo giá của Bitcoin bằng cách sử dụng Hợp đồng thông minh của Ethereum để điều chỉnh nguồn cung dựa trên tình trạng thị trường.",
-      "desc_3": "Giá của $ XBT sẽ bằng $ BTC sau 100 ngày điều chỉnh nguồn cung.",
-      "buy_xbt": "Mua XBT ngay"
+      "desc_2": "Đã đến lúc biết về XBN, đồng tiền ổn định theo giá của BNB bằng cách sử dụng Hợp đồng thông minh của Binance Smart Chain để điều chỉnh nguồn cung dựa trên tình trạng thị trường.",
+      "desc_3": "Giá của $ XBN sẽ bằng $ BTC sau 100 ngày điều chỉnh nguồn cung.",
+      "buy_xbt": "Mua XBN ngay"
     },
     "features_tiles": {
-      "section_header_title": "Elastic BNB  (XBT) là gì?",
+      "section_header_title": "Elastic BNB  (XBN) là gì?",
       "section_data_upper": {
         "item_1": {
           "title": "Một giao thức Defi đặc biệt",
-          "desc": "XBT được phân nhánh từ $AMPL, một giao thức DeFi với mô hình nguồn cung co giãn. Tổng cung XBT luôn thay đổi hàng ngày."
+          "desc": "XBN được phân nhánh từ $AMPL, một giao thức DeFi với mô hình nguồn cung co giãn. Tổng cung XBN luôn thay đổi hàng ngày."
         },
         "item_2": {
           "title": "Rebasing ngẫu nhiên",
-          "desc": "Để tránh thao túng giá, XBT sẽ được thay đổi nguồn cung ngẫu nhiên với hệ số trễ. XBT sẽ đạt đến trạng thái cân bằng cung-giá, sự biến động nằm ở nguồn cung cấp token, không phải giá"
+          "desc": "Để tránh thao túng giá, XBN sẽ được thay đổi nguồn cung ngẫu nhiên với hệ số trễ. XBN sẽ đạt đến trạng thái cân bằng cung-giá, sự biến động nằm ở nguồn cung cấp token, không phải giá"
         },
         "item_3": {
           "title": "Mục tiêu giá 1 $ BTC",
-          "desc": "$XBT được thiết kế để duy trì mục tiêu giá chuẩn là 1 $BTC sau 100 ngày."
+          "desc": "$XBN được thiết kế để duy trì mục tiêu giá chuẩn là 0.001 $BNB sau 100 ngày."
         },
         "item_4": {
-          "title": "Khi có nhiều người sỡ hữu hơn, 1 đồng XBT vẫn sẽ có giá bằng 1 $BTC nhưng có vốn hóa thị trường lớn hơn.",
-          "desc": "Người nắm giữ XBT sở hữu một tỷ lệ phần trăm của mạng lưới. Giá trị nắm giữ của họ tăng lên khi vốn hóa thị trường tăng."
+          "title": "Khi có nhiều người sỡ hữu hơn, 1 đồng XBN vẫn sẽ có giá bằng 1 $BNB nhưng có vốn hóa thị trường lớn hơn.",
+          "desc": "Người nắm giữ XBN sở hữu một tỷ lệ phần trăm của mạng lưới. Giá trị nắm giữ của họ tăng lên khi vốn hóa thị trường tăng."
         },
         "item_5": {
           "title": "Sự kiện rebase là gì?",
@@ -99,8 +99,8 @@
     },
     "testimonial": {
       "section_header": {
-        "title": "Nhóm sáng lập XBT",
-        "paragraph": "Tổ chức XBT - là một tổ chức phi lợi nhuận chuyên trách hỗ trợ XBT và các công nghệ liên quan, vai trò của tổ chức không phải là kiểm soát mà là đóng góp vào sự tăng trưởng của XBT"
+        "title": "Nhóm sáng lập XBN",
+        "paragraph": "Tổ chức XBN - là một tổ chức phi lợi nhuận chuyên trách hỗ trợ XBN và các công nghệ liên quan, vai trò của tổ chức không phải là kiểm soát mà là đóng góp vào sự tăng trưởng của XBN"
       },
       "team_data": {
         "item_1": {
@@ -122,19 +122,19 @@
     },
     "features_split": {
       "section_header": {
-        "title": "Tìm hiểu về XBT",
-        "paragraph": "XBT là một loại tiền điện tử giống như Bitcoin, mục tiêu giá của nó là Bitcoin và nguồn cung của nó thay đổi hàng ngày"
+        "title": "Tìm hiểu về XBN",
+        "paragraph": "XBN là một loại tiền điện tử giống như BNB, mục tiêu giá của nó là BNB và nguồn cung của nó thay đổi hàng ngày"
       },
       "title_1": "Số lượng nguồn cung tùy biến",
       "title_2": "Đa dạng hóa rủi ro",
       "title_3": "Một công cụ giao dịch",
-      "desc_1": "Số lượng XBT bạn sở hữu có thể thay đổi hằng ngày để giá 1 XBT sẽ bằng giá 1 BTC trong 100 ngày. Phần trăm XBT bạn nắm giữ so với tổng số XBT  sẽ vẫn giữ nguyên dù tổng nguồn cung thay đổi.",
-      "desc_2": "Điều này làm giảm rủi ro về mối tương quan của các Altcoin (chẳng hạn như ETH, LINK ...) và Bitcoin trong danh mục đầu tư của bạn vì chúng có độ trễ 30 ngày giữa giá của XBT và BTC.",
-      "desc_3": "Là một công cụ giao dịch, XBT có nhiều lợi thế, sở hữu XBT, bạn có thể nắm bắt được đà tăng trưởng giá của Bitcoin, nhưng cũng giảm rủi ro khi Bitcoin lao dốc nhanh chóng vì yếu tố trễ."
+      "desc_1": "Số lượng XBN bạn sở hữu có thể thay đổi hằng ngày để giá 1 XBN sẽ bằng giá 1 BTC trong 100 ngày. Phần trăm XBN bạn nắm giữ so với tổng số XBN  sẽ vẫn giữ nguyên dù tổng nguồn cung thay đổi.",
+      "desc_2": "Điều này làm giảm rủi ro về mối tương quan của các Altcoin (chẳng hạn như BNB, LINK ...) và BNB trong danh mục đầu tư của bạn vì chúng có độ trễ 30 ngày giữa giá của XBN và BTC.",
+      "desc_3": "Là một công cụ giao dịch, XBN có nhiều lợi thế, sở hữu XBN, bạn có thể nắm bắt được đà tăng trưởng giá của BNB, nhưng cũng giảm rủi ro khi BNB lao dốc nhanh chóng vì yếu tố trễ."
     },
     "faq_data": {
       "item_1": {
-        "title": "Các cặp XBT được đưa lên Uniswap khi nào",
+        "title": "Các cặp XBN được đưa lên PancakeSwap khi nào",
         "answer": "11/11/2020"
       },
       "item_2": {
@@ -150,15 +150,15 @@
         "answer": "Có, bạn có thể tìm thấy nó <a href='https://github.com/ElasticBTC-XBT/elastic-bitcoin-xbt-contract'>ở đây</a>"
       },
       "item_5": {
-        "title": "Khi nào XBT sẽ xuất hiện trên CoinGecko và Coin Market Cap",
-        "answer": "Chúng tôi đang đăng ký Coingecko và chúng tôi đang chờ sự chấp thuận của họ. Sau khi chúng tôi niêm yết XBT trên một sàn giao dịch khác, chúng tôi sẽ ở trên Coin Market Cap"
+        "title": "Khi nào XBN sẽ xuất hiện trên CoinGecko và Coin Market Cap",
+        "answer": "Chúng tôi đang đăng ký Coingecko và chúng tôi đang chờ sự chấp thuận của họ. Sau khi chúng tôi niêm yết XBN trên một sàn giao dịch khác, chúng tôi sẽ ở trên Coin Market Cap"
       },
       "item_6": {
         "title": "Ví của nhóm có bị khóa không",
         "answer": "Có, tất cả ví đã bị khóa trong một hợp đồng được trả ra theo thời hạn. Chúng sẽ được mở khóa với tỷ lệ 1% mỗi tuần."
       },
       "item_7": {
-        "title": "Thanh khoản Uniswap có bị khóa không",
+        "title": "Thanh khoản PancakeSwap có bị khóa không",
         "answer": "Có, nó bị khóa qua Unicrypt. Bạn có thể tìm thêm thông tin trên <a href='https://www.dextools.io/app/uniswap/pair-explorer/0x080cf470ea91532bf5e313acc60c4b0d029409d4'>Dextools</a>"
       },
       "item_8": {
@@ -175,25 +175,25 @@
       },
       "item_11": {
         "title": "Rebase được tính như thế nào",
-        "answer": "(Giá hiện tại - giá mục tiêu cơ sở) * số dư ví / (giá mục tiêu cơ sở * hệ số trễ) <br/> Ví dụ: Với mức giá hiện tại là $BTC 1,30, hệ số trễ 10,00, số dư ví cập nhật sẽ được điều chỉnh bằng: (1,30 - 1) * 100 / (1 * 10) = 3. Số dư ví mới sẽ là 103 $XBT."
+        "answer": "(Giá hiện tại - giá mục tiêu cơ sở) * số dư ví / (giá mục tiêu cơ sở * hệ số trễ) <br/> Ví dụ: Với mức giá hiện tại là $BNB 1,30, hệ số trễ 10,00, số dư ví cập nhật sẽ được điều chỉnh bằng: (1,30 - 1) * 100 / (1 * 10) = 3. Số dư ví mới sẽ là 103 $XBN."
       },
       "item_12": {
         "title": "Yếu tố độ trễ là gì",
         "answer": "Một hệ số độ trễ theo đường cong, ngẫu nhiên được sử dụng để tính toán lượng cung tăng và giảm khi xảy ra sự kiện rebase. Điều này làm cho các sự kiện rebase khó đoán hơn. Đường cong cho phép cung tăng với tốc độ nhanh hơn khi tổng vốn hóa thị trường thấp. Hệ số trễ phụ thuộc vào tổng cung. Nguồn cung càng cao thì hệ số trễ có thể xảy ra càng cao. Tối thiểu là 6 và tối đa là 100."
       },
       "item_13": {
-        "title": "Staking XBT LP là gì",
-        "answer": "XBT LP Staking cung cấp một giải pháp để khuyến khích cung cấp thanh khoản trên Uniswap. Khi bạn đã cung cấp thanh khoản cho XBT trên Uniswap, bạn sẽ nhận được mã thông báo UNI-V2, bạn có thể góp vào trên dashboard XBT Staking. Tùy thuộc vào số lượng token đã đặt cược và thời gian đặt cược của bạn, bạn sẽ nhận được một phần của tổng hệ sinh thái XBT. Pool được mở khóa theo thời gian và được phân phối cho mỗi người đóng góp theo tỷ trọng của họ trong mạng lưới."
+        "title": "Staking XBN LP là gì",
+        "answer": "XBN LP Staking cung cấp một giải pháp để khuyến khích cung cấp thanh khoản trên PancakeSwap. Khi bạn đã cung cấp thanh khoản cho XBN trên PancakeSwap, bạn sẽ nhận được mã thông báo liquidity, bạn có thể góp vào trên dashboard XBN Staking. Tùy thuộc vào số lượng token đã đặt cược và thời gian đặt cược của bạn, bạn sẽ nhận được một phần của tổng hệ sinh thái XBN. Pool được mở khóa theo thời gian và được phân phối cho mỗi người đóng góp theo tỷ trọng của họ trong mạng lưới."
       }
     }
   },
   "cta": {
-    "title": "Tham gia cộng đồng XBT ngay!",
-    "buy_xbt": "Mua XBT"
+    "title": "Tham gia cộng đồng XBN ngay!",
+    "buy_xbt": "Mua XBN"
   },
   "learn": {
     "section_header": {
-      "title": "Tìm hiểu về XBT"
+      "title": "Tìm hiểu về XBN"
     },
     "basic": "Cơ bản",
     "technology": "Công nghệ",
@@ -201,21 +201,21 @@
   },
   "basic_split": {
     "section_header": {
-      "title": "Tìm hiểu về XBT",
-      "paragraph": "XBT là một loại tiền điện tử giống như Bitcoin, mục tiêu giá của nó là Bitcoin và nguồn cung của nó thay đổi hàng ngày"
+      "title": "Tìm hiểu về XBN",
+      "paragraph": "XBN là một loại tiền điện tử giống như BNB, mục tiêu giá của nó là BNB và nguồn cung của nó thay đổi hàng ngày"
     },
     "section_contents": {
       "item_1": {
-        "title": "Chúng tôi có thể có Bitcoin trên Mạng Ethereum mà không cần bảo chứng.",
-        "description": "Điều đó là sự thật và thú vị, bạn có Bitcoin trên mạng Ethereum mà không cần tài sản thế chấp tập trung như WBTC. Giao thức XBT tự động điều chỉnh nguồn cung theo nhu cầu. Khi giá cao, số dư ví tăng lên. Khi giá thấp, số dư ví giảm."
+        "title": "Chúng tôi có thể có BNB trên Mạng Binance Smart Chain mà không cần bảo chứng.",
+        "description": "Điều đó là sự thật và thú vị, bạn có BNB trên mạng Binance Smart Chain mà không cần tài sản thế chấp tập trung như WBTC. Giao thức XBN tự động điều chỉnh nguồn cung theo nhu cầu. Khi giá cao, số dư ví tăng lên. Khi giá thấp, số dư ví giảm."
       },
       "item_2": {
-        "title": "Với XBT, chúng ta có thể có không giới hạn, không phải 21 triệu, Bitcoin",
-        "description": "Chỉ có 21 triệu bitcoin nhưng số XBT là không giới hạn, sẽ có đủ XBT để mọi người trên trái đất sở hữu 1 $ XBT, và 1 $ XBT vẫn bằng 1 Bitcoin. Tuyệt vời !"
+        "title": "Với XBN, chúng ta có thể có không giới hạn, không phải 21 triệu, BNB",
+        "description": "Chỉ có 21 triệu bitcoin nhưng số XBN là không giới hạn, sẽ có đủ XBN để mọi người trên trái đất sở hữu 1 $ XBN, và 1 $ XBN vẫn bằng 1 BNB. Tuyệt vời !"
       },
       "item_3": {
-        "title": "XBT giúp ổn định Bitcoin trong khi góp phần vào sự tăng trưởng của nó",
-        "description": "Khi XBT phát triển, không chỉ giá của nó được ổn định với giá Bitcoin mà còn giúp Bitcoin ổn định vì nguồn cung co giãn và có thể mở rộng. Vì vậy, khi có nhiều nhu cầu về bitcoin, XBT có thể tăng cung để đáp ứng nhu cầu và ngược lại."
+        "title": "XBN giúp ổn định BNB trong khi góp phần vào sự tăng trưởng của nó",
+        "description": "Khi XBN phát triển, không chỉ giá của nó được ổn định với giá BNB mà còn giúp BNB ổn định vì nguồn cung co giãn và có thể mở rộng. Vì vậy, khi có nhiều nhu cầu về bitcoin, XBN có thể tăng cung để đáp ứng nhu cầu và ngược lại."
       }
     },
     "learn_basic": "Learn Basics",
@@ -226,19 +226,19 @@
     "title_1": "Cách thức hoạt động",
     "title_2": "Luồng thông tin",
     "title_3": "Các tính năng và khả năng cốt lõi",
-    "desc_1": "Là một nhánh từ AMPL, XBT hoạt động rất giống với nó, thông tin từ trang này được sử dụng lại, sau đó được sửa đổi từ AMPL",
-    "desc_1_5": "Thiết kế hợp đồng thông minh của XBT cho phép việc tăng và giảm nguồn cung được thực hiện tự động mà không cần chuyển giao ngang hàng và không cần ngân hàng.",
-    "desc_2": "Giao thức tiền tệ tự động điều chỉnh việc cung cấp XBT trên tất cả các ví của người dùng dựa trên giá cả. Điều này có nghĩa là số lượng XBT mà bạn sở hữu thay đổi dựa trên điều kiện thị trường. Khi giá cao, số dư trong ví sẽ tự động tăng. Khi giá thấp, số dư trong ví sẽ tự động giảm. Hoạt động điều chỉnh nguồn cung này diễn ra một lần mỗi ngày và được gọi là điều chỉnh nguồn cung (rebase).",
-    "desc_3": "Hoạt động rebase hàng ngày này được áp dụng phổ biến và tương ứng trên mọi số dư của ví. Điều này có nghĩa là XBT không pha loãng. Giống như Bitcoin, nếu bạn sở hữu 1% mạng lưới tổng thể, bạn sẽ luôn sở hữu 1% trừ khi bạn chủ động thực hiện chuyển khoản.",
+    "desc_1": "Là một nhánh từ AMPL, XBN hoạt động rất giống với nó, thông tin từ trang này được sử dụng lại, sau đó được sửa đổi từ AMPL",
+    "desc_1_5": "Thiết kế hợp đồng thông minh của XBN cho phép việc tăng và giảm nguồn cung được thực hiện tự động mà không cần chuyển giao ngang hàng và không cần ngân hàng.",
+    "desc_2": "Giao thức tiền tệ tự động điều chỉnh việc cung cấp XBN trên tất cả các ví của người dùng dựa trên giá cả. Điều này có nghĩa là số lượng XBN mà bạn sở hữu thay đổi dựa trên điều kiện thị trường. Khi giá cao, số dư trong ví sẽ tự động tăng. Khi giá thấp, số dư trong ví sẽ tự động giảm. Hoạt động điều chỉnh nguồn cung này diễn ra một lần mỗi ngày và được gọi là điều chỉnh nguồn cung (rebase).",
+    "desc_3": "Hoạt động rebase hàng ngày này được áp dụng phổ biến và tương ứng trên mọi số dư của ví. Điều này có nghĩa là XBN không pha loãng. Giống như BNB, nếu bạn sở hữu 1% mạng lưới tổng thể, bạn sẽ luôn sở hữu 1% trừ khi bạn chủ động thực hiện chuyển khoản.",
     "desc_4": "Ở cấp độ cao, hợp đồng chính sách phản ánh những thay đổi về giá cả trên thị trường khi nguồn cung thay đổi trong số dư của ví. Điều này lại khuyến khích các tác nhân thị trường điều chỉnh giá. Giá  đưa thông tin cho thuật toán nguồn cung và nguồn cung ảnh hưởng giá theo hành vi, theo một chu kỳ.",
     "section_header": {
       "title": "Công nghệ",
-      "paragraph": "XBT kết hợp những gì tốt nhất của Bitcoin và Hợp đồng thông minh trên mạng Ethereum"
+      "paragraph": "XBN kết hợp những gì tốt nhất của BNB và Hợp đồng thông minh trên mạng Binance Smart Chain"
     },
     "faq_data": {
       "item_1": {
         "title": "Thuật toán",
-        "description": "Các quy tắc giao thức được mã hóa trong các hợp đồng thông minh trên Ethereum. Các luật dựa trên quy tắc hoạt động cho phép các hành động có thể được dự đoán và phản hồi thì có thể đo lường được, đồng thời là biện pháp kiểm tra hiệu quả đối với các chính sách tiền tệ."
+        "description": "Các quy tắc giao thức được mã hóa trong các hợp đồng thông minh trên Binance Smart Chain. Các luật dựa trên quy tắc hoạt động cho phép các hành động có thể được dự đoán và phản hồi thì có thể đo lường được, đồng thời là biện pháp kiểm tra hiệu quả đối với các chính sách tiền tệ."
       },
       "item_2": {
         "title": "Không pha loãng",
@@ -246,11 +246,11 @@
       },
       "item_3": {
         "title": "Không có ngân hàng",
-        "description": "XBT là tiền cơ sở, không có khái niệm nợ hay tín dụng trong hệ thống. Nó không dựa vào thị trường nợ mở hoặc những người cho vay cuối"
+        "description": "XBN là tiền cơ sở, không có khái niệm nợ hay tín dụng trong hệ thống. Nó không dựa vào thị trường nợ mở hoặc những người cho vay cuối"
       },
       "item_4": {
         "title": "Động lực đơn giản",
-        "description": "Một hệ thống đơn giản là minh bạch và dễ hiểu. Giao thức XBT chỉ có hai quy tắc mở rộng và thu hẹp, và chỉ phụ thuộc vào các tác nhân tìm kiếm lợi nhuận trên thị trường để đạt được trạng thái cân bằng."
+        "description": "Một hệ thống đơn giản là minh bạch và dễ hiểu. Giao thức XBN chỉ có hai quy tắc mở rộng và thu hẹp, và chỉ phụ thuộc vào các tác nhân tìm kiếm lợi nhuận trên thị trường để đạt được trạng thái cân bằng."
       },
       "item_5": {
         "title": "Không chiếm giữ",
@@ -258,29 +258,29 @@
       },
       "item_6": {
         "title": "Quản trị tối thiểu",
-        "description": "XBT được thiết kế để giảm thiểu nhu cầu quản trị. Không có sự quản lý nào tồn tại trong vòng lặp điều chỉnh nguồn cung vì không có lãi suất để điều chỉnh hoặc thị trường để cân bằng."
+        "description": "XBN được thiết kế để giảm thiểu nhu cầu quản trị. Không có sự quản lý nào tồn tại trong vòng lặp điều chỉnh nguồn cung vì không có lãi suất để điều chỉnh hoặc thị trường để cân bằng."
       },
       "item_7": {
         "title": "Mô hình chuyển động khác biệt",
-        "description": "Các quy tắc giao thức mới của XBT dẫn đến các động lực duy nhất và dấu hiệu biến động khác biệt. XBT cung cấp một giải pháp giảm thiểu rủi ro trong một hệ sinh thái tương quan nguy hiểm của tiền điện tử."
+        "description": "Các quy tắc giao thức mới của XBN dẫn đến các động lực duy nhất và dấu hiệu biến động khác biệt. XBN cung cấp một giải pháp giảm thiểu rủi ro trong một hệ sinh thái tương quan nguy hiểm của tiền điện tử."
       },
       "item_8": {
         "title": "ERC-20",
-        "description": "XBT triển khai giao diện ERC-20 và có thể được sử dụng với bất kỳ ví blockchain gốc nào. Một giao diện tiêu chuẩn cho phép XBT tích hợp với nhiều nền tảng ứng dụng DeFi."
+        "description": "XBN triển khai giao diện ERC-20 và có thể được sử dụng với bất kỳ ví blockchain gốc nào. Một giao diện tiêu chuẩn cho phép XBN tích hợp với nhiều nền tảng ứng dụng DeFi."
       }
     }
   },
   "economic": {
     "title_1": "Cách hoạt động",
-    "desc_1": "Là một nhánh từ AMPL, XBT hoạt động rất giống với nó, thông tin từ trang này được lấy  sau đó được sửa đổi từ AMPL.",
-    "desc_2": "Hoàn cảnh kinh tế thay đổi như suy thoái, bùng nổ và tiến bộ công nghệ, ảnh hưởng đến nhu cầu mọi người muốn nắm giữ một loại tiền tệ. Trong trường hợp các đồng tiền cung ứng cố định như vàng, bạc và Bitcoin, những thay đổi này trong nhu cầu được thể hiện hoàn toàn bằng những thay đổi trong giá trị của tiền tệ.",
+    "desc_1": "Là một nhánh từ AMPL, XBN hoạt động rất giống với nó, thông tin từ trang này được lấy  sau đó được sửa đổi từ AMPL.",
+    "desc_2": "Hoàn cảnh kinh tế thay đổi như suy thoái, bùng nổ và tiến bộ công nghệ, ảnh hưởng đến nhu cầu mọi người muốn nắm giữ một loại tiền tệ. Trong trường hợp các đồng tiền cung ứng cố định như vàng, bạc và BNB, những thay đổi này trong nhu cầu được thể hiện hoàn toàn bằng những thay đổi trong giá trị của tiền tệ.",
     "desc_3": "Nghĩa là sự biến động của nhu cầu chuyển thành giá của bất kỳ thứ gì có giá trị liên quan đơn vị tiền tệ đó — bao gồm hợp đồng và đặc biệt là nợ. Vì lý do này, những cú sốc đột ngột về nhu cầu có thể làm mất ổn định hệ sinh thái xoay quanh bởi tài sản có nguồn cung cố định. Sự phức tạp của một hệ sinh thái được xây dựng trên các tài sản  có nguồn cung cố định càng lớn thì nguy cơ đổ vỡ càng lớn.",
-    "desc_4": "Để giải quyết vấn đề này, chúng tôi đã cho XBT khả năng tự động điều chỉnh nguồn cung của mình theo nhu cầu mà không cần đến ngân hàng. XBT được thiết kế để trở thành giải pháp trực tiếp đơn giản nhất cho vấn đề nguồn cung không co giãn mà đó giờ chính là hạn chể của các tài sản như vàng và bitcoin.",
-    "desc_5": "Ngày nay, mô hình biến động độc đáo của XBT khiến nó trở thành một nền tảng mới có giá trị cho tài chính phi tập trung. Ngày mai XBT có thể là một Bitcoin tốt hơn.",
+    "desc_4": "Để giải quyết vấn đề này, chúng tôi đã cho XBN khả năng tự động điều chỉnh nguồn cung của mình theo nhu cầu mà không cần đến ngân hàng. XBN được thiết kế để trở thành giải pháp trực tiếp đơn giản nhất cho vấn đề nguồn cung không co giãn mà đó giờ chính là hạn chể của các tài sản như vàng và bitcoin.",
+    "desc_5": "Ngày nay, mô hình biến động độc đáo của XBN khiến nó trở thành một nền tảng mới có giá trị cho tài chính phi tập trung. Ngày mai XBN có thể là một BNB tốt hơn.",
     "desc_6": "Bạn có thể đọc thêm về cách hoạt động của đồng tiền có nguồn cung đàn hồi từ ",
     "section_header": {
       "title": "Kinh tế học",
-      "paragraph": "Mô hình biến động độc đáo của XBT khiến nó trở thành một nền tảng mới có giá trị cho tài chính phi tập trung và XBT thậm chí có thể tốt hơn Bitcoin."
+      "paragraph": "Mô hình biến động độc đáo của XBN khiến nó trở thành một nền tảng mới có giá trị cho tài chính phi tập trung và XBN thậm chí có thể tốt hơn BNB."
     },
     "faq_data": {
       "item_1": {
@@ -298,22 +298,22 @@
     }
   },
   "governance": {
-    "title_1": "Giới thiệu về Quản Lý XBT",
+    "title_1": "Giới thiệu về Quản Lý XBN",
     "title_2": "Thảo luận",
     "title_3": "Đề xuất (XIPs / XCCPs)",
     "title_4": "Thảo luận có mục tiêu",
     "title_5": "Báo hiệu trên chuỗi",
     "title_6": "Phát triển kỹ thuật",
     "title_7": "Ràng buộc Bỏ phiếu / Triển khai (công việc đang tiến hành)",
-    "desc_1": "XBT học hỏi mô hình Quản lý từ AMPL và sẽ nâng cấp khi cần.",
-    "desc_2": "Giao thức XBT được điều chỉnh thông qua một loạt các bước, mỗi bước đại diện cho mức độ đồng thuận ngày càng tăng từ cộng đồng. Các đề xuất và ý tưởng được hiển thị trên Telegram hoặc Twitter và được hoàn thiện khi chúng được triển khai trên chuỗi. Sự tiến triển của sự đồng thuận ngày càng ràng buộc có thể được nhìn thấy dưới đây.",
-    "desc_3": "Các cuộc thảo luận cấp cao nhất có thể đưa ra các ý tưởng ở nhiều nơi, bao gồm (nhưng không giới hạn ở) Telegram và Twitter / Reddit. Khi dường như có đủ sự hỗ trợ chung, người đưa ra ý tưởng có thể hợp thức hóa ý tưởng bằng cách gửi Đề xuất cải tiến XBT (XIP) hoặc Đề xuất thay đổi cấu hình (XCCP).",
+    "desc_1": "XBN học hỏi mô hình Quản lý từ AMPL và sẽ nâng cấp khi cần.",
+    "desc_2": "Giao thức XBN được điều chỉnh thông qua một loạt các bước, mỗi bước đại diện cho mức độ đồng thuận ngày càng tăng từ cộng đồng. Các đề xuất và ý tưởng được hiển thị trên Telegram hoặc Twitter và được hoàn thiện khi chúng được triển khai trên chuỗi. Sự tiến triển của sự đồng thuận ngày càng ràng buộc có thể được nhìn thấy dưới đây.",
+    "desc_3": "Các cuộc thảo luận cấp cao nhất có thể đưa ra các ý tưởng ở nhiều nơi, bao gồm (nhưng không giới hạn ở) Telegram và Twitter / Reddit. Khi dường như có đủ sự hỗ trợ chung, người đưa ra ý tưởng có thể hợp thức hóa ý tưởng bằng cách gửi Đề xuất cải tiến XBN (XIP) hoặc Đề xuất thay đổi cấu hình (XCCP).",
     "desc_4": "XIP và XCCP là các tài liệu chính thức mô tả thay đổi được đề xuất đối với giao thức hoặc cấu hình giao thức.",
-    "desc_5": "Mỗi đề xuất có github dành riêng để thảo luận theo hướng dẫn đến kết quả đươc thực hiện. Mục tiêu ở bước này là hoàn thiện mọi vấn đề chưa được giải quyết và chính thức hóa sự đồng thuận ngoài chuỗi. Mọi thứ sẽ được ghi lại tại XBT Github https://github.com/ElasticBTC-XBT/",
+    "desc_5": "Mỗi đề xuất có github dành riêng để thảo luận theo hướng dẫn đến kết quả đươc thực hiện. Mục tiêu ở bước này là hoàn thiện mọi vấn đề chưa được giải quyết và chính thức hóa sự đồng thuận ngoài chuỗi. Mọi thứ sẽ được ghi lại tại XBN Github https://github.com/ElasticBTC-XBT/",
     "desc_6": "Nếu bước trước đó không đạt được sự đồng thuận rõ ràng, ý kiến có thể được thu thập theo cách không ràng buộc thông qua tín hiệu trên chuỗi từ chủ sở hữu token. Điều này cung cấp cái nhìn sâu hơn về khuynh hướng của cuộc bỏ phiếu ràng buộc cuối cùng.",
     "desc_7": "Các yêu cầu được thực hiện bằng mã, khởi chạy trên testnet và được kiểm tra tính bảo mật.",
     "desc_8": "Các thay đổi hệ thống hiện được kiểm soát bởi một hợp đồng nhiều bên ký kết. Sau này các vấn đề sẽ được thay thế bằng biểu quyết chung từ những người nắm giữ tokens",
-    "section_header_title": "Quản Lý XBT"
+    "section_header_title": "Quản Lý XBN"
   },
   "road_map": {
     "item_1": {
@@ -323,12 +323,12 @@
     },
     "item_2": {
       "title": "Khởi chạy Testnet",
-      "desc": "XBT đã được khởi chạy nội bộ cho testnet",
+      "desc": "XBN đã được khởi chạy nội bộ cho testnet",
       "category": "PHÁT TRIỂN"
     },
     "item_3": {
       "title": "Ra mắt công chúng",
-      "desc": "Các cặp XBT ra mắt trên Uniswap",
+      "desc": "Các cặp XBN ra mắt trên PancakeSwap",
       "category": "RA MẮT"
     },
     "item_4": {
@@ -338,32 +338,32 @@
     },
     "item_5": {
       "title": "Bật Staking",
-      "desc": "Cho phép staking XBT",
+      "desc": "Cho phép staking XBN",
       "category": "PHÁT TRIỂN"
     },
     "item_6": {
       "title": "Xuất bản báo cáo chính thức",
-      "desc": "Nhóm sẽ ra mắt Whitepaper XBT cho cộng đồng công khai",
+      "desc": "Nhóm sẽ ra mắt Whitepaper XBN cho cộng đồng công khai",
       "category": "NGHIÊN CỨU"
     },
     "item_7": {
       "title": "Ra mắt công chúng",
-      "desc": "Khởi động Quỹ XBT Foundation",
+      "desc": "Khởi động Quỹ XBN Foundation",
       "category": "Khởi chạy"
     },
     "item_8": {
       "title": "Ra mắt công chúng",
-      "desc": "Khởi chạy các trò chơi được xây dựng trên XBT",
+      "desc": "Khởi chạy các trò chơi được xây dựng trên XBN",
       "category": "Khởi chạy"
     },
     "item_9": {
       "title": "Khởi chạy trên các sàn giao dịch hàng đầu",
-      "desc": "Nhóm nghiên cứu đặt mục tiêu ra mắt XBT trên các sàn giao dịch hàng đầu, giúp tăng lượng tính phổ biến cho XBT",
+      "desc": "Nhóm nghiên cứu đặt mục tiêu ra mắt XBN trên các sàn giao dịch hàng đầu, giúp tăng lượng tính phổ biến cho XBN",
       "category": "SỰ PHÁT TRIỂN"
     },
     "item_10": {
       "title": "Khởi chạy trên Chuỗi Tron và Chuỗi Binance",
-      "desc": "XBT sẽ trở thành một hệ thống đa chuỗi với mô hình cung ứng đàn hồi độc đáo",
+      "desc": "XBN sẽ trở thành một hệ thống đa chuỗi với mô hình cung ứng đàn hồi độc đáo",
       "category": "SỰ PHÁT TRIỂN"
     },
     "section_header_title": "Lộ trình"
@@ -386,19 +386,19 @@
   },
   "investment": {
     "section_header": {
-      "title": "XBT Fund sắp ra mắt"
+      "title": "XBN Fund sắp ra mắt"
     }
   },
   "buy": {
     "section_header": {
       "title": "Lấy"
     },
-    "buy_with_ETH": "Mua với ETH",
+    "buy_with_BNB": "Mua với BNB",
     "buy_with_WBTC": "Mua với WBTC",
     "buy_with_USDT": "Mua với USDT"
   },
   "footer": {
-    "copy_right": "2020 Elastic BNB  (XBT), all rights reserved"
+    "copy_right": "2020 Elastic BNB  (XBN), all rights reserved"
   },
   "format_time": {
     "years_past": "{year} năm trước",

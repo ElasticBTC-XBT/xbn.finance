@@ -228,7 +228,7 @@ export default {
           name: "Khang Tran",
           title: "DApps Specialist",
           contact: 'https://www.linkedin.com/in/khangtrandinh/',
-          description: "Joined software engineering for 5 years. Doing full-stack stuffs: mobile, backend, frontend, and DevOps development. My lifetime goal is to become a human-expert in my own life journey. Have been fallen in love with bootstrapped startups and cryptocurrency. Currently, I'm running a business with my friends @ activators.dev and doing dApp specialist @ elasticbitcoin.org"
+          description: "Joined software engineering for 5 years. Doing full-stack stuffs: mobile, backend, frontend, and DevOps development. My lifetime goal is to become a human-expert in my own life journey. Have been fallen in love with bootstrapped startups and cryptocurrency. Currently, I'm running a business with my friends @ activators.dev and doing dApp specialist @ xbn.finance"
         }
       ]
     }

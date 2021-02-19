@@ -33,7 +33,7 @@
               </div>
               <div>
                 <sale-info
-                    :xbt-balance="totalPurchasedXBT"
+                    :xbt-balance="totalPurchasedXBN"
                     :sale-supply="saleSupply"
                     :sale-rate="saleRate"
                 />
@@ -93,7 +93,7 @@ import SaleInput from '@/components/sales/SaleInput'
 import WalletNotConnect from "@/components/sections/WalletNotConnect";
 import {getWeb3Client} from "@/libs/web3";
 import {adjustSaleRule, getOrderMetaOf, getSaleRule, getSaleSupply, makeBid, withdrawFund} from "@/libs/mystic-dealer";
-import {getXBTBalance} from "@/libs/xbt";
+import {getXBNBalance} from "@/libs/xbt";
 
 export default {
   name: 'Login',
@@ -155,7 +155,7 @@ export default {
         length: 10
       })
     },
-    totalPurchasedXBT() {
+    totalPurchasedXBN() {
       return this.xbtBalance;
     }
   },
@@ -231,7 +231,7 @@ export default {
       // this.getOrderBook();
 
       // Get balance
-      const xbtBalance = await getXBTBalance(walletClient.web3Client);
+      const xbtBalance = await getXBNBalance(walletClient.web3Client);
       this.$set(this, 'xbtBalance', xbtBalance);
     },
 

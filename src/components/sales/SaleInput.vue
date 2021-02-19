@@ -14,22 +14,22 @@
               :min="minBidAmount"
               :max="maxBidAmount"
           />
-          <div class="currency">ETH</div>
+          <div class="currency">BNB</div>
         </div>
         <div class="mt-16">
-          <h2> = {{ displayedSaleRate }} XBT</h2>
+          <h2> = {{ displayedSaleRate }} XBN</h2>
         </div>
         <div class="mt-16">
-          <span style="font-size: 14px">{{ $t('sale.you_can_buy') }} {{ $t('max') }} <strong>{{ displayedMaxBidAmount }} ETH</strong> {{ $t('and') }} {{ $t('min') }} <strong>{{
+          <span style="font-size: 14px">{{ $t('sale.you_can_buy') }} {{ $t('max') }} <strong>{{ displayedMaxBidAmount }} BNB</strong> {{ $t('and') }} {{ $t('min') }} <strong>{{
               displayedMinBidAmount
-            }} ETH</strong></span>
+            }} BNB</strong></span>
         </div>
       </div>
       <c-button :disabled="!validInput || submitted === true"
                 class="mt-8"
                 color="primary" wide-mobile
                 @click="handlePurchase">
-        {{ $t('buy.buy_with_ETH') }}
+        {{ $t('buy.buy_with_BNB') }}
       </c-button>
     </div>
 

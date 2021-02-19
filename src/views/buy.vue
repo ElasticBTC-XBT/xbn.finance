@@ -21,8 +21,8 @@
                             <c-section-header :data="genericSection01Header" class="center-content"/>
                             <div class="button-group">
                                 <c-button tag="a" color="primary" wide-mobile target="_blank"
-                                          href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8">
-                                    Buy XBT
+                                          href="https://app.uniswap.org/#/swap?inputCurrency=BNB&outputCurrency=0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8">
+                                    Buy XBN
                                 </c-button>
                                 <c-button tag="a" color="primary" wide-mobile target="_blank"
                                           href="https://app.uniswap.org/#/swap?inputCurrency=0x2260fac5e5542a773aa44fbcfedf7c193bc2c599&outputCurrency=0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8">

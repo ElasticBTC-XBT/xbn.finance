@@ -41,7 +41,7 @@ export default {
   data() {
     return {
       sectionHeader: {
-        title: 'Learn about XBT'
+        title: 'Learn about XBN'
       }
     }
   }

@@ -1,4 +1,4 @@
-import {getXBTContract} from "@/libs/xbt";
+import {getXBNContract} from "@/libs/xbt";
 
 export const MysticDealer = {
     address: process.env.VUE_APP_MYSTIC_DEALER_ADDRESS,
@@ -20,7 +20,7 @@ export const getDealerContract = async (web3Client) => {
 }
 
 export const getSaleSupply = async (web3Client) => {
-    const contract = await getXBTContract(web3Client);
+    const contract = await getXBNContract(web3Client);
 
     const balance = await contract.methods.balanceOf(MysticDealer.address).call();
     const decimals = await contract.methods.decimals().call();
@@ -29,7 +29,7 @@ export const getSaleSupply = async (web3Client) => {
 };
 
 export const getSaleRule = async (web3Client) => {
-    const xbtContract = await getXBTContract(web3Client);
+    const xbtContract = await getXBNContract(web3Client);
     const dealerContract = await getDealerContract(web3Client);
 
     const decimals = await xbtContract.methods.decimals().call();
@@ -59,7 +59,7 @@ export const getOrderMetaOf = async (web3Client, account) => {
 
 export const getOrderBook = async (web3Client) => {
     const dealerContract = await getDealerContract(web3Client);
-    const xbtContract = await getXBTContract(web3Client);
+    const xbtContract = await getXBNContract(web3Client);
     const decimals = await xbtContract.methods.decimals().call();
 
     const data = await dealerContract.methods.getOrderBook().call();
@@ -79,7 +79,7 @@ const parseOrderBook = (orderBook, xbtDecimals, convertToEther) => {
         bonusWon,
         timestamp,
         purchasedTokenAmount,
-        totalETHValue
+        totalBNBValue
     ] = orderBook;
     return {
         price: Number(price) / (10 ** xbtDecimals),
@@ -87,7 +87,7 @@ const parseOrderBook = (orderBook, xbtDecimals, convertToEther) => {
         bonusWon: Number(bonusWon) / (10 ** xbtDecimals),
         timestamp: Number(timestamp) * 1000,
         purchasedTokenAmount: Number(purchasedTokenAmount) / (10 ** xbtDecimals),
-        totalETHValue: convertToEther(totalETHValue)
+        totalBNBValue: convertToEther(totalBNBValue)
     }
 }
 
@@ -109,7 +109,7 @@ export const withdrawFund = async (web3Client) => {
 export const adjustSaleRule = async (web3Client) => {
     const dealerContract = await getDealerContract(web3Client);
     await dealerContract.methods.setQuantityRules(
-        16500 * (1e8),
+        16500 * (1e18),
         web3Client.utils.toWei('0.01', 'ether'),
         web3Client.utils.toWei('0.2', 'ether'),
     ).send({

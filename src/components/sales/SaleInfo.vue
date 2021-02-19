@@ -15,7 +15,7 @@
                 />
                 <div class="sales-statis">
                   <div class="title">{{$t('sale.current_rate')}}</div>
-                  <div class="value">1 ETH = {{ displayedSaleRate }} XBT</div>
+                  <div class="value">1 BNB = {{ displayedSaleRate }} XBN</div>
                 </div>
                 <img
                     class="sales-icon-bg"
@@ -39,7 +39,7 @@
                 />
                 <div class="sales-statis">
                   <div class="title">{{$t('sale.your_xbt_balance')}}</div>
-                  <div class="value">{{ displayedXBTBalance }} XBT</div>
+                  <div class="value">{{ displayedXBNBalance }} XBN</div>
                 </div>
                 <img
                     class="sales-icon-bg"
@@ -63,7 +63,7 @@
                 />
                 <div class="sales-statis">
                   <div class="title">{{$t('sale.sale_supply')}}</div>
-                  <div class="value">{{ displayedSaleSupply }} XBT</div>
+                  <div class="value">{{ displayedSaleSupply }} XBN</div>
                 </div>
                 <img
                     class="sales-icon-bg"
@@ -94,7 +94,7 @@ export default {
     displayedSaleRate() {
       return numeral(this.saleRate).format('0,0.00')
     },
-    displayedXBTBalance() {
+    displayedXBNBalance() {
       return numeral(this.xbtBalance).format('0,0.00')
     }
   }

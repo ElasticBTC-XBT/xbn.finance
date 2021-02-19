@@ -1,6 +1,7 @@
 import Vue from 'vue';
 
 import Fragment from 'vue-fragment';
+import VueI18n from 'vue-i18n'
 
 Vue.use(Fragment.Plugin);
 
@@ -13,7 +14,6 @@ Vue.use(VueSweetalert2);
 
 import App from './App.vue';
 import router from './router';
-import VueI18n from 'vue-i18n'
 
 import vnMessage from './lang/vi.json'
 import enMessage from './lang/en.json'
@@ -82,15 +82,10 @@ router.beforeEach((to, from, next) => {
 
     // Redirect to a url with the language
     if (!hasLang) {
-        if (lang != 'en') return next(`/${lang}${to.fullPath}`);
+        if (lang !== 'en') return next(`/${lang}${to.fullPath}`);
         else return next();
     }
-    // else {
-    //     if (lang == 'en') {
-    //         if (to.fullPath == '/en/' || to.fullPath == '/en') return next('/')
-    //         return next();
-    //     }
-    // }
+
     return next();
 });
 

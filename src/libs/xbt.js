@@ -1,15 +1,15 @@
 import {AirdropLander} from "@/libs/xbt-airdrop";
 
-export const XBT = {
-    address: process.env.VUE_APP_XBT_CONTRACT_ADDRESS,
-    jsonInterface: require('@/assets/contracts/XBT.json')
+export const XBN = {
+    address: process.env.VUE_APP_XBN_CONTRACT_ADDRESS,
+    jsonInterface: require('@/assets/contracts/XBN.json')
 }
 
-export const getXBTContract = async (web3Client) => {
+export const getXBNContract = async (web3Client) => {
     const accounts = await web3Client.eth.getAccounts();
     return new web3Client.eth.Contract(
-        XBT.jsonInterface.abi,
-        XBT.address,
+        XBN.jsonInterface.abi,
+        XBN.address,
         {
             gas: 100000,
             from: accounts[0]
@@ -17,16 +17,16 @@ export const getXBTContract = async (web3Client) => {
     );
 }
 
-export const getContractXBTFundBalance = async (web3Client) => {
-    const contract = await getXBTContract(web3Client);
+export const getContractXBNFundBalance = async (web3Client) => {
+    const contract = await getXBNContract(web3Client);
     const balance = await contract.methods.balanceOf(AirdropLander.address).call();
     const decimals = await contract.methods.decimals().call();
     return balance / (10 ** decimals);
 };
 
-export const getXBTBalance = async (web3Client) => {
+export const getXBNBalance = async (web3Client) => {
     const accounts = await web3Client.eth.getAccounts();
-    const contract = await getXBTContract(web3Client);
+    const contract = await getXBNContract(web3Client);
     const balance = await contract.methods.balanceOf(accounts[0]).call();
     const decimals = await contract.methods.decimals().call();
     return balance / (10 ** decimals);

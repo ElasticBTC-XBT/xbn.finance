@@ -6,20 +6,20 @@
                     <c-logo/>
                     <div class="footer-top space-between">
 
-                        <div class="icon-flag-wrapper">
-                            <a href="/vi" @click="setToVi()" class="clickable">
-                                <img class="icon-flag" :src="require('@/assets/images/vi-sm.png')"/>
-                            </a>
+<!--                        <div class="icon-flag-wrapper">-->
+<!--                            <a href="/vi" @click="setToVi()" class="clickable">-->
+<!--                                <img class="icon-flag" :src="require('@/assets/images/vi-sm.png')"/>-->
+<!--                            </a>-->
 
-                            <a href="/" @click="setToEn()" class="clickable">
-                                <img class="icon-flag" :src="require('@/assets/images/en-sm.png')"/>
-                            </a>
+<!--                            <a href="/" @click="setToEn()" class="clickable">-->
+<!--                                <img class="icon-flag" :src="require('@/assets/images/en-sm.png')"/>-->
+<!--                            </a>-->
 
-                            <a href="/kr" @click="setToKr()" class="clickable">
-                                <img class="icon-flag" :src="require('@/assets/images/kr-sm.png')"/>
-                            </a>
+<!--                            <a href="/kr" @click="setToKr()" class="clickable">-->
+<!--                                <img class="icon-flag" :src="require('@/assets/images/kr-sm.png')"/>-->
+<!--                            </a>-->
 
-                        </div>
+<!--                        </div>-->
 
                         <c-footer-social/>
                     </div>

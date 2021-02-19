@@ -43,13 +43,13 @@
           <strong
               v-if="scope.row.bonusWon"
               class="bonus-won">
-            {{ scope.row.purchasedTokenAmount | numeral }} XBT
+            {{ scope.row.purchasedTokenAmount | numeral }} XBN
           </strong>
-          <span v-else>{{ scope.row.purchasedTokenAmount | numeral }} XBT</span>
+          <span v-else>{{ scope.row.purchasedTokenAmount | numeral }} XBN</span>
         </template>
       </el-table-column>
       <el-table-column
-          prop="totalETHValue"
+          prop="totalBNBValue"
           :label="$t('sale.eth_value')">
       </el-table-column>
       <el-table-column
@@ -60,9 +60,9 @@
           <strong
               v-if="scope.row.bonusWon"
               class="bonus-won">
-            {{ scope.row.bonusWon | numeral }} XBT
+            {{ scope.row.bonusWon | numeral }} XBN
           </strong>
-          <span v-else>{{ scope.row.bonusWon | numeral }} XBT</span>
+          <span v-else>{{ scope.row.bonusWon | numeral }} XBN</span>
         </template>
       </el-table-column>
       <el-table-column
@@ -156,7 +156,7 @@ export default {
               }
             }, 0);
 
-            sums[index] = numeral(sum).format('0,0.00') + ` ${index === 2 ? 'XBT' : 'ETH'}`;
+            sums[index] = numeral(sum).format('0,0.00') + ` ${index === 2 ? 'XBN' : 'BNB'}`;
           }
         } else {
           sums[index] = 'N/A';

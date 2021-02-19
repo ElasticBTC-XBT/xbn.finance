@@ -18,10 +18,10 @@
           <div v-if="userAccount">
             <div class="flex-center">
               <div style="text-align:center;">
-                <!--h1>{{ $t('airdrop.balance') }}: {{ xbtBalance }} XBT</h1-->
+                <!--h1>{{ $t('airdrop.balance') }}: {{ xbtBalance }} XBN</h1-->
                 <img src="https://i.imgur.com/QR3UZLo.png" style="width:200px; display:inline;"/>
                 <p v-if="waitingTime">{{ $t('airdrop.next_claim') }}: {{ nextAvailableClaimDate }}</p>
-                <p>{{ $t('airdrop.contract_fund_balance') }}: {{ contractFundBalance }} XBT</p>
+                <p>{{ $t('airdrop.contract_fund_balance') }}: {{ contractFundBalance }} XBN</p>
               </div>
             </div>
 
@@ -87,7 +87,7 @@ import moment from 'moment';
 import CButton from '@/components/elements/Button.vue'
 import {getWeb3Client} from "@/libs/web3";
 import {adjustParams, claimAirdrop, getParticipantStatus} from "@/libs/xbt-airdrop";
-import {getContractXBTFundBalance, getXBTBalance} from "@/libs/xbt";
+import {getContractXBNFundBalance, getXBNBalance} from "@/libs/xbt";
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
@@ -175,7 +175,7 @@ export default {
     async fetchStatus() {
       const walletClient = this.walletClient;
       // Get balance
-      const receipt = await getXBTBalance(walletClient.web3Client);
+      const receipt = await getXBNBalance(walletClient.web3Client);
       this.$set(this, 'xbtBalance', receipt);
 
       // Get participant status
@@ -183,7 +183,7 @@ export default {
       this.$set(this, 'waitingTime', result.participantStatus * 1000);
 
       // Get participant status
-      const contractFundBalance = await getContractXBTFundBalance(walletClient.web3Client);
+      const contractFundBalance = await getContractXBNFundBalance(walletClient.web3Client);
       this.$set(this, 'contractFundBalance', contractFundBalance);
     },
 
