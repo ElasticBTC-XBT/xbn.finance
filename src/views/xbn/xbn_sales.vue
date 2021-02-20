@@ -6,8 +6,7 @@
             hasBgColor && 'has-bg-color',
             invertColor && 'invert-color'
         ]">
-      <div class="container">XBN Pre-Sale
-
+      <div class="container">
         <div
             class="signin-inner section-inner"
             :class="[
