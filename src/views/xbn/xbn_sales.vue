@@ -119,7 +119,8 @@ export default {
   data() {
     return {
       sectionHeader: {
-        title: this.$t('sale.public_discounted_sale')
+        title: this.$t('sale.public_discounted_sale'),
+        paragraph: "<img src=\"https://i.imgur.com/jmPNlwr.png\" style=\"width: 30px; display: inline;\"> Limited offer to buy XBN at a discounted price to build XBN long-term Development"
       },
       // sale info
       saleSupply: 0,
