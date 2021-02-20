@@ -2,6 +2,9 @@
   <div>
     <h2 class="center-content">You need to connect wallet to continue</h2>
     <div class="center-content">
+      <p>
+        Please switch to <a href="https://docs.binance.org/smart-chain/wallet/metamask.html" target="_blank">BSC network</a> to buy. <br/>
+      </p>
       <p style="font-size: 14px">{{ $t('hint') }}: {{ $t('dont_have_wallet') }}
         <a target="_blank" href="https://trustwallet.com/">Trust Wallet</a>
         {{ $t('or') }} <a target="_blank" href="https://metamask.io/">Metamask</a></p>

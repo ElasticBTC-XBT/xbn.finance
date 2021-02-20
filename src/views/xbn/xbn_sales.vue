@@ -19,7 +19,7 @@
           <div v-if="!isSaleOver">
             <div v-if="userAccount">
               <p class="center-content mt-0 mb-32">
-                Please swith to <a href="https://docs.binance.org/smart-chain/wallet/metamask.html" target="_blank">BSC network</a> to buy. <br/>
+
                 {{ $t('sale.connected_as') }} <a
                   target="_blank"
                   :href="`https://etherscan.io/address/${userAccount}`">{{ truncatedAddress }}</a></p>
