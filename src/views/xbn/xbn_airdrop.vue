@@ -15,7 +15,12 @@
                 ]">
           <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
           <p style="text-align: center">
-          <b>To get XBN, please follow <a href="https://twitter.com/elasticbitcoin" target="_blank">XBN Twitter</a>,  retweet this <a href="https://twitter.com/elasticbitcoin/status/1362737977772834816" target="_blank">tweet</a> and join <a href="https://t.me/elasticbitcoinxbt" target="_blank">XBN Telegram</a></b>
+            <b>To get XBN, please follow <a href="https://twitter.com/elasticbitcoin" target="_blank">XBN Twitter</a>,  retweet this <a href="https://twitter.com/elasticbitcoin/status/1362737977772834816" target="_blank">tweet</a> and join <a href="https://t.me/elasticbitcoinxbt" target="_blank">XBN Telegram</a>
+              and  <a href="https://t.me/elasticbitcoin" target="_blank">XBT Channel</a>
+            </b>
+          </p><p style="text-align: center">
+            <b>Hot<img src="https://i.imgur.com/jmPNlwr.png" style="width: 30px;  display: inline"/>: you can buy XBN Pre-sale <a href="https://www.xbn.finance/xbn/sales/" target="_blank">here</a>
+            </b>
           </p>
           <div v-if="userAccount">
             <div class="flex-center">
@@ -23,6 +28,7 @@
                 <!--h1>{{ $t('airdrop.balance') }}: {{ xbtBalance }} XBN</h1-->
                 <img src="https://i.imgur.com/QR3UZLo.png" style="width:200px; display:inline;"/>
                 <p v-if="waitingTime">{{ $t('airdrop.next_claim') }}: {{ nextAvailableClaimDate }}</p>
+                <p>You can also get XBT (ETH Network) airdrop <a href="https://elasticbitcoin.org/airdrop/">here</a> </p>
                 <p>{{ $t('airdrop.contract_fund_balance') }}: {{ contractFundBalance }} XBN</p>
               </div>
             </div>

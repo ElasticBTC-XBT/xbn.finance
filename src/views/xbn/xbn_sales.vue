@@ -6,7 +6,7 @@
             hasBgColor && 'has-bg-color',
             invertColor && 'invert-color'
         ]">
-      <div class="container">
+      <div class="container">XBN Pre-Sale
 
         <div
             class="signin-inner section-inner"
@@ -18,7 +18,9 @@
 
           <div v-if="!isSaleOver">
             <div v-if="userAccount">
-              <p class="center-content mt-0 mb-32">{{ $t('sale.connected_as') }} <a
+              <p class="center-content mt-0 mb-32">
+
+                {{ $t('sale.connected_as') }} <a
                   target="_blank"
                   :href="`https://etherscan.io/address/${userAccount}`">{{ truncatedAddress }}</a></p>
               <div>
