@@ -21,7 +21,7 @@
 
                 {{ $t('sale.connected_as') }} <a
                   target="_blank"
-                  :href="`https://etherscan.io/address/${userAccount}`">{{ truncatedAddress }}</a></p>
+                  :href="`https://bscscan.com/address/${userAccount}`">{{ truncatedAddress }}</a></p>
               <div>
                 <sale-input
                     @on-purchase="exchangeToken"
