@@ -19,7 +19,7 @@
               and  <a href="https://t.me/elasticbitcoin" target="_blank">XBT Channel</a>
             </b>
           </p><p style="text-align: center">
-            <b>Hot<img src="https://i.imgur.com/jmPNlwr.png" style="width: 30px;  display: inline"/>: you can buy XBN Pre-sale <a href="https://www.xbn.finance/xbn/sales/" target="_blank">here</a>
+            <b>Hot<img src="https://i.imgur.com/jmPNlwr.png" style="width: 30px;  display: inline"/>: you can buy XBN <a href="https://www.xbn.finance/xbn/sales/" target="_blank">here</a>
             </b>
           </p>
           <div v-if="userAccount">
