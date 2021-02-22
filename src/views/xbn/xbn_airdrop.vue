@@ -15,8 +15,8 @@
                 ]">
           <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
           <p style="text-align: center">
-            <b>To get XBN, please follow <a href="https://twitter.com/elasticbitcoin" target="_blank">XBN Twitter</a>,  retweet this <a href="https://twitter.com/elasticbitcoin/status/1362737977772834816" target="_blank">tweet</a> and join <a href="https://t.me/elasticbitcoinxbt" target="_blank">XBN Telegram</a>
-              and  <a href="https://t.me/elasticbitcoin" target="_blank">XBT Channel</a>
+            <b>To get XBN, please follow <a href="https://twitter.com/elasticbitcoin" target="_blank">XBN Twitter</a>,  retweet this <a href="https://twitter.com/elasticbitcoin/status/1362737977772834816" target="_blank">tweet</a> and join <a href="https://t.me/elasticbitcoin" target="_blank">XBN Telegram</a>
+
             </b>
           </p><p style="text-align: center">
             <b>Hot<img src="https://i.imgur.com/jmPNlwr.png" style="width: 30px;  display: inline"/>: you can buy XBN <a href="https://www.xbn.finance/xbn/sales/" target="_blank">here</a>
