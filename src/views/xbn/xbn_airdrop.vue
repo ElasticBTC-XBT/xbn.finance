@@ -20,7 +20,7 @@
 
             </b>
           </p><p style="text-align: center">
-            <b>Hot<img src="https://i.imgur.com/jmPNlwr.png" style="width: 30px;  display: inline"/>: you can buy XBN <a href="https://www.xbn.finance/xbn/sales/" target="_blank">here</a>
+            <b>Hot<img src="https://i.imgur.com/jmPNlwr.png" style="width: 30px;  display: inline"/>: Now you can buy XBN <a href="https://www.xbn.finance/xbn/sales/" target="_blank">here</a>
             </b>
           </p>
           <div v-if="userAccount">
