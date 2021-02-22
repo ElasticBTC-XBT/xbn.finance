@@ -16,11 +16,11 @@
           <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
           <p style="text-align: center">
             <b>To get XBN, please retweet this <a href="https://twitter.com/elasticbitcoin/status/1363808975641137152" target="_blank">tweet</a>, follow <a href="https://twitter.com/elasticbitcoin" target="_blank">XBN Twitter</a>,
-              and join <a href="https://t.me/elasticbitcoin" target="_blank">XBN Telegram</a> &  <a href="https://t.me/elasticbitcoinxbt" target="_blank">group</a>
+              and join <a href="https://t.me/elasticbitcoin" target="_blank">XBN Telegram</a> &  <a href="https://t.me/elasticbitcoinxbt" target="_blank">group</a>.
 
             </b>
           </p><p style="text-align: center">
-            <b>Hot<img src="https://i.imgur.com/jmPNlwr.png" style="width: 30px;  display: inline"/>: Now you can buy XBN <a href="https://www.xbn.finance/xbn/sales/" target="_blank">here</a>
+            <b>Hot<img src="https://i.imgur.com/jmPNlwr.png" style="width: 30px;  display: inline"/>: Now you can buy XBN <a href="https://www.xbn.finance/xbn/sales/" target="_blank">here</a>.
             </b>
           </p>
           <div v-if="userAccount">
