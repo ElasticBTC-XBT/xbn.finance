@@ -21,17 +21,10 @@
                             <c-section-header :data="genericSection01Header" class="center-content"/>
                             <div class="button-group">
                                 <c-button tag="a" color="primary" wide-mobile target="_blank"
-                                          href="https://app.uniswap.org/#/swap?inputCurrency=BNB&outputCurrency=0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8">
+                                          href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac">
                                     Buy XBN
                                 </c-button>
-                                <c-button tag="a" color="primary" wide-mobile target="_blank"
-                                          href="https://app.uniswap.org/#/swap?inputCurrency=0x2260fac5e5542a773aa44fbcfedf7c193bc2c599&outputCurrency=0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8">
-                                    Buy XBN
-                                </c-button>
-                                <!--                                <c-button tag="a" color="primary" wide-mobile target="_blank"-->
-                                <!--                                          href="https://app.uniswap.org/#/swap?inputCurrency=0xdac17f958d2ee523a2206206994597c13d831ec7&outputCurrency=0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8">-->
-                                <!--                                    {{ $t('buy.buy_with_USDT') }}-->
-                                <!--                                </c-button>-->
+
                             </div>
                         </div>
                     </c-generic-section>

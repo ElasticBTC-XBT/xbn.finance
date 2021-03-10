@@ -39,9 +39,9 @@
                                 </div>
 
                             </li>
-                          <li @click="closeMenu">
-                            <router-link to="/xbn/sales/">XBN Sales</router-link>
-                          </li>
+<!--                          <li @click="closeMenu">-->
+<!--                            <router-link to="/xbn/sales/">XBN Sales</router-link>-->
+<!--                          </li>-->
                           <li @click="closeMenu">
                             <router-link to="/xbn/airdrop/">{{ $t("airdrop.airdrop") }}</router-link>
                           </li>
@@ -75,9 +75,9 @@
                         </ul>
                         <ul class="list-reset header-nav-right">
                             <c-button tag="a" class="button button-primary button-sm" color="primary" wide-mobile
-                                      href="/xbn/sales/"
+                                      href="/buy"
                             >
-                                {{ $t("header.buy") }}
+                                {{ $t("header.buy") }} XBN
                             </c-button>
                         </ul>
                     </div>
