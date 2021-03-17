@@ -37,7 +37,7 @@
             </div>
             <el-table
                 style="margin-top: 20px"
-                :empty-text="'No data available'"
+                empty-text="No data available"
                 :data="displayedData"
                 max-height="560">
               <el-table-column prop="createdAt" label="Created At">
@@ -49,7 +49,12 @@
                   prop="rewardCode" label="Reward Code"
                   width="150">
               </el-table-column>
-              <el-table-column prop="status" label="Status"></el-table-column>
+              <el-table-column
+                  :filter-method="filterHandler"
+                  :filtered-value="['1']"
+                  :filters="[{text: 'active', value: '1'}, {text: 'deleted', value: '0'}]"
+                  prop="status"
+                  label="Status"></el-table-column>
               <el-table-column
                   filter-placement="bottom-end"
                   :filters="amountFilters"
@@ -174,7 +179,7 @@ export default {
         value: elm
       }));
     },
-    displayedData(){
+    displayedData() {
       return this.questCodes.filter(elm => JSON.stringify(elm).includes(this.searchTerm));
     }
   },
