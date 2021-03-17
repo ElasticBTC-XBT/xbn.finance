@@ -1,7 +1,7 @@
 {
   "sale": {
     "i_want_to_buy": "I want to buy",
-    "public_discounted_sale": "XBN Discounted Sale",
+    "public_discounted_sale": "XBN Sales",
     "connected_as": "Connected as",
     "you_can_buy": "You can buy",
     "current_rate": "Current Rate",
@@ -379,7 +379,7 @@
   },
   "buy": {
     "section_header": {
-      "title": "Get XBN & XBN"
+      "title": "Get XBN on PancakeSwap"
     },
     "buy_with_BNB": "Buy with BNB",
     "buy_with_WBTC": "Buy with WBTC",

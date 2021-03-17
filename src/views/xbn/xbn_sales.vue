@@ -21,7 +21,7 @@
 
                 {{ $t('sale.connected_as') }} <a
                   target="_blank"
-                  :href="`https://etherscan.io/address/${userAccount}`">{{ truncatedAddress }}</a></p>
+                  :href="`https://bscscan.com/address/${userAccount}`">{{ truncatedAddress }}</a></p>
               <div>
                 <sale-input
                     @on-purchase="exchangeToken"
@@ -120,7 +120,7 @@ export default {
     return {
       sectionHeader: {
         title: this.$t('sale.public_discounted_sale'),
-        paragraph: "<img src=\"https://i.imgur.com/jmPNlwr.png\" style=\"width: 30px; display: inline;\"> Limited offer to buy XBN at a discounted price to build XBN long-term Development"
+        paragraph: "<img src=\"https://i.imgur.com/jmPNlwr.png\" style=\"width: 30px; display: inline;\"> Limited offer to buy XBN to here to help build XBN long-term Development or you can trade XBN on <a href='https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac'>PancakeSwap</a>!"
       },
       // sale info
       saleSupply: 0,

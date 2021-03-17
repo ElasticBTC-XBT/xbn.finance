@@ -19,7 +19,7 @@
                     </h3>
                 </div>
                 <div class="cta-action reveal-from-right">
-                    <c-button tag="a" color="primary" wide-mobile href="/xbn/sales/">
+                    <c-button tag="a" color="primary" wide-mobile href="/buy">
                         {{ $t('cta.buy_xbt') }}
                     </c-button>
                 </div>

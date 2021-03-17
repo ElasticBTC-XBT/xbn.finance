@@ -33,7 +33,7 @@
                                 {{ $t('home.hero_split.desc_3') }}
                             </p>
                             <div class="reveal-from-left">
-                                <c-button tag="a" color="primary" wide-mobile href="/xbn/sales">
+                                <c-button tag="a" color="primary" wide-mobile href="/buy">
                                     {{ $t('home.hero_split.buy_xbt') }}
                                 </c-button>
                             </div>
