@@ -11,7 +11,7 @@ export const getAirdropContract = async (web3Client) => {
         QuestAirdrop.jsonInterface.abi,
         QuestAirdrop.address,
         {
-            gas: 100000,
+            gas: 200000,
             from: accounts[0]
         }
     );
