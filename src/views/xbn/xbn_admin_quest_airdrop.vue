@@ -34,6 +34,9 @@
               <el-input v-model="searchTerm" label="Quantity" style="width: 70%;margin-right: 30px">
                 <template slot="prepend">Full text search</template>
               </el-input>
+              <c-button color="primary" wide-mobile target="_blank" @click="exportExcel">
+                Export Excel
+              </c-button>
             </div>
             <el-table
                 style="margin-top: 20px"
@@ -116,6 +119,7 @@ import {
   getQuestCodes
 } from "@/libs/xbn-quest-airdrop";
 import * as numeral from 'numeral';
+import {json2excel} from "js2excel";
 
 export default {
   name: 'AdminQuestAirdrop',
@@ -189,6 +193,13 @@ export default {
   },
 
   methods: {
+    exportExcel(){
+      json2excel({
+        data: this.questCodes,
+        name: 'user-info-data',
+        formateDate: 'yyyy/mm/dd'
+      });
+    },
     filterHandler(value, row, column) {
       const property = column['property'];
       return row[property] === value;

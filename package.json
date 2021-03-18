@@ -21,6 +21,7 @@
     "element-ui": "^2.14.1",
     "eslint-loader": "^2.1.2",
     "express": "^4.17.1",
+    "js2excel": "^1.0.1",
     "lodash": "^4.17.15",
     "moment": "^2.29.1",
     "moment-countdown": "^0.0.3",
