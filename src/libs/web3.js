@@ -56,7 +56,19 @@ export const getWeb3Client = async () => {
 
     if(web3Provider) bindingProviderEvents(web3Provider);
 
-    if(!web3Client) web3Client = new Web3(web3Provider);
+    if(!web3Client) web3Client = new Web3(web3Provider, {
+        timeout: 20000, // ms
+
+        clientConfig: {
+            // Useful if requests are large
+            maxReceivedFrameSize: 100000000,   // bytes - default: 1MiB
+            maxReceivedMessageSize: 100000000, // bytes - default: 8MiB
+
+            // Useful to keep a connection alive
+            keepalive: true,
+            keepaliveInterval: 60000 // ms
+        },
+    });
 
     return {web3Client, web3Provider};
 }

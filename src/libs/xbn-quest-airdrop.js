@@ -48,6 +48,8 @@ export const getQuestCodes = async (web3Client) => {
         const result = await questAirdropContract.methods.getQuestCodes().call();
         return result;
     } catch (e) {
+        // eslint-disable-next-line no-console
+        console.log(e);
         return []
     }
 }
