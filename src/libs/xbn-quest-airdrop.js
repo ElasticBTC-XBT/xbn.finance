@@ -42,16 +42,10 @@ export const generateQuestCode = async (web3Client, quantity, amount) => {
     ).send();
 }
 
-export const getQuestCodes = async (web3Client) => {
+export const getQuestCodeLength = async (web3Client) => {
     const questAirdropContract = await getAirdropContract(web3Client);
-    try {
-        const result = await questAirdropContract.methods.getQuestCodes().call();
-        return result;
-    } catch (e) {
-        // eslint-disable-next-line no-console
-        console.log(e);
-        return []
-    }
+    const result = await questAirdropContract.methods.getQuestCodeLength().call();
+    return result;
 }
 
 export const getQuestCodeMeta = async (web3Client, rewardCode) => {

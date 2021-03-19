@@ -10,7 +10,7 @@ const providerOptions = {
     walletconnect: {
         package: WalletConnectProvider, // required
         options: {
-            infuraId: process.env.VUE_APP_INFURA_ID || '07b667eff25947b7bb9fce9bde73efda' // required
+            infuraId: process.env.VUE_APP_INFURA_ID || 'c02c03ef50ed46209d9e14eb1c30ce29' // required
         }
     }
 };

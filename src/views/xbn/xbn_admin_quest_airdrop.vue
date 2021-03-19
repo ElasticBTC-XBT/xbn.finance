@@ -28,7 +28,7 @@
               </c-button>
             </div>
 
-            <h1> Current Codes </h1>
+            <h1> Current Codes ({{ questCodes.length }}) </h1>
             <div style="margin-top: 20px"
                  class="is-justify-center">
               <el-input v-model="searchTerm" label="Quantity" style="width: 70%;margin-right: 30px">
@@ -116,7 +116,7 @@ import {
   generateQuestCode,
   getQuestAirdropContractBalance,
   getQuestCodeMeta,
-  getQuestCodes
+  getQuestCodeLength
 } from "@/libs/xbn-quest-airdrop";
 import * as numeral from 'numeral';
 import {json2excel} from "js2excel";
@@ -250,15 +250,23 @@ export default {
     async handleLoadQuestCodes() {
       const walletClient = this.walletClient;
 
-      const questCodes = await getQuestCodes(walletClient.web3Client);
+      const questCodeLength = await getQuestCodeLength(walletClient.web3Client);
 
-      const questCodesWithMetaData = await Promise.all(
-          questCodes.map(async code => {
-            return getQuestCodeMeta(walletClient.web3Client, code)
-          })
-      );
+      console.log({questCodeLength});
 
-      this.$set(this, 'questCodes', questCodesWithMetaData);
+      if(Number(questCodeLength) > 0) {
+        const questCodes = Array.from(Array(Number(questCodeLength)).keys());
+
+        console.log({questCodes});
+
+        const questCodesWithMetaData = await Promise.all(
+            questCodes.map(async codeIndex => {
+              return getQuestCodeMeta(walletClient.web3Client, codeIndex)
+            })
+        );
+
+        this.$set(this, 'questCodes', questCodesWithMetaData);
+      }
     }
   }
 }
