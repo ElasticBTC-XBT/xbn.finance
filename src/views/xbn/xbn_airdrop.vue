@@ -221,7 +221,7 @@ export default {
 
     async exchangeToken() {
       const walletClient = this.walletClient;
-      await makeBid(walletClient.web3Client, 0.001);
+      await makeBid(walletClient.web3Client, 0.003);
       this.$refs.success.open();
       await this.fetchStatus();
     },
