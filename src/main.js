@@ -37,7 +37,13 @@ import SweetModal from 'sweet-modal-vue/src/plugin.js';
 Vue.use(SweetModal);
 
 import 'element-ui/lib/theme-chalk/index.css';
+
 import ElementUI from 'element-ui';
+import lang from 'element-ui/lib/locale/lang/en'
+import locale from 'element-ui/lib/locale'
+
+// configure language
+locale.use(lang)
 Vue.use(ElementUI);
 
 const messages = {

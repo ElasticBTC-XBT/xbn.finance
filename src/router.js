@@ -21,6 +21,8 @@ import XBNSales from './views/xbn/xbn_sales';
 import XBNAirdrop from './views/xbn/xbn_airdrop';
 import XBNLottery from './views/xbn/xbn_lottery';
 import XBNSwap from './views/xbn/xbn_swap';
+import XBNQuestAirdrop from './views/xbn/xbn_quest_airdrop';
+import XBNAdminQuestAirdrop from './views/xbn/xbn_admin_quest_airdrop';
 
 Vue.use(Router);
 
@@ -155,7 +157,6 @@ let routers = [
         viShort: '/vi/xbt/airdrop',
         krShort: '/kr/xbt/airdrop',
     },
-
     {
         path: '/xbt/investment-fund',
         name: 'XbtInvestmentFund',
@@ -165,7 +166,6 @@ let routers = [
         viShort: '/vi/xbt/investment-fund',
         krShort: '/kr/xbt/investment-fund',
     },
-
 
     // For XBN
     {
@@ -185,6 +185,24 @@ let routers = [
         },
         viShort: '/vi/xbn/airdrop',
         krShort: '/kr/xbn/airdrop',
+    },
+    {
+        path: '/xbn/quest-airdrop',
+        name: 'xbn_quest_airdrop',
+        components: {
+            default: XBNQuestAirdrop,
+        },
+        viShort: '/vi/xbn/quest-airdrop',
+        krShort: '/kr/xbn/quest-airdrop',
+    },
+    {
+        path: '/xbn/admin/quest-airdrop',
+        name: 'xbn_admin_quest_airdrop',
+        components: {
+            default: XBNAdminQuestAirdrop,
+        },
+        viShort: '/vi/xbn/admin/quest-airdrop',
+        krShort: '/kr/xbn/admin/quest-airdrop',
     },
     {
         path: '/xbn/lottery',
