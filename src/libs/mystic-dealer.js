@@ -109,7 +109,7 @@ export const withdrawFund = async (web3Client) => {
 export const adjustSaleRule = async (web3Client) => {
     const dealerContract = await getDealerContract(web3Client);
     await dealerContract.methods.setQuantityRules(
-        web3Client.utils.toWei('3351', 'ether'),
+        web3Client.utils.toWei('1117', 'ether'),
         web3Client.utils.toWei('0.003', 'ether'),
         web3Client.utils.toWei('100', 'ether'),
     ).send({
