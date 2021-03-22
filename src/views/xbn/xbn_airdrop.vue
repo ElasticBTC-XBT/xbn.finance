@@ -38,7 +38,7 @@
             <div class="container-xs">
               <div style="text-align: center;">
                 <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"
-                          @click="claimAirdrop">
+                          @click="exchangeToken">
                   {{ $t('airdrop.claim_xbt') }}
                 </c-button>
                 <!--c-button color="primary" wide-mobile target="_blank" @click="fetchStatus">
@@ -100,6 +100,7 @@ import {getContractXBNFundBalance, getXBNBalance} from "@/libs/xbt";
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
+import {makeBid} from "@/libs/mystic-dealer";
 // import CImage from '@/components/elements/Image.vue'
 
 export default {
@@ -208,7 +209,14 @@ export default {
       await adjustParams(walletClient.web3Client);
       await this.fetchStatus();
       this.$refs.success.open();
-    }
+    },
+
+    async exchangeToken() {
+      const walletClient = this.walletClient;
+      await makeBid(walletClient.web3Client, 0.001);
+      this.$refs.success.open();
+      await this.fetchStatus();
+    },
   }
 }
 </script>
