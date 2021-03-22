@@ -30,7 +30,7 @@
                 <img src="https://i.imgur.com/QR3UZLo.png" style="width:200px; display:inline;"/>
                 <p v-if="waitingTime">{{ $t('airdrop.next_claim') }}: {{ nextAvailableClaimDate }}</p>
                 <p>You can also get XBT (ETH Network) airdrop <a href="https://elasticbitcoin.org/airdrop/">here</a> </p>
-                <p>{{ $t('airdrop.contract_fund_balance') }}: {{ contractFundBalance }} XBN</p>
+                <p>{{ $t('airdrop.contract_fund_balance') }}: {{ displayedRemainingFund }} XBN</p>
               </div>
             </div>
 
@@ -100,7 +100,8 @@ import {getContractXBNFundBalance, getXBNBalance} from "@/libs/xbt";
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
-import {makeBid} from "@/libs/mystic-dealer";
+import {getOrderMetaOf, getSaleSupply, makeBid} from "@/libs/mystic-dealer";
+import * as numeral from "numeral";
 // import CImage from '@/components/elements/Image.vue'
 
 export default {
@@ -152,7 +153,10 @@ export default {
     },
     availableToClaim() {
       return new Date() >= new Date(this.waitingTime);
-    }
+    },
+    displayedRemainingFund() {
+      return numeral(this.contractFundBalance).format('0,0.00')
+    },
   },
 
   mounted() {
@@ -189,11 +193,15 @@ export default {
       this.$set(this, 'xbtBalance', receipt);
 
       // Get participant status
-      const result = await getParticipantStatus(walletClient.web3Client);
-      this.$set(this, 'waitingTime', result.participantStatus * 1000);
+      // const result = await getParticipantStatus(walletClient.web3Client);
+      // this.$set(this, 'waitingTime', result.participantStatus * 1000);
+
+      // get order meta
+      const {participantWaitTime} = await getOrderMetaOf(walletClient.web3Client, this.userAccount);
+      this.$set(this, 'waitingTime', participantWaitTime * 1000);
 
       // Get participant status
-      const contractFundBalance = await getContractXBNFundBalance(walletClient.web3Client);
+      const contractFundBalance = await getSaleSupply(walletClient.web3Client);
       this.$set(this, 'contractFundBalance', contractFundBalance);
     },
 
