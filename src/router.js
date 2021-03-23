@@ -15,7 +15,7 @@ import Airdrop from './views/airdrop.vue';
 import Roadmap from './views/roadmap.vue';
 import XbtInvestmentFund from './views/xbt_investment_fund.vue';
 import Cryptounicorns from './views/cryptounicorns.vue';
-import App from "./App";
+// import App from "./App";
 import Sales from './views/sales.vue';
 import XBNSales from './views/xbn/xbn_sales';
 import XBNAirdrop from './views/xbn/xbn_airdrop';
@@ -25,6 +25,7 @@ import XBNQuestAirdrop from './views/xbn/xbn_quest_airdrop';
 import XBNAdminQuestAirdrop from './views/xbn/xbn_admin_quest_airdrop';
 
 Vue.use(Router);
+
 
 let routers = [
     {
@@ -228,26 +229,26 @@ export default new Router({
     routes: [
         ...routers,
         // All pages are preceded by /vi/
-        {
-
-            path: '/:lang',
-            components: {
-                default: App,
-            },
-            children: [
-                // All the pages are mapped from the routes
-                ...routers.map((p) => ({
-                    path: p.path.replace(p.path.substring(0, 1), ""),
-                    alias: p.viShort,
-                    name: p.name,
-                    components: p.components,
-                })),
-                {
-                    path: '',
-                    redirect: {name: 'home'},
-                },
-            ],
-        },
+        // {
+        //
+        //     path: '/:lang',
+        //     components: {
+        //         default: App,
+        //     },
+        //     children: [
+        //         // All the pages are mapped from the routes
+        //         ...routers.map((p) => ({
+        //             path: p.path.replace(p.path.substring(0, 1), ""),
+        //             alias: p.viShort,
+        //             name: p.name + '_lang',
+        //             components: p.components,
+        //         })),
+        //         {
+        //             path: '',
+        //             redirect: {name: 'home'},
+        //         },
+        //     ],
+        // },
 
     ],
     mode: 'history'
