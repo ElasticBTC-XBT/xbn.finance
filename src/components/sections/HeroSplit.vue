@@ -1,57 +1,52 @@
 <template>
-    <section
-            class="hero section"
-            :class="[
-            hasBgColor && 'has-bg-color',
-            invertColor && 'invert-color'
-        ]">
-        <div class="container">
-            <div
-                    class="hero-inner section-inner"
-                    :class="[
+
+    <div class="container hero">
+        <div
+                class="hero-inner section-inner"
+                :class="[
                     topDivider && 'has-top-divider',
                     bottomDivider && 'has-bottom-divider'
                 ]">
-                <div
-                        class="split-wrap"
-                        :class="[
+            <div
+                    class="split-wrap"
+                    :class="[
                         invertMobile && 'invert-mobile',
                         invertDesktop && 'invert-desktop'
                     ]">
-                    <div class="split-item">
-                        <div class="hero-content split-item-content center-content-mobile">
-                            <h1 class="mt-0 mb-16 reveal-from-left">
-                                {{ $t('home.hero_split.title_1') }}
-                            </h1>
-                            <p class="mt-0 mb-24 reveal-from-left" data-reveal-delay="200">
-                                <span class="subtitle">{{ $t('home.hero_split.desc_1') }}</span>
-                                <br/>
-                                <br/>
-                                {{ $t('home.hero_split.desc_2') }}
-                                <br/>
-                                <br/>
-                                {{ $t('home.hero_split.desc_3') }}
-                            </p>
-                            <div class="reveal-from-left">
-                                <c-button tag="a" color="primary" wide-mobile href="/buy">
-                                    {{ $t('home.hero_split.buy_xbt') }}
-                                </c-button>
-                            </div>
+                <div class="split-item">
+                    <div class="hero-content split-item-content center-content-mobile">
+                        <h1 class="mt-0 mb-16 reveal-from-left">
+                            {{ $t('home.hero_split.title_1') }}
+                        </h1>
+                        <p class="mt-0 mb-24 reveal-from-left" data-reveal-delay="200">
+                            <span class="subtitle">{{ $t('home.hero_split.desc_1') }}</span>
+                            <br/>
+                            <br/>
+                            {{ $t('home.hero_split.desc_2') }}
+                            <br/>
+                            <br/>
+                            {{ $t('home.hero_split.desc_3') }}
+                        </p>
+                        <div class="reveal-from-left">
+                            <c-button tag="a" color="primary" wide-mobile href="/buy">
+                                {{ $t('home.hero_split.buy_xbt') }}
+                            </c-button>
                         </div>
-                        <div class="hero-figure is-3d split-item-image illustration-element-01 reveal-scale-up">
-                            <c-image
-                                    id="big-banner-logo"
-                                    class="has-shadow"
-                                    :src="require('@/assets/images/banner.png')"
-                                    alt="Hero image"
-                                    :width="528"
-                                    :height="396"/>
-                        </div>
+                    </div>
+                    <div class="hero-figure is-3d split-item-image illustration-element-01 reveal-scale-up">
+                        <c-image
+                                id="big-banner-logo"
+                                class="has-shadow"
+                                :src="require('@/assets/images/banner.png')"
+                                alt="Hero image"
+                                :width="528"
+                                :height="396"/>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
 </template>
 
 <script>

@@ -1,22 +1,32 @@
 <template>
-    <fragment>
-        <c-hero-split image-fill class="illustration-section-01"/>
-        <c-features-tiles/>
-        <c-testimonial class="illustration-section-03"/>
-        <c-features-split invert-mobile image-fill class="illustration-section-05"/>
-        <c-generic-section top-divider>
-            <div class="container-xs">
-                <c-section-header class="center-content"/>
-                <c-accordion>
-                    <c-accordion-item v-for="(faq, index) in faqData" :key="index" :title="`${faq.title}?`"
-                                      :active="index===0">
-                        <span v-html="faq.answer"></span>
+    <div>
+        <section
+                class="signin section illustration-section-01"
+                :class="[
+            hasBgColor && 'has-bg-color',
+            invertColor && 'invert-color'
+        ]">
+            <fragment>
+                <c-hero-split image-fill/>
+                <c-features-tiles/>
+                <c-testimonial class="illustration-section-03"/>
+                <c-features-split invert-mobile image-fill class="illustration-section-05"/>
+                <c-generic-section top-divider>
+                    <div class="container-xs">
+                        <c-section-header class="center-content"/>
+                        <c-accordion>
+                            <c-accordion-item v-for="(faq, index) in faqData" :key="index" :title="`${faq.title}?`"
+                                              :active="index===0">
+                                <span v-html="faq.answer"></span>
 
-                    </c-accordion-item>
-                </c-accordion>
-            </div>
-        </c-generic-section>
-    </fragment>
+                            </c-accordion-item>
+                        </c-accordion>
+                    </div>
+                </c-generic-section>
+            </fragment>
+        </section>
+    </div>
+
 </template>
 
 <script>
@@ -44,7 +54,7 @@
             CGenericSection,
             CAccordion,
             CAccordionItem,
-            CTestimonial,
+            CTestimonial
         },
         data() {
             let v = this
