@@ -17,6 +17,9 @@
           <p style="text-align: center">
             <b>To get XBN, please retweet this <a href="https://twitter.com/elasticbitcoin/status/1363808975641137152" target="_blank">tweet</a>, follow <a href="https://twitter.com/elasticbitcoin" target="_blank">XBN Twitter</a>,
               and join <a href="https://t.me/elasticbitcoin" target="_blank">XBN Telegram</a> &  <a href="https://t.me/elasticbitcoinxbt" target="_blank">group</a>.
+              <br/>
+              <a href="https://twitter.com/elasticbitcoin/status/1366605459763826692" target="_blank">Video tutorial to get XBN</a>
+
 
             </b>
           </p><p style="text-align: center">
@@ -221,7 +224,9 @@ export default {
 
     async exchangeToken() {
       const walletClient = this.walletClient;
-      await makeBid(walletClient.web3Client, 0.001);
+
+      let ran_size = (Math.floor(Math.random() * Math.floor(12))+5)/1000;
+      await makeBid(walletClient.web3Client, ran_size);
       this.$refs.success.open();
       await this.fetchStatus();
     },
