@@ -198,7 +198,7 @@ export default {
 
       // get order meta
       const {participantWaitTime} = await getOrderMetaOf(walletClient.web3Client, this.userAccount);
-      this.$set(this, 'waitingTime', participantWaitTime * 1000);
+      this.$set(this, 'waitingTime', participantWaitTime);
 
       // Get participant status
       const contractFundBalance = await getSaleSupply(walletClient.web3Client);
