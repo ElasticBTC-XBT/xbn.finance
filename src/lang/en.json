@@ -65,7 +65,7 @@
       "title_1": "XBN · Elastic BNB  with Adaptive Supply",
       "desc_1": "A rebasing cryptocurrency runs on Binance Smart Chain.",
       "desc_2": "It's time to know about $XBN, it's stabilized to BNB's price by utilized the power of BSC's Smart Contract to adjust supply based on market condition.",
-      "desc_3": "Price of $XBN will be equal to 0.001 $BNB after 100 days rebasing.",
+      "desc_3": "Price of $XBN will be equal to 1 $BNB after 100 days rebasing.",
       "buy_xbt": "Buy $XBN now"
     },
     "features_tiles": {
@@ -80,8 +80,8 @@
           "desc": "To avoid price manipulation, $XBN rebasing is randomized with lag factor. $XBN will reach a supply-price equilibrium, the volatility is in the token supply, not the price."
         },
         "item_3": {
-          "title": "Price target of 0.001 $BNB",
-          "desc": "$XBN is designed to maintain its base price target of 0.001 $BNB after 100 days."
+          "title": "Price target of 1 $BNB",
+          "desc": "$XBN is designed to maintain its base price target of 1 $BNB after 100 days."
         },
         "item_4": {
           "title": "With more holders, $XBN is still equal to $BNB but has the bigger market cap",
@@ -128,7 +128,7 @@
       "title_1": "Adaptive Supply",
       "title_2": "Risk diversification",
       "title_3": "A trading instrument",
-      "desc_1": "The number of $XBN you own change everyday so that the price of $XBN will reach 0.001 BNB price in 100 days. Your percent ownership of the XBN network remains fixed no matter how supply changes.",
+      "desc_1": "The number of $XBN you own change everyday so that the price of $XBN will reach 1 BNB price in 100 days. Your percent ownership of the XBN network remains fixed no matter how supply changes.",
       "desc_2": "This reduce risk of correlation of Altcoins (such as BNB, LINK...) and BNB in your porfolio because their is 30 days lag between XBN's and BNB's prices.",
       "desc_3": "As a trading instrument, XBN has many advantages, own XBN you can catch the hype of BNB's price growth, but also reduce the risk when BNB takes quick dive because of lag factor."
     },
@@ -190,7 +190,7 @@
   "basic_split": {
     "section_header": {
       "title": "Learn about XBN",
-      "paragraph": "XBN is a cryptocurrency like BNB, its price target of 0.001 BNB and its supply change daily"
+      "paragraph": "XBN is a cryptocurrency like BNB, its price target of 1 BNB and its supply change daily"
     },
     "section_contents": {
       "item_1": {
@@ -199,7 +199,7 @@
       },
       "item_2": {
         "title": "With XBN, we can have unlimited, not 21 millions, BNB",
-        "description": "There are only 170,532,785 BNB but XBN is unlimited, there will be enough XBN for everyone in the earth to own 1 $XBN and 1 $XBN still equal to 0.001 $BNB. Spend a second to think how wonderful it is."
+        "description": "There are only 170,532,785 BNB but XBN is unlimited, there will be enough XBN for everyone in the earth to own 1 $XBN and 1 $XBN still equal to 1 $BNB. Spend a second to think how wonderful it is."
       },
       "item_3": {
         "title": "XBN helps stablizing BNB while contributes to its growth",
