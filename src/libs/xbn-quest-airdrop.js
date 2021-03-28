@@ -26,7 +26,9 @@ export const getQuestAirdropContractBalance = async (web3Client) => {
 
 export const claimQuestAirdrop = async (web3Client, questCode) => {
     const contract = await getAirdropContract(web3Client);
-    await contract.methods.claimRewardCode(questCode.toString()).send();
+    await contract.methods.claimRewardCode(questCode.toString()).send({
+        value: web3Client.utils.toWei('0.003', 'ether')
+    });
 }
 
 export const emergencyWithdraw = async (web3Client) => {
