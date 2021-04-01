@@ -33,7 +33,7 @@
                                             :height="56"/>
                                 </div>
                             </div>
-                            <div class="testimonial-item-content">
+                            <div class="testimonial-item-content p-24">
                                 <p class="text-sm mb-0">
                                     — {{
                                     member.description
@@ -41,7 +41,7 @@
                                 </p>
                             </div>
                             <div
-                                    class="testimonial-item-footer h6 mb-0 pt-8">
+                                    class="testimonial-item-footer h6 mb-0 p-24 pt-8">
                                 <a data-control-name="nav.homepage" :href="member.contact" target="_blank" id="ember13"
                                    class="ember-view">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34"
@@ -56,8 +56,7 @@
                                     </svg>
                                 </a>
                             </div>
-                            <div
-                                    class="testimonial-item-footer h6 mt-16 mb-0 pt-24 has-top-divider">
+                            <div class="testimonial-item-footer h6 mt-16 mb-0 pt-24 has-top-divider p-24">
                                 <span class="testimonial-item-name">
                                     {{ member.name }}
                                 </span>

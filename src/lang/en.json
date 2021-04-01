@@ -139,7 +139,7 @@
       },
       "item_3": {
         "title": "What is the total supply",
-        "answer": "The total supply changes constantly. You can see the current supply here: <a href='https://bscscan.com/token/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac'>here</a>"
+        "answer": "You can see the current supply here: <a href='https://bscscan.com/token/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac'>here</a>"
       },
       "item_4": {
         "title": "Has the smart contract been released",
