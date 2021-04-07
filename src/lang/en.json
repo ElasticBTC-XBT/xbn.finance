@@ -73,27 +73,28 @@
       "section_data_upper": {
         "item_1": {
           "title": "A special DeFi token",
-          "desc": "$XBN is forked from $AMPL, a DeFi protocol with an elastic supply model. The total supply of $XBN is constantly changing every day."
+          "desc": "$XBN is using Artificial Intelligent technology to balancing its trading pool and increasing its price"
         },
         "item_2": {
-          "title": "Rebasing is randomized",
-          "desc": "To avoid price manipulation, $XBN rebasing is randomized with lag factor. $XBN will reach a supply-price equilibrium, the volatility is in the token supply, not the price."
+          "title": "Following the Defi Market",
+          "desc": "XBN pool automatically adjust everyday to optimize its earning by investing in other Defi tokens"
         },
         "item_3": {
           "title": "Price target of 1 $BNB",
-          "desc": "$XBN is designed to grow its base price target of 1 $BNB"
+          "desc": "$XBN's goal is to reach price target of 1 $BNB with just 6.5 million supply"
         },
         "item_4": {
-          "title": "With more holders, $XBN is still equal to $BNB but has the bigger market cap",
-          "desc": "$XBN Holders own a percentage of the network. Their holding values rise as market cap rises."
+          "title": "$XBN powers different Dapps",
+          "desc": "$XBN Holders can benefit not just from one but many different Dapps to be release every quarter"
         },
         "item_5": {
-          "title": "What is a rebase event?",
-          "desc": "A rebase event is the event of adjusting the balance of all wallets based on the current price of the coin related to the target price of 1 bitcoin"
+          "title": "What is Defi Dapps?",
+          "desc": "It refers to digital assets, financial smart contracts, protocols, and dapps predominantly built on Binance Smart Chain"
         },
         "item_6": {
-          "title": "What is rebase lag factor?",
-          "desc": "The Rebase Lag Factor helps to smooth changes, a lower Lag Factor means faster adjustments and vise versa"
+          "title": "What is prediction market?",
+          "desc": "also known as predictive markets, information markets, decision markets, idea futures, event derivatives, or virtual markets are exchange-traded markets created for the purpose of trading the outcome of events. The market prices can indicate what the crowd thinks the probability of the event is.",
+
         }
       }
     },
