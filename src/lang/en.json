@@ -124,14 +124,14 @@
     "features_split": {
       "section_header": {
         "title": "Learn about $XBN",
-        "paragraph": "$XBN is a cryptocurrency like BNB which runs on Binance Smart Chain, its price target of BNB and its supply change daily"
+        "paragraph": "$XBN is a cryptocurrency like BNB which runs on Binance Smart Chain, its price target of BNB"
       },
-      "title_1": "Adaptive Supply",
+      "title_1": "Artificial Intelligence",
       "title_2": "Risk diversification",
       "title_3": "A trading instrument",
-      "desc_1": "Your percent ownership of the XBN network remains fixed no matter how supply changes.",
-      "desc_2": "This reduce risk of correlation of Altcoins (such as BNB, LINK...) and BNB in your porfolio because their is 30 days lag between XBN's and BNB's prices.",
-      "desc_3": "As a trading instrument, XBN has many advantages, own XBN you can catch the hype of BNB's price growth, but also reduce the risk when BNB takes quick dive because of lag factor."
+      "desc_1": "At its core, XBN is running by complex multi-million USD AI bot system to balancing its trading pools to optimize return for holders",
+      "desc_2": "When investing into XBN, you are investing into the whole sophisticated ecosystem, which reduces risk of your altcoin portfolio",
+      "desc_3": "As a trading instrument, XBN has many advantages, own XBN you can catch the hype of BNB's price growth, but also reduce the risk when BNB takes quick dive because of smart pooling technology built by XBN"
     },
     "faq_data": {
       "item_2": {
@@ -191,7 +191,7 @@
   "basic_split": {
     "section_header": {
       "title": "Learn about XBN",
-      "paragraph": "XBN is a cryptocurrency like BNB, its price target of 1 BNB and its supply change daily"
+      "paragraph": "XBN is a cryptocurrency like BNB, its price target of 1 BNB "
     },
     "section_contents": {
       "item_1": {

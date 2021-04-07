@@ -24,21 +24,13 @@
                         <ul
                                 class="list-reset text-xxs"
                                 :class="navPosition && `header-nav-${navPosition}`">
-                            <li @click="closeMenu" class="item-header-main">
-                                <router-link to="/learn/" class="text-main">{{ $t("header.learn") }}</router-link>
 
-                                <div class="list-item-header-child">
-                                    <ul>
-                                        <li @click="closeMenu">
-                                            <router-link to="/governance/">{{ $t("header.governance") }}</router-link>
-                                        </li>
-                                        <li @click="closeMenu">
-                                            <router-link to="/roadmap/">{{ $t("header.roadmap") }}</router-link>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                            </li>
+                          <li @click="closeMenu">
+                            <router-link to="/governance/">{{ $t("header.governance") }}</router-link>
+                          </li>
+                          <li @click="closeMenu">
+                            <router-link to="/roadmap/">{{ $t("header.roadmap") }}</router-link>
+                          </li>
 <!--                          <li @click="closeMenu">-->
 <!--                            <router-link to="/xbn/sales/">XBN Sales</router-link>-->
 <!--                          </li>-->
