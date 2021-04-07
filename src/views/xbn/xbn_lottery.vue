@@ -15,7 +15,7 @@
                 ]">
 
           <div v-if="userAccount">
-            <div class="flex-row" style="justify-content: space-around">
+            <div class="pot-info">
               <div style="flex: 1">
                 <h4>XBN Lottery</h4>
                 <p style="font-size: 14px">
@@ -35,7 +35,7 @@
               <h3>Countdown</h3>
               <countdown :time="currentRoundInfo.endAt - new Date().getTime()"
                          v-slot="{ days, hours, minutes, seconds }">
-                <div class="clock-display" style="margin: 100px">
+                <div class="clock-display">
                   <span>{{ days }} : </span><span>{{ hours }} : </span><span>{{ minutes }} : </span><span>{{
                     seconds
                   }}</span>
@@ -65,7 +65,7 @@
                 TICKETS
               </div>
               <div class="center-content" style="margin-top: 32px">
-                <el-button :disabled="!amountBuy || amountBuy > playerVault.currentBNBBalance" @click="buyTickets">Buy Tickets</el-button>
+                <el-button :loading="loadingBuy" :disabled="!amountBuy || amountBuy > playerVault.currentBNBBalance" @click="buyTickets">Buy Tickets</el-button>
               </div>
             </div>
 
@@ -99,7 +99,7 @@
                   </div>
 
                   <div style="margin-top: 60px">
-                    <el-button @click="withdraw">Withdraw All</el-button>
+                    <el-button :loading="loadingWithdraw" @click="withdraw">Withdraw All</el-button>
                   </div>
                 </div>
 
@@ -252,7 +252,9 @@ export default {
       playerVault: {},
       currentRoundInfo: {},
       priceFeedData: {},
-      estimatedTickets: 0
+      estimatedTickets: 0,
+      loadingWithdraw: false,
+      loadingBuy: false
     }
   },
 
@@ -332,20 +334,27 @@ export default {
 
     async withdraw() {
       const walletClient = this.walletClient;
+      this.loadingWithdraw = true;
       await withdraw(walletClient.web3Client);
+      this.loadingWithdraw = false;
       this.$refs.success.open();
+      this.fetchStatus();
     },
 
     async buyTickets() {
       const walletClient = this.walletClient;
+      this.loadingBuy = true;
       await buyTicket(walletClient.web3Client, {amountBuy: this.amountBuy});
+      this.loadingBuy = false;
       this.$refs.success.open();
+      this.fetchStatus();
     },
 
     async fetchStatus() {
       this.getCurrentRoundInfo();
       this.getPlayerVault();
       this.fetchPriceData();
+      this.getTicketReceive();
     },
   }
 }
@@ -376,5 +385,28 @@ export default {
   font-size: 100px;
   font-weight: bold;
   font-style: italic;
+  margin: 100px;
+}
+
+.pot-info {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around
+}
+
+@media screen and (max-width: 800px)  {
+
+  .clock-display {
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    margin: 10px
+  }
+
+  .pot-info {
+    display: block;
+  }
 }
 </style>
