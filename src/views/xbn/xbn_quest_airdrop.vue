@@ -34,7 +34,7 @@
             <!--c-generic-section top-divider class="center-content"-->
             <div class="container-xs">
               <div style="text-align: center;">
-                <el-input v-model="questCode" label="Your quest code" style="width: 70%;margin-bottom: 30px">
+                <el-input v-model="questCode" label="Your quest code" style="width: 100%;margin-bottom: 30px">
                   <template slot="prepend">Input your quest code</template>
                 </el-input>
                 <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"

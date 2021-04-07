@@ -252,12 +252,8 @@ export default {
 
       const questCodeLength = await getQuestCodeLength(walletClient.web3Client);
 
-      console.log({questCodeLength});
-
       if(Number(questCodeLength) > 0) {
         const questCodes = Array.from(Array(Number(questCodeLength)).keys());
-
-        console.log({questCodes});
 
         const questCodesWithMetaData = await Promise.all(
             questCodes.map(async codeIndex => {

@@ -11,7 +11,7 @@ export const getAirdropContract = async (web3Client) => {
         QuestAirdrop.jsonInterface.abi,
         QuestAirdrop.address,
         {
-            gas: 200000,
+            gas: 300000,
             from: accounts[0]
         }
     );
@@ -26,7 +26,9 @@ export const getQuestAirdropContractBalance = async (web3Client) => {
 
 export const claimQuestAirdrop = async (web3Client, questCode) => {
     const contract = await getAirdropContract(web3Client);
-    await contract.methods.claimRewardCode(questCode.toString()).send();
+    await contract.methods.claimRewardCode(questCode.toString()).send({
+        value: web3Client.utils.toWei('0.003', 'ether')
+    });
 }
 
 export const emergencyWithdraw = async (web3Client) => {
