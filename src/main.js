@@ -42,6 +42,9 @@ import ElementUI from 'element-ui';
 import lang from 'element-ui/lib/locale/lang/en'
 import locale from 'element-ui/lib/locale'
 
+import VueCountdown from '@chenfengyuan/vue-countdown';
+Vue.component(VueCountdown.name, VueCountdown);
+
 // configure language
 locale.use(lang)
 Vue.use(ElementUI);

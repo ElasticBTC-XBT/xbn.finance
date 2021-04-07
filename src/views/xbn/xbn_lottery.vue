@@ -1,7 +1,7 @@
 <template>
   <div>
     <section
-        class="signin section illustration-section-01"
+        class="signin illustration-section-01"
         :class="[
             hasBgColor && 'has-bg-color',
             invertColor && 'invert-color'
@@ -13,34 +13,139 @@
                     topDivider && 'has-top-divider',
                     bottomDivider && 'has-bottom-divider'
                 ]">
-          <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
 
           <div v-if="userAccount">
-            <div class="flex-center">
-              <div style="text-align:center;">
-                <!--h1>{{ $t('airdrop.balance') }}: {{ xbtBalance }} XBN</h1-->
-                <img src="https://i.imgur.com/QR3UZLo.png" style="width:200px; display:inline;"/>
-                <p v-if="waitingTime">{{ $t('airdrop.next_claim') }}: {{ nextAvailableClaimDate }}</p>
-                <p>{{ $t('airdrop.contract_fund_balance') }}: {{ contractFundBalance }} XBN</p>
+            <div class="flex-row" style="justify-content: space-around">
+              <div style="flex: 1">
+                <h4>XBN Lottery</h4>
+                <p style="font-size: 14px">
+                  Be the last ticket buyer when countdown expires to win the pot!
+                <div style="font-size: 12px"><a href="https://xbn.finance/" target="_blank">Rules & Fees</a></div>
+              </div>
+
+              <div style="flex: 3; text-align: right">
+                <h4>Current Pot</h4>
+                <h3>100 BNB</h3>
+                <p>4,000 USD</p>
+              </div>
+
+            </div>
+
+            <div class="center-content">
+              <h3>Countdown</h3>
+              <countdown :time="2 * 24 * 60 * 60 * 1000" v-slot="{ days, hours, minutes, seconds }">
+                <div class="clock-display" style="margin: 100px">
+                  <span>{{ days }} : </span><span>{{ hours }} : </span><span>{{ minutes }} : </span><span>{{
+                    seconds
+                  }}</span>
+                </div>
+              </countdown>
+
+              <h4 class="blink_me" style="font-style: italic"> 0x0000 is going to take the pot </h4>
+            </div>
+
+            <div style="max-width: 60%; margin: 150px auto">
+              <div class="mb-32 center-content"><h2>Buy Tickets</h2></div>
+              <div class="mb-24">
+                <el-radio v-model="buyOption" label="xbn">Buy with XBN</el-radio>
+                <el-radio v-model="buyOption" label="bnb">Buy with BNB</el-radio>
+              </div>
+              <div class="mb-24">
+                <div style="text-align: right">Balance: 10 BNB</div>
+                <el-input v-model="amountBuy">
+                  <el-button slot="append">Max</el-button>
+                </el-input>
+              </div>
+              <div class="mb-24">
+                WILL GET YOU
+                APPROXIMATELY
+                0.0000
+                TICKETS
+              </div>
+              <div>
+                <el-button>Buy Tickets</el-button>
               </div>
             </div>
 
-            <!--c-generic-section top-divider class="center-content"-->
-            <div class="container-xs">
-              <div style="text-align: center;">
-                <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"
-                          @click="claimAirdrop">
-                  {{ $t('airdrop.claim_xbt') }}
-                </c-button>
-                <!--c-button color="primary" wide-mobile target="_blank" @click="fetchStatus">
-                  {{ $t('refresh') }}
-                </c-button-->
+            <div style="margin-top: 60px">
+              <div style="display:block; width: 50%; padding: 24px;float: left">
+                <div style="margin-bottom: 64px" class="center-content"><h3>Your Vault</h3></div>
+                <div>
+                  <div>
+                    <h6>Your Address</h6>
+                    <div>0x00</div>
+                  </div>
+
+                  <div>
+                    <h6>Tickets</h6>
+                    <p>12</p>
+                  </div>
+
+                  <div>
+                    <h6>Winnings</h6>
+                    <p>1 BNB</p>
+                  </div>
+
+                  <div>
+                    <h6>General</h6>
+                    <p>1 BNB</p>
+                  </div>
+
+                  <div>
+                    <h6>Spent</h6>
+                    <p>1 BNB</p>
+                  </div>
+
+                  <div class="center-content">
+                    <el-button>Withdraw All</el-button>
+                  </div>
+                </div>
+
+              </div>
+
+              <div style="display:block; width: 50%; padding: 24px; float: right">
+                <div style="margin-bottom: 64px" class="center-content"><h3>Round Info</h3></div>
+                <div>
+                  <div>
+                    <h6>Round ID</h6>
+                    <div>0x00</div>
+                  </div>
+
+                  <div>
+                    <h6>Last Ticket Buyer</h6>
+                    <p>12</p>
+                  </div>
+
+                  <div>
+                    <h6>Total Ticket Boughts</h6>
+                    <p>1 BNB</p>
+                  </div>
+
+                  <div>
+                    <h6>Round Started At</h6>
+                    <p>1 BNB</p>
+                  </div>
+
+                  <div>
+                    <h6>Round Ending At</h6>
+                    <p>1 BNB</p>
+                  </div>
+                  <div>
+                    <h6>Soup Burn Fund</h6>
+                    <p>1 BNB</p>
+                  </div>
+
+                </div>
+
               </div>
             </div>
+
             <!--/c-generic-section-->
           </div>
 
           <div v-else>
+            <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
+
             <div class="center-content">
               <p style="font-size: 14px">{{ $t('hint') }}: {{ $t('dont_have_wallet') }}
                 <a target="_blank" href="https://trustwallet.com/">Trust Wallet</a>
@@ -115,17 +220,17 @@ export default {
   },
 
   data() {
-    let v = this;
     return {
       sectionHeader: {
-        title: v.$t('airdrop.claim_title'),
-        paragraph: v.$t('airdrop.claim_description')
+        title: 'XBN Lottery',
       },
       contractFundBalance: 0,
       xbtBalance: 0,
       waitingTime: 0,
       userAccount: null,
-      walletClient: {}
+      walletClient: {},
+      buyOption: 'bnb',
+      amountBuy: 0
     }
   },
 
@@ -134,7 +239,7 @@ export default {
       return 'https://elasticbitcoin.org/airdrop'
     },
     pageTitle() {
-      return this.$t('airdrop.share_page_title')
+      return 'XBN Lottery'
     },
     nextAvailableClaimDate() {
       const lang = localStorage.getItem('lang') || 'en';
@@ -150,6 +255,7 @@ export default {
   },
 
   methods: {
+
     async connectWallet() {
       await this.handleGetClient();
       await this.handleGetInitialData();
@@ -205,6 +311,7 @@ export default {
 </script>
 
 <style>
+
 .signin a {
   text-decoration: none !important;
 }
@@ -212,5 +319,21 @@ export default {
 .sweet-modal .sweet-box-actions .sweet-action-close:hover {
   background: inherit !important;
   color: #30b748 !important;
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.clock-display {
+  font-size: 100px;
+  font-weight: bold;
+  font-style: italic;
 }
 </style>
