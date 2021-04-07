@@ -25,15 +25,16 @@
 
               <div style="flex: 3; text-align: right">
                 <h4>Current Pot</h4>
-                <h3>100 BNB</h3>
-                <p>4,000 USD</p>
+                <h3>{{ currentRoundInfo.currentPot | numeral }} BNB</h3>
+                <p>{{ currentRoundInfo.currentPot * priceFeedData.Price | numeral }} USD</p>
               </div>
 
             </div>
 
             <div class="center-content">
               <h3>Countdown</h3>
-              <countdown :time="2 * 24 * 60 * 60 * 1000" v-slot="{ days, hours, minutes, seconds }">
+              <countdown :time="currentRoundInfo.endAt - new Date().getTime()"
+                         v-slot="{ days, hours, minutes, seconds }">
                 <div class="clock-display" style="margin: 100px">
                   <span>{{ days }} : </span><span>{{ hours }} : </span><span>{{ minutes }} : </span><span>{{
                     seconds
@@ -41,98 +42,99 @@
                 </div>
               </countdown>
 
-              <h4 class="blink_me" style="font-style: italic"> 0x0000 is going to take the pot </h4>
+              <h4 class="blink_me" style="font-style: italic"> {{ currentRoundInfo.currentLead | truncate }} is going to
+                take the pot </h4>
             </div>
 
             <div style="max-width: 60%; margin: 150px auto">
               <div class="mb-32 center-content"><h2>Buy Tickets</h2></div>
+              <!--              <div class="mb-24">-->
+              <!--                <el-radio v-model="buyOption" label="xbn">Buy with XBN</el-radio>-->
+              <!--                <el-radio v-model="buyOption" label="bnb">Buy with BNB</el-radio>-->
+              <!--              </div>-->
               <div class="mb-24">
-                <el-radio v-model="buyOption" label="xbn">Buy with XBN</el-radio>
-                <el-radio v-model="buyOption" label="bnb">Buy with BNB</el-radio>
-              </div>
-              <div class="mb-24">
-                <div style="text-align: right">Balance: 10 BNB</div>
+                <div style="text-align: right">Balance: {{ playerVault.currentBNBBalance | numeral }} BNB</div>
                 <el-input v-model="amountBuy">
-                  <el-button slot="append">Max</el-button>
+                  <el-button slot="append" @click="amountBuy = playerVault.currentBNBBalance">Max</el-button>
                 </el-input>
               </div>
               <div class="mb-24">
                 WILL GET YOU
                 APPROXIMATELY
-                0.0000
+                {{ estimatedTickets | numeral }}
                 TICKETS
               </div>
-              <div>
-                <el-button>Buy Tickets</el-button>
+              <div class="center-content" style="margin-top: 32px">
+                <el-button @click="buyTickets">Buy Tickets</el-button>
               </div>
             </div>
 
             <div style="margin-top: 60px">
-              <div style="display:block; width: 50%; padding: 24px;float: left">
+              <div style="display:block; width: 50%; padding: 24px; word-wrap: break-word; float: left">
                 <div style="margin-bottom: 64px" class="center-content"><h3>Your Vault</h3></div>
                 <div>
                   <div>
-                    <h6>Your Address</h6>
-                    <div>0x00</div>
+                    <h5>Your Address</h5>
+                    <div>{{ playerVault.address | truncate }}</div>
                   </div>
 
                   <div>
-                    <h6>Tickets</h6>
-                    <p>12</p>
+                    <h5>Tickets</h5>
+                    <p>{{ playerVault.tickets | numeral }}</p>
                   </div>
 
                   <div>
-                    <h6>Winnings</h6>
-                    <p>1 BNB</p>
+                    <h5>Winnings</h5>
+                    <p>{{ playerVault.winnings | numeral }} BNB</p>
                   </div>
 
                   <div>
-                    <h6>General</h6>
-                    <p>1 BNB</p>
+                    <h5>General</h5>
+                    <p>{{ playerVault.general | numeral }} BNB</p>
                   </div>
 
                   <div>
-                    <h6>Spent</h6>
-                    <p>1 BNB</p>
+                    <h5>Spent</h5>
+                    <p>{{ playerVault.spentBNB | numeral }} BNB</p>
                   </div>
 
-                  <div class="center-content">
-                    <el-button>Withdraw All</el-button>
+                  <div style="margin-top: 60px">
+                    <el-button @click="withdraw">Withdraw All</el-button>
                   </div>
                 </div>
 
               </div>
 
-              <div style="display:block; width: 50%; padding: 24px; float: right">
+              <div style="display:block; width: 50%; word-wrap: break-word; padding: 24px; float: right">
                 <div style="margin-bottom: 64px" class="center-content"><h3>Round Info</h3></div>
                 <div>
                   <div>
-                    <h6>Round ID</h6>
-                    <div>0x00</div>
+                    <h5>Round ID</h5>
+                    <div>{{ currentRoundInfo.roundId }}</div>
                   </div>
 
                   <div>
-                    <h6>Last Ticket Buyer</h6>
-                    <p>12</p>
+                    <h5>Last Ticket Buyer</h5>
+                    <p>{{ currentRoundInfo.currentLead | truncate }}</p>
                   </div>
 
                   <div>
-                    <h6>Total Ticket Boughts</h6>
-                    <p>1 BNB</p>
+                    <h5>Total Ticket Boughts</h5>
+                    <p>{{ currentRoundInfo.tickets | numeral }}</p>
                   </div>
 
                   <div>
-                    <h6>Round Started At</h6>
-                    <p>1 BNB</p>
+                    <h5>Round Started At</h5>
+                    <p>{{ currentRoundInfo.startAt | date }}</p>
                   </div>
 
                   <div>
-                    <h6>Round Ending At</h6>
-                    <p>1 BNB</p>
+                    <h5>Round Ending At</h5>
+                    <p>{{ currentRoundInfo.endAt | date }}</p>
                   </div>
                   <div>
-                    <h6>Soup Burn Fund</h6>
-                    <p>1 BNB</p>
+                    <h5>Burn Fund</h5>
+                    <p>{{ currentRoundInfo.burnFund | numeral }} BNB</p>
                   </div>
 
                 </div>
@@ -164,8 +166,7 @@
 
 
           <sweet-modal ref="success" icon="success">
-            <h1>{{ $t('airdrop.xbt_coming') }}</h1>
-            {{ $t('airdrop.thank_you') }}
+            <h1>Successfully</h1>
 
             <div class="mt-32">
               <vue-goodshare-facebook :quote="pageTitle" :page_title="pageTitle" :page_url="pageUrl" has_icon
@@ -188,15 +189,14 @@ import CLayout from '@/layouts/LayoutDefault.vue'
 import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
 import {SectionProps} from '@/utils/SectionProps.js'
 import moment from 'moment';
-// import CGenericSection from '@/components/sections/GenericSection.vue'
 import CButton from '@/components/elements/Button.vue'
 import {getWeb3Client} from "@/libs/web3";
-import {adjustParams, claimAirdrop, getParticipantStatus} from "@/libs/xbt-airdrop";
-import {getContractXBNFundBalance, getXBNBalance} from "@/libs/xbt";
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
-// import CImage from '@/components/elements/Image.vue'
+import {buyTicket, calcKeysReceived, getCurrentRoundInfo, getPlayerVault, withdraw} from "@/libs/xbn-lottery";
+import * as numeral from 'numeral';
+import _ from 'lodash';
 
 export default {
   name: 'AirDrop',
@@ -211,6 +211,27 @@ export default {
   },
   mixins: [SectionProps],
 
+  watch: {
+    amountBuy() {
+      this.getTicketReceive();
+    }
+  },
+
+  filters: {
+    date(value) {
+      return moment(value).format('llll');
+    },
+    numeral(val) {
+      return numeral(val).format('0,00.00000')
+    },
+    truncate(val) {
+      return _.truncate(val, {
+        'length': 15,
+        'omission': '...'
+      })
+    }
+  },
+
   created() {
     this.$emit('update:layout', CLayout);
 
@@ -224,13 +245,14 @@ export default {
       sectionHeader: {
         title: 'XBN Lottery',
       },
-      contractFundBalance: 0,
-      xbtBalance: 0,
-      waitingTime: 0,
       userAccount: null,
       walletClient: {},
       buyOption: 'bnb',
-      amountBuy: 0
+      amountBuy: 0,
+      playerVault: {},
+      currentRoundInfo: {},
+      priceFeedData: {},
+      estimatedTickets: 0
     }
   },
 
@@ -255,7 +277,11 @@ export default {
   },
 
   methods: {
-
+    async fetchPriceData() {
+      const bnbPrice = await fetch('https://api.diadata.org/v1/foreignQuotation/CoinMarketCap/BNB');
+      const priceFeed = await bnbPrice.json();
+      this.$set(this, 'priceFeedData', priceFeed);
+    },
     async connectWallet() {
       await this.handleGetClient();
       await this.handleGetInitialData();
@@ -278,34 +304,49 @@ export default {
       }
     },
 
+    async getPlayerVault() {
+      const walletClient = this.walletClient;
+      const playerVault = await getPlayerVault(walletClient.web3Client);
+      this.$set(this, 'playerVault', playerVault);
+    },
+
+    async getCurrentRoundInfo() {
+      const walletClient = this.walletClient;
+      const currentRoundInfo = await getCurrentRoundInfo(walletClient.web3Client);
+      this.$set(this, 'currentRoundInfo', currentRoundInfo);
+    },
+
+    async getTicketReceive() {
+      const walletClient = this.walletClient;
+
+      const result = await calcKeysReceived(
+          walletClient.web3Client,
+          {
+            roundId: this.currentRoundInfo.roundId,
+            amountInBNB: this.amountBuy
+          }
+      );
+
+      this.$set(this, 'estimatedTickets', result);
+    },
+
+    async withdraw() {
+      const walletClient = this.walletClient;
+      await withdraw(walletClient.web3Client);
+      this.$refs.success.open();
+    },
+
+    async buyTickets() {
+      const walletClient = this.walletClient;
+      await buyTicket(walletClient.web3Client, {amountBuy: this.amountBuy});
+      this.$refs.success.open();
+    },
+
     async fetchStatus() {
-      const walletClient = this.walletClient;
-      // Get balance
-      const receipt = await getXBNBalance(walletClient.web3Client);
-      this.$set(this, 'xbtBalance', receipt);
-
-      // Get participant status
-      const result = await getParticipantStatus(walletClient.web3Client);
-      this.$set(this, 'waitingTime', result.participantStatus * 1000);
-
-      // Get participant status
-      const contractFundBalance = await getContractXBNFundBalance(walletClient.web3Client);
-      this.$set(this, 'contractFundBalance', contractFundBalance);
+      this.getCurrentRoundInfo();
+      this.getPlayerVault();
+      this.fetchPriceData();
     },
-
-    async claimAirdrop() {
-      const walletClient = this.walletClient;
-      await claimAirdrop(walletClient.web3Client);
-      await this.fetchStatus();
-      this.$refs.success.open();
-    },
-
-    async adjustParams() {
-      const walletClient = this.walletClient;
-      await adjustParams(walletClient.web3Client);
-      await this.fetchStatus();
-      this.$refs.success.open();
-    }
   }
 }
 </script>
