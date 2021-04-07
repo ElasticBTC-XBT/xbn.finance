@@ -65,7 +65,7 @@
                 TICKETS
               </div>
               <div class="center-content" style="margin-top: 32px">
-                <el-button @click="buyTickets">Buy Tickets</el-button>
+                <el-button :disabled="!amountBuy || amountBuy > playerVault.currentBNBBalance" @click="buyTickets">Buy Tickets</el-button>
               </div>
             </div>
 
