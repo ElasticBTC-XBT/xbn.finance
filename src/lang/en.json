@@ -62,9 +62,9 @@
   },
   "home": {
     "hero_split": {
-      "title_1": "XBN · Elastic BNB  with Adaptive Supply",
-      "desc_1": "A rebasing cryptocurrency runs on Binance Smart Chain.",
-      "desc_2": "It's time to know about $XBN, it's stabilized to BNB's price by utilized the power of BSC's Smart Contract to adjust supply based on market condition.",
+      "title_1": "XBN · Elastic BNB · DeFi apps and Prediction Market",
+      "desc_1": "XBN's mission is powering Defi Apps on Binance Smart Chain",
+      "desc_2": "XBN utilizes the power of BSC's Smart Contract to achieve its goal: 1 XBN = 1 BNB",
       "desc_3": "",
       "buy_xbt": "Buy $XBN now"
     },
@@ -72,28 +72,29 @@
       "section_header_title": "What is Elastic BNB ($XBN)?",
       "section_data_upper": {
         "item_1": {
-          "title": "A special DeFi protocol",
-          "desc": "$XBN is forked from $AMPL, a DeFi protocol with an elastic supply model. The total supply of $XBN is constantly changing every day."
+          "title": "A special DeFi token",
+          "desc": "$XBN is using Artificial Intelligent technology to balancing its trading pool and increasing its price"
         },
         "item_2": {
-          "title": "Rebasing is randomized",
-          "desc": "To avoid price manipulation, $XBN rebasing is randomized with lag factor. $XBN will reach a supply-price equilibrium, the volatility is in the token supply, not the price."
+          "title": "Following the Defi Market",
+          "desc": "XBN pool automatically adjust everyday to optimize its earning by investing in other Defi tokens"
         },
         "item_3": {
           "title": "Price target of 1 $BNB",
-          "desc": "$XBN is designed to grow its base price target of 1 $BNB"
+          "desc": "$XBN's goal is to reach price target of 1 $BNB with just 6.5 million supply"
         },
         "item_4": {
-          "title": "With more holders, $XBN is still equal to $BNB but has the bigger market cap",
-          "desc": "$XBN Holders own a percentage of the network. Their holding values rise as market cap rises."
+          "title": "$XBN powers different Dapps",
+          "desc": "$XBN Holders can benefit not just from one but many different Dapps to be release every quarter"
         },
         "item_5": {
-          "title": "What is a rebase event?",
-          "desc": "A rebase event is the event of adjusting the balance of all wallets based on the current price of the coin related to the target price of 1 bitcoin"
+          "title": "What is Defi Dapps?",
+          "desc": "It refers to digital assets, financial smart contracts, protocols, and dapps predominantly built on Binance Smart Chain"
         },
         "item_6": {
-          "title": "What is rebase lag factor?",
-          "desc": "The Rebase Lag Factor helps to smooth changes, a lower Lag Factor means faster adjustments and vise versa"
+          "title": "What is prediction market?",
+
+          "desc": "also known as information markets or virtual markets are exchange-traded markets created for the purpose of trading the outcome of events. "
         }
       }
     },
@@ -123,14 +124,14 @@
     "features_split": {
       "section_header": {
         "title": "Learn about $XBN",
-        "paragraph": "$XBN is a cryptocurrency like BNB which runs on Binance Smart Chain, its price target of BNB and its supply change daily"
+        "paragraph": "$XBN is a cryptocurrency like BNB which runs on Binance Smart Chain, its price target of BNB"
       },
-      "title_1": "Adaptive Supply",
+      "title_1": "Artificial Intelligence",
       "title_2": "Risk diversification",
       "title_3": "A trading instrument",
-      "desc_1": "Your percent ownership of the XBN network remains fixed no matter how supply changes.",
-      "desc_2": "This reduce risk of correlation of Altcoins (such as BNB, LINK...) and BNB in your porfolio because their is 30 days lag between XBN's and BNB's prices.",
-      "desc_3": "As a trading instrument, XBN has many advantages, own XBN you can catch the hype of BNB's price growth, but also reduce the risk when BNB takes quick dive because of lag factor."
+      "desc_1": "At its core, XBN is running by complex multi-million USD AI bot system to balancing its trading pools to optimize return for holders",
+      "desc_2": "When investing into XBN, you are investing into the whole sophisticated ecosystem, which reduces risk of your altcoin portfolio",
+      "desc_3": "As a trading instrument, XBN has many advantages, own XBN you can catch the hype of BNB's price growth, but also reduce the risk when BNB takes quick dive because of smart pooling technology built by XBN"
     },
     "faq_data": {
       "item_2": {
@@ -148,6 +149,10 @@
       "item_5": {
         "title": "When will XBN appear on CoinGecko and CoinMarketCap",
         "answer": "We are applying for Coingecko and we are waiting for their approval. After we list XBN on another exchange we will be on CoinMarketCap"
+      },
+      "item_6": {
+        "title": "Where to ask questions about XBN?",
+        "answer": "You can check more QNA here on <a href='https://twitter.com/elasticbitcoin/status/1366224650536017922'>Twitter</a> "
       },
       "item_8": {
         "title": "How does the rebase work",
@@ -190,7 +195,7 @@
   "basic_split": {
     "section_header": {
       "title": "Learn about XBN",
-      "paragraph": "XBN is a cryptocurrency like BNB, its price target of 1 BNB and its supply change daily"
+      "paragraph": "XBN is a cryptocurrency like BNB, its price target of 1 BNB "
     },
     "section_contents": {
       "item_1": {
@@ -325,18 +330,18 @@
       "category": "announcement"
     },
     "item_5": {
-      "title": "Enable Staking",
-      "desc": "Enable staking XBN liquidity tokens",
+      "title": "Releasing First Dapps",
+      "desc": "On-chain fomo lottery",
       "category": "development"
     },
     "item_6": {
-      "title": "Publish whitepaper",
-      "desc": "The team will launch XBN Whitepaper for public audiences",
+      "title": "Releasing 2nd Dapps",
+      "desc": "On-chain price prediction market",
       "category": "research"
     },
     "item_7": {
-      "title": "Public launch",
-      "desc": "Launch XBN Foundation Fund",
+      "title": "Releasing 3rd Dapps",
+      "desc": "To be announced",
       "category": "launch"
     },
     "item_8": {

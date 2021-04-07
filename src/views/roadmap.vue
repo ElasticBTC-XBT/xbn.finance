@@ -60,8 +60,8 @@
                     />
 
                     <vue-timeline-update
-                            :dateString="getDateString('2021-01-31')"
-                            :date="new Date('2021-01-31')"
+                            :dateString="getDateString('2021-04-17')"
+                            :date="new Date('2021-04-15')"
                             :title="$t('road_map.item_5.title')"
                             :description="$t('road_map.item_5.desc')"
                             :category="$t('road_map.item_5.category')"
@@ -69,8 +69,8 @@
                     />
 
                     <vue-timeline-update
-                            :dateString="getDateString('2021-03-01')"
-                            :date="new Date('2021-03-01')"
+                            :dateString="getDateString('2021-06-17')"
+                            :date="new Date('2021-06-07')"
                             :title="$t('road_map.item_6.title')"
                             :description="$t('road_map.item_6.desc')"
                             :category="$t('road_map.item_6.category')"
@@ -78,7 +78,7 @@
                     />
 
                     <vue-timeline-update
-                            :dateString="getDateString('2021-04-17')"
+                            :dateString="getDateString('2021-08-17')"
                             :date="new Date('2021-04-17')"
                             :title="$t('road_map.item_7.title')"
                             :description="$t('road_map.item_7.desc')"
@@ -87,7 +87,7 @@
                     />
 
                     <vue-timeline-update
-                            :dateString="getDateString('2021-05-15')"
+                            :dateString="getDateString('2022-01-17')"
                             :date="new Date('2021-05-15')"
                             :title="$t('road_map.item_8.title')"
                             :description="$t('road_map.item_8.desc')"

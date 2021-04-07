@@ -19,6 +19,14 @@
                 </li>
               <li>
                 <a class="flex-center"
+                   href="https://dexbeta.julswap.com/trading/0x7f80315c631ac59d633bceb27f80d209f7d6c254"
+                   target="_blank">
+                  <c-image height="24" :src="require('@/assets/images/julswap.png')"></c-image>
+
+                </a>
+              </li>
+              <li>
+                <a class="flex-center"
                    href="https://goswapp-bsc.web.app/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac"
                    target="_blank">
                   <c-image width="24" height="24" :src="require('@/assets/images/goswap.png')"></c-image>

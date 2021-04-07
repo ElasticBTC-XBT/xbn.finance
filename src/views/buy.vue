@@ -22,8 +22,16 @@
                             <div class="button-group">
                                 <c-button tag="a" color="primary" wide-mobile target="_blank"
                                           href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac">
-                                    Buy XBN
+                                    Buy XBN on Pancake
                                 </c-button>
+                              <c-button tag="a" color="primary" wide-mobile target="_blank"
+                                        href="https://dexbeta.julswap.com/trading/0x7f80315c631ac59d633bceb27f80d209f7d6c254">
+                                Buy XBN on Julswap
+                              </c-button>
+                              <c-button tag="a" color="primary" wide-mobile target="_blank"
+                                        href="https://1inch.exchange/#/BUSD/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac?network=56">
+                                Buy XBN on 1inch
+                              </c-button>
 
                             </div>
                         </div>
