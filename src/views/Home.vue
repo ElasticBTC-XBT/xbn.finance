@@ -76,10 +76,11 @@ export default {
           "title": v.$t('home.faq_data.item_5.title'),
           "answer": v.$t('home.faq_data.item_5.answer')
         },
+        {
+          "title": v.$t('home.faq_data.item_6.title'),
+          "answer": v.$t('home.faq_data.item_6.answer')
+        },
         // {
-        //   "title": v.$t('home.faq_data.item_8.title'),
-        //   "answer": v.$t('home.faq_data.item_8.answer')
-        // }, {
         //   "title": v.$t('home.faq_data.item_9.title'),
         //   "answer": v.$t('home.faq_data.item_9.answer')
         // }, {

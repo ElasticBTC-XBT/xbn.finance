@@ -150,6 +150,10 @@
         "title": "When will XBN appear on CoinGecko and CoinMarketCap",
         "answer": "We are applying for Coingecko and we are waiting for their approval. After we list XBN on another exchange we will be on CoinMarketCap"
       },
+      "item_6": {
+        "title": "Where to ask questions about XBN?",
+        "answer": "You can check more QNA here on <a href='https://twitter.com/elasticbitcoin/status/1366224650536017922'>Twitter</a> "
+      },
       "item_8": {
         "title": "How does the rebase work",
         "answer": "The rebase happens randomly after 24 hours since the last rebase. The rebase alters every wallets balance by a calculated percentage. If the price is above $BNB 1.05 the rebase is positive and balances increase; if the price is below $BNB 0.95 the rebase is negative and balances decrease.The rebase automatically changes the balance in your wallet. You do not have to stake or do anything. Every wallet where you have access to your private keys is supported"
