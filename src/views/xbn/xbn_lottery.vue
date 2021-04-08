@@ -13,8 +13,11 @@
                     topDivider && 'has-top-divider',
                     bottomDivider && 'has-bottom-divider'
                 ]">
-
                     <div v-if="userAccount">
+
+                        <h1 class="title-main">
+                           XBN FomoLotto
+                        </h1>
 
                         <div class="card-wrapper winner-lottery-wrapper">
 
@@ -351,7 +354,7 @@
         data() {
             return {
                 sectionHeader: {
-                    title: 'XBN Lottery',
+                    title: 'FomoLotto',
                 },
                 userAccount: null,
                 walletClient: {},
@@ -650,6 +653,11 @@
         color: white;
         border-radius: 5px;
         padding: 5px;
+    }
+
+    .title-main {
+        margin-bottom: 100px;
+        text-align: center;
     }
 
     @media screen and (max-width: 800px) {
