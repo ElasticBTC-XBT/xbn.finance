@@ -56,13 +56,14 @@
 
             <div class="card-wrapper count-down-wrapper center-content"
                  v-if="(currentRoundInfo.timeLeft) > 0">
-              <p class="title">Countdown</p>
+              <p class="title">Countdown until we have new winner</p>
               <countdown :time="currentRoundInfo.timeLeft"
                          v-slot="{ days, hours, minutes, seconds }">
                 <div class="clock-display">
-                  <span>{{ days }} : </span><span>{{ hours }} : </span><span>{{ minutes }} : </span><span>
-                                    {{ seconds }}
-                                  </span>
+                    <span>{{ days }} : </span>
+                    <span>{{ hours }} : </span>
+                    <span>{{ minutes }} : </span>
+                    <span> {{ seconds }}</span>
                 </div>
               </countdown>
             </div>
@@ -170,7 +171,7 @@
             </div>
 
             <div class="card-wrapper count-down-wrapper center-content current-pot-mobile">
-              <p class="title">Countdown</p>
+              <p class="title">Countdown until we have new winner</p>
               <countdown :time="currentRoundInfo.timeLeft"
                          v-slot="{ days, hours, minutes, seconds }">
                 <div class="clock-display">
