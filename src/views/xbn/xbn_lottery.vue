@@ -127,7 +127,7 @@
 
                 <p style="font-size: 16px">Cash to take :
                   <span class="pot-bold">
-                                  {{ currentRoundInfo.currentPot * priceFeedData.Price | numeral }} USD
+                                  {{ currentRoundInfo.currentPot * priceFeedData.RAW.BNB.USD.PRICE | numeral }} USD
                                   </span>
                 </p>
 
@@ -153,7 +153,7 @@
 
                 <p style="font-size: 16px">Cash to take :
                   <span class="pot-bold">
-                                  {{ currentRoundInfo.currentPot * priceFeedData.Price | numeral }} USD
+                                  {{ currentRoundInfo.currentPot * priceFeedData.RAW.BNB.USD.PRICE | numeral }} USD
                                    </span>
                 </p>
 
@@ -427,7 +427,7 @@ export default {
 
   methods: {
     async fetchPriceData() {
-      const bnbPrice = await fetch('https://api.diadata.org/v1/quotation/BNB');
+      const bnbPrice = await fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BNB&tsyms=USD');
       const priceFeed = await bnbPrice.json();
       this.$set(this, 'priceFeedData', priceFeed);
     },
