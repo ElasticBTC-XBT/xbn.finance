@@ -427,7 +427,7 @@ export default {
 
   methods: {
     async fetchPriceData() {
-      const bnbPrice = await fetch('https://api.diadata.org/v1/foreignQuotation/CoinMarketCap/BNB');
+      const bnbPrice = await fetch('https://api.diadata.org/v1/quotation/BNB');
       const priceFeed = await bnbPrice.json();
       this.$set(this, 'priceFeedData', priceFeed);
     },
