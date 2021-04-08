@@ -23,7 +23,8 @@
 
             </b>
           </p><p style="text-align: center">
-            <b>Hot<img src="https://i.imgur.com/jmPNlwr.png" style="width: 30px;  display: inline"/>: Now you can buy XBN <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac" target="_blank">here on PancakeSwap</a>.
+            <b>Hot<img src="https://i.imgur.com/jmPNlwr.png" style="width: 30px;  display: inline"/>:
+              Now you can buy XBN <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac" target="_blank">here on PancakeSwap</a> or win big <a href="https://www.xbn.finance/xbn/lottery/" target="_blank">FomoLotto here</a>!
             </b>
           </p>
           <div v-if="userAccount">
