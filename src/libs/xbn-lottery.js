@@ -66,6 +66,39 @@ export const getCurrentRoundInfo = async (web3Client) => {
     }
 }
 
+export const getRoundInfo = async (web3Client, _roundId) => {
+    const contract = await getLottoContract(web3Client);
+    const result = await contract.methods.getRoundInfo(
+        _roundId.toString()
+    ).call();
+    const burnFund = await contract.methods.burnFund_().call();
+    const timeLeft = await contract.methods.getTimeLeft().call();
+
+    const {
+        '0': roundId,
+        '1': tickets,
+        '2': endedAt,
+        '3': startAt,
+        '4': currentPot,
+        '5': totalSpent,
+        '6': currentLead
+    } = result;
+
+    console.log({result});
+
+    return {
+        roundId,
+        tickets: tickets / ticketDecimal,
+        endAt: endedAt * 1000,
+        startAt: startAt * 1000,
+        timeLeft: timeLeft * 1000,
+        currentPot: web3Client.utils.fromWei(currentPot.toString(), 'ether'),
+        totalSpent: web3Client.utils.fromWei(totalSpent.toString(), 'ether'),
+        burnFund: web3Client.utils.fromWei(burnFund.toString(), 'ether'),
+        currentLead: currentLead
+    }
+}
+
 export const calcKeysReceived = async (web3Client, {roundId, amountInBNB}) => {
     const contract = await getLottoContract(web3Client);
 
