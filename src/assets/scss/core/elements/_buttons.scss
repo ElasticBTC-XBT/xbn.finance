@@ -91,9 +91,9 @@
 }
 
 .button-primary {
-	color: color(button-primary);
-    background-color: color-bg(button-primary);
-	border-color: color-border(button-primary);
+	color: color(button-primary) !important;
+    background-color: color-bg(button-primary) !important;
+	border-color: transparent !important;
 
     &:hover {
         background-color: color-bg(button-primary-hover);
@@ -106,7 +106,12 @@
 			border-color: color(button-primary);
 		}
 	}
+
+	&.is-disabled {
+		opacity: 0.5;
+	}
 }
+
 
 .button-secondary {
 	color: color(button-secondary);
