@@ -412,7 +412,7 @@
                     if (isNaN(val))
                         return 0
                     else {
-                        let parse = parseFloat(val) * 0.9
+                        let parse = parseFloat(parseFloat(val).toFixed(6)) * 0.9
                         return parse
                     }
                 } else {
