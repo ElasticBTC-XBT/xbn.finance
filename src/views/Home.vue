@@ -9,7 +9,7 @@
       <fragment>
         <c-hero-split image-fill/>
         <c-features-tiles/>
-        <c-testimonial class="illustration-section-03"/>
+<!--        <c-testimonial class="illustration-section-03"/>-->
         <c-features-split invert-mobile image-fill class="illustration-section-05"/>
         <c-generic-section top-divider>
           <div class="container-xs">
