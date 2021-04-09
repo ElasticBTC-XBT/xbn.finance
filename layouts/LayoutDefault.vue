@@ -1,5 +1,6 @@
 <template>
     <fragment>
+        <c-ribbon/>
         <c-header navPosition="right" />
         <main class="site-content">
             <slot />
@@ -11,8 +12,10 @@
 <script>
 import CHeader from '@/components/layout/Header.vue'
 import CFooter from '@/components/layout/Footer.vue'
+import CRibbon from "../src/components/layout/Ribbon";
 export default {
   components: {
+      CRibbon,
     CHeader,
     CFooter
   }
