@@ -91,6 +91,8 @@
               <div class="mb-24 estimated-ticket">
                 WILL GET YOU APPROXIMATELY :
                 <b>{{ estimatedTickets | numeral }} TICKETS</b>
+                <br/>
+                You only have chance to win if buying >=1 ticket
               </div>
 
               <div class="center-content" style="margin-top: 32px">
