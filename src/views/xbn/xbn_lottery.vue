@@ -26,13 +26,13 @@
 
                                 <p style="font-size: 16px">Current Pot :
                                     <span class="pot-bold">
-                                    {{ currentRoundInfo.currentPot | numeral }} BNB
+                                    {{ currentPotDisplay | numeral }} BNB
                                   </span>
                                 </p>
 
                                 <p style="font-size: 16px">Cash to take :
                                     <span class="pot-bold">
-                                  {{ currentRoundInfo.currentPot * priceFeedData.RAW.BNB.USD.PRICE | numeral }} USD
+                                  {{ cashToTakeDisplay | numeral }} USD
                                    </span>
                                 </p>
 
@@ -144,32 +144,6 @@
                                         </a>
                                     </div>
                                 </div>
-
-                                <!--              <div class="card-wrapper current-pot current-pot-wrapper">-->
-                                <!--                <p class="title">Current Pot to win</p>-->
-
-                                <!--                <p style="font-size: 16px">Current Pot :-->
-                                <!--                  <span class="pot-bold">-->
-                                <!--                                  {{ currentRoundInfo.currentPot | numeral }} BNB-->
-                                <!--                                    </span>-->
-                                <!--                </p>-->
-
-                                <!--                <p style="font-size: 16px">Cash to take :-->
-                                <!--                  <span class="pot-bold">-->
-                                <!--                                  {{ currentRoundInfo.currentPot * priceFeedData.RAW.BNB.USD.PRICE | numeral }} USD-->
-                                <!--                                  </span>-->
-                                <!--                </p>-->
-
-                                <!--                <p class="blink_text blink_me" style="font-style: italic;">-->
-                                <!--                  <a :href="'https://bscscan.com/address/' + currentRoundInfo.currentLead"-->
-                                <!--                     target="_blank"-->
-                                <!--                     style="color: red!important;">-->
-                                <!--                    {{ currentRoundInfo.currentLead | truncate }}-->
-                                <!--                    is going to take the pot if he is last one to buy ticket-->
-                                <!--                  </a>-->
-                                <!--                </p>-->
-                                <!--              </div>-->
-
                             </div>
                         </div>
 
@@ -201,7 +175,7 @@
 
                                     <div>
                                         <p class="title-1">Your Earnings</p>
-                                        <p class="title-2">{{ PlayerGeneralDisplay | numeral }} BNB
+                                        <p class="title-2">{{ playerGeneralDisplay | numeral }} BNB
                                         </p>
                                         <!--                                        <p class="text-warning">Note: You will only receive 90% of this value.</p>-->
                                     </div>
@@ -401,11 +375,36 @@
             availableToClaim() {
                 return new Date() >= new Date(this.waitingTime);
             },
-            PlayerGeneralDisplay() {
-                console.log('player:')
-                console.log(this.playerVault)
-
+            playerGeneralDisplay() {
                 let val = this.playerVault.general
+
+                if (val) {
+                    if (isNaN(val))
+                        return 0
+                    else {
+                        let parse = parseFloat(parseFloat(val).toFixed(6)) * 0.9
+                        return parse
+                    }
+                } else {
+                    return 0
+                }
+            },
+            currentPotDisplay() {
+                let val = this.currentRoundInfo.currentPot
+
+                if (val) {
+                    if (isNaN(val))
+                        return 0
+                    else {
+                        let parse = parseFloat(parseFloat(val).toFixed(6)) * 0.9
+                        return parse
+                    }
+                } else {
+                    return 0
+                }
+            },
+            cashToTakeDisplay() {
+                let val = this.currentRoundInfo.currentPot * this.priceFeedData.RAW.BNB.USD.PRICE
 
                 if (val) {
                     if (isNaN(val))
