@@ -78,7 +78,7 @@
                                 <div class="center-content" style="margin-top: 32px">
                                     <el-button :loading="loadingBuy"
                                                class="button-primary"
-                                               :disabled="!amountBuy || amountBuy > playerVault.currentBNBBalance"
+                                               :disabled="estimatedTickets < 1|| !amountBuy || amountBuy > playerVault.currentBNBBalance"
                                                @click="buyTickets">Buy Tickets
                                     </el-button>
                                 </div>
@@ -120,8 +120,7 @@
                         </div>
 
                         <div class="display-flex justify-center-between mt-60 mt-sm-0">
-                            <div class="card-wrapper count-down-wrapper center-content"
-                                 v-if="(currentRoundInfo.timeLeft) > 0">
+                            <div class="card-wrapper count-down-wrapper center-content">
                                 <p class="title">Countdown until we have new winner</p>
                                 <countdown :time="currentRoundInfo.timeLeft"
                                            v-slot="{ days, hours, minutes, seconds }">
@@ -609,6 +608,7 @@
 
     .buy-ticket-wrapper {
         max-width: 45%;
+        width: 45%;
     }
 
     .buy-ticket-wrapper .text-warning {

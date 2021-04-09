@@ -4,8 +4,7 @@
             <div class="ribbon-container">
                 <h2 class="ribbon">
                     <div class="ribbon-content">
-                        <router-link to="/xbn/lottery/">FomoLotto is out, win your pot now!</router-link>
-
+                        <router-link to="/xbn/lottery/" class="no-hover">FomoLotto is out, win your pot now!</router-link>
                     </div>
                 </h2>
             </div>
@@ -56,6 +55,11 @@
         text-shadow: 6px 4px 3px rgba(0, 0, 0, 0.5);
         line-height: 1.0;
         margin: 0 0 20px;
+    }
+
+    .no-hover:hover {
+        color: white!important;
+        cursor: pointer;
     }
 
     .ribbon-container {
@@ -140,24 +144,6 @@
         color: hsl(30, 90%, 43%);
     }
 
-    .underpage {
-        background: #f4f4f4 url(http://portfolio.queenofwhisks.com/demo/overlay/noise-paper.png);
-        box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.25);
-        box-sizing: border-box;
-        color: #444;
-        font-family: Garamond, 'Goudy Old Style', Times, 'Times New Roman', serif;
-        line-height: 1.5;
-        margin: 0 auto;
-        padding: 4.5em 1.5em 1.5em;
-        position: relative;
-        top: -4em;
-        width: 65%;
-        z-index: -1;
-    }
-
-    .underpage p:last-child {
-        margin-bottom: 0;
-    }
 
     @media screen and (max-width: 800px) {
         .ribbon {
