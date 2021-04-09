@@ -204,7 +204,7 @@
                                         <p class="title-1">Your Earnings</p>
                                         <p class="title-2">{{ PlayerGeneralDisplay | numeral }} BNB
                                         </p>
-<!--                                        <p class="text-warning">Note: You will only receive 90% of this value.</p>-->
+                                        <!--                                        <p class="text-warning">Note: You will only receive 90% of this value.</p>-->
                                     </div>
 
                                     <!--                                    <div>-->
@@ -403,12 +403,20 @@
                 return new Date() >= new Date(this.waitingTime);
             },
             PlayerGeneralDisplay() {
+                console.log('player:')
+                console.log(this.playerVault)
+
                 let val = this.playerVault.general
-                if (isNaN(val))
+
+                if (val) {
+                    if (isNaN(val))
+                        return 0
+                    else {
+                        let parse = parseFloat(val) * 0.9
+                        return parse
+                    }
+                } else {
                     return 0
-                else {
-                    let parse = parseFloat(val) * 0.9
-                    return parse
                 }
             }
         },
@@ -422,7 +430,7 @@
             }, 1000);
 
             setInterval(function () {
-              v.fetchStatus();
+                v.fetchStatus();
             }, 5000);
 
         },
