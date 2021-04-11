@@ -405,19 +405,25 @@
                 }
             },
             cashToTakeDisplay() {
-                let val = this.currentRoundInfo.currentPot * this.priceFeedData.RAW.BNB.USD.PRICE
+              try {
+                  let val = this.currentRoundInfo.currentPot * this.priceFeedData.RAW.BNB.USD.PRICE
 
-                if (val) {
+                  if (val) {
                     if (isNaN(val))
-                        return 0
+                      return 0
                     else {
-                        let parse = parseFloat(parseFloat(val).toFixed(6)) * 0.9
-                        return parse
+                      let parse = parseFloat(parseFloat(val).toFixed(6)) * 0.9
+                      return parse
                     }
-                } else {
+                  } else {
                     return 0
+                  }
                 }
+              catch(error){
+                return 0;
+              }
             }
+
         },
 
         mounted() {
