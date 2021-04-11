@@ -513,8 +513,8 @@
                     const walletClient = this.walletClient;
                     this.loadingBuy = true;
 
-                    if (this.amountBuy < 0.0017){
-                      this.amountBuy = 0.0017
+                    if (this.amountBuy < 0.0037){
+                      this.amountBuy = 0.0037
                     }
                     await buyTicket(walletClient.web3Client, {amountBuy: this.amountBuy});
                     this.loadingBuy = false;
