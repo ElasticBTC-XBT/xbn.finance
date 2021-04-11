@@ -69,7 +69,7 @@
                                 </div>
                                 <div class="estimated-ticket">
                                     WILL GET YOU APPROXIMATELY :
-                                    <b style="color: black">{{ estimatedTickets | numeral }} TICKETS</b>
+                                    <b style="color: black">{{ estimatedTickets * 0.9 | numeral }} TICKETS</b>
                                 </div>
                                 <div class="text-warning">
                                     You only have chance to win if buying >=1 ticket
