@@ -214,6 +214,7 @@
                   <div>
                     <p class="title-1">Your Earnings</p>
                     <p class="title-2">{{ playerVault.general | numeral }} BNB</p>
+                    <p class="title-2">Make sure increase gas when withdraw earnings to avoid network congestion!</p>
                   </div>
 
                   <!--                                    <div>-->
