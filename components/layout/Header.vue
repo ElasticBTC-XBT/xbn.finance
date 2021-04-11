@@ -1,5 +1,6 @@
 <template>
     <header class="site-header">
+        <c-ribbon/>
         <div class="container">
             <div class="site-header-inner" :class="bottomDivider && 'has-bottom-divider'">
                 <c-logo />
@@ -65,10 +66,12 @@
 <script>
 import CLogo from '@/components/layout/partials/Logo.vue'
 import CButton from '@/components/elements/Button.vue'
+import CRibbon from "../../src/components/layout/Ribbon";
 
 export default {
   name: 'CHeader',
   components: {
+      CRibbon,
     CLogo,
     CButton
   },
