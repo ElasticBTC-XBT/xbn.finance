@@ -177,6 +177,7 @@
                                         <p class="title-1">Your Earnings</p>
                                         <p class="title-2">{{ playerGeneralDisplay | numeral }} BNB
                                         </p>
+                                      <p>Make sure increase gas when withdrawing earnings to avoid network congestion!</p>
                                         <!--                                        <p class="text-warning">Note: You will only receive 90% of this value.</p>-->
                                     </div>
 
