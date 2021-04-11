@@ -30,7 +30,7 @@
                                   </span>
                                 </p>
 
-                                <p style="font-size: 16px">Cash to take :
+                                <p style="font-size: 16px" v-if="cashToTakeDisplay>0">Cash to take :
                                     <span class="pot-bold">
                                   {{ cashToTakeDisplay | numeral }} USD
                                    </span>
