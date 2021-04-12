@@ -351,7 +351,7 @@
                 userAccount: null,
                 walletClient: {},
                 buyOption: 'bnb',
-                amountBuy: 0.017,
+                amountBuy: 0.17,
                 playerVault: {},
                 currentRoundInfo: {},
                 previousRoundInfo: {},
