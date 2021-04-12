@@ -420,6 +420,7 @@
                   }
                 }
               catch(error){
+                console.error(`#423 ${error}`)
                 return 0;
               }
             }
