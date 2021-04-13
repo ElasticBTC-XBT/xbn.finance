@@ -41,7 +41,7 @@
                                        target="_blank"
                                        style="color: red!important;">
                                         {{ currentRoundInfo.currentLead | truncate }}
-                                        is going to take the pot if he is last one to buy ticket
+                                        is going to take the pot if s/he is the last one to buy ticket
                                     </a>
                                 </p>
 
@@ -351,7 +351,7 @@
                 userAccount: null,
                 walletClient: {},
                 buyOption: 'bnb',
-                amountBuy: 0.01,
+                amountBuy: 0.17,
                 playerVault: {},
                 currentRoundInfo: {},
                 previousRoundInfo: {},
