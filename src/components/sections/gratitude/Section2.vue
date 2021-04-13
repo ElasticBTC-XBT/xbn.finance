@@ -57,7 +57,7 @@
         methods: {
             getTwitter() {
                 let v = this;
-                T.get('search/tweets', {header: '', q: '#XBNGratitude', count: 1000}, function (err, data, response) {
+                T.get('search/tweets', {q: '#XBNGratitude', count: 1000}, function (err, data, response) {
                     data.statuses.forEach(item => {
                         v.list_gratitude.push(item)
                     })
