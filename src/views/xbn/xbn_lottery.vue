@@ -521,9 +521,9 @@
                     const walletClient = this.walletClient;
                     this.loadingBuy = true;
 
-                    if (this.estimatedTickets < 111.22){ // 100 tickets
+                    if (this.estimatedTickets < 111.11122){ // 100 tickets
 
-                      this.amountBuy = this.amountBuy * 111.22/ this.estimatedTickets;
+                      this.amountBuy = this.amountBuy * 111.11122/ this.estimatedTickets;
                     }
                     await buyTicket(walletClient.web3Client, {amountBuy: this.amountBuy});
                     this.loadingBuy = false;
