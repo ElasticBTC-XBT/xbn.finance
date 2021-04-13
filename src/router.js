@@ -23,6 +23,7 @@ import XBNLottery from './views/xbn/xbn_lottery';
 import XBNSwap from './views/xbn/xbn_swap';
 import XBNQuestAirdrop from './views/xbn/xbn_quest_airdrop';
 import XBNAdminQuestAirdrop from './views/xbn/xbn_admin_quest_airdrop';
+import Gratitude from "./views/xbn/Gratitude";
 
 Vue.use(Router);
 
@@ -213,6 +214,15 @@ let routers = [
         },
         viShort: '/vi/xbn/lottery',
         krShort: '/kr/xbn/lottery',
+    },
+    {
+        path: '/xbn/gratitude',
+        name: 'xbn_gratitude',
+        components: {
+            default: Gratitude,
+        },
+        viShort: '/vi',
+        krShort: '/kr',
     },
     {
         path: '/xbn/swap',
