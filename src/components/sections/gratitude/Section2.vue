@@ -41,7 +41,7 @@
 <script>
     import {SectionSplitProps} from '@/utils/SectionProps.js'
 
-    import {Tweet, Moment, Timeline} from 'vue-tweet-embed'
+    import {Tweet} from 'vue-tweet-embed'
 
     export default {
         name: 'GratitudeSection2',

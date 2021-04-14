@@ -135,7 +135,6 @@ const subscribeEventChange = async (web3Client, eventName, callback) => {
             result.topics.slice(1)
         );
 
-        // console.log(`New ${eventName}!`, eventObj)
         if (typeof callback === "function") callback(eventObj);
     });
 

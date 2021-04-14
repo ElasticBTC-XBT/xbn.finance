@@ -24,7 +24,7 @@ exports.getPosts = (req, res) => {
     });
 
     T.get('search/tweets', {header: '', q: '#XBNGratitude', count: 1000}, function (err, data, response) {
-        // console.log(data)
+
         res.status(200).send(data);
     })
     // let message = req.query.message || req.body.message || 'Hello World!';

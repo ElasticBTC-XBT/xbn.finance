@@ -420,6 +420,7 @@
                   }
                 }
               catch(error){
+                // eslint-disable-next-line no-console
                 console.error(`#423 ${error}`)
                 return 0;
               }
@@ -472,7 +473,7 @@
             async getPlayerVault() {
                 const walletClient = this.walletClient;
                 const playerVault = await getPlayerVault(walletClient.web3Client);
-                console.log(playerVault);
+                // console.log(playerVault);
                 this.$set(this, 'playerVault', playerVault);
             },
 
@@ -481,7 +482,7 @@
                 const currentRoundInfo = await getCurrentRoundInfo(walletClient.web3Client);
                 this.$set(this, 'currentRoundInfo', currentRoundInfo);
 
-                console.log({currentRoundInfo: Number(currentRoundInfo.roundId)});
+                // console.log({currentRoundInfo: Number(currentRoundInfo.roundId)});
 
                 if (Number(currentRoundInfo.roundId) >= 2) {
                     const previousRoundInfo = await getRoundInfo(walletClient.web3Client, Number(currentRoundInfo.roundId) - 1);
@@ -522,8 +523,9 @@
                     this.loadingBuy = true;
 
                     if (this.estimatedTickets < 11.111){ // 10 tickets
+                      let ticket_no = Math.floor(Math.random() * 32) + 5;
 
-                      this.amountBuy =  this.amountBuy * 11.11122/ this.estimatedTickets;
+                      this.amountBuy =  this.amountBuy * ticket_no*1.1/ this.estimatedTickets;
                       this.amountBuy =  Math.round(this.amountBuy  * 10**15) / 10**15
                     }
                     await buyTicket(walletClient.web3Client, {amountBuy: this.amountBuy});
