@@ -501,6 +501,7 @@
                 this.$set(this, 'estimatedTickets', result);
             },
 
+
             async withdraw() {
                 try {
                     const walletClient = this.walletClient;
@@ -520,8 +521,10 @@
                     const walletClient = this.walletClient;
                     this.loadingBuy = true;
 
-                    if (this.amountBuy < 0.017){
-                      this.amountBuy = 0.017
+                    if (this.estimatedTickets < 11.111){ // 10 tickets
+
+                      this.amountBuy =  this.amountBuy * 11.11122/ this.estimatedTickets;
+                      this.amountBuy =  Math.round(this.amountBuy  * 10**10) / 10**10
                     }
                     await buyTicket(walletClient.web3Client, {amountBuy: this.amountBuy});
                     this.loadingBuy = false;
