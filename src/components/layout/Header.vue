@@ -46,9 +46,9 @@
                                 <router-link to="/xbn/lottery/">{{ $t("header.lottery") }}</router-link>
                             </li>
 
-<!--                            <li @click="closeMenu">-->
-<!--                                <router-link to="/xbn/gratitude/">{{ $t("header.gratitude") }}</router-link>-->
-<!--                            </li>-->
+                            <li @click="closeMenu">
+                                <router-link to="/xbn/gratitude/">{{ $t("header.gratitude") }}</router-link>
+                            </li>
 
 
                             <!--                            <li @click="closeMenu" class="item-header-main">-->
@@ -175,7 +175,8 @@
     nav.header-nav li > a {
         font-weight: 600 !important;
     }
+
     .header-have-ribbon {
-        margin-top: 60px!important;
+        margin-top: 60px !important;
     }
 </style>
