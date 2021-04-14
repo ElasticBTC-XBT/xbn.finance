@@ -29,17 +29,12 @@
                             <br/>
                             <br/>
                         </p>
-                        <div class="reveal-from-left">
-                            <c-button tag="a" color="primary" wide-mobile href="/buy">
-                                {{ $t('home.hero_split.buy_xbt') }}
-                            </c-button>
-                        </div>
                     </div>
                     <div class="hero-figure is-3d split-item-image illustration-element-01 reveal-scale-up">
                         <c-image
                                 id="big-banner-logo"
                                 class="has-shadow"
-                                :src="require('@/assets/images/banner.png')"
+                                :src="require('@/assets/images/growing-heart-emoji.png')"
                                 alt="Hero image"
                                 :width="528"
                                 :height="396"/>

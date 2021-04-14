@@ -16,7 +16,9 @@
                     ]">
 
                 <div class="main-title">
-                    LIST TWEET FOR #XBNGratitude HASHTAG
+                    <a href="https://twitter.com/hashtag/XBNGratitude">
+                        #XBNGratitude
+                    </a>
                 </div>
 
 
