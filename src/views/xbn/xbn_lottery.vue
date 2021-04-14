@@ -521,7 +521,7 @@
                     const walletClient = this.walletClient;
                     this.loadingBuy = true;
 
-                    if (this.estimatedTickets < 11.11122){ // 100 tickets
+                    if (this.estimatedTickets < 11.111){ // 10 tickets
 
                       this.amountBuy = this.amountBuy * 11.11122/ this.estimatedTickets;
                     }
