@@ -1,22 +1,37 @@
 <template>
 
-    <div class="container hero">
+    <div class="container hero" v-loading="loading_get_tweet">
 
-        <div v-if="list_gratitude.length > 0">
-            <div class="main-title">
-                LIST TWEET FOR #XBNGratitude HASHTAG
-            </div>
+        <div
+                class="hero-inner section-inner"
+                :class="[
+                    topDivider && 'has-top-divider',
+                    bottomDivider && 'has-bottom-divider'
+                ]">
+            <div
+                    class="split-wrap"
+                    :class="[
+                        invertMobile && 'invert-mobile',
+                        invertDesktop && 'invert-desktop'
+                    ]">
 
-            <div class="list-twitter-wrapper">
-                <div class="item-twitter">
-                    <tweet v-for="(item,index) in list_gratitude" :id="item.id_str" :key="index"></tweet>
+                <div class="main-title">
+                    LIST TWEET FOR #XBNGratitude HASHTAG
                 </div>
-            </div>
-        </div>
 
-        <div v-else>
-            <div class="main-title">
-                DO NOT HAVE ANY TWEET FOR #XBNGratitude HASHTAG
+
+                <div class="list-twitter-wrapper" v-if="list_gratitude.length > 0">
+                    <div class="item-twitter">
+                        <tweet v-for="(item,index) in list_gratitude" :id="item.id_str" :key="index"></tweet>
+                    </div>
+                </div>
+
+                <div v-else>
+                    <div class="main-title not-tweet">
+                        Do not have any tweet for #XBNGratitude Hashtag
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -38,14 +53,17 @@
         mixins: [SectionSplitProps],
         data() {
             return {
-                list_gratitude: []
+                list_gratitude: [],
+                loading_get_tweet: false
             }
         },
         methods: {
             async getTwitter() {
+                this.loading_get_tweet = true
                 let fetch_tweet = await fetch('https://us-central1-get-twitter-pot-with-string.cloudfunctions.net/get-twitter-post-with-string');
                 let list_tweet = await fetch_tweet.json()
                 this.$set(this, 'list_gratitude', list_tweet.statuses);
+                this.loading_get_tweet = false
             }
         },
         mounted() {
@@ -68,7 +86,16 @@
         margin-bottom: 50px;
     }
 
+    .not-tweet {
+        font-size: 20px;
+    }
+
     .list-twitter-wrapper .twitter-tweet {
         margin: auto;
     }
+
+    .el-loading-spinner {
+        left: calc(50% - 21px) !important;
+    }
+
 </style>
