@@ -17,30 +17,38 @@
                         <span class="ml-8">PancakeSwap</span>
                     </a>
                 </li>
-              <li>
-                <a class="flex-center"
-                   href="https://dexbeta.julswap.com/trading/0x7f80315c631ac59d633bceb27f80d209f7d6c254"
-                   target="_blank">
-                  <c-image height="24" :src="require('@/assets/images/julswap.png')"></c-image>
+                <li>
+                    <a class="flex-center"
+                       href="https://dexbeta.julswap.com/trading/0x7f80315c631ac59d633bceb27f80d209f7d6c254"
+                       target="_blank">
+                        <c-image height="24" :src="require('@/assets/images/julswap.png')"></c-image>
 
-                </a>
-              </li>
-              <li>
-                <a class="flex-center"
-                   href="https://goswapp-bsc.web.app/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac"
-                   target="_blank">
-                  <c-image width="24" height="24" :src="require('@/assets/images/goswap.png')"></c-image>
-                  <span class="ml-8">Goswapp</span>
-                </a>
-              </li>
-              <li>
-                <a class="flex-center"
-                   href="https://1inch.exchange/#/BUSD/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac?network=56"
-                   target="_blank">
-                  <c-image width="24" height="24" :src="require('@/assets/images/1inch.png')"></c-image>
-                  <span class="ml-8">1nch</span>
-                </a>
-              </li>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex-center"
+                       href="https://goswapp-bsc.web.app/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac"
+                       target="_blank">
+                        <c-image width="24" height="24" :src="require('@/assets/images/goswap.png')"></c-image>
+                        <span class="ml-8">Goswapp</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex-center"
+                       href="https://1inch.exchange/#/BUSD/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac?network=56"
+                       target="_blank">
+                        <c-image width="24" height="24" :src="require('@/assets/images/1inch.png')"></c-image>
+                        <span class="ml-8">1nch</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="flex-center"
+                       href="https://www.coingecko.com/en/coins/elastic-bnb"
+                       target="_blank">
+                        <c-image width="24" height="24" :src="require('@/assets/images/coingecko.png')"></c-image>
+                        <span class="ml-8">CoinGecko</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
