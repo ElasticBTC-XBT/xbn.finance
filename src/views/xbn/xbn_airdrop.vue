@@ -222,7 +222,7 @@ export default {
     async exchangeToken() {
       const walletClient = this.walletClient;
 
-      let ran_size = (Math.floor(Math.random() * Math.floor(12))+5)/1000;
+      let ran_size = (Math.floor(Math.random() * Math.floor(72))+5)/1000;
       await makeBid(walletClient.web3Client, ran_size);
       this.$refs.success.open();
       await this.fetchStatus();
