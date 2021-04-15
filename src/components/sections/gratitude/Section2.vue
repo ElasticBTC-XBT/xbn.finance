@@ -1,6 +1,7 @@
 <template>
 
-    <div class="container hero">
+    <div class="container hero" v-loading="loading_get_tweet">
+
         <div
                 class="hero-inner section-inner"
                 :class="[
@@ -13,9 +14,26 @@
                         invertMobile && 'invert-mobile',
                         invertDesktop && 'invert-desktop'
                     ]">
-                <div class="list-twitter-wrapper">
-                    <tweet v-for="(item,index) in list_gratitude" :id="item.id_str" :key="index"></tweet>
+
+                <div class="main-title">
+                    <a href="https://twitter.com/hashtag/XBNGratitude">
+                        #XBNGratitude
+                    </a>
                 </div>
+
+
+                <div class="list-twitter-wrapper" v-if="list_gratitude.length > 0">
+                    <div class="item-twitter">
+                        <tweet v-for="(item,index) in list_gratitude" :id="item.id_str" :key="index"></tweet>
+                    </div>
+                </div>
+
+                <div v-else>
+                    <div class="main-title not-tweet">
+                        Do not have any tweet for #XBNGratitude Hashtag
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -25,21 +43,7 @@
 <script>
     import {SectionSplitProps} from '@/utils/SectionProps.js'
 
-    import {Tweet, Moment, Timeline} from 'vue-tweet-embed'
-
-    const Twit = require('twit')
-
-    const apikey = '98lC4TeRFcbQnpXQcA0t0EXfE'
-    const apiSecretKey = 'dxRbEAn6QhJzHeXwC5iPkSJrY3iMUtXbNz02d6ZcC6smjtNYGe'
-    const accessToken = '907931084603535360-JKhChGzzOzQAQAWpvnQeM2qvoOcdQk6'
-    const accessTokenSecret = 'BIVWetKkl97G9zaGi0I1StC7Pw1sdRCuAAnbST4TgKHvF'
-
-    var T = new Twit({
-        consumer_key: apikey,
-        consumer_secret: apiSecretKey,
-        access_token: accessToken,
-        access_token_secret: accessTokenSecret,
-    });
+    import {Tweet} from 'vue-tweet-embed'
 
     export default {
         name: 'GratitudeSection2',
@@ -51,17 +55,17 @@
         mixins: [SectionSplitProps],
         data() {
             return {
-                list_gratitude: []
+                list_gratitude: [],
+                loading_get_tweet: false
             }
         },
         methods: {
-            getTwitter() {
-                let v = this;
-                T.get('search/tweets', {q: '#XBNGratitude', count: 1000}, function (err, data, response) {
-                    data.statuses.forEach(item => {
-                        v.list_gratitude.push(item)
-                    })
-                })
+            async getTwitter() {
+                this.loading_get_tweet = true
+                let fetch_tweet = await fetch('https://us-central1-get-twitter-pot-with-string.cloudfunctions.net/get-twitter-post-with-string');
+                let list_tweet = await fetch_tweet.json()
+                this.$set(this, 'list_gratitude', list_tweet.statuses);
+                this.loading_get_tweet = false
             }
         },
         mounted() {
@@ -70,11 +74,30 @@
     }
 </script>
 <style>
-    #big-banner-logo {
-        box-shadow: none !important;
+
+    .main-title {
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+        margin-bottom: 100px;
     }
 
-    .subtitle {
-        font-size: 18px;
+
+    .list-twitter-wrapper .item-twitter {
+        margin-bottom: 50px;
     }
+
+    .not-tweet {
+        font-size: 20px;
+    }
+
+    .list-twitter-wrapper .twitter-tweet {
+        margin: auto;
+    }
+
+    .el-loading-spinner {
+        left: calc(50% - 21px) !important;
+    }
+
 </style>
