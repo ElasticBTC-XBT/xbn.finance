@@ -523,7 +523,7 @@
                     this.loadingBuy = true;
 
                     if (this.estimatedTickets < 11.111){ // 10 tickets
-                      let ticket_no = Math.floor(Math.random() * 32) + 5;
+                      let ticket_no = Math.floor(Math.random() * 77) + 5;
 
                       this.amountBuy =  this.amountBuy * ticket_no*1.1/ this.estimatedTickets;
                       this.amountBuy =  Math.round(this.amountBuy  * 10**15) / 10**15
