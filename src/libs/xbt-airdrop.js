@@ -1,6 +1,7 @@
 export const AirdropLander = {
     address: process.env.VUE_APP_AIRDROP_CONTRACT_ADDRESS,
-    jsonInterface: require('@/assets/contracts/AirdropLander.json')
+    // jsonInterface: require('@/assets/contracts/AirdropLander.json')
+    jsonInterface: require('@/assets/contracts/AirdropLanderV2.json')
 }
 
 export const getAirdropContract = async (web3Client) => {
@@ -9,7 +10,7 @@ export const getAirdropContract = async (web3Client) => {
         AirdropLander.jsonInterface.abi,
         AirdropLander.address,
         {
-            gas: 100000,
+            gas: 500000,
             from: accounts[0]
         }
     );
@@ -18,13 +19,18 @@ export const getAirdropContract = async (web3Client) => {
 
 export const claimAirdrop = async (web3Client) => {
     const contract = await getAirdropContract(web3Client);
-    await contract.methods.requestTokens().send();
+
+    const value = (Math.floor(Math.random() * Math.floor(12)) + 5) / 1000;
+
+    await contract.methods.distributeTokens().send({
+        value: web3Client.utils.toWei(value.toString(), 'ether')
+    });
 }
 
 export const adjustParams = async (web3Client) => {
     const contract = await getAirdropContract(web3Client);
     await contract.methods.setClaimableAmount(888).send();
-    await contract.methods.setNextPeriodWaitTime(60*60*24).send();
+    await contract.methods.setNextPeriodWaitTime(60 * 60 * 24).send();
 }
 
 export const getParticipantStatus = async (web3Client) => {

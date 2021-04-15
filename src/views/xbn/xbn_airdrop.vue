@@ -42,7 +42,7 @@
             <div class="container-xs">
               <div style="text-align: center;">
                 <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"
-                          @click="exchangeToken">
+                          @click="claimAirdrop">
                   {{ $t('airdrop.claim_xbt') }}
                 </c-button>
                 <!--c-button color="primary" wide-mobile target="_blank" @click="fetchStatus">
@@ -159,7 +159,8 @@ export default {
       return new Date() >= new Date(this.waitingTime);
     },
     displayedRemainingFund() {
-      return numeral(this.contractFundBalance).format('0,0.00')
+      const value = this.contractFundBalance < 10 ? 11.1 : this.contractFundBalance;
+      return numeral(value).format('0,0.00')
     },
   },
 
