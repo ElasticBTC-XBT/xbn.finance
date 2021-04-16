@@ -527,6 +527,10 @@
 
                       this.amountBuy =  this.amountBuy * ticket_no*1.1/ this.estimatedTickets;
                       this.amountBuy =  Math.round(this.amountBuy  * 10**15) / 10**15
+
+                      if (this.amountBuy < 0.0017){
+                        this.amountBuy = 0.0017 + this.amountBuy;
+                      }
                     }
                     await buyTicket(walletClient.web3Client, {amountBuy: this.amountBuy});
                     this.loadingBuy = false;
