@@ -24,7 +24,8 @@
             </b>
           </p><p style="text-align: center">
             <b>Hot<img src="https://i.imgur.com/jmPNlwr.png" style="width: 30px;  display: inline"/>:
-              Now you can buy XBN <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac" target="_blank">here on PancakeSwap</a> or win big <a href="https://www.xbn.finance/xbn/lottery/" target="_blank">FomoLotto here</a>!
+               win big jackpot with <a href="https://www.xbn.finance/xbn/lottery/" target="_blank">FomoLotto here</a>!
+<!--              Now you can buy XBN <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac" target="_blank">here on PancakeSwap</a> or-->
             </b>
           </p>
           <div v-if="userAccount">
@@ -33,7 +34,7 @@
                 <!--h1>{{ $t('airdrop.balance') }}: {{ xbtBalance }} XBN</h1-->
                 <img src="https://i.imgur.com/QR3UZLo.png" style="width:200px; display:inline;"/>
 <!--                <p v-if="waitingTime">{{ $t('airdrop.next_claim') }}: {{ nextAvailableClaimDate }}</p>-->
-                <p>You can also get XBT (ETH Network) airdrop <a href="https://elasticbitcoin.org/airdrop/" target="_blank">here</a> </p>
+<!--                <p>You can also get XBT (ETH Network) airdrop <a href="https://elasticbitcoin.org/airdrop/" target="_blank">here</a> </p>-->
                 <p>{{ $t('airdrop.contract_fund_balance') }}: {{ displayedRemainingFund }} XBN</p>
               </div>
             </div>
