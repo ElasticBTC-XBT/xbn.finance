@@ -39,12 +39,7 @@
                     :sale-rate="saleRate"
                 />
               </div>
-              <!--            <div class="mb-32 container">-->
-              <!--              <sale-order-book-->
-              <!--                  :current-address="userAccount"-->
-              <!--                  :order-book="orderBook"-->
-              <!--                  @refresh="getOrderBook"/>-->
-              <!--            </div>-->
+
             </div>
 
             <div v-else>
@@ -65,8 +60,8 @@
         <div class="mt-32">
           <vue-goodshare-facebook :quote="pageTitle" :page_title="pageTitle" :page_url="pageUrl" has_icon
                                   has_counter title_social="Facebook"/>
-          <vue-goodshare-reddit :page_title="pageTitle" :page_url="pageUrl" has_icon has_counter
-                                title_social="Reddit"/>
+<!--          <vue-goodshare-reddit :page_title="pageTitle" :page_url="pageUrl" has_icon has_counter-->
+<!--                                title_social="Reddit"/>-->
           <vue-goodshare-twitter :page_title="pageTitle" :page_url="pageUrl" has_icon title_social="Twitter"/>
         </div>
       </sweet-modal>
@@ -81,7 +76,7 @@
 <script>
 import _ from 'lodash';
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
-import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
+// import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
 // import layout
 import CLayout from '@/layouts/LayoutDefault.vue'
@@ -93,7 +88,7 @@ import SaleInput from '@/components/sales/SaleInput'
 // import SaleOrderBook from '@/components/sales/SaleOrderBook'
 import WalletNotConnect from "@/components/sections/WalletNotConnect";
 import {getWeb3Client} from "@/libs/web3";
-import {adjustSaleRule, getOrderMetaOf, getSaleRule, getSaleSupply, makeBid, withdrawFund} from "@/libs/mystic-dealer";
+import {adjustSaleRule,  getSaleRule,  makeBid, withdrawFund} from "@/libs/mystic-dealer";
 import {getXBNBalance} from "@/libs/xbt";
 
 export default {
@@ -105,7 +100,7 @@ export default {
     SaleInput,
     // SaleOrderBook,
     VueGoodshareFacebook,
-    VueGoodshareReddit,
+    // VueGoodshareReddit,
     VueGoodshareTwitter
   },
   mixins: [SectionProps],
@@ -150,7 +145,7 @@ export default {
       return this.$t('sales.page_title')
     },
     pageUrl() {
-      return 'https://elasticbitcoin.org/sales'
+      return 'https://xbn.finance/sales'
     },
     truncatedAddress() {
       return _.truncate(this.userAccount || '', {
@@ -189,41 +184,21 @@ export default {
         await this.handleGetInitialData();
       }
     },
-    //
-    // subscribeOrderBook() {
-    //   const walletClient = this.walletClient.web3Client;
-    //
-    //   if (walletClient) {
-    //     subscribeOrderBookChange(walletClient, () => {
-    //       this.fetchStatus();
-    //     })
-    //   }
-    // },
-    //
-    // async getOrderBook() {
-    //   const walletClient = this.walletClient;
-    //
-    //   // get order book
-    //   const orderBook = await getOrderBook(walletClient.web3Client);
-    //   this.$set(this, 'orderBook', orderBook);
-    // },
+
 
     async getSaleInfo() {
       const walletClient = this.walletClient;
 
-      // Get sale supply
-      const saleSupply = await getSaleSupply(walletClient.web3Client);
-      this.$set(this, 'saleSupply', saleSupply);
+      // // Get sale supply
+      // const saleSupply = await getSaleSupply(walletClient.web3Client);
+      // this.$set(this, 'saleSupply', saleSupply);
 
       // Get sale rate
       const saleRate = await getSaleRule(walletClient.web3Client);
-      this.$set(this, 'saleRate', saleRate.exchangeRate);
-      this.$set(this, 'minBidAmount', saleRate.minBidAmount);
-      this.$set(this, 'maxBidAmount', saleRate.maxBidAmount);
+      this.$set(this, 'saleRate', saleRate);
+      // this.$set(this, 'minBidAmount', saleRate.minBidAmount);
+      // this.$set(this, 'maxBidAmount', saleRate.maxBidAmount);
 
-      // get order meta
-      const {participantWaitTime} = await getOrderMetaOf(walletClient.web3Client, this.userAccount);
-      this.$set(this, 'participantWaitTime', participantWaitTime);
     },
 
     async fetchStatus() {

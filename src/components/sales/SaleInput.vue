@@ -17,7 +17,7 @@
           <div class="currency">BNB</div>
         </div>
         <div class="mt-16">
-          <h2> = {{ displayedSaleRate }} XBN</h2>
+          <h2> ~ {{ displayedSaleRate }} XBN</h2>
         </div>
         <div class="mt-16">
           <span style="font-size: 14px">{{ $t('sale.you_can_buy') }} {{ $t('max') }} <strong>{{ displayedMaxBidAmount }} BNB</strong> {{ $t('and') }} {{ $t('min') }} <strong>{{
@@ -43,7 +43,7 @@
 <script>
 import CButton from '@/components/elements/Button.vue'
 import * as numeral from "numeral";
-import moment from "moment";
+
 
 export default {
   name: "SaleInput",
@@ -63,10 +63,7 @@ export default {
       type: Number,
       default: 0
     },
-    participantWaitTime: {
-      type: Number,
-      default: 0
-    },
+
     saleSupply: {
       type: Number,
       default: 0
@@ -89,17 +86,14 @@ export default {
     validInput() {
       return this.ethPurchaseAmount <= this.actualMaxBid && this.ethPurchaseAmount >= this.minBidAmount;
     },
-    nextAvailableClaimDate() {
-      const lang = localStorage.getItem('lang') || 'en';
-      return moment(this.participantWaitTime).locale(lang).format('llll');
-    },
+
     availableToClaim() {
-      return new Date() >= new Date(this.participantWaitTime);
+      return true;
     },
   },
   data() {
     return {
-      ethPurchaseAmount: 0.1,
+      ethPurchaseAmount: 1,
       submitted: false
     }
   },

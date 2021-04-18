@@ -266,8 +266,8 @@
                             <vue-goodshare-facebook :quote="pageTitle" :page_title="pageTitle" :page_url="pageUrl"
                                                     has_icon
                                                     has_counter title_social="Facebook"/>
-                            <vue-goodshare-reddit :page_title="pageTitle" :page_url="pageUrl" has_icon has_counter
-                                                  title_social="Reddit"/>
+<!--                            <vue-goodshare-reddit :page_title="pageTitle" :page_url="pageUrl" has_icon has_counter-->
+<!--                                                  title_social="Reddit"/>-->
                             <vue-goodshare-twitter :page_title="pageTitle" :page_url="pageUrl" has_icon
                                                    title_social="Twitter"/>
                         </div>
@@ -288,7 +288,7 @@
     import CButton from '@/components/elements/Button.vue'
     import {getWeb3Client} from "@/libs/web3";
     import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
-    import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
+    // import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
     import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
     import {
         buyTicket,
@@ -308,7 +308,7 @@
             // CGenericSection,
             CButton,
             VueGoodshareFacebook,
-            VueGoodshareReddit,
+            // VueGoodshareReddit,
             VueGoodshareTwitter,
             // CImage
         },

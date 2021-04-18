@@ -64,8 +64,7 @@
         <div class="mt-32">
           <vue-goodshare-facebook :quote="pageTitle" :page_title="pageTitle" :page_url="pageUrl" has_icon
                                   has_counter title_social="Facebook"/>
-          <vue-goodshare-reddit :page_title="pageTitle" :page_url="pageUrl" has_icon has_counter
-                                title_social="Reddit"/>
+
           <vue-goodshare-twitter :page_title="pageTitle" :page_url="pageUrl" has_icon title_social="Twitter"/>
         </div>
       </sweet-modal>
@@ -80,7 +79,7 @@
 <script>
 import _ from 'lodash';
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
-import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
+// import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
 // import layout
 import CLayout from '@/layouts/LayoutDefault.vue'
@@ -104,7 +103,7 @@ export default {
     SaleInput,
     // SaleOrderBook,
     VueGoodshareFacebook,
-    VueGoodshareReddit,
+    // VueGoodshareReddit,
     VueGoodshareTwitter
   },
   mixins: [SectionProps],

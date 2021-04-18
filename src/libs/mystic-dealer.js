@@ -1,17 +1,36 @@
 import {getXBNContract} from "@/libs/xbt";
 
 export const MysticDealer = {
+
     address: process.env.VUE_APP_MYSTIC_DEALER_ADDRESS,
     jsonInterface: require('@/assets/contracts/MysticDealer.json')
 }
+export const PancakeRouter = {
+    address: "0x05fF2B0DB69458A0750badebc4f9e13aDd608C7F",
+    jsonInterface: require('@/assets/contracts/Router.json')
+}
 
-const GasLimit = 100000;
+const GasLimit = 500000;
 
 export const getDealerContract = async (web3Client) => {
     const accounts = await web3Client.eth.getAccounts();
+
     return new web3Client.eth.Contract(
         MysticDealer.jsonInterface.abi,
         MysticDealer.address,
+        {
+            gas: GasLimit,
+            from: accounts[0]
+        }
+    );
+}
+
+
+export const getRouterContract = async (web3Client) => {
+    const accounts = await web3Client.eth.getAccounts();
+    return new web3Client.eth.Contract(
+        PancakeRouter.jsonInterface.abi,
+        PancakeRouter.address,
         {
             gas: GasLimit,
             from: accounts[0]
@@ -29,21 +48,12 @@ export const getSaleSupply = async (web3Client) => {
 };
 
 export const getSaleRule = async (web3Client) => {
-    const xbtContract = await getXBNContract(web3Client);
-    const dealerContract = await getDealerContract(web3Client);
+    // const xbtContract = await getXBNContract(web3Client);
+    const dealerContract = await getRouterContract(web3Client);
 
-    const decimals = await xbtContract.methods.decimals().call();
-    const saleRule = await dealerContract.methods.getSaleRule().call();
-
-    const {
-        '0': minBidAmount, '1': maxBidAmount, '2': exchangeRate
-    } = saleRule;
-
-    return {
-        minBidAmount: Number(web3Client.utils.fromWei(minBidAmount.toString(), 'ether')),
-        maxBidAmount: Number(web3Client.utils.fromWei(maxBidAmount.toString(), 'ether')),
-        exchangeRate: Number(exchangeRate) / (10 ** decimals),
-    };
+    // const decimals = await xbtContract.methods.decimals().call();
+    const saleRate = await dealerContract.methods.getAmountsOut(1,['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c','0x547cbe0f0c25085e7015aa6939b28402eb0ccdac']).call();
+    return Number(saleRate[1])*1.02; //2% discount
 };
 
 
@@ -55,40 +65,6 @@ export const getOrderMetaOf = async (web3Client, account) => {
     return {
         participantWaitTime: Number(participantWaitTime) * 1000
     };
-}
-
-export const getOrderBook = async (web3Client) => {
-    const dealerContract = await getDealerContract(web3Client);
-    const xbtContract = await getXBNContract(web3Client);
-    const decimals = await xbtContract.methods.decimals().call();
-
-    const data = await dealerContract.methods.getOrderBook().call();
-    const orderBook = data.map(order => parseOrderBook(
-        order,
-        decimals,
-        (val) => Number(web3Client.utils.fromWei(val.toString(), 'ether'))
-    ));
-    orderBook.sort((o1, o2) => o2.timestamp - o1.timestamp);
-    return orderBook;
-}
-
-const parseOrderBook = (orderBook, xbtDecimals, convertToEther) => {
-    const [
-        price,
-        buyerAddress,
-        bonusWon,
-        timestamp,
-        purchasedTokenAmount,
-        totalBNBValue
-    ] = orderBook;
-    return {
-        price: Number(price) / (10 ** xbtDecimals),
-        buyerAddress,
-        bonusWon: Number(bonusWon) / (10 ** xbtDecimals),
-        timestamp: Number(timestamp) * 1000,
-        purchasedTokenAmount: Number(purchasedTokenAmount) / (10 ** xbtDecimals),
-        totalBNBValue: convertToEther(totalBNBValue)
-    }
 }
 
 export const makeBid = async (web3Client, bidRate) => {
