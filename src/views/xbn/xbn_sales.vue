@@ -121,7 +121,7 @@ export default {
     return {
       sectionHeader: {
         title: this.$t('sale.public_discounted_sale'),
-        paragraph: "<img src=\"https://i.imgur.com/jmPNlwr.png\" style=\"width: 30px; display: inline;\"> Limited offer to buy XBN at discounted price. <br/>BNB from sales go straight to liquidity pool!💰 <br/> You win, XBN's holders wins ✌️ "
+        paragraph: "<img src=\"https://i.imgur.com/jmPNlwr.png\" style=\"width: 30px; display: inline;\"> Limited offer to buy XBN at discounted price. <br/>BNB from sales go straight to liquidity pool!💰 <br/> You win and XBN holders win ✌️ "
       },
       // sale info
       saleSupply: 0,
