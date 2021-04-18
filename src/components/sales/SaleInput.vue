@@ -35,7 +35,7 @@
 
       <p style="margin-top: 57px">
         <hr/>
-        <h5> 💕 Love XBN? Make Money with XBN 💸</h5>
+        <h5> 💕 Love XBN?  💕<br/> 💸 Make Money with XBN 💸</h5>
          Get 3% XBN bonus when helping your friends acquire XBN using link below
       </p>
       <p>

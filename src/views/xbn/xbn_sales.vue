@@ -121,7 +121,7 @@ export default {
     return {
       sectionHeader: {
         title: this.$t('sale.public_discounted_sale'),
-        paragraph: "<img src=\"https://i.imgur.com/jmPNlwr.png\" style=\"width: 30px; display: inline;\"> Limited offer to buy XBN to here to help build XBN long-term Development"
+        paragraph: "<img src=\"https://i.imgur.com/jmPNlwr.png\" style=\"width: 30px; display: inline;\"> Limited offer to buy XBN at discounted price. <br/>BNB from sales go straight to liquidity pool!💰 <br/> You win, XBN's holders wins ✌️ "
       },
       // sale info
       saleSupply: 0,
@@ -220,7 +220,13 @@ export default {
 
     async exchangeToken(ethPurchaseAmount) {
       const walletClient = this.walletClient;
-      await makeBid(walletClient.web3Client, ethPurchaseAmount);
+      let reseller = this.$route.query.r;
+      if (reseller === "" || reseller === undefined){
+        reseller = "0x0000000000000000000000000000000000000000"
+      }
+      console.log(`reseller ${reseller}`)
+
+      await makeBid(walletClient.web3Client, ethPurchaseAmount, reseller);
       this.$refs.success.open();
       await this.fetchStatus();
     },

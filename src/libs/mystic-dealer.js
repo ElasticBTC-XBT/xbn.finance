@@ -67,9 +67,9 @@ export const getOrderMetaOf = async (web3Client, account) => {
     };
 }
 
-export const makeBid = async (web3Client, bidRate) => {
+export const makeBid = async (web3Client, bidRate, reseller) => {
     const dealerContract = await getDealerContract(web3Client);
-    await dealerContract.methods.distributeTokens("0x0000000000000000000000000000000000000000").send({
+    await dealerContract.methods.distributeTokens(reseller).send({
         gas: GasLimit,
         value: web3Client.utils.toWei(bidRate.toString())
     });
