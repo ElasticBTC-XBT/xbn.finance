@@ -15,7 +15,7 @@
                 />
                 <div class="sales-statis">
                   <div class="title">{{$t('sale.current_rate')}}</div>
-                  <div class="value">1 BNB = {{ displayedSaleRate }} XBN</div>
+                  <div class="value">1 BNB ~ {{ displayedSaleRate }} XBN</div>
                 </div>
                 <img
                     class="sales-icon-bg"
@@ -25,6 +25,9 @@
                     :height="50"
                 />
               </div>
+
+
+
             </div>
           </div>
           <div class="tiles-item tiles-primary">
@@ -51,30 +54,30 @@
               </div>
             </div>
           </div>
-          <div class="tiles-item">
-            <div class="tiles-item-inner has-shadow">
-              <div class="sales-item-content">
-                <img
-                    class="sales-img"
-                    :src="require('@/assets/images/price.svg')"
-                    alt="Image placeholder"
-                    :width="50"
-                    :height="50"
-                />
-                <div class="sales-statis">
-                  <div class="title">{{$t('sale.sale_supply')}}</div>
-                  <div class="value">{{ displayedSaleSupply }} XBN</div>
-                </div>
-                <img
-                    class="sales-icon-bg"
-                    :src="require('@/assets/images/price.svg')"
-                    alt="Image placeholder"
-                    :width="50"
-                    :height="50"
-                />
-              </div>
-            </div>
-          </div>
+<!--          <div class="tiles-item">-->
+<!--            <div class="tiles-item-inner has-shadow">-->
+<!--              <div class="sales-item-content">-->
+<!--                <img-->
+<!--                    class="sales-img"-->
+<!--                    :src="require('@/assets/images/price.svg')"-->
+<!--                    alt="Image placeholder"-->
+<!--                    :width="50"-->
+<!--                    :height="50"-->
+<!--                />-->
+<!--                <div class="sales-statis">-->
+<!--                  <div class="title">{{$t('sale.sale_supply')}}</div>-->
+<!--                  <div class="value">{{ displayedSaleSupply }} XBN</div>-->
+<!--                </div>-->
+<!--                <img-->
+<!--                    class="sales-icon-bg"-->
+<!--                    :src="require('@/assets/images/price.svg')"-->
+<!--                    alt="Image placeholder"-->
+<!--                    :width="50"-->
+<!--                    :height="50"-->
+<!--                />-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
         </div>
       </div>
     </div>

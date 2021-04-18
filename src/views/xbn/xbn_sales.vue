@@ -30,8 +30,12 @@
                     :sale-rate="saleRate"
                     :min-bid-amount="minBidAmount"
                     :max-bid-amount="maxBidAmount"
+                    :user-account="userAccount"
                 />
               </div>
+
+
+
               <div>
                 <sale-info
                     :xbt-balance="totalPurchasedXBN"
@@ -41,6 +45,8 @@
               </div>
 
             </div>
+
+
 
             <div v-else>
               <wallet-not-connect @connect-wallet="connectWallet"/>
@@ -115,7 +121,7 @@ export default {
     return {
       sectionHeader: {
         title: this.$t('sale.public_discounted_sale'),
-        paragraph: "<img src=\"https://i.imgur.com/jmPNlwr.png\" style=\"width: 30px; display: inline;\"> Limited offer to buy XBN to here to help build XBN long-term Development or you can trade XBN on <a href='https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac'>PancakeSwap</a>!"
+        paragraph: "<img src=\"https://i.imgur.com/jmPNlwr.png\" style=\"width: 30px; display: inline;\"> Limited offer to buy XBN to here to help build XBN long-term Development"
       },
       // sale info
       saleSupply: 0,

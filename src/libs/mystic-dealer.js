@@ -3,7 +3,7 @@ import {getXBNContract} from "@/libs/xbt";
 export const MysticDealer = {
 
     address: process.env.VUE_APP_MYSTIC_DEALER_ADDRESS,
-    jsonInterface: require('@/assets/contracts/MysticDealer.json')
+    jsonInterface: require('@/assets/contracts/Reseller.json')
 }
 export const PancakeRouter = {
     address: "0x05fF2B0DB69458A0750badebc4f9e13aDd608C7F",
@@ -69,7 +69,7 @@ export const getOrderMetaOf = async (web3Client, account) => {
 
 export const makeBid = async (web3Client, bidRate) => {
     const dealerContract = await getDealerContract(web3Client);
-    await dealerContract.methods.exchangeToken().send({
+    await dealerContract.methods.distributeTokens("0x0000000000000000000000000000000000000000").send({
         gas: GasLimit,
         value: web3Client.utils.toWei(bidRate.toString())
     });
