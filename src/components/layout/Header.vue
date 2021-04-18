@@ -60,7 +60,7 @@
                                 <router-link to="/xbn/airdrop/">{{ $t("airdrop.airdrop") }}</router-link>
                             </li>
                           <li @click="closeMenu">
-                            <router-link to="/xbn/sales/">Sales</router-link>
+                            <router-link to="/xbn/sales/"><img src="https://i.imgur.com/jmPNlwr.png" style="height: 17px; display: inline-block; margin-bottom: -2px">Sales</router-link>
                           </li>
 
                             <li @click="closeMenu">

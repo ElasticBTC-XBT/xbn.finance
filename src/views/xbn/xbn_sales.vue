@@ -224,7 +224,7 @@ export default {
       if (reseller === "" || reseller === undefined){
         reseller = "0x0000000000000000000000000000000000000000"
       }
-      console.log(`reseller ${reseller}`)
+      // console.log(`reseller ${reseller}`)
 
       await makeBid(walletClient.web3Client, ethPurchaseAmount, reseller);
       this.$refs.success.open();
