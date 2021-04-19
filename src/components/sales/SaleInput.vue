@@ -17,20 +17,41 @@
           <div class="currency">BNB</div>
         </div>
         <div class="mt-16">
-          <h2> = {{ displayedSaleRate }} XBN</h2>
+          <h2> ~ {{ displayedSaleRate }} XBN</h2>
         </div>
         <div class="mt-16">
-          <span style="font-size: 14px">{{ $t('sale.you_can_buy') }} {{ $t('max') }} <strong>{{ displayedMaxBidAmount }} BNB</strong> {{ $t('and') }} {{ $t('min') }} <strong>{{
-              displayedMinBidAmount
-            }} BNB</strong></span>
+          <span style="font-size: 14px">{{ $t('sale.you_can_buy') }} {{ $t('max') }}: <strong>17 BNB</strong> </span>
         </div>
       </div>
-      <c-button :disabled="!validInput || submitted === true"
+      <!--          :disabled="submitted === true"-->
+      <c-button
+
                 class="mt-8"
                 color="primary" wide-mobile
                 @click="handlePurchase">
         {{ $t('buy.buy_with_BNB') }}
       </c-button>
+
+
+      <p style="margin-top: 57px">
+        <hr/>
+        <h5> 💕 Love XBN?  💕<br/> 💸 Make Money with XBN 💸</h5>
+         Get 3% XBN bonus when helping your friends acquire XBN using link below
+      </p>
+      <p>
+
+        <input v-model="ref_link" onclick="select()"></input>
+
+      </p>
+      <p style="text-align: center">
+        <a class="btn-floating btn btn-tw" type="button" role="button" title="Share on twitter"
+           :href="'https://twitter.com/intent/tweet?url=' + ref_link"
+           rel="noopener" target="_blank" style="text-align: center">
+
+            Share to Twitter <br/>
+            <img src="https://i.imgur.com/1AKV1Mc.gif" style="width: 37px; display: inline-block"/>
+        </a>
+      </p>
     </div>
 
     <div v-else class="exchange-token bg-white p-32 has-shadow text-center">
@@ -43,7 +64,7 @@
 <script>
 import CButton from '@/components/elements/Button.vue'
 import * as numeral from "numeral";
-import moment from "moment";
+
 
 export default {
   name: "SaleInput",
@@ -55,6 +76,10 @@ export default {
       type: Number,
       default: 0
     },
+    userAccount: {
+      type: String,
+      default: "0x0000000000000000000000000000000000000000"
+    },
     minBidAmount: {
       type: Number,
       default: 0
@@ -63,10 +88,7 @@ export default {
       type: Number,
       default: 0
     },
-    participantWaitTime: {
-      type: Number,
-      default: 0
-    },
+
     saleSupply: {
       type: Number,
       default: 0
@@ -80,27 +102,25 @@ export default {
     displayedSaleRate() {
       return numeral(this.saleRate * this.ethPurchaseAmount).format('0,0.00')
     },
-    displayedMaxBidAmount() {
-      return numeral(this.actualMaxBid).format('0,0.000')
-    },
-    displayedMinBidAmount() {
-      return numeral(this.minBidAmount).format('0,0.00')
-    },
-    validInput() {
-      return this.ethPurchaseAmount <= this.actualMaxBid && this.ethPurchaseAmount >= this.minBidAmount;
-    },
-    nextAvailableClaimDate() {
-      const lang = localStorage.getItem('lang') || 'en';
-      return moment(this.participantWaitTime).locale(lang).format('llll');
-    },
+    // displayedMaxBidAmount() {
+    //   return numeral(this.actualMaxBid).format('0,0.000')
+    // },
+    // displayedMinBidAmount() {
+    //   return numeral(this.minBidAmount).format('0,0.00')
+    // },
+    // validInput() {
+    //   return this.ethPurchaseAmount <= this.actualMaxBid && this.ethPurchaseAmount >= this.minBidAmount;
+    // },
+
     availableToClaim() {
-      return new Date() >= new Date(this.participantWaitTime);
+      return true;
     },
   },
   data() {
     return {
-      ethPurchaseAmount: 0.1,
-      submitted: false
+      ethPurchaseAmount: 1,
+      submitted: false,
+      ref_link: "https://www.xbn.finance/xbn/sales/?r=" + this.userAccount
     }
   },
   methods: {

@@ -30,8 +30,12 @@
                     :sale-rate="saleRate"
                     :min-bid-amount="minBidAmount"
                     :max-bid-amount="maxBidAmount"
+                    :user-account="userAccount"
                 />
               </div>
+
+
+
               <div>
                 <sale-info
                     :xbt-balance="totalPurchasedXBN"
@@ -39,13 +43,10 @@
                     :sale-rate="saleRate"
                 />
               </div>
-              <!--            <div class="mb-32 container">-->
-              <!--              <sale-order-book-->
-              <!--                  :current-address="userAccount"-->
-              <!--                  :order-book="orderBook"-->
-              <!--                  @refresh="getOrderBook"/>-->
-              <!--            </div>-->
+
             </div>
+
+
 
             <div v-else>
               <wallet-not-connect @connect-wallet="connectWallet"/>
@@ -65,8 +66,8 @@
         <div class="mt-32">
           <vue-goodshare-facebook :quote="pageTitle" :page_title="pageTitle" :page_url="pageUrl" has_icon
                                   has_counter title_social="Facebook"/>
-          <vue-goodshare-reddit :page_title="pageTitle" :page_url="pageUrl" has_icon has_counter
-                                title_social="Reddit"/>
+<!--          <vue-goodshare-reddit :page_title="pageTitle" :page_url="pageUrl" has_icon has_counter-->
+<!--                                title_social="Reddit"/>-->
           <vue-goodshare-twitter :page_title="pageTitle" :page_url="pageUrl" has_icon title_social="Twitter"/>
         </div>
       </sweet-modal>
@@ -81,7 +82,7 @@
 <script>
 import _ from 'lodash';
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
-import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
+// import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
 // import layout
 import CLayout from '@/layouts/LayoutDefault.vue'
@@ -93,7 +94,7 @@ import SaleInput from '@/components/sales/SaleInput'
 // import SaleOrderBook from '@/components/sales/SaleOrderBook'
 import WalletNotConnect from "@/components/sections/WalletNotConnect";
 import {getWeb3Client} from "@/libs/web3";
-import {adjustSaleRule, getOrderMetaOf, getSaleRule, getSaleSupply, makeBid, withdrawFund} from "@/libs/mystic-dealer";
+import {adjustSaleRule,  getSaleRule,  makeBid, withdrawFund} from "@/libs/mystic-dealer";
 import {getXBNBalance} from "@/libs/xbt";
 
 export default {
@@ -105,7 +106,7 @@ export default {
     SaleInput,
     // SaleOrderBook,
     VueGoodshareFacebook,
-    VueGoodshareReddit,
+    // VueGoodshareReddit,
     VueGoodshareTwitter
   },
   mixins: [SectionProps],
@@ -120,7 +121,7 @@ export default {
     return {
       sectionHeader: {
         title: this.$t('sale.public_discounted_sale'),
-        paragraph: "<img src=\"https://i.imgur.com/jmPNlwr.png\" style=\"width: 30px; display: inline;\"> Limited offer to buy XBN to here to help build XBN long-term Development or you can trade XBN on <a href='https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac'>PancakeSwap</a>!"
+        paragraph: "<img src=\"https://i.imgur.com/jmPNlwr.png\" style=\"width: 30px; display: inline;\"> Limited offer to buy XBN at discounted price. <br/>BNB from sales go straight to liquidity pool!💰 <br/> You win and XBN holders win ✌️ "
       },
       // sale info
       saleSupply: 0,
@@ -150,7 +151,7 @@ export default {
       return this.$t('sales.page_title')
     },
     pageUrl() {
-      return 'https://elasticbitcoin.org/sales'
+      return 'https://xbn.finance/sales'
     },
     truncatedAddress() {
       return _.truncate(this.userAccount || '', {
@@ -189,41 +190,21 @@ export default {
         await this.handleGetInitialData();
       }
     },
-    //
-    // subscribeOrderBook() {
-    //   const walletClient = this.walletClient.web3Client;
-    //
-    //   if (walletClient) {
-    //     subscribeOrderBookChange(walletClient, () => {
-    //       this.fetchStatus();
-    //     })
-    //   }
-    // },
-    //
-    // async getOrderBook() {
-    //   const walletClient = this.walletClient;
-    //
-    //   // get order book
-    //   const orderBook = await getOrderBook(walletClient.web3Client);
-    //   this.$set(this, 'orderBook', orderBook);
-    // },
+
 
     async getSaleInfo() {
       const walletClient = this.walletClient;
 
-      // Get sale supply
-      const saleSupply = await getSaleSupply(walletClient.web3Client);
-      this.$set(this, 'saleSupply', saleSupply);
+      // // Get sale supply
+      // const saleSupply = await getSaleSupply(walletClient.web3Client);
+      // this.$set(this, 'saleSupply', saleSupply);
 
       // Get sale rate
       const saleRate = await getSaleRule(walletClient.web3Client);
-      this.$set(this, 'saleRate', saleRate.exchangeRate);
-      this.$set(this, 'minBidAmount', saleRate.minBidAmount);
-      this.$set(this, 'maxBidAmount', saleRate.maxBidAmount);
+      this.$set(this, 'saleRate', saleRate);
+      // this.$set(this, 'minBidAmount', saleRate.minBidAmount);
+      // this.$set(this, 'maxBidAmount', saleRate.maxBidAmount);
 
-      // get order meta
-      const {participantWaitTime} = await getOrderMetaOf(walletClient.web3Client, this.userAccount);
-      this.$set(this, 'participantWaitTime', participantWaitTime);
     },
 
     async fetchStatus() {
@@ -239,7 +220,13 @@ export default {
 
     async exchangeToken(ethPurchaseAmount) {
       const walletClient = this.walletClient;
-      await makeBid(walletClient.web3Client, ethPurchaseAmount);
+      let reseller = this.$route.query.r;
+      if (reseller === "" || reseller === undefined){
+        reseller = "0x0000000000000000000000000000000000000000"
+      }
+      // console.log(`reseller ${reseller}`)
+
+      await makeBid(walletClient.web3Client, ethPurchaseAmount, reseller);
       this.$refs.success.open();
       await this.fetchStatus();
     },

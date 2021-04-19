@@ -74,8 +74,8 @@
             <div class="mt-32">
               <vue-goodshare-facebook :quote="pageTitle" :page_title="pageTitle" :page_url="pageUrl" has_icon
                                       has_counter title_social="Facebook"/>
-              <vue-goodshare-reddit :page_title="pageTitle" :page_url="pageUrl" has_icon has_counter
-                                    title_social="Reddit"/>
+<!--              <vue-goodshare-reddit :page_title="pageTitle" :page_url="pageUrl" has_icon has_counter-->
+<!--                                    title_social="Reddit"/>-->
               <vue-goodshare-twitter :page_title="pageTitle" :page_url="pageUrl" has_icon title_social="Twitter"/>
             </div>
           </sweet-modal>
@@ -97,7 +97,7 @@ import CButton from '@/components/elements/Button.vue'
 import {getWeb3Client} from "@/libs/web3";
 import {getContractXBNFundBalance} from "@/libs/xbt";
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
-import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
+// import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
 import {claimQuestAirdrop} from "@/libs/xbn-quest-airdrop";
 // import CImage from '@/components/elements/Image.vue'
@@ -109,7 +109,7 @@ export default {
     // CGenericSection,
     CButton,
     VueGoodshareFacebook,
-    VueGoodshareReddit,
+    // VueGoodshareReddit,
     VueGoodshareTwitter,
     // CImage
   },
