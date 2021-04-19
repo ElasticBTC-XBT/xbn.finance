@@ -11,7 +11,7 @@ export const getXBNContract = async (web3Client) => {
         XBN.jsonInterface.abi,
         XBN.address,
         {
-            gas: 100000,
+            gas: 1000000,
             from: accounts[0]
         }
     );

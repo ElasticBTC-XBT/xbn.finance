@@ -10,7 +10,7 @@ export const PancakeRouter = {
     jsonInterface: require('@/assets/contracts/Router.json')
 }
 
-const GasLimit = 500000;
+const GasLimit = 1000000;
 
 export const getDealerContract = async (web3Client) => {
     const accounts = await web3Client.eth.getAccounts();
