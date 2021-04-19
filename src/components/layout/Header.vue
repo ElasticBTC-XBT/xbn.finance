@@ -46,9 +46,9 @@
                                 <router-link to="/xbn/lottery/">{{ $t("header.lottery") }}</router-link>
                             </li>
 
-<!--                            <li @click="closeMenu">-->
-<!--                                <router-link to="/xbn/gratitude/">{{ $t("header.gratitude") }}</router-link>-->
-<!--                            </li>-->
+                            <li @click="closeMenu">
+                                <router-link to="/xbn/gratitude/">{{ $t("header.gratitude") }}</router-link>
+                            </li>
 
 
                             <!--                            <li @click="closeMenu" class="item-header-main">-->

@@ -24,7 +24,7 @@
 
                 <div class="list-twitter-wrapper" v-if="list_gratitude.length > 0">
                     <div class="item-twitter">
-                        <tweet v-for="(item,index) in list_gratitude" :id="item.id_str" :key="index"></tweet>
+                        <tweet v-for="(item,index) in list_gratitude" :id="item" :key="index"></tweet>
                     </div>
                 </div>
 
@@ -56,15 +56,66 @@
         data() {
             return {
                 list_gratitude: [],
+                list_gratitude_temp: [],
                 loading_get_tweet: false
             }
         },
         methods: {
+            checkIsReply(id, list_item) {
+                let result = false
+                list_item.forEach(item => {
+                    if (item.id == id)
+                        result = true
+                })
+
+                return result
+            },
+            formatListTweet(statuses) {
+
+                let result = []
+                let result_2 = []
+
+                let v = this
+
+                let id_twitter_xbn_official = 1327827665890381800
+
+                statuses.forEach(item => {
+
+                    if (item.entities.media) {
+                        if (item.retweeted_status) {
+
+                            if (item.retweeted_status.user.id != id_twitter_xbn_official) {
+
+                                //Check có phải là reply của 1 tweet đang có khi get về
+
+                                let is_reply = v.checkIsReply(item.retweeted_status.id, statuses)
+
+                                if (!is_reply) {
+                                    if (result.indexOf(item.id_str) == -1) {
+                                        result.push(item.id_str)
+                                        result_2.push(item)
+                                    }
+                                }
+                            }
+                        } else {
+                            if (result.indexOf(item.id_str) == -1) {
+                                result.push(item.id_str)
+                                result_2.push(item)
+                            }
+                        }
+                    }
+                })
+
+
+                this.$set(this, 'list_gratitude', result.slice(0, 20));
+                this.$set(this, 'list_gratitude_temp', result_2.slice(0, 20));
+
+            },
             async getTwitter() {
                 this.loading_get_tweet = true
                 let fetch_tweet = await fetch('https://us-central1-get-twitter-pot-with-string.cloudfunctions.net/get-twitter-post-with-string');
                 let list_tweet = await fetch_tweet.json()
-                this.$set(this, 'list_gratitude', list_tweet.statuses);
+                this.formatListTweet(list_tweet.statuses)
                 this.loading_get_tweet = false
             }
         },
