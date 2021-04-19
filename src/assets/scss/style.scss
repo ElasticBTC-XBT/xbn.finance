@@ -217,6 +217,49 @@
 
 @media (max-width: 640px) {
 
+  .last-survior-wrapper {
+    .section-2 {
+      display: block !important;
+
+      .part-1 {
+        width: 100% !important;
+      }
+
+      .part-2 {
+        width: 100% !important;
+
+        .text-1 {
+          font-size: 20px !important;
+        }
+      }
+    }
+
+    .section-3 {
+      .text-1 {
+        font-size: 20px !important;
+      }
+
+      .part-1 {
+        width: 100% !important;
+      }
+
+      .content-part {
+        font-size: 14px;
+      }
+
+      .part-2 {
+        width: 100% !important;
+        margin-top: 50px;
+      }
+    }
+
+    .section-4 {
+      .content-part {
+        font-size: 14px!important;
+      }
+    }
+  }
+
   .footer-social ul, .footer-nav ul {
     justify-content: center !important;
   }
@@ -412,7 +455,6 @@ input:focus {
       }
     }
   }
-
 
   .section-3 {
 
