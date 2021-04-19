@@ -24,7 +24,7 @@
 
 
     export default {
-        name: 'Home',
+        name: 'GratitudeMain',
         components: {
             GratitudeSection1,
             GratitudeSection2

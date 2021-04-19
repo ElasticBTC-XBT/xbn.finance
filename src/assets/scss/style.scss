@@ -326,3 +326,152 @@ input:focus {
 .sales .tiles-primary .sales-statis .value {
   color: #ffffff;
 }
+
+.last-survior-wrapper {
+  padding-bottom: 100px;
+
+  .card-spec-wrapper {
+    background-color: white;
+    width: 100%;
+    padding: 30px;
+    background-image: linear-gradient(315deg, #ffffff 1%, #f4b151 20%, #f4b151 79%);
+
+    .text-1 {
+      font-size: 25px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .text-2 {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .text-3 {
+      font-size: 18px;
+      color: white;
+    }
+  }
+
+  .section-1 {
+    margin-top: 70px;
+  }
+
+  .section-2 {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px !important;
+
+    .part-1 {
+      width: 50%;
+
+      img {
+        width: 70%;
+      }
+    }
+
+    .part-2 {
+      text-align: right;
+      width: 50%;
+      padding: 30px;
+
+      .clock-display {
+        font-size: 35px;
+        font-style: normal;
+        color: black;
+        margin: 30px 20px;
+
+      }
+
+      .text-1 {
+        font-size: 35px;
+        font-weight: bold;
+        color: black;
+        line-height: 1.4;
+      }
+
+
+      .text-2 {
+        font-size: 25px;
+        font-weight: bold;
+        color: black;
+      }
+
+      .text-3 {
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+        margin-top: 20px;
+      }
+
+      .text-4 {
+        font-size: 16px;
+        color: black;
+      }
+    }
+  }
+
+
+  .section-3 {
+
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .content-part {
+      margin-top: 20px;
+    }
+
+    .text-1 {
+      font-size: 30px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .part-1 {
+      width: 48%;
+
+      .text-2 {
+        font-size: 15px;
+        color: black;
+        text-align: right;
+        font-weight: bold;
+      }
+
+      .button-approve {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+    }
+
+    .part-2 {
+      width: 48%;
+      color: black;
+
+    }
+
+  }
+
+  .section-4 {
+    margin-top: 50px;
+
+    .text-1 {
+      font-size: 35px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .content-part {
+      margin-top: 30px;
+      color: black;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+  }
+
+}

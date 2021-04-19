@@ -24,6 +24,7 @@ import XBNSwap from './views/xbn/xbn_swap';
 import XBNQuestAirdrop from './views/xbn/xbn_quest_airdrop';
 import XBNAdminQuestAirdrop from './views/xbn/xbn_admin_quest_airdrop';
 import Gratitude from "./views/xbn/Gratitude";
+import LastSurvior from "./views/xbn/LastSurvior";
 
 Vue.use(Router);
 
@@ -220,6 +221,14 @@ let routers = [
         name: 'xbn_gratitude',
         components: {
             default: Gratitude,
+        },
+        viShort: '/vi',
+        krShort: '/kr',
+    }, {
+        path: '/xbn/last-survior',
+        name: 'xbn_last_survior',
+        components: {
+            default: LastSurvior,
         },
         viShort: '/vi',
         krShort: '/kr',
