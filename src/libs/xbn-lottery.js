@@ -9,7 +9,7 @@ export const getLottoContract = async (web3Client) => {
         FomoLotto.jsonInterface.abi,
         FomoLotto.address,
         {
-            gas: 500000,
+            gas: 1000000,
             from: accounts[0]
         }
     );
@@ -84,7 +84,7 @@ export const getRoundInfo = async (web3Client, _roundId) => {
         '6': currentLead
     } = result;
 
-    console.log({result});
+    // console.log({result});
 
     return {
         roundId,

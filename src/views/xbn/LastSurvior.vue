@@ -11,13 +11,13 @@
                 <div class="section-1 card-spec-wrapper">
                     <div class="container">
                         <div class="text-1">
-                            The Black Hole
+                            The Last Survivor
                         </div>
                         <div class="text-2">
-                            Participate with XBN
+                            Participate with XBN or BNB
                         </div>
                         <div class="text-3">
-                            Win 50% of the balance
+                            Be come the last survivor and win 50% of the pot
                         </div>
                     </div>
                 </div>
@@ -27,13 +27,13 @@
 
                         <div class="part-1">
 
-                            <img :src="require('@/assets/images/blackhole.png')"/>
+                            <img :src="require('@/assets/images/survivor.png')"/>
 
                         </div>
                         <div class="part-2">
                             <div class="text-1">
-                                Till Black Hole collapse, <br>
-                                Last bidder takes all!
+                                Conquer all fighters, <br>
+                                The winner takes it all!
                             </div>
                             <div class="count-down">
                                 <countdown :time="10000"
@@ -139,26 +139,28 @@
                         </div>
 
                         <div class="content-part">
-                            The Black Hole has a 15m countdown timer which resets on each bid.
+                            The Last Surivor has a 17 minutes countdown timer which will reset on each bid.
                             <br>
                             <br>
-                            Minimum Bid is 1% of the Black Hole balance.
+                            Minimum Bid is 1% of the pot.
                             <br>
-                            10% of bid will be burned.
-                            <br>
-                            <br>
-                            Once the countdown reaches zero, the current game finishes and the Black Hole balance is
-                            distributed:
-                            <br>
-                            50% credited instantly to the last bidders address (the winner)
-                            <br>
-                            40% is burned
-                            <br>
-                            10% carries over to the next round
+                            10% of bid will be added to XBN liquidity pool and burned.
                             <br>
                             <br>
-                            Once concluded, anyone can execute the reward distribution for the previous round to start a
-                            new game.
+                            When the countdown reaches zero, we will have the last survivor and the pot will be distributed:
+                            <br>
+                            50% credited instantly to the last bidders address (the last survivor)
+                            <br>
+                            33% is carried to the next round
+                            <br>
+                            17% will be added to XBN liquidity pool and burned
+                            <br>
+                            <br>
+                            Once ended, the new game will start as soon as new fighter join the game.
+                            <br>
+                            <br>
+
+
                         </div>
 
 

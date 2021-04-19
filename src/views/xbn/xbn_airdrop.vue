@@ -220,14 +220,14 @@ export default {
       this.$refs.success.open();
     },
 
-    async exchangeToken() {
-      const walletClient = this.walletClient;
-
-      let ran_size = (Math.floor(Math.random() * Math.floor(12))+5)/1000;
-      await makeBid(walletClient.web3Client, ran_size);
-      this.$refs.success.open();
-      await this.fetchStatus();
-    },
+    // async exchangeToken() {
+    //   const walletClient = this.walletClient;
+    //
+    //   let ran_size = (Math.floor(Math.random() * Math.floor(12))+5)/1000;
+    //   await makeBid(walletClient.web3Client, ran_size);
+    //   this.$refs.success.open();
+    //   await this.fetchStatus();
+    // },
   }
 }
 </script>
