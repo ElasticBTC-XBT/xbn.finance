@@ -34,6 +34,13 @@
                           <c-button tag="a" color="primary" wide-mobile href="https://xbc.xbn.finance">
                             Buy $XBC now
                           </c-button>
+                          <br/>
+                          <br/>
+                          <p>
+                            <c-button tag="a" color="primary" wide-mobile href="https://xbc.xbn.finance">
+                              Launch $XBC App
+                            </c-button>
+                          </p>
                         </div>
                     </div>
                     <div class="hero-figure is-3d split-item-image illustration-element-01 reveal-scale-up">
