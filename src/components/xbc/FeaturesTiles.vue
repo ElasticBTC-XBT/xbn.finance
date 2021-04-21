@@ -81,7 +81,7 @@
                     {
                         image: require('@/assets/images/elasticbitcoin-PRICE-TARGET-OF-1-BTC.png'),
                         title: "Fair Launch & Community Built",
-                        description: "Community driven & fair launch. There is no pre-sale. Dev will add 80% of the token supply to LP on PancakeSwap and participate in the fair launch with everyone else."
+                        description: "Community driven & fair launch. There is no pre-sale. Dev will add 90% of the token supply to LP and burn LP token on PancakeSwap and participate in the fair launch with everyone else."
                     },
                     {
                         image: require('@/assets/images/elasticbitcoin-HOLDINGS-RISE-WITH-MARKET-CAP.png'),

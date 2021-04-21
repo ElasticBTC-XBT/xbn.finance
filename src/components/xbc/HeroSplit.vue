@@ -16,6 +16,10 @@
                 <div class="split-item">
                     <div class="hero-content split-item-content center-content-mobile">
                         <h1 class="mt-0 mb-16 reveal-from-left" style="font-size: 37px">
+                          Important note: we decided to pending the launch because too many bots accomulate $XBC, which is not fair. <br/>
+                          Please follow Twitter: <a href="https://twitter.com/elasticbitcoin">elasticbitcoin</a> for further announcement!
+                          <br/>
+
                           XBC · XBN Community · Hold XBC to Earn BNB
                         </h1>
                         <p class="mt-0 mb-24 reveal-from-left" data-reveal-delay="200">
@@ -32,9 +36,9 @@
 <!--                            <c-button tag="a" color="primary" wide-mobile href="/buy">-->
 <!--                              Buy $XBC now-->
 <!--                            </c-button>-->
-                          <c-button tag="a" color="primary" wide-mobile href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x1396148f0f45888d9a57ad9bf35077cbf9d067d9">
-                            Buy $XBC now
-                          </c-button>
+<!--                          <c-button tag="a" color="primary" wide-mobile href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x1396148f0f45888d9a57ad9bf35077cbf9d067d9">-->
+<!--                            Buy $XBC now-->
+<!--                          </c-button>-->
                           <br/>
                           <br/>
                           <p>
