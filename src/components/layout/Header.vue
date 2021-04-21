@@ -77,18 +77,19 @@
 
 
 
-                            <!--                            <li @click="closeMenu">-->
-                            <!--                                <router-link to="/cryptounicorns/">{{ $t("header.cryptounicorns") }}</router-link>-->
-                            <!--                            </li>-->
-
                         </ul>
                         <ul class="list-reset header-nav-right">
                             <c-button tag="a" class="button button-primary button-sm" color="primary" wide-mobile
-                                      href="/buy"
-                            >
+                                      href="/buy" >
                                 {{ $t("header.buy") }} XBN
                             </c-button>
                         </ul>
+                      <ul class="list-reset header-nav-right">
+                        <c-button tag="a" class="button button-primary button-sm" color="primary" wide-mobile
+                                  href="https://xbc.xbn.finance" >
+                          XBC App
+                        </c-button>
+                      </ul>
                     </div>
                 </nav>
             </div>
