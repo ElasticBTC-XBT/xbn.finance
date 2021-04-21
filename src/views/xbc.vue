@@ -80,11 +80,11 @@ export default {
               "So then the ratio of your $XBC/BNB pool reduces as well. That’s why you should claim as soon as your cycle is ready"
         },
         {
-          "title": "What do I need to do to passively earn BNB?",
+          "title": "What do I need to do to passively earn BNB",
           "answer": "Simply holding $XBC will earn you a share of the BNB rewards pool, proportional to the amount of $XBC you hold. You will also earn $XBC passively too, which gets put straight in your wallet"
         },
         {
-          "title": "When can I claim my BNB?\n",
+          "title": "When can I claim my BNB",
           "answer": "The specific time you can claim depends on a few factors. In the first seven days after $XBC was listed on PancakeSwap, the collection time is every 24 hours, after the first seven days, the collection time changes to once every week. Be aware however, that if you purchase a significant amount more $XBC, your collection time will be moved back, and if you sell all your $XBC and buy back in, your collection date will be pushed years out into the future. This is not a bug, it's a feature that helps prevent scalping. More information on how this works can be found here: https://app.gitbook.com/@oneandonlychance/s/xbc/innovation/a-new-way-to-earn-bnb"
         },
         {
