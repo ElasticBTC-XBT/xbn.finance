@@ -25,6 +25,7 @@
                           XBC has been fixed all security issues on Smart Contract by security experts and ready to meet you at the moon
                             <br/>
                             <br/>
+                          When you trade, set slippage 11-13% . Ask community here <a target="_blank" href="https://t.me/elasticbitcoinxbt"> Telegram </a>
 
                         </p>
                         <div class="reveal-from-left">
