@@ -47,7 +47,7 @@
                         <c-image
                                 id="big-banner-logo"
                                 class="has-shadow"
-                                :src="require('@/assets/images/banner.png')"
+                                :src="require('@/assets/images/xbc.png')"
                                 alt="Hero image"
                                 :width="528"
                                 :height="396"/>
