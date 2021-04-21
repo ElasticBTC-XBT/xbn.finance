@@ -10,6 +10,7 @@ import Staking from './views/staking.vue';
 import Signup from './views/Signup.vue';
 import Learn from './views/learn.vue';
 import Governance from './views/governance.vue';
+import XBC from './views/xbc.vue';
 import Airdrop from './views/airdrop.vue';
 
 import Roadmap from './views/roadmap.vue';
@@ -121,6 +122,13 @@ let routers = [
         },
         viShort: '/vi/governance',
         krShort: '/kr/governance',
+    },
+    {
+        path: '/xbc',
+        name: 'XBC',
+        components: {
+            default: XBC,
+        }
     },
     {
         path: '/cryptounicorns',
