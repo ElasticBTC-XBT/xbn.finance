@@ -56,6 +56,9 @@
                             <!--                          <li @click="closeMenu">-->
                             <!--                            <router-link to="/xbn/sales/">XBN Sales</router-link>-->
                             <!--                          </li>-->
+                          <li @click="closeMenu">
+                            <router-link to="/xbc/">XBC</router-link>
+                          </li>
                             <li @click="closeMenu">
                                 <router-link to="/xbn/airdrop/">{{ $t("airdrop.airdrop") }}</router-link>
                             </li>
