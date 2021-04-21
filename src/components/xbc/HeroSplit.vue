@@ -15,10 +15,15 @@
                     ]">
                 <div class="split-item">
                     <div class="hero-content split-item-content center-content-mobile">
+                      <h3 style="color:red; font-size: 17px">Important note: we decided to pending the launch because too many bots accumulate $XBC when we deploy contract, which is not fair. <br/>
+                        Please follow Twitter: <a href="https://twitter.com/elasticbitcoin">elasticbitcoin</a> for further announcement!
+                        <br/>
+
+                        We are considering give XBN holders privilege to buy XBC first to avoid bots.
+
+                      </h3>
                         <h1 class="mt-0 mb-16 reveal-from-left" style="font-size: 37px">
-                          Important note: we decided to pending the launch because too many bots accomulate $XBC, which is not fair. <br/>
-                          Please follow Twitter: <a href="https://twitter.com/elasticbitcoin">elasticbitcoin</a> for further announcement!
-                          <br/>
+
 
                           XBC · XBN Community · Hold XBC to Earn BNB
                         </h1>
