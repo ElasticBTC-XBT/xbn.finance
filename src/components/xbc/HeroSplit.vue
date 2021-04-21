@@ -32,7 +32,7 @@
 <!--                            <c-button tag="a" color="primary" wide-mobile href="/buy">-->
 <!--                              Buy $XBC now-->
 <!--                            </c-button>-->
-                          <c-button tag="a" color="primary" wide-mobile href="https://xbc.xbn.finance">
+                          <c-button tag="a" color="primary" wide-mobile href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x1396148f0f45888d9a57ad9bf35077cbf9d067d9">
                             Buy $XBC now
                           </c-button>
                           <br/>
