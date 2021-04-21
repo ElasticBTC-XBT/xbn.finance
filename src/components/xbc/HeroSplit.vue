@@ -19,7 +19,7 @@
                           XBC · XBN Community · Hold XBC to Earn BNB
                         </h1>
                         <p class="mt-0 mb-24 reveal-from-left" data-reveal-delay="200">
-                            <span class="subtitle">XBC is forked from MoonRat.Finance, it is a new brilliant & innovative protocol. XBC is fair launch, driven by community run on #BSC</span>
+                            <span class="subtitle">XBC is forked from XBC.Finance, it is a new brilliant & innovative protocol. XBC is fair launch, driven by community run on #BSC</span>
                             <br/>
                             <br/>
                           XBC has been fixed all security issues on Smart Contract by security experts and ready to meet you at the moon

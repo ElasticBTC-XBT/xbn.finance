@@ -20,7 +20,12 @@
                 <span v-html="faq.answer"></span>
 
               </c-accordion-item>
+
+
             </c-accordion>
+            <h5 style="text-align: center">
+              <a href="https://xbc.xbn.finance">Launch XBC App</a>
+            </h5>
           </div>
         </c-generic-section>
       </fragment>
@@ -76,19 +81,19 @@ export default {
         },
         {
           "title": "What do I need to do to passively earn BNB?",
-          "answer": "Simply holding $MRAT will earn you a share of the BNB rewards pool, proportional to the amount of $MRAT you hold. You will also earn $MRAT passively too, which gets put straight in your wallet"
+          "answer": "Simply holding $XBC will earn you a share of the BNB rewards pool, proportional to the amount of $XBC you hold. You will also earn $XBC passively too, which gets put straight in your wallet"
         },
         {
           "title": "When can I claim my BNB?\n",
-          "answer": "The specific time you can claim depends on a few factors. In the first seven days after $MRAT was listed on PancakeSwap, the collection time is every 24 hours, after the first seven days, the collection time changes to once every week. Be aware however, that if you purchase a significant amount more $MRAT, your collection time will be moved back, and if you sell all your $MRAT and buy back in, your collection date will be pushed years out into the future. This is not a bug, it's a feature that helps prevent scalping. More information on how this works can be found here: https://app.gitbook.com/@oneandonlychance/s/xbc/innovation/a-new-way-to-earn-bnb"
+          "answer": "The specific time you can claim depends on a few factors. In the first seven days after $XBC was listed on PancakeSwap, the collection time is every 24 hours, after the first seven days, the collection time changes to once every week. Be aware however, that if you purchase a significant amount more $XBC, your collection time will be moved back, and if you sell all your $XBC and buy back in, your collection date will be pushed years out into the future. This is not a bug, it's a feature that helps prevent scalping. More information on how this works can be found here: https://app.gitbook.com/@oneandonlychance/s/xbc/innovation/a-new-way-to-earn-bnb"
         },
         {
-          "title": "What time zone is the Moonrat app on? (relating to reward claim timer)",
+          "title": "What time zone is the XBC app on? (relating to reward claim timer)",
           "answer": "It syncs to your device time so the answer is whatever time zone you are in.\n"
         },
         {
           "title": "How can I claim my BNB",
-          "answer": "Simply have your wallet connected through the Moonrat Dapp on the website, click \"Collect my bnb\". Please note that you must have BNB in your wallet that will be used to cover transfer fees."
+          "answer": "Simply have your wallet connected through the XBC Dapp on the website, click \"Collect my bnb\". Please note that you must have BNB in your wallet that will be used to cover transfer fees."
         },
         {
           "title": "Does my BNB stack if I don't claim it",

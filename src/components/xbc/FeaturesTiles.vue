@@ -71,7 +71,7 @@
                     {
                         image: require('@/assets/images/elasticbitcoin-A-NEW-DEFI-PROTOCOL.png'),
                         title: "Automatic Liquidity Pool",
-                        description: "4% of every transaction contributes toward automatically generating further liquidity on Pancake Swap. Benefiting long term for $MRAT holders the most!",
+                        description: "4% of every transaction contributes toward automatically generating further liquidity on Pancake Swap. Benefiting long term for $XBC holders the most!",
                     },
                     {
                         image: require('@/assets/images/elasticbitcoin-RANDOMIZED-REBASING.png'),
