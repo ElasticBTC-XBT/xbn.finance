@@ -15,13 +15,13 @@
                     ]">
                 <div class="split-item">
                     <div class="hero-content split-item-content center-content-mobile">
-                      <h3 style="color:red; font-size: 17px">Important note: we decided to pending the launch because too many bots accumulate $XBC when we deploy contract, which is not fair. <br/>
-                        Please follow Twitter: <a href="https://twitter.com/elasticbitcoin">elasticbitcoin</a> for further announcement!
-                        <br/>
+<!--                      <h3 style="color:red; font-size: 17px">Important note: we decided to pending the launch because too many bots accumulate $XBC when we deploy contract, which is not fair. <br/>-->
+<!--                        Please follow Twitter: <a href="https://twitter.com/elasticbitcoin">elasticbitcoin</a> for further announcement!-->
+<!--                        <br/>-->
 
-                        We are considering give XBN holders privilege to buy XBC first to avoid bots.
+<!--                        We are considering give XBN holders privilege to buy XBC first to avoid bots.-->
 
-                      </h3>
+<!--                      </h3>-->
                         <h1 class="mt-0 mb-16 reveal-from-left" style="font-size: 37px">
 
 
@@ -35,15 +35,18 @@
                             <br/>
                             <br/>
                           When you trade, set slippage 11-13% . Ask community here <a target="_blank" href="https://t.me/elasticbitcoinxbt"> Telegram </a>
+                          <br/>
+                          <br/>
+                          Liquidity will be added and you can start trading at 04:15 GMT.
 
                         </p>
                         <div class="reveal-from-left">
-<!--                            <c-button tag="a" color="primary" wide-mobile href="/buy">-->
-<!--                              Buy $XBC now-->
-<!--                            </c-button>-->
-<!--                          <c-button tag="a" color="primary" wide-mobile href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x1396148f0f45888d9a57ad9bf35077cbf9d067d9">-->
-<!--                            Buy $XBC now-->
-<!--                          </c-button>-->
+                            <c-button tag="a" color="primary" wide-mobile href="/buy">
+                              Buy $XBC now
+                            </c-button>
+                          <c-button tag="a" color="primary" wide-mobile href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x0321394309cad7e0e424650844c3ab3b659315d3">
+                            Buy $XBC now
+                          </c-button>
                           <br/>
                           <br/>
                           <p>
