@@ -37,7 +37,7 @@
                           When you trade, set slippage 11-13% . Ask community here <a target="_blank" href="https://t.me/joinchat/vKS286Te-98wODZl"> Telegram </a>
                           <br/>
                           <br/>
-                          Liquidity will be added and you can start trading at 04:20 GMT.
+<!--                          Liquidity will be added and you can start trading at 04:20 GMT.-->
 
                         </p>
                         <div class="reveal-from-left">
