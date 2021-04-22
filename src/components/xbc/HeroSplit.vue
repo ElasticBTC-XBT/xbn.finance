@@ -34,7 +34,7 @@
                           XBC has been fixed all security issues on Smart Contract by security experts and ready to meet you at the moon
                             <br/>
                             <br/>
-                          When you trade, set slippage 11-13% . Ask community here <a target="_blank" href="https://t.me/joinchat/vKS286Te-98wODZl"> Telegram </a>
+                          When you trade, set slippage 11-13% . Ask community here <a target="_blank" href="https://t.me/XBCforeveryone"> Telegram </a>
                           <br/>
                           <br/>
 <!--                          Liquidity will be added and you can start trading at 04:20 GMT.-->
