@@ -11,7 +11,7 @@
                 </li>
                 <li>
                     <a class="flex-center"
-                       href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac"
+                       href="https://v1exchange.pancakeswap.finance/#/swap?outputCurrency=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac"
                        target="_blank">
                         <c-image width="24" height="24" :src="require('@/assets/images/pancakeswap.png')"></c-image>
                         <span class="ml-8">PancakeSwap</span>

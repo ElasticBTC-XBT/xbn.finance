@@ -21,7 +21,7 @@
                             <c-section-header :data="genericSection01Header" class="center-content"/>
                             <div class="button-group">
                                 <c-button tag="a" color="primary" wide-mobile target="_blank"
-                                          href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac">
+                                          href="https://v1exchange.pancakeswap.finance/#/swap?outputCurrency=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac">
                                     Buy XBN on Pancake
                                 </c-button>
                               <c-button tag="a" color="primary" wide-mobile target="_blank"
