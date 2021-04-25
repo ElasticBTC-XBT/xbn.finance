@@ -47,6 +47,11 @@
                           </c-button>
                           <br/>
                           <br/>
+                          <c-button tag="a" color="primary" wide-mobile href="https://medium.com/@emekadeboy/how-to-buy-xbc-and-claim-bnb-on-metamask-8ebcce5f2038">
+                            How to buy?
+                          </c-button>
+                          <br/>
+                          <br/>
                           <p>
                             <c-button tag="a" color="primary" wide-mobile href="https://xbc.xbn.finance">
                               Launch $XBC App
