@@ -18,6 +18,8 @@
                         <h1 class="title-main">
                             FOMOLOTTO
                         </h1>
+                      <h3>Earn BNB  and Win big pot</h3>
+                      <p>You can withdraw your BNB earning anytime, you keep earning BNB until there is a winner.</p>
 
                         <div class="display-flex justify-center-between">
                             <div class="card-wrapper current-pot-wrapper">
@@ -351,7 +353,7 @@
                 userAccount: null,
                 walletClient: {},
                 buyOption: 'bnb',
-                amountBuy: 0.17,
+                amountBuy: 0.01,
                 playerVault: {},
                 currentRoundInfo: {},
                 previousRoundInfo: {},
