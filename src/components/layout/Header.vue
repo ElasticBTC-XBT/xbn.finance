@@ -1,6 +1,6 @@
 <template>
     <header class="site-header">
-        <c-ribbon/>
+<!--        <c-ribbon/>-->
         <div class="container header-have-ribbon">
             <div class="site-header-inner" :class="bottomDivider && 'has-bottom-divider'">
                 <c-logo/>
@@ -66,9 +66,9 @@
                             <router-link to="/xbn/sales/"><img src="https://i.imgur.com/jmPNlwr.png" style="height: 17px; display: inline-block; margin-bottom: -2px">Sales</router-link>
                           </li>
 
-                            <li @click="closeMenu">
-                                <router-link to="/xbn/lottery/">{{ $t("header.lottery") }}</router-link>
-                            </li>
+<!--                            <li @click="closeMenu">-->
+<!--                                <router-link to="/xbn/lottery/">{{ $t("header.lottery") }}</router-link>-->
+<!--                            </li>-->
 
                             <li @click="closeMenu">
                                 <router-link to="/xbn/gratitude/">{{ $t("header.gratitude") }}</router-link>
@@ -100,12 +100,12 @@
 <script>
     import CLogo from '@/components/layout/partials/Logo.vue'
     import CButton from '@/components/elements/Button'
-    import CRibbon from "./Ribbon";
+    // import CRibbon from "./Ribbon";
 
     export default {
         name: 'CHeader',
         components: {
-            CRibbon,
+            // CRibbon,
             CLogo,
             CButton
         },
