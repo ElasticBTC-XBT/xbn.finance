@@ -64,7 +64,7 @@
   },
   "home": {
     "hero_split": {
-      "title_1": "XBN · Elastic BNB · DeFi apps and Prediction Market",
+      "title_1": "XBN · Elastic BNB · DeFi apps and Smart Liquidity Pool",
       "desc_1": "XBN's mission is powering Defi Apps on Binance Smart Chain",
       "desc_2": "XBN utilizes the power of BSC's Smart Contract to achieve its goal: 1 XBN = 1 BNB",
       "desc_3": "",
@@ -94,7 +94,7 @@
           "desc": "It refers to digital assets, financial smart contracts, protocols, and dapps predominantly built on Binance Smart Chain"
         },
         "item_6": {
-          "title": "What is prediction market?",
+          "title": "What is Smart Liquidity Pool?",
 
           "desc": "also known as information markets or virtual markets are exchange-traded markets created for the purpose of trading the outcome of events. "
         }
@@ -338,7 +338,7 @@
     },
     "item_6": {
       "title": "Releasing 2nd Dapps",
-      "desc": "On-chain price prediction market",
+      "desc": "On-chain price Smart Liquidity Pool",
       "category": "research"
     },
     "item_7": {
@@ -357,8 +357,8 @@
       "category": "Growth"
     },
     "item_10": {
-      "title": "Launching Prediction Market",
-      "desc": "XBN will become The Best on-chain Prediction Market",
+      "title": "Launching Smart Liquidity Pool",
+      "desc": "XBN will become The Best on-chain Smart Liquidity Pool",
       "category": "Growth"
     },
     "section_header_title": "Roadmap"

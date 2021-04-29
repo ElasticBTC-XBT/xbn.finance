@@ -21,7 +21,7 @@
                     <div class="split-item">
                         <div class="hero-content split-item-content center-content-mobile">
                             <h1 class="mt-0 mb-16 reveal-from-left">
-                                XBN · Elastic BNB · DeFi Dapps and Prediction Market
+                                XBN · Elastic BNB · DeFi Dapps and Smart Liquidity Pool
                             </h1>
                             <p class="mt-0 mb-24 reveal-from-left" data-reveal-delay="200">
                                <em>A rebasing bitcoin run on ethereum network.</em>
