@@ -186,6 +186,6 @@
     }
 
     .header-have-ribbon {
-        margin-top: 60px !important;
+        /*margin-top: 60px !important;*/
     }
 </style>
