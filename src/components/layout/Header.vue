@@ -41,11 +41,11 @@
                                   <router-link to="/roadmap/">Roadmap</router-link>
                                 </li>
 
-                                <li @click="closeMenu">
-                                  <a href="https://elasticbitcoin.org" target="_blank">
-                                    XBT
-                                  </a>
-                                </li>
+<!--                                <li @click="closeMenu">-->
+<!--                                  <a href="https://elasticbitcoin.org" target="_blank">-->
+<!--                                    XBT-->
+<!--                                  </a>-->
+<!--                                </li>-->
                               </ul>
                             </div>
                           </li>
@@ -60,7 +60,10 @@
                             <!--                            <router-link to="/xbn/sales/">XBN Sales</router-link>-->
                             <!--                          </li>-->
                           <li @click="closeMenu">
-                            <router-link to="/xbc/">XBC</router-link>
+                            <a href="https://elasticbitcoin.org">XBT</a>
+                          </li>
+                          <li @click="closeMenu">
+                            <a href="https://xbc.xbn.finance">XBC</a>
                           </li>
                             <li @click="closeMenu">
                                 <router-link to="/xbn/airdrop/">{{ $t("airdrop.airdrop") }}</router-link>
@@ -89,7 +92,7 @@
                         </ul>
                       <ul class="list-reset header-nav-right">
                         <c-button tag="a" class="button button-primary button-sm" color="primary" wide-mobile
-                                  href="https://xbc.xbn.finance" >
+                                  href="https://app.xbc.xbn.finance" >
                           XBC App
                         </c-button>
                       </ul>
