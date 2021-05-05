@@ -32,6 +32,9 @@
                             <div class="list-item-header-child">
                               <ul>
                                 <li @click="closeMenu">
+                                  <router-link to="https://tothemoon.xbn.finance/">White Paper</router-link>
+                                </li>
+                                <li @click="closeMenu">
                                   <router-link to="/governance/">Governance</router-link>
                                 </li>
                                 <li @click="closeMenu">
