@@ -63,7 +63,7 @@
                             <a href="https://elasticbitcoin.org">XBT</a>
                           </li>
                           <li @click="closeMenu">
-                            <a href="https://xbc.xbn.finance">XBC</a>
+                            <a href="https://about.xbc.xbn.finance">XBC</a>
                           </li>
                             <li @click="closeMenu">
                                 <router-link to="/xbn/airdrop/">{{ $t("airdrop.airdrop") }}</router-link>
