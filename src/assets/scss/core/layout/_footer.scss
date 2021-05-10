@@ -142,7 +142,7 @@
     @include anchor-aspect(footer);
     @include font-weight(footer-link);
     text-transform: $link-footer--transform;
-    padding: 0 $footer-nav--padding-h;
+    padding: 0 $footer-nav--padding-h 0 0;
 
     .invert-color & {
       @include anchor-aspect(footer, inverse);

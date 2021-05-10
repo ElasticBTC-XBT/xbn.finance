@@ -49,6 +49,14 @@
                         <span class="ml-8">CoinGecko</span>
                     </a>
                 </li>
+                <li>
+                    <a class="flex-center"
+                       href="https://coinmarketcap.com/currencies/xbn/"
+                       target="_blank">
+                        <c-image width="24" height="24" :src="require('@/assets/images/cmc.png')"></c-image>
+                        <span class="ml-8">Coinmarketcap</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
