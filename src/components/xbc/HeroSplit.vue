@@ -42,7 +42,7 @@
                         </p>
                         <div class="reveal-from-left">
 
-                          <c-button tag="a" color="primary" wide-mobile href="https://v1exchange.pancakeswap.finance/#/swap?outputCurrency=0x0321394309cad7e0e424650844c3ab3b659315d3">
+                          <c-button tag="a" color="primary" wide-mobile href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x0321394309cad7e0e424650844c3ab3b659315d3">
                             Buy $XBC now
                           </c-button>
                           <br/>
