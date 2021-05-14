@@ -68,3 +68,8 @@
         }
     }
 </script>
+<style scoped>
+.footer-copyright{
+    max-width: 240px;
+}
+</style>
