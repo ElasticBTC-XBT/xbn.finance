@@ -35,6 +35,9 @@
                                   <a href="https://tothemoon.xbn.finance/">White Paper</a>
                                 </li>
                                 <li @click="closeMenu">
+                                  <a href="https://tothemoon.xbn.finance/xbn-investor-protection-program">Investor Protection</a>
+                                </li>
+                                <li @click="closeMenu">
                                   <router-link to="/governance/">Governance</router-link>
                                 </li>
                                 <li @click="closeMenu">
