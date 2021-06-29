@@ -6,7 +6,7 @@ import Basic from './views/basic.vue';
 import BuyXBN from './views/buy.vue';
 import Economics from './views/economics.vue';
 import Technology from './views/technology.vue';
-import Staking from './views/staking.vue';
+import Staking from './views/auto_staking.vue';
 import Signup from './views/Signup.vue';
 import Learn from './views/learn.vue';
 import Governance from './views/governance.vue';

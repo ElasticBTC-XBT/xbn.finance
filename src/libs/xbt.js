@@ -5,6 +5,12 @@ export const XBN = {
     jsonInterface: require('@/assets/contracts/XBN.json')
 }
 
+
+export const Staking = {
+    address: process.env.VUE_APP_XBN_CONTRACT_ADDRESS,
+    jsonInterface: require('@/assets/contracts/Staking.json')
+}
+
 export const getXBNContract = async (web3Client) => {
     const accounts = await web3Client.eth.getAccounts();
     return new web3Client.eth.Contract(
@@ -16,6 +22,20 @@ export const getXBNContract = async (web3Client) => {
         }
     );
 }
+
+
+export const getStakingContract = async (web3Client) => {
+    const accounts = await web3Client.eth.getAccounts();
+    return new web3Client.eth.Contract(
+        XBN.jsonInterface.abi,
+        XBN.address,
+        {
+            gas: 500000,
+            from: accounts[0]
+        }
+    );
+}
+
 
 export const getContractXBNFundBalance = async (web3Client) => {
     const contract = await getXBNContract(web3Client);

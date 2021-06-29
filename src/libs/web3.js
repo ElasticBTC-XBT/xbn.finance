@@ -48,7 +48,7 @@ const bindingProviderEvents = (provider) => {
 }
 
 export const getWeb3Client = async () => {
-    console.log('get client');
+    //console.log('get client');
 
     if(!web3Provider) {
         web3Provider = await web3Modal.connect();
