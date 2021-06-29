@@ -34,9 +34,9 @@
                                 <li @click="closeMenu">
                                   <a href="https://tothemoon.xbn.finance/">White Paper</a>
                                 </li>
-                                <li @click="closeMenu">
-                                  <a href="https://tothemoon.xbn.finance/xbn-investor-protection-program">Investor Protection</a>
-                                </li>
+<!--                                <li @click="closeMenu">-->
+<!--                                  <a href="https://tothemoon.xbn.finance/xbn-investor-protection-program">Investor Protection</a>-->
+<!--                                </li>-->
                                 <li @click="closeMenu">
                                   <router-link to="/governance/">Governance</router-link>
                                 </li>
@@ -44,44 +44,75 @@
                                   <router-link to="/roadmap/">Roadmap</router-link>
                                 </li>
 
-<!--                                <li @click="closeMenu">-->
-<!--                                  <a href="https://elasticbitcoin.org" target="_blank">-->
-<!--                                    XBT-->
-<!--                                  </a>-->
-<!--                                </li>-->
                               </ul>
                             </div>
                           </li>
 
-<!--                            <li @click="closeMenu">-->
-<!--                                <router-link to="/governance/">{{ $t("header.governance") }}</router-link>-->
-<!--                            </li>-->
-<!--                            <li @click="closeMenu">-->
-<!--                                <router-link to="/roadmap/">{{ $t("header.roadmap") }}</router-link>-->
-<!--                            </li>-->
-                            <!--                          <li @click="closeMenu">-->
-                            <!--                            <router-link to="/xbn/sales/">XBN Sales</router-link>-->
-                            <!--                          </li>-->
-                          <li @click="closeMenu">
-                            <a href="https://elasticbitcoin.org">XBT</a>
+                          <li @click="closeMenu" class="item-header-main">
+                            <a href="#" class="text-main">Ecosystem</a>
+
+                            <div class="list-item-header-child">
+                              <ul>
+                                <li @click="closeMenu">
+                                  <a href="https://elasticbitcoin.org">XBT</a>
+                                </li>
+                                <li @click="closeMenu">
+                                  <a href="https://about.xbc.xbn.finance">XBC</a>
+                                </li>
+                                <li @click="closeMenu">
+                                  <a href="https://pepe.community">PePe</a>
+                                </li>
+
+                              </ul>
+                            </div>
                           </li>
-                          <li @click="closeMenu">
-                            <a href="https://about.xbc.xbn.finance">XBC</a>
+                          <li @click="closeMenu" class="item-header-main">
+                            <a href="#" class="text-main">Products</a>
+
+                            <div class="list-item-header-child">
+                              <ul>
+                                <li @click="closeMenu">
+                                  <router-link to="/staking/">Auto Staking</router-link>
+                                </li>
+                                <li @click="closeMenu">
+                                  <router-link to="/xbn/airdrop/">{{ $t("airdrop.airdrop") }}</router-link>
+                                </li>
+                                <li @click="closeMenu">
+                                  <router-link to="/xbn/sales/"><img src="https://i.imgur.com/jmPNlwr.png" style="height: 17px; display: inline-block; margin-bottom: -2px">Sales</router-link>
+                                </li>
+                                <li @click="closeMenu">
+                                  <a href="https://xbc.xbn.finance">Earn BNB</a>
+                                </li>
+
+                              </ul>
+                            </div>
                           </li>
-                            <li @click="closeMenu">
-                                <router-link to="/xbn/airdrop/">{{ $t("airdrop.airdrop") }}</router-link>
-                            </li>
-                          <li @click="closeMenu">
-                            <router-link to="/xbn/sales/"><img src="https://i.imgur.com/jmPNlwr.png" style="height: 17px; display: inline-block; margin-bottom: -2px">Sales</router-link>
+                          <li @click="closeMenu" class="item-header-main">
+                            <a href="#" class="text-main">Community</a>
+
+                            <div class="list-item-header-child">
+                              <ul>
+                                <li @click="closeMenu">
+                                  <router-link to="/xbn/gratitude/">{{ $t("header.gratitude") }}</router-link>
+                                </li>
+                                <li @click="closeMenu">
+                                  <a href="https://twitter.com/hashtag/XBCagainstCovid19?src=hashtag_click">#XBCagainstCovid19</a>
+                                </li>
+
+
+                              </ul>
+                            </div>
                           </li>
+
+
+
+
 
 <!--                            <li @click="closeMenu">-->
 <!--                                <router-link to="/xbn/lottery/">{{ $t("header.lottery") }}</router-link>-->
 <!--                            </li>-->
 
-                            <li @click="closeMenu">
-                                <router-link to="/xbn/gratitude/">{{ $t("header.gratitude") }}</router-link>
-                            </li>
+
 
 
 
@@ -93,12 +124,12 @@
                                 {{ $t("header.buy") }} XBN
                             </c-button>
                         </ul>
-                      <ul class="list-reset header-nav-right">
-                        <c-button tag="a" class="button button-primary button-sm" color="primary" wide-mobile
-                                  href="https://app.xbc.xbn.finance" >
-                          XBC App
-                        </c-button>
-                      </ul>
+<!--                      <ul class="list-reset header-nav-right">-->
+<!--                        <c-button tag="a" class="button button-primary button-sm" color="primary" wide-mobile-->
+<!--                                  href="https://app.xbc.xbn.finance" >-->
+<!--                          XBC App-->
+<!--                        </c-button>-->
+<!--                      </ul>-->
                     </div>
                 </nav>
             </div>
