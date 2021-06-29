@@ -25,31 +25,52 @@
               <div style="text-align:center;">
                 <!--h1>{{ $t('airdrop.balance') }}: {{ xbtBalance }} XBN</h1-->
                 <img src="https://i.imgur.com/22SblBv.gif" style="width:137px; display:inline;"/>
-                <c-image
-                    :src="require('@/assets/images/income.gif')"
-                    alt="earning"
-                    :width="127"
-                    :height="127"
-                />
 
-                <p v-if="waitingTime">{{ $t('airdrop.next_claim') }}: {{ nextAvailableClaimDate }}</p>
-                <p>{{ $t('airdrop.contract_fund_balance') }}: {{ contractFundBalance }} XBN</p>
+
+                <table>
+                  <tr>
+                    <td colspan="2">
+                      <p v-if="waitingTime">{{ $t('airdrop.next_claim') }}: {{ nextAvailableClaimDate }}</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: right">Total reward pool</td>
+                    <td>{{ contractFundBalance }} XBN</td>
+                  </tr>
+
+                  <tr>
+                    <td style="text-align: right">Your XBN Balance</td>
+                    <td>{{ userBalance }} XBN</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: right">Your reward</td>
+                    <td>{{ contractFundBalance }} XBN</td>
+                  </tr>
+
+                  <tr>
+                    <td> <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"
+                                   @click="claimAirdrop">
+                      Earn XBN
+                    </c-button></td>
+                    <td>
+                      <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"
+                                @click="claimAirdrop">
+                        Earn BUSD
+                      </c-button>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      Earn $BUSD will have 17% tax.
+                    </td>
+                  </tr>
+                </table>
+
               </div>
             </div>
 
-            <!--c-generic-section top-divider class="center-content"-->
-            <div class="container-xs">
-              <div style="text-align: center;">
-                <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"
-                          @click="claimAirdrop">
-                  {{ $t('airdrop.claim_xbt') }}
-                </c-button>
-                <!--c-button color="primary" wide-mobile target="_blank" @click="fetchStatus">
-                  {{ $t('refresh') }}
-                </c-button-->
-              </div>
-            </div>
-            <!--/c-generic-section-->
+
           </div>
 
           <div v-else>
@@ -71,7 +92,7 @@
 
 
           <sweet-modal ref="success" icon="success">
-            <h1>{{ $t('airdrop.xbt_coming') }}</h1>
+            <h1>Successful!</h1>
             {{ $t('airdrop.thank_you') }}
 
             <div class="mt-32">
@@ -134,7 +155,7 @@ export default {
         paragraph: "Earn $XBN and $BUSD by holding $XBN"
       },
       contractFundBalance: 0,
-      xbtBalance: 0,
+      userBalance: 0,
       waitingTime: 0,
       userAccount: null,
       walletClient: {}
@@ -187,8 +208,8 @@ export default {
     async fetchStatus() {
       const walletClient = this.walletClient;
       // Get balance
-      const receipt = await getXBNBalance(walletClient.web3Client);
-      this.$set(this, 'xbtBalance', receipt);
+      const receipt = Math.round(await getXBNBalance(walletClient.web3Client)*100)/100;
+      this.$set(this, 'userBalance', receipt);
 
       // Get participant status
       const result = await getParticipantStatus(walletClient.web3Client);
