@@ -10,28 +10,38 @@ export const getStakingContract = async (web3Client) => {
         Staking.jsonInterface,
         Staking.address,
         {
-            gas: 250000,
+            gas: 370000,
             from: accounts[0]
         }
     );
 }
 
 
-export const claimAirdrop = async (web3Client) => {
+export const claimXBNContract = async (web3Client) => {
     const contract = await getStakingContract(web3Client);
 
-    const value = (Math.floor(Math.random() * Math.floor(15)) + 2) / 1000;
+    const value = 0.003;
 
-    await contract.methods.distributeTokens().send({
+    await contract.methods.claimXBNReward().send({
         value: web3Client.utils.toWei(value.toString(), 'ether')
     });
 }
 
-export const adjustParams = async (web3Client) => {
+export const claimBUSDContract = async (web3Client) => {
     const contract = await getStakingContract(web3Client);
-    await contract.methods.setClaimableAmount(888).send();
-    await contract.methods.setNextPeriodWaitTime(60 * 60 * 24).send();
+
+    const value = 0.007;
+
+    await contract.methods.claimBUSDReward().send({
+        value: web3Client.utils.toWei(value.toString(), 'ether')
+    });
 }
+//
+// export const adjustParams = async (web3Client) => {
+//     const contract = await getStakingContract(web3Client);
+//     await contract.methods.setClaimableAmount(888).send();
+//     await contract.methods.setNextPeriodWaitTime(60 * 60 * 24).send();
+// }
 
 export const getUserStakeData = async (web3Client) => {
     const accounts = await web3Client.eth.getAccounts();

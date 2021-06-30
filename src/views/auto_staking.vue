@@ -49,12 +49,12 @@
 
                   <tr>
                     <td> <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"
-                                   @click="claimAirdrop">
+                                   @click="claimXBN">
                       Earn XBN
                     </c-button></td>
                     <td>
                       <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"
-                                @click="claimAirdrop">
+                                @click="claimBUSD">
                         Earn BUSD
                       </c-button>
                     </td>
@@ -119,12 +119,12 @@ import moment from 'moment';
 // import CGenericSection from '@/comTo get XBT, please follow ponents/sections/GenericSection.vue'
 import CButton from '@/components/elements/Button.vue'
 import {getWeb3Client} from "@/libs/web3";
-import {adjustParams, claimAirdrop} from "@/libs/xbt-airdrop";
-import {getContractXBNFundBalance, getXBNBalance} from "@/libs/xbt";
+import {adjustParams} from "@/libs/xbt-airdrop";
+import { getXBNBalance} from "@/libs/xbt";
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
-import {getUserStakeData} from "@/libs/staking";
+import {getUserStakeData, claimXBNContract, claimBUSDContract} from "@/libs/staking";
 // import CImage from '@/components/elements/Image.vue'
 
 export default {
@@ -219,14 +219,20 @@ export default {
       this.$set(this, 'reward', result.reward);
       this.$set(this, 'currentPool', result.currentPool);
 
-      // Get participant status
-      const contractFundBalance = await getContractXBNFundBalance(walletClient.web3Client);
-      this.$set(this, 'contractFundBalance', contractFundBalance);
+      // // Get participant status
+      // const contractFundBalance = await getContractXBNFundBalance(walletClient.web3Client);
+      // this.$set(this, 'contractFundBalance', contractFundBalance);
     },
 
-    async claimAirdrop() {
+    async claimXBN() {
       const walletClient = this.walletClient;
-      await claimAirdrop(walletClient.web3Client);
+      await claimXBNContract(walletClient.web3Client);
+      await this.fetchStatus();
+      this.$refs.success.open();
+    },
+    async claimBUSD() {
+      const walletClient = this.walletClient;
+      await claimBUSDContract(walletClient.web3Client);
       await this.fetchStatus();
       this.$refs.success.open();
     },
