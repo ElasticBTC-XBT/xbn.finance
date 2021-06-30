@@ -35,7 +35,7 @@
                   </tr>
                   <tr>
                     <td style="text-align: right">Total reward pool</td>
-                    <td>{{ contractFundBalance }} XBN</td>
+                    <td>{{ currentPool }} XBN</td>
                   </tr>
 
                   <tr>
@@ -44,7 +44,7 @@
                   </tr>
                   <tr>
                     <td style="text-align: right">Your reward</td>
-                    <td>{{ contractFundBalance }} XBN</td>
+                    <td>{{ reward }} XBN</td>
                   </tr>
 
                   <tr>
@@ -119,11 +119,12 @@ import moment from 'moment';
 // import CGenericSection from '@/comTo get XBT, please follow ponents/sections/GenericSection.vue'
 import CButton from '@/components/elements/Button.vue'
 import {getWeb3Client} from "@/libs/web3";
-import {adjustParams, claimAirdrop, getParticipantStatus} from "@/libs/xbt-airdrop";
+import {adjustParams, claimAirdrop} from "@/libs/xbt-airdrop";
 import {getContractXBNFundBalance, getXBNBalance} from "@/libs/xbt";
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
+import {getUserStakeData} from "@/libs/staking";
 // import CImage from '@/components/elements/Image.vue'
 
 export default {
@@ -154,7 +155,8 @@ export default {
         title: "XBN Auto Staking",
         paragraph: "Earn $XBN and $BUSD by holding $XBN"
       },
-      contractFundBalance: 0,
+      reward: 0,
+      currentPool: 0,
       userBalance: 0,
       waitingTime: 0,
       userAccount: null,
@@ -212,8 +214,10 @@ export default {
       this.$set(this, 'userBalance', receipt);
 
       // Get participant status
-      const result = await getParticipantStatus(walletClient.web3Client);
-      this.$set(this, 'waitingTime', result.participantStatus * 1000);
+      const result = await getUserStakeData(walletClient.web3Client);
+      this.$set(this, 'waitingTime', result.nextClaimTime * 1000);
+      this.$set(this, 'reward', result.reward);
+      this.$set(this, 'currentPool', result.currentPool);
 
       // Get participant status
       const contractFundBalance = await getContractXBNFundBalance(walletClient.web3Client);
