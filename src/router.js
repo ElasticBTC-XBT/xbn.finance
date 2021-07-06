@@ -26,6 +26,7 @@ import XBNQuestAirdrop from './views/xbn/xbn_quest_airdrop';
 import XBNAdminQuestAirdrop from './views/xbn/xbn_admin_quest_airdrop';
 import Gratitude from "./views/xbn/Gratitude";
 import LastSurvior from "./views/xbn/LastSurvior";
+import AIStaking from "./views/ai_staking.vue";
 
 Vue.use(Router);
 
@@ -249,6 +250,15 @@ let routers = [
         },
         viShort: '/vi/xbn/swap',
         krShort: '/kr/xbn/swap',
+    },
+    {
+        path: '/ai-staking',
+        name: 'AiStaking',
+        components: {
+            default: AIStaking,
+        },
+        viShort: '/vi/ai-staking',
+        krShort: '/kr/ai-staking',
     }
 ]
 
