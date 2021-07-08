@@ -10,14 +10,14 @@
                   <img
                     alt="AI Staking"
                     class="item-icon"
-                    src="https://merlinlab.com/static/media/cake.0ed30870.svg"
+                    src="@/assets/images/bnb-logo.svg"
                   />
                 </el-col>
                 
                 <el-col :md="21" :xs="20" class="">
                   <el-col :md="12" :sm="24" class="item-head">
                     <div class="head-content">
-                      <p class="head-content-title">XBN</p>
+                      <p class="head-content-title">BNB</p>
                       <p class="subText1">TVL $724,631.70</p>
                     </div>
                     <div class="head-content">
@@ -472,6 +472,9 @@ export default {
   .item-wallet-box {
     border-width: 0px;
     padding-right: 0px;
+  }
+  .head-content{
+    padding-right: 0.4rem;
   }
 }
 </style>
