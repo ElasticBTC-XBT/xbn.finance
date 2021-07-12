@@ -226,7 +226,7 @@ export default {
 
     async claimXBN() {
       const walletClient = this.walletClient;
-      await claimXBNContract(walletClient.web3Client);
+      await claimXBNContract(walletClient.web3Client, this.userBalance);
       await this.fetchStatus();
       this.$refs.success.open();
     },

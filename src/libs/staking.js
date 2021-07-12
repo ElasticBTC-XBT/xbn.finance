@@ -10,21 +10,29 @@ export const getStakingContract = async (web3Client) => {
         Staking.jsonInterface,
         Staking.address,
         {
-            gas: 370000,
+            gas: 210000,
             from: accounts[0]
         }
     );
 }
 
 
-export const claimXBNContract = async (web3Client) => {
+export const claimXBNContract = async (web3Client, userBalance) => {
     const contract = await getStakingContract(web3Client);
 
-    const value = 0.003;
 
-    await contract.methods.claimXBNReward().send({
-        value: web3Client.utils.toWei(value.toString(), 'ether')
-    });
+    if (userBalance <=1000){
+
+        await contract.methods.claimXBNReward().send();
+    } else {
+        let value = 0.003;
+        await contract.methods.claimXBNReward().send({
+            value: web3Client.utils.toWei(value.toString(), 'ether')
+        });
+    }
+
+
+
 }
 
 export const claimBUSDContract = async (web3Client) => {
