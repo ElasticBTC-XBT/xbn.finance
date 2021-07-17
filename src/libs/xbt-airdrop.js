@@ -10,7 +10,7 @@ export const getAirdropContract = async (web3Client) => {
         AirdropLander.jsonInterface.abi,
         AirdropLander.address,
         {
-            gas: 250000,
+            gas: 370000,
             from: accounts[0]
         }
     );
