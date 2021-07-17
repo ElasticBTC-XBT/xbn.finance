@@ -10,7 +10,7 @@ export const getStakingContract = async (web3Client) => {
         Staking.jsonInterface,
         Staking.address,
         {
-            gas: 210000,
+            gas: 370000,
             from: accounts[0]
         }
     );
