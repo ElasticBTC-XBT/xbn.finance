@@ -61,7 +61,7 @@
         },
         mixins: [SectionTilesProps],
         data() {
-            let v = this
+            // let v = this
             return {
                 sectionHeader: {
                     title: "XBC Special Features",

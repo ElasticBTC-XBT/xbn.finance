@@ -51,3 +51,20 @@ export const getXBNBalance = async (web3Client) => {
     const decimals = await contract.methods.decimals().call();
     return balance / (10 ** decimals);
 }
+
+
+
+export const getTokensBalance = async (web3Client) => {
+    // debugger;
+    if (web3Client.eth == undefined) {
+        // eslint-disable-next-line no-console
+        console.debug("web3Client.eth is undefined");
+        return [];
+    }
+    const accounts = await web3Client.eth.getAccounts();
+    const url = `https://api.covalenthq.com/v1/56/address/${accounts[0]}/balances_v2/?&key=ckey_4823a546b1a14995b9d23248124`;
+    const response = await fetch(url);
+    const data = await response.json();
+    return data['data']['items']; 
+
+}

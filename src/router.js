@@ -7,6 +7,7 @@ import BuyXBN from './views/buy.vue';
 import Economics from './views/economics.vue';
 import Technology from './views/technology.vue';
 import Staking from './views/auto_staking.vue';
+import convertingDust from './views/converting_dust.vue';
 import Signup from './views/Signup.vue';
 import Learn from './views/learn.vue';
 import Governance from './views/governance.vue';
@@ -95,6 +96,13 @@ let routers = [
         },
         viShort: '/vi/staking',
         krShort: '/kr/staking',
+    },
+    {
+        path: '/converting_dust',
+        name: 'converting_dust',
+        components: {
+            default: convertingDust,
+        }
     },
     {
         path: '/learn',

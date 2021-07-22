@@ -23,8 +23,8 @@ import krMessage from './lang/kr.json'
 import '@/assets/scss/style.scss';
 
 Vue.config.productionTip = false;
-require('./assets/js/countdown.min');
-import './assets/scss/countdown.css';
+// require('./assets/js/countdown.min');
+// import './assets/scss/countdown.css';
 
 import vuetimeline from './assets/js/vuetimeline.esm';
 //

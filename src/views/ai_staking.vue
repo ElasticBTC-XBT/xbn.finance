@@ -121,19 +121,19 @@ import moment from "moment";
 import CButton from "@/components/elements/Button.vue";
 
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
-import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
+// import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
 // import CImage from '@/components/elements/Image.vue'
 
 export default {
   name: "AiStaking",
   components: {
-    CSectionHeader,
+    // CSectionHeader,
     // CGenericSection,
-    CButton,
-    VueGoodshareFacebook,
-    VueGoodshareReddit,
-    VueGoodshareTwitter,
+    // CButton,
+    // VueGoodshareFacebook,
+    // VueGoodshareReddit,
+    // VueGoodshareTwitter,
     // CImage
   },
   mixins: [SectionProps],

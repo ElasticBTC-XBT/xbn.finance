@@ -33,14 +33,14 @@
       </c-button>
 
 
-      <p style="margin-top: 57px">
+      <div style="margin-top: 57px">
         <hr/>
         <h5> 💕 Love XBN?  💕<br/> 💸 Make Money with XBN 💸</h5>
          Get 3% XBN bonus when helping your friends acquire XBN using link below
-      </p>
+      </div>
       <p>
 
-        <input v-model="ref_link" onclick="select()"></input>
+        <input v-model="ref_link" onclick="select()"/>
 
       </p>
       <p style="text-align: center">

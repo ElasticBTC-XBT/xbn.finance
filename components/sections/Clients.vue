@@ -17,8 +17,8 @@
                         <c-image
                             :src="require('@/assets/images/clients-01.svg')"
                             alt="Client 01"
-                            :width="124"
-                            :height="24" />
+                            :width=124
+                            :height=24 />
                     </li>
                     <li class="reveal-rotate-from-left" data-reveal-delay="150">
                         <c-image

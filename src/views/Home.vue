@@ -40,7 +40,7 @@ import CFeaturesTiles from '@/components/sections/FeaturesTiles.vue'
 import CGenericSection from '@/components/sections/GenericSection.vue'
 import CAccordion from '@/components/elements/Accordion.vue'
 import CAccordionItem from '@/components/elements/AccordionItem.vue'
-import CTestimonial from '@/components/sections/Testimonial.vue'
+// import CTestimonial from '@/components/sections/Testimonial.vue'
 import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
 
 export default {
@@ -54,7 +54,7 @@ export default {
     CGenericSection,
     CAccordion,
     CAccordionItem,
-    CTestimonial
+    // CTestimonial
   },
   data() {
     let v = this

@@ -111,7 +111,7 @@
         },
         mixins: [SectionSplitProps],
         data() {
-            let v = this
+            // let v = this
             return {
                 sectionHeader: {
                     title: "Fair Tokenomics",

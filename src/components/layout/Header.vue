@@ -86,18 +86,15 @@
                     </li>
                     <li @click="closeMenu">
                       <router-link to="/xbn/sales/"
-                        ><img
-                          src="https://i.imgur.com/jmPNlwr.png"
-                          style="
-                            height: 17px;
-                            display: inline-block;
-                            margin-bottom: -2px;
-                          "
-                        />Sales</router-link
+                        >Sales</router-link
                       >
                     </li>
                     <li @click="closeMenu">
                       <a href="https://xbc.xbn.finance">Earn BNB</a>
+                    </li>
+                    <li @click="closeMenu">
+                      <router-link to="/converting_dust"
+                        >Converting Dust</router-link>
                     </li>
                   </ul>
                 </div>

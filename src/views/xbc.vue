@@ -62,7 +62,7 @@ export default {
     // CTestimonial
   },
   data() {
-    let v = this
+    // let v = this
     return {
       faqData: [
         {

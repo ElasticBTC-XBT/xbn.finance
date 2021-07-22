@@ -48,13 +48,13 @@
 
 <script>
     import {SectionSplitProps} from '@/utils/SectionProps.js'
-    import CButton from '@/components/elements/Button.vue'
+    // import CButton from '@/components/elements/Button.vue'
     import CImage from '@/components/elements/Image.vue'
 
     export default {
         name: 'GratitudeSection1',
         components: {
-            CButton,
+            // CButton,
             CImage
         },
         mixins: [SectionSplitProps]
