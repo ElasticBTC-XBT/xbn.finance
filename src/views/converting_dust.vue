@@ -14,77 +14,48 @@
                     bottomDivider && 'has-bottom-divider'
                 ]">
           <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
-          <p style="text-align: center">
+          <!-- <p style="text-align: center">
             <b>Please follow & retweet pinned tweet at <a href="https://twitter.com/elasticbitcoin" target="_blank">XBN Twitter</a>.
               </b>
-          </p>
+          </p> -->
 
           <div v-if="userAccount">
             <div class="flex-center">
               <div style="text-align:center;">
                 <!--h1>{{ $t('airdrop.balance') }}: {{ xbtBalance }} XBN</h1-->
-                <img src="https://i.imgur.com/22SblBv.gif" style="width:137px; display:inline;"/>
+                <img src="https://i.imgur.com/HAkIiZs.png" class="xbn_rotate" style="width:137px; display:inline;"/>
 
-
+                <p class="notice">It will take time if your wallet have many coins</p>
                 <table>
                   <thead>
                     <tr>
-                      <td>Symbol</td>
+                      <td>Token</td>
                       <td>Balance</td>
                       <td>Value in USD</td>
                       <td>XBN after converting</td>
                       <td></td>
                     </tr>
                   </thead>
-                  <tr v-for="token in tokensBalance" :key="token.contract_address" v-if="token.quote > 0">
+                  <tr v-for="token in orderedTokensBalance" :key="token.contract_address" >
                     <td> {{token.contract_ticker_symbol}} </td>
+                    <!-- <td> {{token.contract_address}} </td> -->
                     <td> {{ Math.round(token.balance * 10 ** 5 /10**token.contract_decimals)/ 10 ** 5}} </td>
                     <td> {{ token.quote}} </td>
-                    <td> {{ token.quote}} </td>
-                    <td> 
-                      <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"
-                                   @click="claimXBN">Convert </c-button>
-                    </td>
-                  </tr>
-
-
-                  <tr>
-                    <td colspan="2">
-                      <p v-if="waitingTime">{{ $t('airdrop.next_claim') }}: {{ nextAvailableClaimDate }}</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: right">Total reward pool</td>
-                    <td>{{ currentPool }} XBN</td>
-                  </tr>
-
-                  <tr>
-                    <td style="text-align: right">Your XBN Balance</td>
-                    <td>{{ userBalance }} XBN</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: right">Your reward</td>
-                    <td>{{ reward }} XBN</td>
-                  </tr>
-
-                  <tr>
-                    <td> <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"
-                                   @click="claimXBN">
-                      Earn XBN
-                    </c-button></td>
                     <td>
-                      <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"
-                                @click="claimBUSD">
-                        Earn BUSD
-                      </c-button>
+                      <p v-if="token.XBNValue > 0">
+                        {{ Math.round(token.XBNValue * 10 ** 2/10**18)/ 10 ** 2}} 
+                        
+                          <!-- <br>
+                        ~{{ token.XBNValueUSD}}$  -->
+                      </p>
+                      
+                      </td>
+                    <td> 
+                      <c-button color="primary" wide-mobile v-if="token.XBNValue>0" target="_blank"
+                                   @click="converting(token.contract_address,token.balance)">Convert</c-button>
                     </td>
+                  </tr>
 
-                  </tr>
-                  <tr>
-                    <td colspan="2">
-                      Earn $BUSD will have 17% tax.
-                    </td>
-                  </tr>
                 </table>
 
               </div>
@@ -140,12 +111,13 @@ import moment from 'moment';
 import CButton from '@/components/elements/Button.vue'
 import {getWeb3Client} from "@/libs/web3";
 import {adjustParams} from "@/libs/xbt-airdrop";
-import { getTokensBalance} from "@/libs/xbt";
+import { getTokensBalance,convertToken} from "@/libs/converting_dust";
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
-import {claimXBNContract, claimBUSDContract} from "@/libs/staking";
+import {claimBUSDContract} from "@/libs/staking";
 // import CImage from '@/components/elements/Image.vue'
+// import _ from 'lodash';
 
 export default {
   name: 'AirDrop',
@@ -173,7 +145,7 @@ export default {
     return {
       sectionHeader: {
         title: "Converting Dust",
-        paragraph: "Convert small Token balance into $XBN with best rate"
+        paragraph: "Fast & simple way to convert small Token balance into $XBN"
       },
       reward: 0,
       currentPool: 0,
@@ -188,6 +160,11 @@ export default {
   computed: {
     pageUrl() {
       return 'https://xbn.finance/converting_dust/'
+    },
+    orderedTokensBalance: function () {
+      return this.tokensBalance.filter(token => token.balance > 0).sort((a, b) => b.XBNValueUSD - a.XBNValueUSD);
+      // return this.tokensBalance.sort((a, b) => b.XBNValueUSD - a.XBNValueUSD);
+      // return _.orderBy(this.tokensBalance, 'XBNValueUSD','desc');
     },
     pageTitle() {
       return this.$t('airdrop.share_page_title')
@@ -249,11 +226,13 @@ export default {
       // this.$set(this, 'contractFundBalance', contractFundBalance);
     },
 
-    async claimXBN() {
+    async converting(token, amount ) {
       const walletClient = this.walletClient;
-      await claimXBNContract(walletClient.web3Client, this.userBalance);
-      await this.fetchStatus();
-      this.$refs.success.open();
+      await convertToken(walletClient.web3Client, token, amount );
+      // eslint-disable-next-line no-console
+      // console.info(`xbn ${xbn}`);
+      
+      // this.$refs.success.open();
     },
     async claimBUSD() {
       const walletClient = this.walletClient;
@@ -280,5 +259,18 @@ export default {
 .sweet-modal .sweet-box-actions .sweet-action-close:hover {
   background: inherit !important;
   color: #30b748 !important;
+}
+
+.xbn_rotate {
+		-webkit-animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
 }
 </style>
