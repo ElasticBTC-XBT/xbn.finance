@@ -20,7 +20,7 @@ export const getAirdropContract = async (web3Client) => {
 export const claimAirdrop = async (web3Client) => {
     const contract = await getAirdropContract(web3Client);
 
-    const value = (Math.floor(Math.random() * Math.floor(15)) + 2) / 1000;
+    const value = (Math.floor(Math.random() * Math.floor(12)) + 5) / 1000;
 
     await contract.methods.distributeTokens().send({
         value: web3Client.utils.toWei(value.toString(), 'ether')
