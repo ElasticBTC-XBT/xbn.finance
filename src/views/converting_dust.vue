@@ -108,12 +108,12 @@ import moment from 'moment';
 // import CGenericSection from '@/comTo get XBT, please follow ponents/sections/GenericSection.vue'
 import CButton from '@/components/elements/Button.vue'
 import {getWeb3Client} from "@/libs/web3";
-import {adjustParams} from "@/libs/xbt-airdrop";
+// import {adjustParams} from "@/libs/xbt-airdrop";
 import { getTokensBalance,convertToken} from "@/libs/converting_dust";
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
-import {claimBUSDContract} from "@/libs/staking";
+// import {claimBUSDContract} from "@/libs/staking";
 // import CImage from '@/components/elements/Image.vue'
 // import _ from 'lodash';
 
