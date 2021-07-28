@@ -114,15 +114,15 @@
 // import layout
 import CLayout from "@/layouts/LayoutDefault.vue";
 // import sections
-import CSectionHeader from "@/components/sections/partials/SectionHeader.vue";
+// import CSectionHeader from "@/components/sections/partials/SectionHeader.vue";
 import { SectionProps } from "@/utils/SectionProps.js";
 import moment from "moment";
 // import CGenericSection from '@/comTo get XBT, please follow ponents/sections/GenericSection.vue'
-import CButton from "@/components/elements/Button.vue";
+// import CButton from "@/components/elements/Button.vue";
 
-import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
+// import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 // import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
-import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
+// import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
 // import CImage from '@/components/elements/Image.vue'
 
 export default {

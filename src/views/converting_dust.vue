@@ -30,27 +30,25 @@
                   <thead>
                     <tr>
                       <td>Token</td>
-                      <td>Balance</td>
-                      <td>Value in USD</td>
-                      <td>XBN after converting</td>
-                      <td></td>
+                      <!-- <td>Balance</td> -->
+                      <!-- <td>Value in USD</td> -->
+                      <td>Value after converting</td>
+                      <!-- <td></td> -->
                     </tr>
                   </thead>
                   <tr v-for="token in orderedTokensBalance" :key="token.contract_address" >
-                    <td> {{token.contract_ticker_symbol}} </td>
-                    <!-- <td> {{token.contract_address}} </td> -->
-                    <td> {{ Math.round(token.balance * 10 ** 5 /10**token.contract_decimals)/ 10 ** 5}} </td>
-                    <td> {{ token.quote}} </td>
+                    <td> 
+                       {{ Math.round(token.balance * 10 ** 5 /10**token.contract_decimals)/ 10 ** 5}} {{token.contract_ticker_symbol}} </td>
+                    <!-- <td> {{ token.quote}} </td> -->
                     <td>
                       <p v-if="token.XBNValue > 0">
-                        {{ Math.round(token.XBNValue * 10 ** 2/10**18)/ 10 ** 2}} 
+                        {{ Math.round(token.XBNValue * 10 ** 2/10**18)/ 10 ** 2}}  $XBN 
                         
                           <!-- <br>
                         ~{{ token.XBNValueUSD}}$  -->
                       </p>
                       
-                      </td>
-                    <td> 
+                      
                       <c-button color="primary" wide-mobile v-if="token.XBNValue>0" target="_blank"
                                    @click="converting(token.contract_address,token.balance)">Convert</c-button>
                     </td>
