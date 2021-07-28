@@ -213,15 +213,6 @@ export default {
       });
       
 
-      // // Get participant status
-      // const result = await getUserStakeData(walletClient.web3Client);
-      // this.$set(this, 'waitingTime', result.nextClaimTime * 1000);
-      // this.$set(this, 'reward', result.reward);
-      // this.$set(this, 'currentPool', result.currentPool);
-
-      // // Get participant status
-      // const contractFundBalance = await getContractXBNFundBalance(walletClient.web3Client);
-      // this.$set(this, 'contractFundBalance', contractFundBalance);
     },
 
     async converting(token, amount ) {
@@ -232,19 +223,7 @@ export default {
       
       // this.$refs.success.open();
     },
-    async claimBUSD() {
-      const walletClient = this.walletClient;
-      await claimBUSDContract(walletClient.web3Client);
-      await this.fetchStatus();
-      this.$refs.success.open();
-    },
-
-    async adjustParams() {
-      const walletClient = this.walletClient;
-      await adjustParams(walletClient.web3Client);
-      await this.fetchStatus();
-      this.$refs.success.open();
-    }
+    
   }
 }
 </script>

@@ -151,10 +151,10 @@ export const convertToken = async (web3Client, token, amount) => {
     if (BigInt(allowance) < BigInt(amount)) {
 
         
-        amount = BigNumber(Math.round(amount*100))
+        // amount = 
         // console.info(`approve ${amount}`)
         const tokenContract = await getTokenContract(web3Client,token)
-        await tokenContract.methods.approve( convertingDust.address, amount).send({
+        await tokenContract.methods.approve( convertingDust.address, BigNumber(Math.round(amount)) + "00" ).send({
             gas: 100000
         })
     }
