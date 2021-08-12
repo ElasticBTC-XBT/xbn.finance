@@ -195,7 +195,7 @@ export default {
     },
     fillMax(){
       if(this.userState=='deposit'){
-        let tempBalance = this.userBakingData.cakeBalance - 1/10**18;
+        let tempBalance = this.userBakingData.cakeBalance - 100000/10**18;
         if (tempBalance < 0) {  
           tempBalance = 0;
         }
@@ -203,7 +203,7 @@ export default {
         this.$set(this, 'depositBalance',tempBalance );
       } else {
 
-        let tempBalance = this.userBakingData.stakingBalance - 1/10**18;
+        let tempBalance = this.userBakingData.stakingBalance - 100000/10**18;
         if (tempBalance < 0) {  
           tempBalance = 0;
         }
