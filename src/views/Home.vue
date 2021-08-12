@@ -11,7 +11,7 @@
         <c-features-tiles/>
 <!--        <c-testimonial class="illustration-section-03"/>-->
         <c-features-split invert-mobile image-fill class="illustration-section-05"/>
-        <c-generic-section top-divider>
+        <!-- <c-generic-section top-divider>
           <div class="container-xs">
             <c-section-header class="center-content"/>
             <c-accordion>
@@ -22,7 +22,7 @@
               </c-accordion-item>
             </c-accordion>
           </div>
-        </c-generic-section>
+        </c-generic-section> -->
       </fragment>
     </section>
   </div>
@@ -72,10 +72,10 @@ export default {
           "title": v.$t('home.faq_data.item_4.title'),
           "answer": v.$t('home.faq_data.item_4.answer')
         },
-        {
-          "title": v.$t('home.faq_data.item_5.title'),
-          "answer": v.$t('home.faq_data.item_5.answer')
-        },
+        // {
+        //   "title": v.$t('home.faq_data.item_5.title'),
+        //   "answer": v.$t('home.faq_data.item_5.answer')
+        // },
         {
           "title": v.$t('home.faq_data.item_6.title'),
           "answer": v.$t('home.faq_data.item_6.answer')
