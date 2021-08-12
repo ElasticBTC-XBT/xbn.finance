@@ -1,116 +1,110 @@
 <template>
   <section class="signin section illustration-section-01">
     <div class="container">
-      <div class="group-box" v-if="userAccount">
-        <el-collapse accordion v-model="activeName" type="single" class="group-item">
-          <el-collapse-item name="1">
-            <template slot="title">
-              <el-row class="">
-                <el-col :md="2" :xs="2" class="">
-                  <img
+      <div v-if="userAccount">
+      <h1 style="text-align:center;">Baking Cake earns XBN <br/>
+      <span style="color:darkyellow; font-size:28px; color:#dd9c3c">optimized yield</span></h1>
+        
+      <div class="group-box" >
+        <table>
+          
+            <tr>
+              <td colspan="2" style="text-align:center;">
+
+                <img
                     alt="AI Staking"
                     class="item-icon"
-                    src="@/assets/images/pancakeswap.png"
-                    
-                  />
-                </el-col>
-                
-                <el-col :md="21" :xs="20" class="">
-                  <el-col :md="12" :sm="24" class="item-head">
-                    <div class="head-content">
-                      <p class="head-content-title">CAKE</p>
-                      <p class="subText1">TVL $724,631.70</p>
-                    </div>
-                    <div class="head-content">
-                      <p class="rate">128.71%</p>
-                      <!-- <p class="rate-desc">Auto-Compounding</p> -->
-                    </div>
-                  </el-col>
-                  <el-col :md="12" sm="24" class="item-head">
-                    <div class="head-content">
-                      <p class="subText1 font-12">Earn</p>
-                      <p class="subText1 font-12">Balance</p>
-                    </div>
-                    <div class="head-content">
-                      <p class="head-content-title">XBN</p>
-                      <p class="head-content-title">$0</p>
-                    </div>
-                  </el-col>
-                </el-col>
-              </el-row>
-            </template>
-            <el-row class="item-content">
-              <el-col :md="12" class="item-wallet-box">
-                <div class="wallet-item wallet-head">
-                  <p class="wallet-head-item active">Deposit</p>
-                  <div class="div-col"></div>
-                  <p class="wallet-head-item">Withdraw</p>
-                </div>
+                    src="@/assets/images/pancakeswap.png"/> <br/>
+
+                     <span class="rate"> APR 108%</span><br/>
+                  <span class="rate">
+                      TVL  ${{ userBakingData.tvl }}</span>
+                     
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center" colspan="2">
+
+              <br/>
+                  <span class="wallet-head-item" :class="userState=='deposit'?'active':''"  @click="changeState('deposit')">Deposit</span>
+                  | 
+                  <span class="wallet-head-item"  :class="userState=='withdraw'?'active':''"  @click="changeState('withdraw')">Withdraw</span>
+                  <br/>
+                  <br/>
+              
+            
+              
                 <div class="wallet-item wallet-input">
                   <!-- <p class="input-title">
                     0.5% fee for withdrawals within 3 days
                   </p> -->
                   <div class="input-box">
-                    <input class="xbn-input" value="" /><button
-                      disabled=""
-                      class="xbn-button"
-                    >
+                    <input v-model="depositBalance" class="xbn-input" type="number" /><button @click="fillMax()" class="xbn-button button-primary">
                       MAX
                     </button>
                   </div>
-                  <div class="xbn-value">
-                    <p class="input-title">Wallet balance:</p>
-                    <p class="input-title value-item">&nbsp;0 XBN</p>
-                  </div>
+              
                 </div>
-                <div class="wallet-item balance">
-                  <p class="subText2 input-title">Your balance</p>
-                  <p class="subText2 balance-value">
-                    <b>$0</b>
-                  </p>
+                
+                <div class="" style="text-align:center;">
+                  <br>
+                  <p class="">Wallet balance: &nbsp;
+                    <span v-if="userState=='deposit'">
+                     {{ Math.round(userBakingData.cakeBalance * 1000,3)/1000 }} </span>
+                      <span v-if="userState=='withdraw'">
+                     {{ Math.round(userBakingData.stakingBalance * 1000,3)/1000 }} </span>
+                    <a href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82" target="_blank">CAKE</a></p>
+                  
+                  <br>
+                  <button class="button button-primary" @click="deposit()" v-if="userState=='deposit'" >Deposit</button>
+                  <button class="button button-primary" @click="withdraw()" v-if="userState=='withdraw'">Withdraw</button> &nbsp;
+                  <button class="button button-primary" @click="withdrawAll()" v-if="userState=='withdraw'">Exit: Withdraw All</button>
                 </div>
-                <div class="wallet-item">
-                  <button class="button button-primary">Connect Wallet</button>
-                </div>
-              </el-col>
-             
-              <el-col :md="12" class="claim">
-                <p class="subText2 input-title">APY</p>
-                <div class="content-box col-2-5">
-                  <p class="subText2">128.71%</p>
-                  <p class="subText2 input-title">
-                    &nbsp; (Pool 108.71% + XBN 13%)
-                  </p>
-                </div>
-                <p class="subText2 input-title">Deposit</p>
-                <div class="content-box col-2-5 space-between">
-                  <p font-size="xs" class="subText2">0</p>
-                  <p font-size="xs" class="subText2 input-title">CAKE</p>
-                </div>
-                <p class="subText2 input-title">Earned</p>
-                <div class="content-box col-2-4 space-between">
-                  <div class="sub-box">
-                    <p class="subText2">0.0000000 XBN</p>
-                    
-                  </div>
-                </div>
-                <button disabled="" class="claim-btn">Claim</button>
-                <p class="subText2 input-title">BscScan</p>
-                <a
-                  target="_blank"
-                  href="https://bscscan.com/address/0xa69AC402a8Afe80C4Db293baF231242242A131Af"
-                  class="sc-hKwCoD halVEy"
-                  >0xa69AC...131Af</a
-                >
-              </el-col>
-            </el-row>
-          </el-collapse-item>
-        </el-collapse>
-      </div>
 
-      <div v-else>
-        <wallet-not-connect @connect-wallet="connectWallet"/>
+            </td>
+            </tr>
+
+           <tr>
+             <tr>
+                    <td>Contract
+                    </td>
+                    <td> <p class="subText2"><a
+                  target="_blank"
+                  href="https://bscscan.com/address/0xc50323b2FB63A68cf5C039fEBAd6B8ECc6Be4328"
+                  class="sc-hKwCoD halVEy">0xc5032...e4328</a></p>
+                    </td>
+              </tr><tr>
+                    <td>APR </td>
+                    <td>108% &nbsp; (one of the best yield for staking Cake)</td>
+              </tr><tr>
+                    <td>Deposit
+                    </td>
+                    <td> <p font-size="xs" class="subText2">{{ userBakingData.stakingBalance }} CAKE</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Earned
+                    </td>
+                    <td> <p class="subText2">{{ userBakingData.earned }} XBN</p>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td colspan="2" style="text-align:center;">
+                
+                      <button :disabled="!userBakingData.earned" class="button button-primary" @click="claim()" >Claim</button>
+                
+                    </td>
+                  </tr>
+        </table>
+       
+             
+            
       </div>
+    </div>
+    <div v-else>
+      <wallet-not-connect @connect-wallet="connectWallet"/>
+    </div>
     </div>
   </section>
 </template>
@@ -121,28 +115,20 @@ import CLayout from "@/layouts/LayoutDefault.vue";
 // import sections
 // import CSectionHeader from "@/components/sections/partials/SectionHeader.vue";
 import { SectionProps } from "@/utils/SectionProps.js";
-import moment from "moment";
+// import moment from "moment";
 // import CGenericSection from '@/comTo get XBT, please follow ponents/sections/GenericSection.vue'
 // import CButton from "@/components/elements/Button.vue";
 
-// import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
-// import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
-// import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
 // import CImage from '@/components/elements/Image.vue'
 import WalletNotConnect from "@/components/sections/WalletNotConnect";
 import {getWeb3Client} from "@/libs/web3";
+import {getUserBakingData,depositCake,claimXBN,withdrawCake,withdrawCakeAll} from "@/libs/baking-cake";
 
 export default {
   name: "AiStaking",
   components: {
     WalletNotConnect
-    // CSectionHeader,
-    // CGenericSection,
-    // CButton,
-    // VueGoodshareFacebook,
-    // VueGoodshareReddit,
-    // VueGoodshareTwitter,
-    // CImage
+
   },
   mixins: [SectionProps],
 
@@ -158,12 +144,17 @@ export default {
         paragraph: "AI Staking",
       },
       reward: 0,
-      currentPool: 0,
-      userBalance: 0,
-      waitingTime: 0,
+      // currentPool: 0,
+      // userBalance: 0,
+      
+      // cakeBalance:0,
       userAccount: null,
       walletClient: {},
-      activeName: '1'
+      activeName: '1',
+      tvl:null,
+      depositBalance: 0,
+      userBakingData: {},
+      userState: 'deposit',
     };
   },
 
@@ -174,13 +165,7 @@ export default {
     pageTitle() {
       return this.$t("airdrop.share_page_title");
     },
-    nextAvailableClaimDate() {
-      const lang = localStorage.getItem("lang") || "en";
-      return moment(this.waitingTime).lang(lang).format("llll");
-    },
-    availableToClaim() {
-      return new Date() >= new Date(this.waitingTime);
-    },
+    
   },
 
   mounted() {},
@@ -196,12 +181,51 @@ export default {
       const walletClient = await getWeb3Client();
       this.$set(this, 'walletClient', walletClient);
     },
+    async fetchStatus(setDepositBalance = false) {
+      // eslint-disable-next-line no-console
+      console.info("fetchStatus");
+
+      const walletClient = this.walletClient;
+      // Get balance
+      const userBakingData = await getUserBakingData(walletClient.web3Client);
+      this.$set(this, 'userBakingData', userBakingData);
+      if (setDepositBalance) {
+        this.fillMax();
+      }
+    },
+    fillMax(){
+      if(this.userState=='deposit'){
+
+        this.$set(this, 'depositBalance', this.userBakingData.cakeBalance - 100/10**18);
+      } else {
+        this.$set(this, 'depositBalance', this.userBakingData.stakingBalance - 100/10**18);
+      }
+    },   
+    changeState(newState){
+      this.$set(this, 'userState', newState);
+      this.fillMax();
+    },   
+    async deposit(){
+      await depositCake(this.walletClient.web3Client, this.depositBalance);
+    },
+    async withdraw(){
+      await withdrawCake(this.walletClient.web3Client, this.depositBalance);
+    },
+    async withdrawAll(){
+      await withdrawCakeAll(this.walletClient.web3Client);
+    },
+    async claim(){
+      await claimXBN(this.walletClient.web3Client);
+    },
 
     async handleGetInitialData() {
       const accounts = await this.walletClient.web3Client.eth.getAccounts();
       this.$set(this, 'userAccount', accounts.length > 0 ? accounts[0] : null);
-      await this.fetchStatus();
-      // this.subscribeOrderBook();
+      await this.fetchStatus(true);
+    
+      let v = this;
+      setInterval(function(){ v.fetchStatus() }, 5000);
+      
     },
 
     async handlePageOnLoad() {
@@ -287,8 +311,9 @@ export default {
   gap: 2.4rem;
   grid-template-columns: 1fr;
   grid-area: atm / atm / atm / atm;
-  padding-right: 1rem;
-  border-right: 1px solid rgba(134, 134, 134, 0.3);
+  padding-right: 3rem;
+  /* margin-right: 3em; */
+  /* border-right: 1px solid rgba(134, 134, 134, 0.3); */
 }
 .wallet-head {
   display: grid;
@@ -507,6 +532,11 @@ export default {
   }
   .head-content{
     padding-right: 0.4rem;
+  }
+
+  .button {
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.75rem;
   }
 }
 </style>

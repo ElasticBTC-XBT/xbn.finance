@@ -77,6 +77,9 @@
                 <div class="list-item-header-child" ref="child">
                   <ul>
                     <li @click="closeMenu">
+                      <router-link to="/ai-staking/">Baking Cake</router-link>
+                    </li>
+                    <li @click="closeMenu">
                       <router-link to="/staking/">Auto Staking</router-link>
                     </li>
                     <li @click="closeMenu">

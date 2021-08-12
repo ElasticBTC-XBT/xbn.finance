@@ -6,7 +6,7 @@
                     <div class="footer-blocks">
                         <div class="footer-block reveal-from-bottom" data-reveal-offset="0">
                             <c-logo class="mb-16" />
-                            <div class="footer-copyright">&copy; 2020 XBN, all rights reserved</div>
+                            <div class="footer-copyright">&copy; 2020 XBN</div>
                         </div>
                         <div class="footer-block reveal-from-bottom" data-reveal-offset="0" data-reveal-delay="100">
                             <div class="footer-block-title">Company</div>
