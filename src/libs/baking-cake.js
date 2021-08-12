@@ -112,7 +112,7 @@ export const claimXBN = async (web3Client) => {
     const bakingContract = await getBakingContract(web3Client);
 
     const _gasLimit = await bakingContract.methods.getReward().estimateGas({gas: GasLimit*10});
-    await bakingContract.methods.getReward().send({gas: _gasLimit});
+    await bakingContract.methods.getReward().send({ gas:  _gasLimit * 1.5 | 0});
 }
 
 
@@ -122,17 +122,20 @@ export const withdrawCakeAll = async (web3Client) => {
     const bakingContract = await getBakingContract(web3Client);
 
     const _gasLimit = await bakingContract.methods.withdrawAll().estimateGas({gas: GasLimit*10});
-    await bakingContract.methods.withdrawAll().send({gas: _gasLimit});
+    await bakingContract.methods.withdrawAll().send({gas: _gasLimit * 1.5 | 0});
 }
 
 
 export const withdrawCake = async (web3Client,amount) => {
-
     
     const bakingContract = await getBakingContract(web3Client);
 
-    const _gasLimit = await bakingContract.methods.withdraw(amount).estimateGas({gas: GasLimit*10});
-    await bakingContract.methods.withdraw(amount).send({gas: _gasLimit});
+    amount = amount * 10 ** 18 ; // CAKE decimals
+    const priceShare = await bakingContract.methods.priceShare().call();
+    const shares = BigInt(amount / priceShare * 10 ** 18); // shares decimals is 18
+
+    const _gasLimit = await bakingContract.methods.withdraw(shares).estimateGas({gas: GasLimit*10});
+    await bakingContract.methods.withdraw(shares).send({gas: _gasLimit * 1.5 | 0});
 }
 
 function toFixed(x) {
@@ -169,8 +172,10 @@ export const getUserBakingData = async (web3Client) => {
         earned = earned[1]
     }
 
-    const stakingBalance = await bakingContract.methods.principalOf(accounts[0]).call();
-    let tvl = await bakingContract.methods.totalSupply().call();
+    const priceShare = await bakingContract.methods.priceShare().call();
+    const shares = await bakingContract.methods.sharesOf(accounts[0]).call();
+    
+    let tvl = await bakingContract.methods.balance().call();
     
     if (tvl>0) {
         tvl = await routerContract.methods.getAmountsOut(tvl,[CakeAddress,BusdAddress]).call();
@@ -180,8 +185,10 @@ export const getUserBakingData = async (web3Client) => {
     return {
         cakeBalance: cakeBalance/ 10**18,
         earned: toFixed(earned*1.13/ 10**18),
-        stakingBalance: toFixed(stakingBalance/ 10**18),
-        tvl: tvl[1]/ 10**18,
+        stakingBalance: toFixed((priceShare/ 10**18)* (shares/ 10**18)),
+        shares: shares,
+        priceShare: priceShare,
+        tvl: Math.round(tvl[1]/ 10**15)/10**3,
         // xbnBalance: xbnBalance
     };
 }
