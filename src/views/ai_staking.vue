@@ -10,14 +10,15 @@
                   <img
                     alt="AI Staking"
                     class="item-icon"
-                    src="@/assets/images/bnb-logo.svg"
+                    src="@/assets/images/pancakeswap.png"
+                    
                   />
                 </el-col>
                 
                 <el-col :md="21" :xs="20" class="">
                   <el-col :md="12" :sm="24" class="item-head">
                     <div class="head-content">
-                      <p class="head-content-title">BNB</p>
+                      <p class="head-content-title">CAKE</p>
                       <p class="subText1">TVL $724,631.70</p>
                     </div>
                     <div class="head-content">
@@ -31,7 +32,7 @@
                       <p class="subText1 font-12">Balance</p>
                     </div>
                     <div class="head-content">
-                      <p class="head-content-title">XBN + XBC</p>
+                      <p class="head-content-title">XBN</p>
                       <p class="head-content-title">$0</p>
                     </div>
                   </el-col>

@@ -11,10 +11,10 @@ exports.getPosts = (req, res) => {
 
     var Twit = require('twit')
 
-    var apikey = '98lC4TeRFcbQnpXQcA0t0EXfE'
-    var apiSecretKey = 'dxRbEAn6QhJzHeXwC5iPkSJrY3iMUtXbNz02d6ZcC6smjtNYGe'
-    var accessToken = '907931084603535360-JKhChGzzOzQAQAWpvnQeM2qvoOcdQk6'
-    var accessTokenSecret = 'BIVWetKkl97G9zaGi0I1StC7Pw1sdRCuAAnbST4TgKHvF'
+    var apikey = '98lC4TeRFc2bQnpXQcA0t0EXfE'
+    var apiSecretKey = 'xdxRbEAn6QhJzHeXwC5iPkSJrY3i3MUtXbNz02d6ZcC6smjtNYGe'
+    var accessToken = 'x907931084603535360-JKhChGzzOzQAQAWpvnQeM2qvdoOcdQk6'
+    var accessTokenSecret = 'BIVWetKkl97G9zaGi0I1SetC7Pw1sdRCuAAnbST4TgKHvF'
 
     var T = new Twit({
         consumer_key: apikey,

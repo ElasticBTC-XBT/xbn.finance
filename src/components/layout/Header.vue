@@ -105,9 +105,10 @@
                 <div class="list-item-header-child">
                   <ul>
                     <li @click="closeMenu">
-                      <router-link to="/xbn/gratitude/">{{
-                        $t("header.gratitude")
-                      }}</router-link>
+                       <a
+                        href="https://twitter.com/hashtag/XBNGratitude?src=hashtag_click"
+                        >#Gratitude</a
+                      >
                     </li>
                     <li @click="closeMenu">
                       <a
