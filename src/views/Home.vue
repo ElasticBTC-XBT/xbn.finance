@@ -37,11 +37,11 @@ import CHeroSplit from '@/components/sections/HeroSplit.vue'
 import CFeaturesSplit from '@/components/sections/FeaturesSplit.vue'
 import CFeaturesTiles from '@/components/sections/FeaturesTiles.vue'
 // import CPricing from '@/components/sections/Pricing.vue'
-import CGenericSection from '@/components/sections/GenericSection.vue'
-import CAccordion from '@/components/elements/Accordion.vue'
-import CAccordionItem from '@/components/elements/AccordionItem.vue'
-// import CTestimonial from '@/components/sections/Testimonial.vue'
-import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
+// import CGenericSection from '@/components/sections/GenericSection.vue'
+// import CAccordion from '@/components/elements/Accordion.vue'
+// import CAccordionItem from '@/components/elements/AccordionItem.vue'
+// // import CTestimonial from '@/components/sections/Testimonial.vue'
+// import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
 
 export default {
   name: 'Home',
@@ -50,10 +50,10 @@ export default {
     CFeaturesSplit,
     CFeaturesTiles,
     // CPricing,
-    CSectionHeader,
-    CGenericSection,
-    CAccordion,
-    CAccordionItem,
+    // CSectionHeader,
+    // CGenericSection,
+    // CAccordion,
+    // CAccordionItem,
     // CTestimonial
   },
   data() {

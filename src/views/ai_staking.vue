@@ -1,7 +1,7 @@
 <template>
   <section class="signin section illustration-section-01">
     <div class="container">
-      <div class="group-box">
+      <div class="group-box" v-if="userAccount">
         <el-collapse accordion v-model="activeName" type="single" class="group-item">
           <el-collapse-item name="1">
             <template slot="title">
@@ -23,7 +23,7 @@
                     </div>
                     <div class="head-content">
                       <p class="rate">128.71%</p>
-                      <p class="rate-desc">Auto-Compounding</p>
+                      <!-- <p class="rate-desc">Auto-Compounding</p> -->
                     </div>
                   </el-col>
                   <el-col :md="12" sm="24" class="item-head">
@@ -47,9 +47,9 @@
                   <p class="wallet-head-item">Withdraw</p>
                 </div>
                 <div class="wallet-item wallet-input">
-                  <p class="input-title">
+                  <!-- <p class="input-title">
                     0.5% fee for withdrawals within 3 days
-                  </p>
+                  </p> -->
                   <div class="input-box">
                     <input class="xbn-input" value="" /><button
                       disabled=""
@@ -79,19 +79,19 @@
                 <div class="content-box col-2-5">
                   <p class="subText2">128.71%</p>
                   <p class="subText2 input-title">
-                    &nbsp; (Pool 108.71% + Merl 20.00%)
+                    &nbsp; (Pool 108.71% + XBN 13%)
                   </p>
                 </div>
                 <p class="subText2 input-title">Deposit</p>
                 <div class="content-box col-2-5 space-between">
                   <p font-size="xs" class="subText2">0</p>
-                  <p font-size="xs" class="subText2 input-title">XBN</p>
+                  <p font-size="xs" class="subText2 input-title">CAKE</p>
                 </div>
                 <p class="subText2 input-title">Earned</p>
                 <div class="content-box col-2-4 space-between">
                   <div class="sub-box">
                     <p class="subText2">0.0000000 XBN</p>
-                    <p class="subText2">0.0000000 XBC</p>
+                    
                   </div>
                 </div>
                 <button disabled="" class="claim-btn">Claim</button>
@@ -106,6 +106,10 @@
             </el-row>
           </el-collapse-item>
         </el-collapse>
+      </div>
+
+      <div v-else>
+        <wallet-not-connect @connect-wallet="connectWallet"/>
       </div>
     </div>
   </section>
@@ -125,10 +129,13 @@ import moment from "moment";
 // import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 // import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
 // import CImage from '@/components/elements/Image.vue'
+import WalletNotConnect from "@/components/sections/WalletNotConnect";
+import {getWeb3Client} from "@/libs/web3";
 
 export default {
   name: "AiStaking",
   components: {
+    WalletNotConnect
     // CSectionHeader,
     // CGenericSection,
     // CButton,
@@ -178,7 +185,31 @@ export default {
 
   mounted() {},
 
-  methods: {},
+  methods: {
+
+     async connectWallet() {
+      await this.handleGetClient();
+      await this.handleGetInitialData();
+    },
+
+    async handleGetClient() {
+      const walletClient = await getWeb3Client();
+      this.$set(this, 'walletClient', walletClient);
+    },
+
+    async handleGetInitialData() {
+      const accounts = await this.walletClient.web3Client.eth.getAccounts();
+      this.$set(this, 'userAccount', accounts.length > 0 ? accounts[0] : null);
+      await this.fetchStatus();
+      // this.subscribeOrderBook();
+    },
+
+    async handlePageOnLoad() {
+      if (this.walletClient.web3Client) {
+        await this.handleGetInitialData();
+      }
+    },
+  },
 };
 </script>
 
