@@ -154,7 +154,7 @@
         </c-generic-section>
 
         <c-testimonial class="illustration-section-03" />
-        <c-cta top-divider bottom-divider split />
+        <c-cta bottom-divider split />
     </fragment>
 </template>
 

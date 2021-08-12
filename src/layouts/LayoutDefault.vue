@@ -4,7 +4,7 @@
         <main class="site-content">
             <slot />
         </main>
-        <c-cta top-divider bottom-divider split/>
+        <c-cta  bottom-divider split/>
         <c-footer class="illustration-section-08 reveal-from-bottom" data-reveal-offset="0" />
     </fragment>
 </template>
