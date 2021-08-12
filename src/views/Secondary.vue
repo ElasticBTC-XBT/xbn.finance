@@ -1,7 +1,7 @@
 <template>
     <fragment>
         <c-hero-full class="illustration-section-01" />
-        <c-team />
+        <!-- <c-team /> -->
 
         <c-generic-section top-divider>
             <div class="container-xs">
@@ -165,7 +165,7 @@ import CLayout from '@/layouts/LayoutAlternative.vue'
 import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
 // import sections
 import CHeroFull from '@/components/sections/HeroFull.vue'
-import CTeam from '@/components/sections/Team.vue'
+// import CTeam from '@/components/sections/Team.vue'
 import CGenericSection from '@/components/sections/GenericSection.vue'
 import CTestimonial from '@/components/sections/Testimonial.vue'
 import CCta from '@/components/sections/Cta.vue'
@@ -182,7 +182,7 @@ export default {
   components: {
     CSectionHeader,
     CHeroFull,
-    CTeam,
+    // CTeam,
     CGenericSection,
     CTestimonial,
     CImage,
