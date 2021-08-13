@@ -8,18 +8,21 @@ let web3Provider = null;
 
 const providerOptions = {
     walletconnect: {
-        package: WalletConnectProvider, // required
-        options: {
-            infuraId: process.env.VUE_APP_INFURA_ID || 'c02c03ef50ed46209d9e14eb1c30ce29' // required
-        }
+      package: WalletConnectProvider,
+      options: {
+        rpc: {
+           56: 'https://bsc-dataseed.binance.org/'
+        },
+        network: 'binance',
+      }
     }
-};
+  };
+  
 
-const web3Modal = new Web3Modal({
-    network: "mainnet", // optional
+  const web3Modal = new Web3Modal({
     cacheProvider: true, // optional
     providerOptions // required
-});
+  });
 
 const bindingProviderEvents = (provider) => {
     // Subscribe to accounts change
