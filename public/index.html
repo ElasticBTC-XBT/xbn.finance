@@ -49,13 +49,30 @@
         position: absolute;
         border-radius: 100%;
         opacity: 0.3;
-        box-shadow: 2px 2px 2px 2px whitesmoke;
+        /* box-shadow: 2px 2px 2px 2px whitesmoke; */
+        box-shadow: 4px 3px 2px 1px #f3ffc0;
+        
+        animation:grow 1.6s ease-in-out infinite;
         }
+        @keyframes grow
+        {
+                0% , 40% , 100%
+                {
+                transform:scale(0.2);
+                }
+                20%{
+                transform:scale(1);
+
+                }
+        }
+
+
     </style>
 </head>
 
-<body class="has-animations" style="overflow: hidden;">
-<div class="body-wrap" id="ball-hodler">
+<body class="has-animations" style="background:whitesmoke" >
+<div id="ball-hodler" style="z-index:-1; height:100%; width: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow:hidden "></div>
+<div class="body-wrap" >
     <noscript>
         <strong>We're sorry but XBN doesn't work properly without JavaScript enabled. Please enable it to
             continue.</strong>

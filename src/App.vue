@@ -28,9 +28,9 @@ export default {
 
 
       // Some random colors
-  const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+  const colors = ["#F3AA43", "#aa872f", "#f3e543", "#f39f43", "#aa6f2f"];
 
-  const numBalls = 25;
+  const numBalls = 37;
   const balls = [];
 
   for (let i = 0; i < numBalls; i++) {
