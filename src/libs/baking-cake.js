@@ -163,20 +163,20 @@ export const getUserBakingData = async (web3Client) => {
 
     const CAKEContract = await getCAKEContract(web3Client);
 
-    console.info(`account: ${accounts[0]}`);   
+    // console.info(`account: ${accounts[0]}`);   
 
     let earned = await bakingContract.methods.earned(accounts[0]).call();  
     
-    console.info(`Earned: ${earned}`);
+    // console.info(`Earned: ${earned}`);
 
     if (earned>0) {
         earned = await routerContract.methods.getAmountsOut(earned,[CakeAddress,XbnAddress]).call();
         earned = earned[1]
-        console.info(`176 Earned: ${earned}`);
+        // console.info(`176 Earned: ${earned}`);
     }
     // debugger;
     const priceShare = await bakingContract.methods.priceShare().call();
-    console.info(`Price share: ${priceShare}`);
+    // console.info(`Price share: ${priceShare}`);
 
     const shares = await bakingContract.methods.sharesOf(accounts[0]).call();
     
@@ -186,10 +186,10 @@ export const getUserBakingData = async (web3Client) => {
         tvl = await routerContract.methods.getAmountsOut(tvl,[CakeAddress,BusdAddress]).call();
         tvl = tvl[1]
     }
-    console.info(`TVL: ${tvl}`);
+    // console.info(`TVL: ${tvl}`);
 
     const cakeBalance = await CAKEContract.methods.balanceOf(accounts[0]).call();
-    console.info(`Cake balance: ${cakeBalance}`);
+    // console.info(`Cake balance: ${cakeBalance}`);
     
     return {
         cakeBalance: cakeBalance/ 10**18,

@@ -44,7 +44,8 @@ export default {
     ball.style.height = ball.style.width;
     
     balls.push(ball);
-    document.body.append(ball);
+    // document.body.append(ball);
+    document.getElementById("ball-hodler").append(ball);
   }
 
   // Keyframes
