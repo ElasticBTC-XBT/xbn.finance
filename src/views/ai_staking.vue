@@ -13,7 +13,7 @@
 
                 <img
                     alt="AI Staking"
-                    class="item-icon"
+                    class="item-icon" style="display:inline"
                     src="@/assets/images/pancakeswap.png"/> <br/>
 
                      <span class="rate"> APR 108%</span><br/>
