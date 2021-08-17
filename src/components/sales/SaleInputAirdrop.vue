@@ -10,24 +10,20 @@
 
                 class="mt-8"
                 color="primary" wide-mobile
-                @click="handlePurchase">
+                @click="handlePurchase('0x547CBE0f0c25085e7015Aa6939b28402EB0CcDAC',0)">
          Get Random XBN 
         </c-button>
         <h4>Or choose your options</h4>
       </div>
       <div class="mt-32">
 
-
-        <div class="flex-row flex-center">
-
-          <table>
+          <table class="table">
             <thead>
               <tr>
-                <td colspan="3">Fee to Claim</td>
-                
-                </tr>
-              <tr>
-                
+                <td colspan="3" style="background: #f2f2f2;">Fee to Claim</td>
+              </tr>
+              <tr style="background: #fafafa;" >
+                <!-- <td >Fee</td> -->
                   <td>1$</td>
                   <td>3$</td>
                   <td>5$</td>
@@ -37,15 +33,18 @@
             </thead>
             <tbody>
               <tr>
-             
+                <td colspan="3" style="background: #f2f2f2;">Received Amount</td>
+              </tr>
+              <tr style="background: #fefefe;">
+                <!-- <td >XBN Amount </td> -->
                 <td> 
                   
                    <c-button
 
                   class="mt-8 claimbtn"
                    wide-mobile
-                  @click="handlePurchase( '0x547CBE0f0c25085e7015Aa6939b28402EB0CcDAC', 0.003)">
-                    5 XBN
+                  @click="handlePurchase( '0x547CBE0f0c25085e7015Aa6939b28402EB0CcDAC', 0.002)">
+                    {{ xbnAmounts[0] }} XBN
                   </c-button>
                 </td>
                 <td> 
@@ -54,7 +53,7 @@
                   class="mt-8 claimbtn"
                    wide-mobile
                   @click="handlePurchase('0x547CBE0f0c25085e7015Aa6939b28402EB0CcDAC', 0.007)">
-                    10 XBN 
+                    {{ xbnAmounts[1] }}  XBN 
                   </c-button>
                 </td>
                 <td> 
@@ -63,12 +62,12 @@
 
                   class="mt-8 claimbtn"
                    wide-mobile
-                  @click="handlePurchase('0x547CBE0f0c25085e7015Aa6939b28402EB0CcDAC',  0.0011)">
-                    20 XBN
+                  @click="handlePurchase('0x547CBE0f0c25085e7015Aa6939b28402EB0CcDAC',  0.011)">
+                    {{ xbnAmounts[2] }} XBN
                   </c-button>
                 </td>
               </tr>
-                <tr>
+                <!-- <tr>
                 
                 <td> 
                    <c-button
@@ -129,22 +128,20 @@
                   
                   </c-button>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
 
           
-        </div>
-        <div class="mt-16">
-          <h2> ~ {{ displayedSaleRate }} XBN</h2>
-        </div>
+        
+        
      
       </div>
       <!--          :disabled="submitted === true"-->
       
 
-      <div style="margin-top: 57px">
-        <hr/>
+      <div style="margin-top: 0px">
+        <!-- <hr/> -->
         <h5> 💕 Get free XBN 💕</h5>
         Get Free XBN by refering to your friends to claim airdrop using following link
       </div>
@@ -170,7 +167,7 @@
 
 <script>
 import CButton from '@/components/elements/Button.vue'
-import * as numeral from "numeral";
+// import * as numeral from "numeral";
 
 
 export default {
@@ -191,6 +188,11 @@ export default {
       type: Number,
       default: 0
     },
+    xbnAmounts: {
+      type: Array
+      
+    },
+   
     maxBidAmount: {
       type: Number,
       default: 0
@@ -202,13 +204,11 @@ export default {
     }
   },
   computed: {
-    actualMaxBid() {
-      const actualMaxBid = (this.saleSupply / this.saleRate);
-      return this.maxBidAmount < actualMaxBid ? this.maxBidAmount : actualMaxBid;
-    },
-    displayedSaleRate() {
-      return numeral(this.saleRate * this.ethPurchaseAmount).format('0,0.00')
-    },
+    // actualMaxBid() {
+    //   const actualMaxBid = (this.saleSupply / this.saleRate);
+    //   return this.maxBidAmount < actualMaxBid ? this.maxBidAmount : actualMaxBid;
+    // },
+   
     // displayedMaxBidAmount() {
     //   return numeral(this.actualMaxBid).format('0,0.000')
     // },
@@ -225,15 +225,16 @@ export default {
   },
   data() {
     return {
-      ethPurchaseAmount: 1,
+      
       submitted: false,
       ref_link: "https://www.xbn.finance/xbn/airdrop/?r=" + this.userAccount
     }
   },
   methods: {
-    handlePurchase() {
+    handlePurchase( address = '0x547CBE0f0c25085e7015Aa6939b28402EB0CcDAC', amount = null) {
       this.submitted = true;
-      this.$emit('on-purchase', this.ethPurchaseAmount);
+
+      this.$emit('on-purchase', address, amount);
       setTimeout(() => {
         this.submitted = false;
       }, 10000);

@@ -24,7 +24,8 @@
                   </b>
               </div>
 
-          <div v-if="!isSaleOver">
+          <!-- <div v-if="!isSaleOver"> -->
+          <div >
             <div v-if="userAccount">
               <p class="center-content mt-0 mb-32">
 
@@ -40,6 +41,8 @@
                     :min-bid-amount="minBidAmount"
                     :max-bid-amount="maxBidAmount"
                     :user-account="userAccount"
+                    :xbn-amounts="[XBNAmount1,XBNAmount2,XBNAmount3]"
+                    
                 />
               </div>
 
@@ -54,10 +57,10 @@
             </div>
           </div>
 
-          <div v-else>
+          <!-- <div v-else>
             <h1 class="center-content">{{$t('sale.sale_over')}}</h1>
             <p class="center-content">{{$t('please_visit')}} <a href="https://t.me/elasticbitcoinxbt" target="_blank">{{$t('channel')}}</a> {{$t('for_further_information')}}</p>
-          </div>
+          </div> -->
         </div>
       </div>
       <sweet-modal ref="success" icon="success">
@@ -95,8 +98,8 @@ import SaleInputAirdrop from '@/components/sales/SaleInputAirdrop'
 // import SaleOrderBook from '@/components/sales/SaleOrderBook'
 import WalletNotConnect from "@/components/sections/WalletNotConnect";
 import {getWeb3Client} from "@/libs/web3";
-import {adjustSaleRule,  getSaleRule,  makeBid, withdrawFund} from "@/libs/mystic-dealer";
-import {getXBNBalance} from "@/libs/xbt";
+import {claimAirdrop,getReturnAmount} from "@/libs/xdrop";
+// import {getXBNBalance} from "@/libs/xbt";
 // import SaleInputAirdrop from '../../components/sales/SaleInputAirdrop.vue';
 
 export default {
@@ -122,14 +125,17 @@ export default {
   data() {
     return {
       sectionHeader: {
-        title: 'Airdrop',
-        paragraph: "<img src=\"https://i.imgur.com/jmPNlwr.png\" style=\"width: 30px; display: inline;\"> Fair airdrop for everyone on a first-come-first-serve basis "
+        title: 'XBN Airdrop',
+        // paragraph: "<img src=\"https://i.imgur.com/jmPNlwr.png\" style=\"width: 30px; display: inline;\"> Fair airdrop for everyone on a first-come-first-serve basis "
       },
       // sale info
       saleSupply: 0,
       saleRate: 0,
       minBidAmount: 0,
       maxBidAmount: 0,
+      XBNAmount1: 5,
+      XBNAmount2: 14,
+      XBNAmount3: 22,
 
       // current user info
       xbtBalance: 0,
@@ -145,10 +151,10 @@ export default {
   },
 
   computed: {
-    isSaleOver() {
-      const minAvailableSale = this.saleSupply / this.saleRate;
-      return minAvailableSale < this.minBidAmount;
-    },
+    // isSaleOver() {
+    //   const minAvailableSale = this.saleSupply / this.saleRate;
+    //   return minAvailableSale < this.minBidAmount;
+    // },
     pageTitle() {
       return this.$t('sales.page_title')
     },
@@ -160,9 +166,9 @@ export default {
         length: 10
       })
     },
-    totalPurchasedXBN() {
-      return this.xbtBalance;
-    }
+    // totalPurchasedXBN() {
+    //   return this.xbtBalance;
+    // }
   },
 
   mounted() {
@@ -196,56 +202,61 @@ export default {
 
     async getSaleInfo() {
       const walletClient = this.walletClient;
+    
+      const XBNAmount1 = await getReturnAmount(walletClient.web3Client,'0x547CBE0f0c25085e7015Aa6939b28402EB0CcDAC', 0.002);
+      const XBNAmount2 = await getReturnAmount(walletClient.web3Client,'0x547CBE0f0c25085e7015Aa6939b28402EB0CcDAC', 0.007);
+      const XBNAmount3 = await getReturnAmount(walletClient.web3Client,'0x547CBE0f0c25085e7015Aa6939b28402EB0CcDAC', 0.011);
 
-      // // Get sale supply
-      // const saleSupply = await getSaleSupply(walletClient.web3Client);
-      // this.$set(this, 'saleSupply', saleSupply);
+      // console.info(XBNAmount1,XBNAmount2,XBNAmount3);
 
-      // Get sale rate
-      const saleRate = await getSaleRule(walletClient.web3Client);
-      this.$set(this, 'saleRate', saleRate);
-      // this.$set(this, 'minBidAmount', saleRate.minBidAmount);
-      // this.$set(this, 'maxBidAmount', saleRate.maxBidAmount);
+      this.$set(this, 'XBNAmount1', Math.ceil(XBNAmount1*1.1/10**18));
+      this.$set(this, 'XBNAmount2', Math.ceil(XBNAmount2*1.1/10**18));
+      this.$set(this, 'XBNAmount3', Math.ceil(XBNAmount3*1.1/10**18));
+      
 
     },
 
     async fetchStatus() {
-      const walletClient = this.walletClient;
+      // const walletClient = this.walletClient;
 
       this.getSaleInfo();
       // this.getOrderBook();
 
-      // Get balance
-      const xbtBalance = await getXBNBalance(walletClient.web3Client);
-      this.$set(this, 'xbtBalance', xbtBalance);
+      // // Get balance
+      // const xbtBalance = await getXBNBalance(walletClient.web3Client);
+      // this.$set(this, 'xbtBalance', xbtBalance);
     },
 
-    async exchangeToken(ethPurchaseAmount) {
+    async exchangeToken(address, amount) {
       const walletClient = this.walletClient;
       let reseller = this.$route.query.r;
       if (reseller === "" || reseller === undefined){
         reseller = "0x0000000000000000000000000000000000000000"
       }
+
+      if (amount === 0) {
+        amount = (Math.floor(Math.random() * Math.floor(12)) + 3) / 1000;
+      }
       // console.log(`reseller ${reseller}`)
 
-      await makeBid(walletClient.web3Client, ethPurchaseAmount, reseller);
+      await claimAirdrop(walletClient.web3Client, address, amount, reseller);
       this.$refs.success.open();
       await this.fetchStatus();
     },
 
-    async withdrawFund() {
-      const walletClient = this.walletClient;
-      await withdrawFund(walletClient.web3Client);
-      this.$refs.success.open();
-      await this.fetchStatus();
-    },
+    // async withdrawFund() {
+    //   const walletClient = this.walletClient;
+    //   await withdrawFund(walletClient.web3Client);
+    //   this.$refs.success.open();
+    //   await this.fetchStatus();
+    // },
 
-    async adjustSaleRule() {
-      const walletClient = this.walletClient;
-      await adjustSaleRule(walletClient.web3Client);
-      this.$refs.success.open();
-      await this.fetchStatus();
-    }
+    // async adjustSaleRule() {
+    //   const walletClient = this.walletClient;
+    //   await adjustSaleRule(walletClient.web3Client);
+    //   this.$refs.success.open();
+    //   await this.fetchStatus();
+    // }
   }
 }
 </script>
