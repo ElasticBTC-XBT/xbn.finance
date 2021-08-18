@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import CHeader from '@/components/layout/Header.vue'
+import CHeader from '@/components/layout/HeaderLeft.vue'
 import CFooter from '@/components/layout/Footer.vue'
 import CCta from "@/components/sections/Cta";
 export default {
