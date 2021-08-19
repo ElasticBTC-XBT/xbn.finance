@@ -30,6 +30,9 @@
 
 .site-content {
     flex: 1 0 auto;
+	width: calc(100% - 208px);
+    height: calc(100vh - 81px);
+    overflow: auto;
 }
 
 .text-center {
