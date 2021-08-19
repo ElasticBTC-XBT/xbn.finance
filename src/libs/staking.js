@@ -3,14 +3,14 @@ export const Staking = {
     // jsonInterface: require('@/assets/contracts/AirdropLander.json')
     jsonInterface: require('@/assets/contracts/Staking.json')
 }
-
+let GasLimit = 370000;
 export const getStakingContract = async (web3Client) => {
     const accounts = await web3Client.eth.getAccounts();
     return new web3Client.eth.Contract(
         Staking.jsonInterface,
         Staking.address,
         {
-            gas: 370000,
+            gas: GasLimit,
             from: accounts[0]
         }
     );
@@ -20,18 +20,27 @@ export const getStakingContract = async (web3Client) => {
 export const claimXBNContract = async (web3Client, userBalance) => {
     const contract = await getStakingContract(web3Client);
 
+    let value = 0.003;
+    let _gasLimit = await contract.methods.claimXBNReward( )
+                        .estimateGas({value: web3Client.utils.toWei(value.toString(), 'ether'),
+                                        gas: GasLimit*10});
+
+    console.info(`claimXBNReward gas limit: ${_gasLimit}`);                                        
+
 
     if (userBalance <=1000){
-
-        await contract.methods.claimXBNReward().send();
+        
+        await contract.methods.claimXBNReward().send({gas: _gasLimit * 1.5 | 0});
     } else {
-        let value = 0.003;
+        
+
+
         await contract.methods.claimXBNReward().send({
-            value: web3Client.utils.toWei(value.toString(), 'ether')
+            value: web3Client.utils.toWei(value.toString(), 'ether'), 
+            gas: _gasLimit * 1.5 | 0
+            
         });
     }
-
-
 
 }
 
@@ -39,9 +48,12 @@ export const claimBUSDContract = async (web3Client) => {
     const contract = await getStakingContract(web3Client);
 
     const value = 0.007;
+    let _gasLimit = await contract.methods.claimBUSDReward()
+                    .estimateGas({value: web3Client.utils.toWei(value.toString(), 'ether'), gas: GasLimit*10});
 
     await contract.methods.claimBUSDReward().send({
-        value: web3Client.utils.toWei(value.toString(), 'ether')
+        value: web3Client.utils.toWei(value.toString(), 'ether'),
+        gas: _gasLimit * 1.5 | 0
     });
 }
 //
