@@ -2,6 +2,7 @@
   <fragment>
     <c-header navPosition="right">
       <main class="site-content">
+        <div class="scroll-content">
         <slot />
 
         <c-cta bottom-divider split />
@@ -9,6 +10,7 @@
           class="illustration-section-08 reveal-from-bottom"
           data-reveal-offset="0"
         />
+        </div>
       </main>
     </c-header>
   </fragment>
