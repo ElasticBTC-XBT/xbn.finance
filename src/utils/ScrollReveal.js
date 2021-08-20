@@ -23,7 +23,6 @@ export const ScrollReveal = {
       );
     },
     elementIsVisible(el, offset) {
-      console.log("el.getBoundingClientRect().top <= this.viewportHeight - offset", el.getBoundingClientRect().top, this.viewportHeight - offset)
       return (
         el.getBoundingClientRect().top <= this.viewportHeight - offset
       );
@@ -80,7 +79,6 @@ export const ScrollReveal = {
       window.removeEventListener('resize', this.handleResize);
     },
     handleScroll() {
-      console.log("scrolllllllllllll")
       this.handleListeners();
       this.revealElements();
     },
