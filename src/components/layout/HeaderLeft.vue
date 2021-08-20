@@ -224,7 +224,7 @@ export default {
   overflow-x: hidden;
 }
 .menu-left {
-  border-right: 1px solid #f3aa43;
+  
   display: flex;
   flex-flow: row nowrap;
   overflow: hidden;
@@ -260,7 +260,7 @@ export default {
   overflow: auto;
   width: 100%;
   max-width: 250px;
-  background: #fff;
+  background: #f8f8f8;
 }
 .main-body {
   display: flex;
@@ -296,6 +296,7 @@ nav.header-nav li > a {
 
 .el-menu{
   border: none;
+  background: #f9f9f9;
 }
 
 .header-have-ribbon {
