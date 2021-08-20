@@ -2,8 +2,10 @@ import { throttle } from 'lodash';
 
 export const ScrollReveal = {
   data() {
+    var windowHeight = window.innerHeight; 
+    
     return {
-      viewportHeight: window.innerHeight,
+      viewportHeight: windowHeight,
       revealEl: null
     };
   },
@@ -12,6 +14,9 @@ export const ScrollReveal = {
       this.revealEl = document.querySelectorAll('[class*=reveal-]');
     },
     checkComplete() {
+      if(document.querySelectorAll('div.scroll-content').length > 0 ){
+        this.viewportHeight = document.querySelectorAll('div.scroll-content')[0].parentNode.offsetHeight;
+      }
       return (
         this.revealEl.length <=
         document.querySelectorAll('[class*=reveal-].is-revealed').length
@@ -51,6 +56,12 @@ export const ScrollReveal = {
       setTimeout(() => {
         this.getElements();
         if (!this.checkComplete()) {
+          
+          if(document.querySelectorAll('div.scroll-content').length > 0 ){
+            document.querySelectorAll('div.scroll-content')[0].parentNode.addEventListener('scroll', this.handleScroll);
+            document.querySelectorAll('div.scroll-content')[0].parentNode.addEventListener('resize', this.handleResize);
+          }
+
           window.addEventListener('scroll', this.handleScroll);
           window.addEventListener('resize', this.handleResize);
         }
@@ -59,6 +70,11 @@ export const ScrollReveal = {
     },
     handleListeners() {
       if (!this.checkComplete()) return;
+     
+      if(document.querySelectorAll('div.scroll-content').length > 0 ){
+        document.querySelectorAll('div.scroll-content')[0].parentNode.removeEventListener('scroll', this.handleScroll);
+        document.querySelectorAll('div.scroll-content')[0].parentNode.removeEventListener('resize', this.handleResize);
+      }
       window.removeEventListener('scroll', this.handleScroll);
       window.removeEventListener('resize', this.handleResize);
     },
@@ -68,6 +84,9 @@ export const ScrollReveal = {
     },
     handleResize() {
       this.viewportHeight = window.innerHeight;
+      if(document.querySelectorAll('div.scroll-content').length > 0 ){
+        this.viewportHeight = document.querySelectorAll('div.scroll-content')[0].parentNode.offsetHeight;
+      }
       this.handleListeners();
       this.revealElements();
     }
