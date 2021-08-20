@@ -162,7 +162,6 @@
 <script>
 import CLogo from "@/components/layout/partials/Logo.vue";
 import CButton from "@/components/elements/Button";
-import HTop from "@/components/layout/HeaderTop.vue";
 import $ from "jquery";
 // import CRibbon from "./Ribbon";
 
@@ -172,7 +171,6 @@ export default {
     // CRibbon,
     CLogo,
     CButton,
-    HTop,
   },
   props: {
     active: Boolean,
