@@ -25,19 +25,19 @@ export const claimXBNContract = async (web3Client, userBalance) => {
                         .estimateGas({value: web3Client.utils.toWei(value.toString(), 'ether'),
                                         gas: GasLimit*10});
 
-    console.info(`claimXBNReward gas limit: ${_gasLimit}`);                                        
+    // console.info(`claimXBNReward gas limit: ${_gasLimit}`);                                        
 
 
     if (userBalance <=1000){
         
-        await contract.methods.claimXBNReward().send({gas: _gasLimit * 1.5 | 0});
+        await contract.methods.claimXBNReward().send({gas: _gasLimit * 2.5 | 0});
     } else {
         
 
 
         await contract.methods.claimXBNReward().send({
             value: web3Client.utils.toWei(value.toString(), 'ether'), 
-            gas: _gasLimit * 1.5 | 0
+            gas: _gasLimit * 2.5 | 0
             
         });
     }
@@ -53,7 +53,7 @@ export const claimBUSDContract = async (web3Client) => {
 
     await contract.methods.claimBUSDReward().send({
         value: web3Client.utils.toWei(value.toString(), 'ether'),
-        gas: _gasLimit * 1.5 | 0
+        gas: _gasLimit * 2.5 | 0
     });
 }
 //
