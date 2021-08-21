@@ -170,7 +170,7 @@ export const getUserBakingData = async (web3Client) => {
     // console.info(`Earned: ${earned}`);
 
     if (earned>0) {
-        earned = await routerContract.methods.getAmountsOut(earned,[CakeAddress,XbnAddress]).call();
+        earned = await routerContract.methods.getAmountsOut(earned,[CakeAddress,BusdAddress,XbnAddress]).call();
         earned = earned[1]
         // console.info(`176 Earned: ${earned}`);
     }
