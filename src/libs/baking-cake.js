@@ -171,7 +171,7 @@ export const getUserBakingData = async (web3Client) => {
 
     if (earned>0) {
         earned = await routerContract.methods.getAmountsOut(earned,[CakeAddress,BusdAddress,XbnAddress]).call();
-        earned = earned[1]
+        earned = earned[2]
         // console.info(`176 Earned: ${earned}`);
     }
     // debugger;
