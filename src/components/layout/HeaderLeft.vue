@@ -270,6 +270,7 @@ export default {
 
 .el-submenu .el-menu-item a {
   padding-left: 1rem;
+  display:block;
 }
 
 .menu-left-box {
