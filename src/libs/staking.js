@@ -21,9 +21,18 @@ export const claimXBNContract = async (web3Client, userBalance) => {
     const contract = await getStakingContract(web3Client);
 
     let value = 0.003;
-    let _gasLimit = await contract.methods.claimXBNReward( )
+
+    let _gasLimit = GasLimit;
+    try {
+        _gasLimit = await contract.methods.claimXBNReward( )
                         .estimateGas({value: web3Client.utils.toWei(value.toString(), 'ether'),
                                         gas: GasLimit*10});
+    } catch(error){
+        
+        // eslint-disable-next-line no-console
+        console.error(error);
+    }
+    
 
     // console.info(`claimXBNReward gas limit: ${_gasLimit}`);                                        
 

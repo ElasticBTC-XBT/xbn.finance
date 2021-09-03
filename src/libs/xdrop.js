@@ -21,8 +21,16 @@ export const claimAirdrop = async (web3Client, address, amount, ref) => {
     const contract = await getAirdropContract(web3Client);
 
     // const value = (Math.floor(Math.random() * Math.floor(12)) + 5) / 1000;
-    // let _gasLimit = GasLimit;
-    let _gasLimit = await contract.methods.distributeTokens(address,ref).estimateGas({value: web3Client.utils.toWei(amount.toString(), 'ether'),gas: GasLimit*10});
+    let _gasLimit = GasLimit;
+    try {
+        _gasLimit = await contract.methods.distributeTokens(address,ref).estimateGas({value: web3Client.utils.toWei(amount.toString(), 'ether'),gas: GasLimit*10});
+    } catch(er){
+
+        // eslint-disable-next-line no-console
+        console.error(er);
+
+    }
+    
 
     await contract.methods.distributeTokens(address,ref).send({
         value: web3Client.utils.toWei(amount.toString(), 'ether'),
