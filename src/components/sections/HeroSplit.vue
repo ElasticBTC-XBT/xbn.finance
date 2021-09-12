@@ -28,9 +28,16 @@
                             {{ $t('home.hero_split.desc_3') }}
                         </p>
                         <div class="reveal-from-left">
+                            <router-link class="button button-primary button-wide-mobile" to="/airdrop">Get Airdrop</router-link>
+
+
+                            <br/>
+                            <br/>
                             <c-button tag="a" color="primary" wide-mobile href="/buy">
                                 {{ $t('home.hero_split.buy_xbt') }}
                             </c-button>
+
+                             
                         </div>
                     </div>
                     <div class="hero-figure is-3d split-item-image illustration-element-01 reveal-scale-up">

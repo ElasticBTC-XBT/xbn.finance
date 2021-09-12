@@ -209,6 +209,14 @@ let routers = [
         krShort: '/kr/xbn/airdrop',
     },
     {
+        path: '/airdrop',
+        name: 'airdrop',
+        components: {
+            default: XBNAirdropV2,
+        }
+       
+    },
+    {
         path: '/xbn/quest-airdrop',
         name: 'xbn_quest_airdrop',
         components: {
