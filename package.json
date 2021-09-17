@@ -1,8 +1,8 @@
 {
-  "name": "XBN-vue",
+  "name": "XBN.finance",
   "version": "1.1.1",
   "engines": {
-    "node": "15.x"
+    "node": "16.x"
   },
   "private": true,
   "scripts": {
@@ -30,9 +30,9 @@
     "moment": "^2.29.1",
     "moment-countdown": "^0.0.3",
     "next": "^10.0.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^6.0",
     "numeral": "^2.0.6",
-    "sass-loader": "^7.1.0",
+    "sass-loader": "^10",
     "sweet-modal-vue": "^2.0.0",
     "twit": "^2.2.11",
     "vue": "^2.6.10",

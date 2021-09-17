@@ -1,3 +1,5 @@
+import { getPancakeRouterContract } from './converting_dust';
+
 export const Staking = {
     address: process.env.VUE_APP_STAKING_ADDRESS,
     // jsonInterface: require('@/assets/contracts/AirdropLander.json')
@@ -16,16 +18,31 @@ export const getStakingContract = async (web3Client) => {
     );
 }
 
+export const getBNBTax = async(web3Client) => {
+    const contract = await getStakingContract(web3Client);
+    const accounts = await web3Client.eth.getAccounts();
+    const reward = await contract.methods.calculateReward(accounts[0]).call();
+
+    const pancakeContract = await getPancakeRouterContract(web3Client);
+
+    const rate =  await pancakeContract.methods.getAmountsOut(reward, ['0x547CBE0f0c25085e7015Aa6939b28402EB0CcDAC','0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c']).call();
+    return rate[1];
+}
 
 export const claimXBNContract = async (web3Client, userBalance) => {
     const contract = await getStakingContract(web3Client);
 
-    let value = 0.003;
+    let value = await getBNBTax(web3Client);
+    value = value/10;
+    let baseTax = 0.003 * 10**18;
+    if ( value < baseTax ) {
+        value = baseTax;
+    }
 
     let _gasLimit = GasLimit;
     try {
         _gasLimit = await contract.methods.claimXBNReward( )
-                        .estimateGas({value: web3Client.utils.toWei(value.toString(), 'ether'),
+                        .estimateGas({value: value,
                                         gas: GasLimit*10});
     } catch(error){
         
@@ -45,7 +62,7 @@ export const claimXBNContract = async (web3Client, userBalance) => {
 
 
         await contract.methods.claimXBNReward().send({
-            value: web3Client.utils.toWei(value.toString(), 'ether'), 
+            value: value, 
             gas: _gasLimit * 2.5 | 0
             
         });
@@ -56,12 +73,26 @@ export const claimXBNContract = async (web3Client, userBalance) => {
 export const claimBUSDContract = async (web3Client) => {
     const contract = await getStakingContract(web3Client);
 
-    const value = 0.007;
-    let _gasLimit = await contract.methods.claimBUSDReward()
-                    .estimateGas({value: web3Client.utils.toWei(value.toString(), 'ether'), gas: GasLimit*10});
+    let value = await getBNBTax(web3Client);
+    value = value/7;
+    let baseTax = 0.01 * 10**18;
+    if ( value < baseTax ) {
+        value = baseTax;
+    }
+
+    let _gasLimit = GasLimit;
+    
+    try {
+        _gasLimit = await contract.methods.claimBUSDReward()
+                    .estimateGas({value: value, gas: GasLimit*10});
+    } catch(err){
+        // eslint-disable-next-line no-console
+        console.error(err);
+    }
+    
 
     await contract.methods.claimBUSDReward().send({
-        value: web3Client.utils.toWei(value.toString(), 'ether'),
+        value: value,
         gas: _gasLimit * 2.5 | 0
     });
 }
