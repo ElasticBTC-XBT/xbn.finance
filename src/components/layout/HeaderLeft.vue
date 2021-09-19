@@ -77,36 +77,17 @@
                 >
               </template>
               <el-menu-item index="1-1">
-                <a href="https://tothemoon.xbn.finance/">White Paper</a>
+                <a href="https://docs.xbn.finance/">White Paper</a>
               </el-menu-item>
-              <el-menu-item index="1-2" v-on:click="menuToggle()">
+              <!-- <el-menu-item index="1-2" v-on:click="menuToggle()">
                 <router-link to="/governance/">Governance</router-link>
-              </el-menu-item>
+              </el-menu-item> -->
               <el-menu-item index="1-3" v-on:click="menuToggle()">
-                <router-link to="/roadmap/">Roadmap</router-link>
+                <router-link to="https://docs.xbn.finance/roadmap">Roadmap</router-link>
               </el-menu-item>
             </el-submenu>
 
-            <el-submenu index="2">
-              <template slot="title">
-                <i>
-                  <img
-                    class="icon-menu"
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAEXklEQVRoge2ZXWgcVRTHf+dO1k1i0iZKGqWQWEWhfaiUWChCRUFqIz6YtkYFH6yETSxIFb/ypQRjxDb1RWiyqRahKq2pVVCU0FBRfKhCY4ugFKV9aKBWTasFs9lmu3N8SDY7u9mPZGcmyUP+b3PuOef+/3vmnnvnLixjcSH5HLqevr94Yrz0TrVil/ceGb64EKQAtI9KhEGUVtnFSDY/kytJa2P9M9fGi/822D9bcWu0bUd9j/dUk1BFVBF9n5uwGEZ4EMOwhrknMZYek7UCrY9v3Sg2JwELOIvaL08Ggj+8c/jLMV/I97MB4ac5uD4rLYQTD0VZ3eLagoglMBbDPND76dAlL4h6jewCxGwGReFQ79Gv/SevrEh5H6oroboCro7Dhb9AZ0ZqnGHpAqTtsfq1qmwQdA2AiP7oG+lpaB+VGPqSFKtg411Jh8oyOHM+8bRb+ziWWNgzAtobH2pUlb2gteL4JWzb/Osr+Q8o5hrfAOuSAlalOtVUOQWUYhjSATZJM+cMQFvj1odV5QhQO+0UA0aBi8bYFX4KkJ1EgY9TjNHJVKdoLC2I74ALMF0BUZp0qiP9htovBmXl8a6jR9Oy+AdpYZ+GWQ08D8Cvo3BzOZSVwOR1OHPO6X4aeFKaic0IsOFWgctSFLvvrcMn/lwo4ilQDiHTAiJROH4abgxCZBJsO+knHEyQh0QF4FuUkbmQ1zADOR1sPpJdfF+YCudECv9FM9iJOx+LAKKUvxGUq+tme2dEKOeoxQgUIMBmjKLpH0e5G9g0MyacRzmBYBPnF2dY3rNQOjTs6MiZIDRLMwfmmzfDPC8BvQjHcLzz6ch5FlpMSAv7gO38wRPZyEOunXgJQFr4LJ9PXgHaTweGhqTBJSuPkb8CQg1K3XwT6wA12LwGgKFbmqc2Hq/h3xqIU4XQhNBEnCq/plmyi3iuWBaw2FgSbTTSQYMKHU6bKD2lPXyeL9YPAVt0P1/MJ0ANVemdTs3cFr73ApTtWDwCfOV57gzwaw0EgW2O51Kf5lmgRSypH+JeYmEWsXI2k3m8k1NAnZvjyXIb9RsTXdTYsakzlQnQXdKVeqZatApoiACQ98bDdpyp7AxnqvwChJLCKGaHhghEVjEI3OE2V9ZXSN9lBTfQi/KU20lS8oYIRKr5BOVRL/JlFKADbEF5D7xvf5Fq1qOODySXmPUKaT8NKEN4Sd6wft4xSvt4J6dQPkyYbGXN7NTpEF6hgNuKPOjWgXnvxrVAHbA2YRDDP+lOKQL0APfivI/xDquxecFtElFmXTSnVsCDSbLPTqvu5xav084I0H5uA286QxaUYXjd66TJCgi78XtnFkLBCm73MqUB0IOUAzu9TJwFllXCcy7it6UbpipwnRCw0kXiucOw2SouMFZpj3TyttMkOojFFX6H2T3WL9gxiLr4F0JgT+mbtAIYrrCDBSQPYAJQ5OIbTeHVRCVEw5zEn96fm0QcJi7h6q5VYI9nhJZRIP4HU2tCeCR4BAcAAAAASUVORK5CYII="
-                  />
-                </i>
-                <span slot="title">Ecosystem</span>
-              </template>
-              <el-menu-item index="2-1">
-                <a href="https://elasticbitcoin.org">XBT</a>
-              </el-menu-item>
-              <el-menu-item index="2-2">
-                <a href="https://about.xbc.xbn.finance">XBC</a>
-              </el-menu-item>
-              <el-menu-item index="2-3">
-                <a href="https://pepe.community">PePe</a>
-              </el-menu-item>
-            </el-submenu>
+           
 
             <el-submenu index="3">
               <template slot="title">
@@ -140,7 +121,28 @@
               </el-menu-item>
             </el-submenu>
 
-            <el-submenu index="4">
+             <el-submenu index="2">
+              <template slot="title">
+                <i>
+                  <img
+                    class="icon-menu"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAEXklEQVRoge2ZXWgcVRTHf+dO1k1i0iZKGqWQWEWhfaiUWChCRUFqIz6YtkYFH6yETSxIFb/ypQRjxDb1RWiyqRahKq2pVVCU0FBRfKhCY4ugFKV9aKBWTasFs9lmu3N8SDY7u9mPZGcmyUP+b3PuOef+/3vmnnvnLixjcSH5HLqevr94Yrz0TrVil/ceGb64EKQAtI9KhEGUVtnFSDY/kytJa2P9M9fGi/822D9bcWu0bUd9j/dUk1BFVBF9n5uwGEZ4EMOwhrknMZYek7UCrY9v3Sg2JwELOIvaL08Ggj+8c/jLMV/I97MB4ac5uD4rLYQTD0VZ3eLagoglMBbDPND76dAlL4h6jewCxGwGReFQ79Gv/SevrEh5H6oroboCro7Dhb9AZ0ZqnGHpAqTtsfq1qmwQdA2AiP7oG+lpaB+VGPqSFKtg411Jh8oyOHM+8bRb+ziWWNgzAtobH2pUlb2gteL4JWzb/Osr+Q8o5hrfAOuSAlalOtVUOQWUYhjSATZJM+cMQFvj1odV5QhQO+0UA0aBi8bYFX4KkJ1EgY9TjNHJVKdoLC2I74ALMF0BUZp0qiP9htovBmXl8a6jR9Oy+AdpYZ+GWQ08D8Cvo3BzOZSVwOR1OHPO6X4aeFKaic0IsOFWgctSFLvvrcMn/lwo4ilQDiHTAiJROH4abgxCZBJsO+knHEyQh0QF4FuUkbmQ1zADOR1sPpJdfF+YCudECv9FM9iJOx+LAKKUvxGUq+tme2dEKOeoxQgUIMBmjKLpH0e5G9g0MyacRzmBYBPnF2dY3rNQOjTs6MiZIDRLMwfmmzfDPC8BvQjHcLzz6ch5FlpMSAv7gO38wRPZyEOunXgJQFr4LJ9PXgHaTweGhqTBJSuPkb8CQg1K3XwT6wA12LwGgKFbmqc2Hq/h3xqIU4XQhNBEnCq/plmyi3iuWBaw2FgSbTTSQYMKHU6bKD2lPXyeL9YPAVt0P1/MJ0ANVemdTs3cFr73ApTtWDwCfOV57gzwaw0EgW2O51Kf5lmgRSypH+JeYmEWsXI2k3m8k1NAnZvjyXIb9RsTXdTYsakzlQnQXdKVeqZatApoiACQ98bDdpyp7AxnqvwChJLCKGaHhghEVjEI3OE2V9ZXSN9lBTfQi/KU20lS8oYIRKr5BOVRL/JlFKADbEF5D7xvf5Fq1qOODySXmPUKaT8NKEN4Sd6wft4xSvt4J6dQPkyYbGXN7NTpEF6hgNuKPOjWgXnvxrVAHbA2YRDDP+lOKQL0APfivI/xDquxecFtElFmXTSnVsCDSbLPTqvu5xav084I0H5uA286QxaUYXjd66TJCgi78XtnFkLBCm73MqUB0IOUAzu9TJwFllXCcy7it6UbpipwnRCw0kXiucOw2SouMFZpj3TyttMkOojFFX6H2T3WL9gxiLr4F0JgT+mbtAIYrrCDBSQPYAJQ5OIbTeHVRCVEw5zEn96fm0QcJi7h6q5VYI9nhJZRIP4HU2tCeCR4BAcAAAAASUVORK5CYII="
+                  />
+                </i>
+                <span slot="title">Ecosystem</span>
+              </template>
+              <el-menu-item index="2-1">
+                <a href="https://elasticbitcoin.org">XBT</a>
+              </el-menu-item>
+              <el-menu-item index="2-2">
+                <a href="https://about.xbc.xbn.finance">XBC</a>
+              </el-menu-item>
+              <el-menu-item index="2-3">
+                <a href="https://pepe.community">PePe</a>
+              </el-menu-item>
+            </el-submenu>
+
+            <!-- <el-submenu index="4">
               <template slot="title">
                 <i>
                   <img
@@ -162,7 +164,7 @@
                   >#XBCagainstCovid19</a
                 >
               </el-menu-item>
-            </el-submenu>
+            </el-submenu> -->
           </el-menu>
         </div>
       </div>
