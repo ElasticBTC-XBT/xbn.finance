@@ -87,8 +87,6 @@
               </el-menu-item>
             </el-submenu>
 
-           
-
             <el-submenu index="3">
               <template slot="title">
                 <i>
@@ -132,13 +130,16 @@
                 <span slot="title">Ecosystem</span>
               </template>
               <el-menu-item index="2-1">
-                <a href="https://elasticbitcoin.org">XBT</a>
+                <a href="https://elasticbitcoin.org">XBT - Rebase</a>
               </el-menu-item>
               <el-menu-item index="2-2">
-                <a href="https://about.xbc.xbn.finance">XBC</a>
+                <a href="https://about.xbc.xbn.finance">XBC Community Coin</a>
               </el-menu-item>
               <el-menu-item index="2-3">
-                <a href="https://pepe.community">PePe</a>
+                <a href="https://pepe.community">PePe Metaverse</a>
+              </el-menu-item>
+              <el-menu-item index="2-3">
+                <a href="https://cryptowar.network">Cryptowar Crossed swords  xBlade </a>
               </el-menu-item>
             </el-submenu>
 
