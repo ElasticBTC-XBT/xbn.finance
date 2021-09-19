@@ -32,7 +32,7 @@
                                 <router-link to="/governance/">Governance</router-link>
                             </li>
                             <li>
-                                <router-link to="/roadmap/">Roadmap</router-link>
+                                <router-link to="https://docs.xbn.finance/roadmap">Roadmap</router-link>
                             </li>
                             <li>
                                 <router-link to="/staking/">Staking</router-link>

@@ -39,38 +39,21 @@
                 <div class="list-item-header-child">
                   <ul>
                     <li @click="closeMenu">
-                      <a href="https://tothemoon.xbn.finance/">White Paper</a>
+                      <a href="https://docs.xbn.finance/">White Paper</a>
                     </li>
                     <!--                                <li @click="closeMenu">-->
                     <!--                                  <a href="https://tothemoon.xbn.finance/xbn-investor-protection-program">Investor Protection</a>-->
                     <!--                                </li>-->
-                    <li @click="closeMenu">
+                    <!-- <li @click="closeMenu">
                       <router-link to="/governance/">Governance</router-link>
-                    </li>
+                    </li> -->
                     <li @click="closeMenu">
-                      <router-link to="/roadmap/">Roadmap</router-link>
+                      <router-link to="https://docs.xbn.finance/roadmap">Roadmap</router-link>
                     </li>
                   </ul>
                 </div>
               </li>
 
-              <li @click="closeMenu($event)" class="item-header-main">
-                <a href="#" class="text-main">Ecosystem</a>
-
-                <div class="list-item-header-child">
-                  <ul>
-                    <li @click="closeMenu">
-                      <a href="https://elasticbitcoin.org">XBT</a>
-                    </li>
-                    <li @click="closeMenu">
-                      <a href="https://about.xbc.xbn.finance">XBC</a>
-                    </li>
-                    <li @click="closeMenu">
-                      <a href="https://pepe.community">PePe</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
               <li @click="closeMenu($event)" class="item-header-main">
                 <a href="#" class="text-main">Products</a>
 
@@ -102,6 +85,25 @@
                   </ul>
                 </div>
               </li>
+
+              <li @click="closeMenu($event)" class="item-header-main">
+                <a href="#" class="text-main">Ecosystem</a>
+
+                <div class="list-item-header-child">
+                  <ul>
+                    <li @click="closeMenu">
+                      <a href="https://elasticbitcoin.org">XBT</a>
+                    </li>
+                    <li @click="closeMenu">
+                      <a href="https://about.xbc.xbn.finance">XBC</a>
+                    </li>
+                    <li @click="closeMenu">
+                      <a href="https://pepe.community">PePe</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              
               <li @click="closeMenu($event)" class="item-header-main">
                 <a href="#" class="text-main">Community</a>
 
