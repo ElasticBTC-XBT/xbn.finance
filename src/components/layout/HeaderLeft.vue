@@ -109,11 +109,11 @@
                 }}</router-link>
               </el-menu-item>
               <el-menu-item index="3-4" v-on:click="menuToggle()">
-                <router-link to="/xbn/sales/">Sales</router-link>
+                <router-link to="/xbn/sales/">Discounted Sales</router-link>
               </el-menu-item>
-              <el-menu-item index="3-5">
+              <!-- <el-menu-item index="3-5">
                 <a href="https://xbc.xbn.finance">Earn BNB</a>
-              </el-menu-item>
+              </el-menu-item> -->
               <el-menu-item index="3-6" v-on:click="menuToggle()">
                 <router-link to="/converting_dust">Converting Dust</router-link>
               </el-menu-item>
@@ -139,7 +139,7 @@
                 <a href="https://pepe.community">PePe Metaverse</a>
               </el-menu-item>
               <el-menu-item index="2-3">
-                <a href="https://cryptowar.network">Cryptowar Crossed swords  xBlade </a>
+                <a href="https://cryptowar.network">Cryptowar ⚔️ xBlade </a>
               </el-menu-item>
             </el-submenu>
 
