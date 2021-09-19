@@ -83,7 +83,7 @@
                 <router-link to="/governance/">Governance</router-link>
               </el-menu-item> -->
               <el-menu-item index="1-3" v-on:click="menuToggle()">
-                <router-link to="https://docs.xbn.finance/roadmap">Roadmap</router-link>
+                <a href="https://docs.xbn.finance/roadmap">Roadmap</a>
               </el-menu-item>
             </el-submenu>
 
