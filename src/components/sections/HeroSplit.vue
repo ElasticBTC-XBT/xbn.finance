@@ -33,9 +33,9 @@
 
                             <br/>
                             <br/>
-                            <c-button tag="a" color="primary" wide-mobile href="/buy">
+                            <router-link class="button button-primary button-wide-mobile" to="/xbn/sales">
                                 {{ $t('home.hero_split.buy_xbt') }}
-                            </c-button>
+                            </router-link>
 
                              
                         </div>
@@ -58,13 +58,13 @@
 
 <script>
     import {SectionSplitProps} from '@/utils/SectionProps.js'
-    import CButton from '@/components/elements/Button.vue'
+    // import CButton from '@/components/elements/Button.vue'
     import CImage from '@/components/elements/Image.vue'
 
     export default {
         name: 'CHeroSplit',
         components: {
-            CButton,
+            // CButton,
             CImage
         },
         mixins: [SectionSplitProps]

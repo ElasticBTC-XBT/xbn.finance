@@ -26,13 +26,13 @@
 // import layout
 import CLayout from '@/layouts/LayoutDefault.vue'
 // import sections
-import BasicSplit from '@/components/sections/BasicSplit.vue'
+// import BasicSplit from '@/components/sections/BasicSplit.vue'
 import {SectionProps} from '@/utils/SectionProps.js'
 
 export default {
   name: 'Basic',
   components: {
-    BasicSplit
+    // BasicSplit
   },
   mixins: [SectionProps],
   created() {

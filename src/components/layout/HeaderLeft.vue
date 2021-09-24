@@ -178,7 +178,7 @@
 <script>
 import CLogo from "@/components/layout/partials/Logo.vue";
 import CButton from "@/components/elements/Button";
-import $ from "jquery";
+// import $ from "jquery";
 // import CRibbon from "./Ribbon";
 
 export default {

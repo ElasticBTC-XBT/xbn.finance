@@ -154,7 +154,7 @@
         </c-generic-section>
 
         <c-testimonial class="illustration-section-03" />
-        <c-cta bottom-divider split />
+        <!-- <c-cta bottom-divider split /> -->
     </fragment>
 </template>
 
@@ -168,7 +168,6 @@ import CHeroFull from '@/components/sections/HeroFull.vue'
 // import CTeam from '@/components/sections/Team.vue'
 import CGenericSection from '@/components/sections/GenericSection.vue'
 import CTestimonial from '@/components/sections/Testimonial.vue'
-import CCta from '@/components/sections/Cta.vue'
 // import some required elements
 import CImage from '@/components/elements/Image.vue'
 import CInput from '@/components/elements/Input.vue'
@@ -186,7 +185,7 @@ export default {
     CGenericSection,
     CTestimonial,
     CImage,
-    CCta,
+    // CCta,
     CInput,
     CButton,
     CModal,

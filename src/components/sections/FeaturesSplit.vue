@@ -13,7 +13,7 @@
                     bottomDivider && 'has-bottom-divider'
                 ]">
                 <c-section-header :data="sectionHeader" class="center-content"/>
-                <div
+                <!-- <div
                         class="split-wrap"
                         :class="[
                         invertMobile && 'invert-mobile',
@@ -78,7 +78,7 @@
                                     :height="396"/>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -87,13 +87,13 @@
 <script>
     import {SectionSplitProps} from '@/utils/SectionProps.js'
     import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
-    import CImage from '@/components/elements/Image.vue'
+    // import CImage from '@/components/elements/Image.vue'
 
     export default {
         name: 'CFeaturesSplit',
         components: {
             CSectionHeader,
-            CImage
+            // CImage
         },
         mixins: [SectionSplitProps],
         data() {
