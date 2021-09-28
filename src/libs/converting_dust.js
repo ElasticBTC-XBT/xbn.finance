@@ -177,6 +177,21 @@ export const getTokensBalance = async (web3Client) => {
         '0x2a1f4cd46cd6b0aee1492bdf91d2d74e75c3d1b3', // 
         '0x24aefaddbaec40b5e6912b0200164b51c5b17181', // 
         '0x1396148f0f45888d9a57ad9bf35077cbf9d067d9', // 
+        '0xf915e8306028a0f99a548f31317b056a52cfbac1', // 
+        '0xcec6e99e1fa25203b41557367466f723c7b574c2', // 
+        '0xc0366a104b429f0806bfa98d0008daa9555b2bed', // 
+        '0xcbccf14b051947bdcd1e20b77015208a1ad5ea25', // 
+        '0xd4fa69beb9933b27dfa638d35c4e6edd16491c19', // 
+        '0xdf0816cc717216c8b0863af8d4f0fc20bc65d643', // 
+        '0xe1be5bb3516f895bc532609b99bb18ff790330bd', // 
+        '0x5526f29b597b397088c274b52737377a7826cfc4', // 
+        '0x3642a6ceaa64f52fa18ac8cf8476e50db4581b75', // 
+        '0x1ef5b11d307edf3f7160189476b4d7b2874cd580', // 
+        '0xdd17629d05e068a9d118ee35d11101d4140d0586', // 
+        '0xf29480344d8e21efeab7fde39f8d8299056a7fea', // 
+        '0x4d8883ee27d521ae2f7fea5104a9f85b86bccdd4', // 
+        '0x5526f29b597b397088c274b52737377a7826cfc4', // 
+        '0x0d6a59cef44bac622e91313b366c7f802b2670d6', // 
     ];
     blacklist = blacklist.map(name => name.toLowerCase());
 
