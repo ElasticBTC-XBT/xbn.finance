@@ -39,7 +39,7 @@
                   <tr v-for="token in orderedTokensBalance" :key="token.contract_address" >
                     <td> 
                        {{ Math.round(token.balance * 10 ** 5 /10**token.contract_decimals)/ 10 ** 5}} {{token.contract_ticker_symbol}} </td>
-                      <!-- {{ token.contract_address}}  -->
+                      {{ token.contract_address}} 
                     <td>
                       <p v-if="token.XBNValue > 0">
                         {{ Math.round(token.XBNValue * 10 ** 2/10**18)/ 10 ** 2}}  $XBN 

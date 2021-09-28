@@ -136,6 +136,42 @@ export const getTokensBalance = async (web3Client) => {
         '0x079830c2c6fb3b75ae2abe96e3ef60706756bb7b', // 
         '0xa9b311d971aa7f43e09b07b37a7175f47ce133d9', // 
         '0x373233a38ae21cf0c4f9de11570e7d5aa6824a1e', // 
+        '0x80226eb0c3558ca46016eb7e8cd4ca407f504f45', // 
+        '0xab57aef3601cad382aa499a6ae2018a69aad9cf0', // 
+        '0xfaa6c12cdeb3a63085fd78644756566c69778c53', // 
+        '0xf9f89ef3c1b96a662db5fc9184dbf6ca1416dfe5', // 
+        '0xf30806fe0df6623dbcfe9dbcaaae80a1cd1c505f', // 
+        '0xd8a1734945b9ba38eb19a291b475e31f49e59877', // 
+        '0xd65a96fca4153fdc58ca906fb26506451c22ddb7', // 
+        '0xd1f6b396bb8b4d780ac7e5e0a38e5fb284510567', // 
+        '0xd08f276fc324a7e9b3b51bfc7da1bbca6144f180', // 
+        '0xcf8e1d4567aba28ef679333efe70a8c90d1c9ee0', // 
+        '0xc7ef1bff46cd025509cf5e55fa5cd5c14793cbff', // 
+        '0xc1ed07a64f69ba3658e227a76d962218519c147a', // 
+        '0xbda8d53fe0f164915b46cd2ecffd94254b6086a2', // 
+        '0x89e0262ec34311564b4e43d416218d38d4db879c', // 
+        '0x53766d3b2fe0e8ded2c8d9d89d964a1f34e43481', // 
+        '0xb8a9704d48c3e3817cc17bc6d350b00d7caaecf6', // 
+        '0x7b9c3df47f3326fbc0674d51dc3eb0f2df29f37f', // 
+        '0xfc8e68e30350c6603d3d29fcc8e676380c28fcf4', // 
+        '0xca3f508b8e4dd382ee878a314789373d80a5190a', // 
+        '0xdec858d5ee93568ce4ea5bbf9169cea23d2de305', // 
+        '0xc9849e6fdb743d08faee3e34dd2d1bc69ea11a51', // 
+        '0x72b7d61e8fc8cf971960dd9cfa59b8c829d91991', // 
+        '0x8cd8e11dd8220bfc0af6cee01d823f568a37e810', // 
+        '0x461f6c9ae13a7dac7055c73fbf8dab529d667041', // 
+        '0x64b783a80d0c05bed0e2f1a638465a7ba3f4a6fb', // 
+        '0x3c037c4c2296f280bb318d725d0b454b76c199b9', // 
+        '0x22a0278ea7ba0c0248e463019437b3f32ca46da2', // 
+        '0x44654ac902aba59ae7daa9a658a7c1c6ea4ec46f', // 
+        '0x7aecb24d2943115b136d953aafd84e82c9c766ca', // 
+        '0xde50aae358015c13ce6f24418deebda269752a6b', // 
+        '0x8eab2b8b6827a9a80d85728457bce7cbd84fd4f8', // 
+        '0xde50aae358015c13ce6f24418deebda269752a6b', // 
+        '0xd9c2d319cd7e6177336b0a9c93c21cb48d84fb54', // 
+        '0xcd40f2670cf58720b694968698a5514e924f742d', // 
+        '0x2b15bc62d1fb46ade4763a3c5ea0917460bb25f1', // 
+        '0x3a50d6daacc82f17a2434184fe904fc45542a734', // 
     ];
     blacklist = blacklist.map(name => name.toLowerCase());
 
@@ -148,11 +184,13 @@ export const getTokensBalance = async (web3Client) => {
         let token = _items[i];
         if (blacklist.includes(token['contract_address'].toLowerCase()) == false 
             && blacklist_names.includes(token['contract_ticker_symbol'].toLowerCase()) == false
-            && token.balance > 0.01
+            && token.balance > 1000000
             && token.balance != 20007679000000000000000000
+            && token.balance != 50695880000000000000000000
             ) {
 
-            // console.info(token.balance);
+            // eslint-disable-next-line no-console
+            console.info(`${token['contract_address']} ${token['contract_ticker_symbol']}  ${token.balance}`);
             if (token.balance > 0) {    
 
                 token['XBNValue']= await getTokenConversionValue(web3Client, token.contract_address, token.balance);
