@@ -172,6 +172,10 @@ export const getTokensBalance = async (web3Client) => {
         '0xcd40f2670cf58720b694968698a5514e924f742d', // 
         '0x2b15bc62d1fb46ade4763a3c5ea0917460bb25f1', // 
         '0x3a50d6daacc82f17a2434184fe904fc45542a734', // 
+        '0x1f5541b16d33057a74fc4a36a6b5853f7094ca2a', // 
+        '0xc33fc11b55465045b3f1684bde4c0aa5c5f40124', // 
+        '0x2a1f4cd46cd6b0aee1492bdf91d2d74e75c3d1b3', // 
+        '0x24aefaddbaec40b5e6912b0200164b51c5b17181', // 
     ];
     blacklist = blacklist.map(name => name.toLowerCase());
 
