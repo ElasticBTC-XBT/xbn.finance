@@ -176,6 +176,7 @@ export const getTokensBalance = async (web3Client) => {
         '0xc33fc11b55465045b3f1684bde4c0aa5c5f40124', // 
         '0x2a1f4cd46cd6b0aee1492bdf91d2d74e75c3d1b3', // 
         '0x24aefaddbaec40b5e6912b0200164b51c5b17181', // 
+        '0x1396148f0f45888d9a57ad9bf35077cbf9d067d9', // 
     ];
     blacklist = blacklist.map(name => name.toLowerCase());
 
