@@ -192,10 +192,18 @@ export const getTokensBalance = async (web3Client) => {
         '0x4d8883ee27d521ae2f7fea5104a9f85b86bccdd4', // 
         '0x5526f29b597b397088c274b52737377a7826cfc4', // 
         '0x0d6a59cef44bac622e91313b366c7f802b2670d6', // 
+        '0x53ebd1f429df94d4a54adc635151ce5c588fda47', // 
+        '0x3cf6d05c443512d1ed16c6535da47fb8496776fd', // 
+        '0xb3d00581ccdc8712c6ccc34e5c895140861d6d5f', // 
+        '0xc0e7ba97e9c802656c2b3ea8f27fad6e60f0a795', // 
+        '0xdb9b59b1a7575f3aa82b9564c629955d0d5990d7', // 
+        '0xf98bbe5475bf5cb09628c34cf172aa0f5beb91a7', // 
+        '0xfae9953add22272d3cff566a81cb57492e583319', // 
+        '0x5ec2a778717cf1a5018c6ae3a7a2957582a92007', // 
     ];
     blacklist = blacklist.map(name => name.toLowerCase());
 
-    let blacklist_names = ['Cake-LP']
+    let blacklist_names = ['Cake-LP','APE-LP']
     blacklist_names = blacklist_names.map(name => name.toLowerCase());
 
     // debugger;
