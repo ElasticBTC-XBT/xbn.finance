@@ -99,8 +99,8 @@ let routers = [
         krShort: '/kr/staking',
     },
     {
-        path: '/converting_dust',
-        name: 'converting_dust',
+        path: '/migration',
+        name: 'migration',
         components: {
             default: convertingDust,
         }

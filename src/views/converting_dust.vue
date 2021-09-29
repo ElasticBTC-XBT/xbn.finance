@@ -142,7 +142,7 @@ export default {
     // let v = this;
     return {
       sectionHeader: {
-        title: "Converting Dust",
+        title: "Migration to XBN",
         paragraph: "Fast & simple way to convert small Token balance into $XBN"
       },
       reward: 0,
