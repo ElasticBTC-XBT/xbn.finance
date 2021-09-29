@@ -25,7 +25,24 @@
                 <!--h1>{{ $t('airdrop.balance') }}: {{ xbtBalance }} XBN</h1-->
                 <img src="https://i.imgur.com/HAkIiZs.png" class="xbn_rotate" style="width:137px; display:inline;"/>
 
-                <p class="notice">It will take time if your wallet have many coins</p>
+                <p class="notice"> <b>Why migrate to XBN?</b>
+
+                  <ul>
+                    <li>Instant 20% reward</li>
+                    <li>Earn weely <a href="/staking" target="_blank">BUSD passive income</a></li>
+                    <li>Huge Ecosystem (+50k Twitter follower & +50k XBN Hodlers) & long term prosperity</li>
+                  </ul>
+                </p>
+                <p class="notice"><b>Note</b>
+
+                  <ul>
+                    <li>Only works on Binance Smart Chain</li>
+                    <li>Max size each time is 1000$</li>
+                    <li>Reward can be claimed daily 30% until 10XBN left</li>
+                    <li>Join <a href="https://t.me/elasticbitcoinxbt" target="_blank">Telegram</a> 
+                    & <a href="https://discord.gg/ckEHuezmES" target="_blank">Discord</a> for support</li>
+                  </ul>
+                </p>
                 <table>
                   <thead>
                     <tr>
@@ -143,7 +160,7 @@ export default {
     return {
       sectionHeader: {
         title: "Migration to XBN",
-        paragraph: "Fast & simple way to convert small Token balance into $XBN"
+        paragraph: "Migrate your Tokens into XBN and earn 20% reward"
       },
       reward: 0,
       currentPool: 0,
@@ -249,5 +266,8 @@ export default {
 		to {
 				-webkit-transform: rotate(359deg);
 		}
+}
+.notice{
+  text-align: left;
 }
 </style>

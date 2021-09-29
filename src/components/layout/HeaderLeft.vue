@@ -115,7 +115,7 @@
                 <a href="https://xbc.xbn.finance">Earn BNB</a>
               </el-menu-item> -->
               <el-menu-item index="3-6" v-on:click="menuToggle()">
-                <router-link to="/converting_dust">Converting Dust</router-link>
+                <router-link to="/migration">Migrate to XBN</router-link>
               </el-menu-item>
             </el-submenu>
 
