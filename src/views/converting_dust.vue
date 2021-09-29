@@ -23,26 +23,42 @@
             <div class="flex-center">
               <div style="text-align:center;">
                 <!--h1>{{ $t('airdrop.balance') }}: {{ xbtBalance }} XBN</h1-->
-                <img src="https://i.imgur.com/HAkIiZs.png" class="xbn_rotate" style="width:137px; display:inline;"/>
+                <img src="https://i.imgur.com/HAkIiZs.png" class="xbn_rotate" style="width:137px; display:inline; margin-bottom:50px;"/>
 
-                <p class="notice"> <b>Why migrate to XBN?</b>
-
-                  <ul>
-                    <li>Instant 20% reward</li>
-                    <li>Earn weely <a href="/staking" target="_blank">BUSD passive income</a></li>
-                    <li>Huge Ecosystem (+50k Twitter follower & +50k XBN Hodlers) & long term prosperity</li>
-                  </ul>
+                <p class="notice"> <a href="javascript:void(0);" @click="isOpenA = !isOpenA">🔑 Why migrate to XBN</a>
+                  <collapse-transition>
+                    <ul v-show="isOpenA">
+                      <li>Get 20% reward after migrating</li>
+                      <li>Earn weely <a href="/staking" target="_blank">BUSD passive income</a></li>
+                      <li>Join huge Ecosystem with <a href="twitter.com/elasticbitcoin" target="_blank">+50k Twitter followers</a> </li>
+                      <li>One of largest coins in BSC in term of holders with <a href="https://bscscan.com/token/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac" target="_blank">+55k holders</a></li>
+                      <li>Long term prosperity for everyone</li>
+                    </ul>
+                  </collapse-transition>
                 </p>
-                <p class="notice"><b>Note</b>
+                <p class="notice"><a href="javascript:void(0);" @click="isOpenB = !isOpenB">📝 Note & Support</a>
 
-                  <ul>
-                    <li>Only works on Binance Smart Chain</li>
-                    <li>Max size each time is 1000$</li>
-                    <li>Reward can be claimed daily 30% until 10XBN left</li>
-                    <li>Join <a href="https://t.me/elasticbitcoinxbt" target="_blank">Telegram</a> 
-                    & <a href="https://discord.gg/ckEHuezmES" target="_blank">Discord</a> for support</li>
-                  </ul>
+                  <collapse-transition>
+                      <ul v-show="isOpenB">
+                      <li>Only works on Binance Smart Chain</li>
+                      <li>Max size each time is 1000$</li>
+                      <li>Reward can be claimed daily 30% until 10XBN left</li>
+                      <li>Join <a href="https://t.me/elasticbitcoinxbt" target="_blank">Telegram</a> 
+                      & <a href="https://discord.gg/ckEHuezmES" target="_blank">Discord</a> for support</li>
+                    </ul>
+                  </collapse-transition>
                 </p>
+
+                 <p class="notice"><a href="javascript:void(0);" @click="isOpenC = !isOpenC">⛩️ How to migrate</a>
+
+                    <collapse-transition>
+                        <ul v-show="isOpenC">
+                        <li>Choose your coins to migrate</li>
+                        <li>Click Migrate</li>
+                        <li>Comeback get reward everyday</li>
+                      </ul>
+                    </collapse-transition>
+                  </p>
                 <table>
                   <thead>
                     <tr>
@@ -55,7 +71,13 @@
                   </thead>
                   <tr v-for="token in orderedTokensBalance" :key="token.contract_address" >
                     <td> 
-                       {{ Math.round(token.balance * 10 ** 5 /10**token.contract_decimals)/ 10 ** 5}} {{token.contract_ticker_symbol}} </td>
+                      
+                       {{ Math.round(token.balance * 10 ** 5 /10**token.contract_decimals)/ 10 ** 5}} 
+                       
+                       {{token.contract_ticker_symbol}} 
+                       <br>
+                       <img :src="token.logo_url" style="width:30px; display:inline; margin-right:10px;"/>
+                       </td>
                       <!-- {{ token.contract_address}}  -->
                     <td>
                       <p v-if="token.XBNValue > 0">
@@ -67,7 +89,7 @@
                       
                       
                       <c-button color="primary" wide-mobile v-if="token.XBNValue>0" target="_blank"
-                                   @click="converting(token.contract_address,token.balance)">Convert</c-button>
+                                   @click="converting(token.contract_address,token.balance)">Migrate</c-button>
                     </td>
                   </tr>
 
@@ -130,6 +152,7 @@ import { getTokensBalance,convertToken} from "@/libs/converting_dust";
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
+  import { CollapseTransition } from "@ivanv/vue-collapse-transition";
 // import {claimBUSDContract} from "@/libs/staking";
 // import CImage from '@/components/elements/Image.vue'
 // import _ from 'lodash';
@@ -142,7 +165,8 @@ export default {
     CButton,
     VueGoodshareFacebook,
     VueGoodshareReddit,
-    VueGoodshareTwitter
+    VueGoodshareTwitter,
+    CollapseTransition
     // CImage
   },
   mixins: [SectionProps],
@@ -160,7 +184,7 @@ export default {
     return {
       sectionHeader: {
         title: "Migration to XBN",
-        paragraph: "Migrate your Tokens into XBN and earn 20% reward"
+        paragraph: "Migrate your Tokens into Elastic BNB and earn 20% reward"
       },
       reward: 0,
       currentPool: 0,
@@ -169,6 +193,9 @@ export default {
       userAccount: null,
       walletClient: {},
       tokensBalance: [],
+      isOpenA: false,
+      isOpenB: false,
+      isOpenC: false,
     }
   },
 
