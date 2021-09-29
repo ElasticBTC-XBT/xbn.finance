@@ -297,4 +297,7 @@ export default {
 .notice{
   text-align: left;
 }
+.notice li{
+  font-size:0.8em;
+}
 </style>
