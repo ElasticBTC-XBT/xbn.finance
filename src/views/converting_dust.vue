@@ -59,41 +59,88 @@
                       </ul>
                     </collapse-transition>
                   </p>
+                  <div>
+                    <table>
+                      <thead>
+                        <tr>
+                          <td>✨ Reward Box</td>
+                        </tr>
+                      </thead>
+
+                    <tbody>
+                      <tr>
+
+                      </tr>
+                    </tbody>
+
+                    </table>
+
+                  </div>
                 <table>
                   <thead>
                     <tr>
-                      <td>Token</td>
+                      <td>💰 Migrate to XBN 
+                        </td>
+                      <!-- <td>Token</td> -->
                       <!-- <td>Balance</td> -->
                       <!-- <td>Value in USD</td> -->
-                      <td>Value after converting</td>
+                      <!-- <td>Value after converting</td> -->
                       <!-- <td></td> -->
                     </tr>
                   </thead>
                   <tr v-for="token in orderedTokensBalance" :key="token.contract_address" >
                     <td> 
+                      <table style="border:none;">
+
+                        <tr>
+                          <td colspan="3">{{token.contract_ticker_symbol}} 
+                            
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><img :src="token.logo_url" style="width:30px; display:inline; "/> </td>
+                          <td>➡️</td>
+                          <td> <img src="https://logos.covalenthq.com/tokens/56/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac.png" style="width:30px; display:inline; "/> </td>
+                        </tr>
+                        <tr>
+                          <td>{{ Math.round(token.balance * 10 ** 5 /10**token.contract_decimals)/ 10 ** 5}}  </td>
+                          <td>➡️</td>
+                          <td>{{ Math.round(token.XBNValue * 10 ** 2/10**18)/ 10 ** 2}}  XBN </td>
+                        </tr>
+                        <tr>
+                          <td>  ~{{ Math.round(token.XBNValueUSD)}} $  </td>
+                          <td>➡️</td>
+                          <td> ~{{ Math.round(token.XBNValueUSD*1.2)}} $ </td>
+                        </tr>
+
+                        <tr>
+                          <td colspan="3">
+                            <c-button color="primary" wide-mobile v-if="token.XBNValue>0" target="_blank"
+                                   @click="converting(token.contract_address,token.balance)">Migrate {{token.contract_ticker_symbol}} </c-button>
+                          </td>
+                        </tr>
+                      </table>
+
                       
-                       {{ Math.round(token.balance * 10 ** 5 /10**token.contract_decimals)/ 10 ** 5}} 
-                       
-                       {{token.contract_ticker_symbol}} 
-                       <br>
-                       <img :src="token.logo_url" style="width:30px; display:inline; margin-right:10px;"/>
-                       </td>
-                      <!-- {{ token.contract_address}}  -->
-                    <td>
-                      <p v-if="token.XBNValue > 0">
-                        {{ Math.round(token.XBNValue * 10 ** 2/10**18)/ 10 ** 2}}  $XBN 
-                        
-                          <!-- <br>
-                        ~{{ token.XBNValueUSD}}$  -->
-                      </p>
-                      
-                      
-                      <c-button color="primary" wide-mobile v-if="token.XBNValue>0" target="_blank"
-                                   @click="converting(token.contract_address,token.balance)">Migrate</c-button>
                     </td>
                   </tr>
 
                 </table>
+
+                <table>
+                      <thead>
+                        <tr>
+                          <td>💌 Make money referring friends</td>
+                        </tr>
+                      </thead>
+
+                    <tbody>
+                      <tr>
+
+                      </tr>
+                    </tbody>
+
+                    </table>
 
               </div>
             </div>
@@ -299,5 +346,9 @@ export default {
 }
 .notice li{
   font-size:0.8em;
+}
+thead {
+  font-weight: bold;
+  text-align: left;
 }
 </style>
