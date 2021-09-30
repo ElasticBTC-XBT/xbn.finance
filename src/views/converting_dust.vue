@@ -88,19 +88,20 @@
                       <!-- <td></td> -->
                     </tr>
                   </thead>
-                  <tr v-for="token in orderedTokensBalance" :key="token.contract_address" >
+                  <tr v-for="token in orderedTokensBalance" :key="token.contract_address" style="border:none">
                     <td> 
                       <table style="border:none;">
-
+                        <thead>
+                          <tr>
+                            <td colspan="3" style="text-align:center;">{{token.contract_ticker_symbol}} 
+                              
+                            </td>
+                          </tr>
+                        </thead>
                         <tr>
-                          <td colspan="3">{{token.contract_ticker_symbol}} 
-                            
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><img :src="token.logo_url" style="width:30px; display:inline; "/> </td>
+                          <td style="width:40%"><img :src="token.logo_url" style="width:30px; display:inline; "/> </td>
                           <td>➡️</td>
-                          <td> <img src="https://logos.covalenthq.com/tokens/56/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac.png" style="width:30px; display:inline; "/> </td>
+                          <td style="width:40%"> <img src="https://logos.covalenthq.com/tokens/56/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac.png" style="width:30px; display:inline; "/> </td>
                         </tr>
                         <tr>
                           <td>{{ Math.round(token.balance * 10 ** 5 /10**token.contract_decimals)/ 10 ** 5}}  </td>
