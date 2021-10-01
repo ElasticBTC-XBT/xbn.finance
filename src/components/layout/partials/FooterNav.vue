@@ -3,6 +3,13 @@
         <div>
             <ul class="list-reset finance-listing mt-8">
                 <li>
+                    <a href="https://anyswap.exchange/#/bridge?bridgetoken=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac&bridgetype=bridge" target="_blank"
+                       class="flex-center">
+                        <c-image width=24 height=24 :src="require('@/assets/images/anyswap.png')"></c-image>
+                        <span class="ml-8 mr-12"></span>
+                    </a>
+                </li>
+                <li>
                     <a href="https://bscscan.com/token/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac" target="_blank"
                        class="flex-center">
                         <c-image width=24 height=24 :src="require('@/assets/images/bscscan.png')"></c-image>
