@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="migration">
     <section
         class="signin section illustration-section-01"
         :class="[
@@ -55,27 +55,75 @@
                         <ul v-show="isOpenC">
                         <li>Choose your coins to migrate</li>
                         <li>Click Migrate</li>
-                        <li>Comeback get reward everyday</li>
+                        <li>Claim XBN bonus at reward box.</li>
                       </ul>
                     </collapse-transition>
                   </p>
-                  <div>
-                    <table>
-                      <thead>
-                        <tr>
-                          <td>✨ Reward Box</td>
-                        </tr>
-                      </thead>
+                 <p class="notice"><a href="javascript:void(0);" @click="isOpenD = !isOpenD">💌 Make money referring friends</a>
+
+                    <collapse-transition>
+                        <div style="margin-top: 0px; font-size:0.8em;" v-if="isOpenD">
+                             
+                              Earn XBN by referring to your friends to migrate to XBN using following link
+                            
+                            <p>
+
+                              <input v-model="ref_link" onclick="select()"/>
+
+                            </p>
+                            <p style="text-align: center">Share to 
+                              <a class="btn-floating btn btn-tw" type="button" role="button" title="Share on twitter"
+                                :href="'https://twitter.com/intent/tweet?url=' + ref_link"
+                                rel="noopener" target="_blank" style="text-align: center">
+
+                                  Twitter 
+                                  
+                              </a> 💎 
+                              <a class="btn-floating btn btn-tw" type="button" role="button" title="Share on twitter"
+                                :href="'https://www.facebook.com/sharer/sharer.php?u=' + ref_link"
+                                rel="noopener" target="_blank" style="text-align: center">
+
+                                  Facebook <br/>
+                                  
+                              </a>
+                            </p>
+                          </div>
+                    </collapse-transition>
+                  </p>
+                  
+                  <table>
+                    <thead>
+                      <tr>
+                        <td colspan="2">🏦 Reward Vault</td>
+                      </tr>
+                    </thead>
 
                     <tbody>
                       <tr>
+                        <td style="text-align:right">Total rewards</td>
+                        <td style="text-align:left"> 3295348543 XBN </td>
 
                       </tr>
+                      <tr>
+                        <td style="text-align:right">Your reward</td>
+                        <td style="text-align:left">23423 XBN</td>
+
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <span style="font-size: 0.9em;">
+                          Next claim time: 17th Otc 2021 <a href="https://docs.xbn.finance/migration-to-xbn">❓</a> </span>
+                          <br>
+                          
+                          <c-button color="primary" 
+                                   @click="converting(token.contract_address,token.balance)">Claim</c-button>
+                          </td>
+                        </tr>
                     </tbody>
 
-                    </table>
+                  </table>
 
-                  </div>
+                 
                 <table>
                   <thead>
                     <tr>
@@ -99,7 +147,9 @@
                           </tr>
                         </thead>
                         <tr>
-                          <td style="width:40%"><img :src="token.logo_url" style="width:30px; display:inline; "/> </td>
+                          <td style="width:40%">
+                            <a :href="'https://bscscan.com/token/' + token.contract_address" target="_blank">
+                            <img :src="token.logo_url" style="width:30px; display:inline; "/></a> </td>
                           <td>➡️</td>
                           <td style="width:40%"> <img src="https://logos.covalenthq.com/tokens/56/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac.png" style="width:30px; display:inline; "/> </td>
                         </tr>
@@ -128,20 +178,7 @@
 
                 </table>
 
-                <table>
-                      <thead>
-                        <tr>
-                          <td>💌 Make money referring friends</td>
-                        </tr>
-                      </thead>
-
-                    <tbody>
-                      <tr>
-
-                      </tr>
-                    </tbody>
-
-                    </table>
+               
 
               </div>
             </div>
@@ -244,6 +281,8 @@ export default {
       isOpenA: false,
       isOpenB: false,
       isOpenC: false,
+      isOpenD: false,
+      ref_link: "https://www.xbn.finance/migration/?r=" + this.userAccount
     }
   },
 
@@ -351,5 +390,10 @@ export default {
 thead {
   font-weight: bold;
   text-align: left;
+}
+
+.migration button {
+  padding: 8px;
+  height: auto;
 }
 </style>
