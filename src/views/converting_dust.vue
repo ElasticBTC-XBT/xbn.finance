@@ -148,6 +148,9 @@
                       <!-- <td></td> -->
                     </tr>
                   </thead>
+                  <tr v-if="orderedTokensBalance.length==0">  
+                    <td> ⌛ Loading your tokens... </td>
+                  </tr>
                   <tr v-for="token in orderedTokensBalance" :key="token.contract_address" style="border:none">
                     <td> 
                       <table style="border:none;">
@@ -401,7 +404,6 @@ export default {
       }
 
       let tx = await convertToken(walletClient.web3Client, token, amount,reseller );
-
 
       this.$refs.success.open();
       // this.$notify({
