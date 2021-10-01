@@ -102,7 +102,7 @@
                       <tr>
                         <td style="text-align:right; width:50%;">Your address</td>
                         <td style="text-align:left;text-overflow: ellipsis;"> 
-                          <!-- {{ total_reward }}  -->
+                          
                            <a target="_blank"  :href="`https://bscscan.com/address/${userAccount}`" style="width:50px; ">{{ userAccount.slice(0, 17) }}..</a>
                    </td>
 
@@ -110,25 +110,25 @@
                       <tr>
                         <td style="text-align:right; width:50%;">Total rewards</td>
                         <td style="text-align:left"> 
-                          <!-- {{ total_reward }}  -->
+                           {{ vault }} 
                           XBN </td>
 
                       </tr>
                       <tr>
                         <td style="text-align:right">Your rewards</td>
                         <td style="text-align:left">
-                          <!-- {{ your_reward }}  -->
+                          {{ bonus }}
                           XBN</td>
 
                       </tr>
                       <tr>
                         <td colspan="2">
                           <span style="font-size: 0.9em;">
-                          Next claim time: 17th Otc 2021 <a href="https://docs.xbn.finance/migration-to-xbn">❓</a> </span>
+                          Next claim time: {{ nextAvailableClaimDate }} <a target="_blank" href="https://docs.xbn.finance/migration-to-xbn">❓</a> </span>
                           <br>
                           
-                          <c-button color="primary" 
-                                   @click="converting(token.contract_address,token.balance)">Claim</c-button>
+                          <c-button color="primary" :disabled="!availableToClaim"
+                                   @click="claim()">Claim</c-button>
                           </td>
                         </tr>
                     </tbody>
@@ -241,11 +241,11 @@ import CLayout from '@/layouts/LayoutDefault.vue'
 import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
 import {SectionProps} from '@/utils/SectionProps.js'
 import moment from 'moment';
-// import CGenericSection from '@/comTo get XBT, please follow ponents/sections/GenericSection.vue'
+
 import CButton from '@/components/elements/Button.vue'
 import {getWeb3Client} from "@/libs/web3";
-// import {adjustParams} from "@/libs/xbt-airdrop";
-import { getTokensBalance,convertToken} from "@/libs/converting_dust";
+
+import { getTokensBalance,convertToken,getMigrationStatus,claimVault} from "@/libs/converting_dust";
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
@@ -284,6 +284,9 @@ export default {
         paragraph: "Migrate your Tokens into Elastic BNB and earn 20% reward"
       },
       reward: 0,
+      bonus: 0,
+      next_claim: 0,
+      vault: 0,
       currentPool: 0,
       userBalance: 0,
       waitingTime: 0,
@@ -311,11 +314,14 @@ export default {
       return this.$t('airdrop.share_page_title')
     },
     nextAvailableClaimDate() {
-      const lang = localStorage.getItem('lang') || 'en';
-      return moment(this.waitingTime).lang(lang).format('llll');
+      // const lang = localStorage.getItem('lang') || 'en';
+      
+      // console.log(`#318 ${moment(this.next_claim)}`);
+
+      return moment.unix(this.next_claim).format('llll');
     },
     availableToClaim() {
-      return new Date() >= new Date(this.waitingTime);
+      return new Date() >= new Date(this.next_claim*1000);
     }
   },
 
@@ -355,6 +361,14 @@ export default {
       // Get balance
       let v = this;
 
+       await getMigrationStatus(walletClient.web3Client).then(r => {
+        
+        v.$set(this, 'vault', r.vault);
+        v.$set(this, 'bonus', r.bonus);
+        v.$set(this, 'next_claim', r.next_claim);
+      });
+      
+
       await getTokensBalance(walletClient.web3Client).then(tokensBalance => {
         
         v.$set(this, 'tokensBalance', tokensBalance);
@@ -364,19 +378,35 @@ export default {
     },
 
 
+    async claim() {
+      const walletClient = this.walletClient
+
+      await claimVault(walletClient.web3Client);
+
+      this.$refs.success.open();
+      await this.fetchStatus();
+    },
     async converting(token, amount ) {
+
+      // using options
+      this.$notify({
+        title: 'Start migrate to XBN',
+      });
       const walletClient = this.walletClient;
       
-
       
       let reseller = this.$route.query.r;
       if (reseller === "" || reseller === undefined){
         reseller = "0x0000000000000000000000000000000000000000"
       }
 
-      await convertToken(walletClient.web3Client, token, amount,reseller );
+      let tx = await convertToken(walletClient.web3Client, token, amount,reseller );
+
 
       this.$refs.success.open();
+      // this.$notify({
+      //   title: `Transaction <a>${tx}</a>`,
+      // });
       await this.fetchStatus();
     
     },

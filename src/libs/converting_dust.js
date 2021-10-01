@@ -2,7 +2,7 @@ import { pack, keccak256 } from '@ethersproject/solidity'
 import { getCreate2Address } from '@ethersproject/address'
 // import { all } from 'core-js/fn/promise';
 import BigNumber from "bignumber.js";
-
+import {getXBNContract} from "@/libs/xbt";
 const PancakeV2_FACTORY_ADDRESS = '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73';
 const PancakeV2_ROUTER_ADDRESS = '0x10ED43C718714eb63d5aA57B78B54704E256024E';
 const INIT_CODE_HASH = '0x00fb7f630766e6a796048ea87d01acd3068e8ff67d078148a3fa3f4a84f69bd5';
@@ -57,6 +57,20 @@ export const getXBNPrice = async (web3Client) => {
     return rate[1]/1000;
 }
 
+export const getMigrationStatus = async (web3Client) => {
+    const contract = await getConvertingDustContract(web3Client);
+    const accounts = await web3Client.eth.getAccounts();
+    const bonus = await contract.methods.getBonus(accounts[0]).call();
+    const next_claim = await contract.methods.nextClaimTime(accounts[0]).call();
+    
+    const XBNcontract = await getXBNContract(web3Client);
+    const vault = await XBNcontract.methods.balanceOf(convertingDust.address).call();
+    return {
+        'bonus': Math.round(bonus* 100/10**18)/100,
+        'vault': Math.round(vault* 100/10**18)/100,
+        'next_claim':next_claim
+    };
+}
 export const getTokensBalance = async (web3Client) => {
     // debugger;
     if (web3Client.eth == undefined) {
@@ -245,7 +259,7 @@ export const getTokensBalance = async (web3Client) => {
                     const amounts = await pancakeContract.methods.getAmountsOut(token.balance, [ token.contract_address, WBNB, '0x547CBE0f0c25085e7015Aa6939b28402EB0CcDAC']).call();
                     
                     
-                    console.info(`#245 ${amounts}`);
+                    // console.info(`#245 ${amounts}`);
                     token['XBNValue']= amounts[2];
                     token['XBNValueUSD']= ((XBNPrice) * (token['XBNValue']/10**18)).toFixed(2);
 
@@ -261,7 +275,10 @@ export const getTokensBalance = async (web3Client) => {
                 token['XBNValue']= 0;
                 token['XBNValueUSD']= 0;
             }
-            items.push(token);
+            if (!isNaN(token['XBNValue'])){
+                items.push(token);
+            }
+            
         }
         
     }
@@ -271,31 +288,29 @@ export const getTokensBalance = async (web3Client) => {
 }
 
 
+// export const getTokenConversionValue = async (web3Client, token, amount) => {
+//     // const accounts = await web3Client.eth.getAccounts();
+//     const contract = await getConvertingDustContract(web3Client);
+//     const WBNB = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c';
 
 
-export const getTokenConversionValue = async (web3Client, token, amount) => {
-    // const accounts = await web3Client.eth.getAccounts();
-    const contract = await getConvertingDustContract(web3Client);
-    const WBNB = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c';
+//     const pair = getCreate2Address(
+//         PancakeV2_FACTORY_ADDRESS,
+//         keccak256(['bytes'], [pack(['address', 'address'], [token, WBNB])]),
+//         INIT_CODE_HASH
+//     )
 
-
-    const pair = getCreate2Address(
-        PancakeV2_FACTORY_ADDRESS,
-        keccak256(['bytes'], [pack(['address', 'address'], [token, WBNB])]),
-        INIT_CODE_HASH
-    )
-
-    // const path = ['0xac109C8025F272414fd9e2faA805a583708A017f','0x9A0Cf2F3B8F8643F5CC694AfeF7CaF636CCBF209'];
-    // const path = [pair,'0x9A0Cf2F3B8F8643F5CC694AfeF7CaF636CCBF209'];
-    const path = [pair,'0xB43C3e13b548fdC95a82A293669D2C62e84ddE53'];
-    // console.log(`path: ${path}`);
-    try {
-        return await contract.methods.FivePub(amount, token,path).call();
-    } catch (e) {
-        return 0
-    }
+//     // const path = ['0xac109C8025F272414fd9e2faA805a583708A017f','0x9A0Cf2F3B8F8643F5CC694AfeF7CaF636CCBF209'];
+//     // const path = [pair,'0x9A0Cf2F3B8F8643F5CC694AfeF7CaF636CCBF209'];
+//     const path = [pair,'0xB43C3e13b548fdC95a82A293669D2C62e84ddE53'];
+//     // console.log(`path: ${path}`);
+//     try {
+//         return await contract.methods.FivePub(amount, token,path).call();
+//     } catch (e) {
+//         return 0
+//     }
     
-}
+// }
 const GasLimit = 500000
 export const getTokenContract = async(web3Client,token_address) => {
     const accounts = await web3Client.eth.getAccounts()
@@ -317,8 +332,6 @@ export const getTokenAllowance = async(web3Client, address, token_address) => {
 export const convertToken = async (web3Client, token, amount, ref) => {
     const accounts = await web3Client.eth.getAccounts();
     const contract = await getConvertingDustContract(web3Client);
-    
-
 
     const allowance = await getTokenAllowance(web3Client, accounts[0],token)
     // debugger;
@@ -330,14 +343,37 @@ export const convertToken = async (web3Client, token, amount, ref) => {
         const tokenContract = await getTokenContract(web3Client,token)
         // debugger
         await tokenContract.methods.approve( convertingDust.address, amount + "00" ).send({
-            gas: 100000
+            gas: 200000
         })
     }
 
 
+    let _gasLimit = GasLimit;
+    try {
+        _gasLimit = await contract.methods.migrateFrom(token,ref).estimateGas({gas: GasLimit*10});
+    } catch(error){
+        
+        // eslint-disable-next-line no-console
+        console.error(error);
+    }
+    
+    
+    try {
+        return await contract.methods.migrateFrom(token,ref).send({gas: _gasLimit * 1.5 | 0});    
+    } catch (e) {
+        // eslint-disable-next-line no-console
+        console.error(e);
+        return 0
+    }
+    
+}
+
+export const claimVault = async (web3Client) => {
+    // const accounts = await web3Client.eth.getAccounts();
+    const contract = await getConvertingDustContract(web3Client);
 
     try {
-        return await contract.methods.migrateFrom(token,ref).send();    
+        return await contract.methods.claimBonus().send();    
     } catch (e) {
         // eslint-disable-next-line no-console
         console.error(e);

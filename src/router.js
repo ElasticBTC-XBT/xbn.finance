@@ -30,7 +30,10 @@ import Gratitude from "./views/xbn/Gratitude";
 import LastSurvior from "./views/xbn/LastSurvior";
 import AIStaking from "./views/ai_staking.vue";
 
+import Notifications from 'vue-notification';
+
 Vue.use(Router);
+Vue.use(Notifications);
 
 
 let routers = [

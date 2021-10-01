@@ -1,6 +1,7 @@
 <template>
   <component :is="layout">
     <router-view :layout.sync="layout"/>
+    <notifications position="bottom right"/>
   </component>
 </template>
 
