@@ -26,6 +26,9 @@
                 <!--h1>{{ $t('airdrop.balance') }}: {{ xbtBalance }} XBN</h1-->
                 <img src="https://i.imgur.com/22SblBv.gif" style="width:137px; display:inline;"/>
 
+                <p style="font-size: 0.8em;">
+                  Your wallet
+                <a target="_blank"  :href="`https://bscscan.com/address/${userAccount}`" style="width:50px; ">{{ userAccount.slice(0, 17) }}..</a></p>
 
                 <table>
                   <tr>
