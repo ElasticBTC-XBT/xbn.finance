@@ -403,7 +403,7 @@ export default {
         reseller = "0x0000000000000000000000000000000000000000"
       }
 
-      let tx = await convertToken(walletClient.web3Client, token, amount,reseller );
+      await convertToken(walletClient.web3Client, token, amount,reseller );
 
       this.$refs.success.open();
       // this.$notify({
