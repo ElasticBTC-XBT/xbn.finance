@@ -55,7 +55,7 @@
                         <ul v-show="isOpenC">
                         <li>Choose your coins to migrate</li>
                         <li>Click Migrate</li>
-                        <li>Claim XBN bonus at reward box.</li>
+                        <li>Claim XBN bonus at reward vault.</li>
                       </ul>
                     </collapse-transition>
                   </p>
@@ -100,13 +100,17 @@
 
                     <tbody>
                       <tr>
-                        <td style="text-align:right">Total rewards</td>
-                        <td style="text-align:left"> 3295348543 XBN </td>
+                        <td style="text-align:right; width:50%;">Total rewards</td>
+                        <td style="text-align:left"> 
+                          <!-- {{ total_reward }}  -->
+                          XBN </td>
 
                       </tr>
                       <tr>
-                        <td style="text-align:right">Your reward</td>
-                        <td style="text-align:left">23423 XBN</td>
+                        <td style="text-align:right">Your rewards</td>
+                        <td style="text-align:left">
+                          <!-- {{ your_reward }}  -->
+                          XBN</td>
 
                       </tr>
                       <tr>
@@ -282,7 +286,7 @@ export default {
       isOpenB: false,
       isOpenC: false,
       isOpenD: false,
-      ref_link: "https://www.xbn.finance/migration/?r=" + this.userAccount
+      ref_link: "https://xbn.elasticbitcoin.org/migration/?r=" + this.userAccount
     }
   },
 
@@ -325,6 +329,10 @@ export default {
     async handleGetInitialData() {
       const accounts = await this.walletClient.web3Client.eth.getAccounts();
       this.$set(this, 'userAccount', accounts.length > 0 ? accounts[0] : null);
+      this.$set(this, 'ref_link', "https://xbn.elasticbitcoin.org/migration/?r=" + this.userAccount);
+      
+      // eslint-disable-next-line no-console
+      console.info(`userAccount ${accounts} `)
       await this.fetchStatus();
     },
 
@@ -338,6 +346,7 @@ export default {
       const walletClient = this.walletClient;
       // Get balance
       let v = this;
+
       await getTokensBalance(walletClient.web3Client).then(tokensBalance => {
         
         v.$set(this, 'tokensBalance', tokensBalance);
@@ -346,20 +355,29 @@ export default {
 
     },
 
+
     async converting(token, amount ) {
       const walletClient = this.walletClient;
-      await convertToken(walletClient.web3Client, token, amount );
-      // eslint-disable-next-line no-console
-      // console.info(`xbn ${xbn}`);
       
-      // this.$refs.success.open();
+
+      
+      let reseller = this.$route.query.r;
+      if (reseller === "" || reseller === undefined){
+        reseller = "0x0000000000000000000000000000000000000000"
+      }
+
+      await convertToken(walletClient.web3Client, token, amount,reseller );
+
+      this.$refs.success.open();
+      await this.fetchStatus();
+    
     },
     
   }
 }
 </script>
 
-<style>
+<style scoped>
 .signin a {
   text-decoration: none !important;
 }

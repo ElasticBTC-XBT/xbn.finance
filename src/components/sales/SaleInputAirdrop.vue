@@ -227,7 +227,7 @@ export default {
     return {
       
       submitted: false,
-      ref_link: "https://www.xbn.finance/xbn/airdrop/?r=" + this.userAccount
+      ref_link: "https://xbn.elasticbitcoin.org/xbn/airdrop/?r=" + this.userAccount
     }
   },
   methods: {

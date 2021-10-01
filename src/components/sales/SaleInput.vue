@@ -120,7 +120,7 @@ export default {
     return {
       ethPurchaseAmount: 1,
       submitted: false,
-      ref_link: "https://www.xbn.finance/xbn/sales/?r=" + this.userAccount
+      ref_link: "https://xbn.elasticbitcoin.org/xbn/sales/?r=" + this.userAccount
     }
   },
   methods: {

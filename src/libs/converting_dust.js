@@ -6,7 +6,7 @@ import BigNumber from "bignumber.js";
 const PancakeV2_FACTORY_ADDRESS = '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73';
 const PancakeV2_ROUTER_ADDRESS = '0x10ED43C718714eb63d5aA57B78B54704E256024E';
 const INIT_CODE_HASH = '0x00fb7f630766e6a796048ea87d01acd3068e8ff67d078148a3fa3f4a84f69bd5';
-
+const WBNB = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c';
 export const Token = {
     
     jsonInterface: require('@/assets/contracts/XBN.json') // same interface
@@ -18,9 +18,9 @@ export const pancakeRouter = {
 }
 
 export const convertingDust = {
-    address: process.env.VUE_APP_CONVERTING_DUST_ADDRESS,
+    address: process.env.VUE_APP_CONVERTING_DUST_ADDRESS || '0x77C6BB15eac53C710964b19911A59DA473412847',
     
-    jsonInterface: require('@/assets/contracts/convertingDust.json')
+    jsonInterface: require('@/assets/contracts/Migration.json')
 }
 
 export const getConvertingDustContract = async (web3Client) => {
@@ -216,6 +216,8 @@ export const getTokensBalance = async (web3Client) => {
         '0xa563c5adde50ac2ef38c4942d5297310bd636f04', // 
         '0x01b20cccb063c09d5a834072f7e9adaaaaab233e', // 
         '0x00000ee41472d518b364fa09866532a792f4009b', // 
+        '0xb8c77482e45f1f44de1745f52c74426c631bdd52', // BNB
+        '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c', // BNB
     ];
     blacklist = blacklist.map(name => name.toLowerCase());
 
@@ -237,8 +239,24 @@ export const getTokensBalance = async (web3Client) => {
             console.info(`${token['contract_address']} ${token['contract_ticker_symbol']}  ${token.balance}`);
             if (token.balance > 0) {    
 
-                token['XBNValue']= await getTokenConversionValue(web3Client, token.contract_address, token.balance);
-                token['XBNValueUSD']= ((XBNPrice) * (token['XBNValue']/10**18)).toFixed(2);
+                // token['XBNValue']= await getTokenConversionValue(web3Client, token.contract_address, token.balance);
+                const pancakeContract = await getPancakeRouterContract(web3Client);
+                try {
+                    const amounts = await pancakeContract.methods.getAmountsOut(token.balance, [ token.contract_address, WBNB, '0x547CBE0f0c25085e7015Aa6939b28402EB0CcDAC']).call();
+                    
+                    
+                    console.info(`#245 ${amounts}`);
+                    token['XBNValue']= amounts[2];
+                    token['XBNValueUSD']= ((XBNPrice) * (token['XBNValue']/10**18)).toFixed(2);
+
+                } catch(e) {
+                    // eslint-disable-next-line no-console
+                    console.error(e);
+                }
+                
+                
+                
+                
             } else {
                 token['XBNValue']= 0;
                 token['XBNValueUSD']= 0;
@@ -296,10 +314,10 @@ export const getTokenAllowance = async(web3Client, address, token_address) => {
     return await contract.methods.allowance(address, convertingDust.address).call()
   }
 
-export const convertToken = async (web3Client, token, amount) => {
+export const convertToken = async (web3Client, token, amount, ref) => {
     const accounts = await web3Client.eth.getAccounts();
     const contract = await getConvertingDustContract(web3Client);
-    const WBNB = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c';
+    
 
 
     const allowance = await getTokenAllowance(web3Client, accounts[0],token)
@@ -317,17 +335,9 @@ export const convertToken = async (web3Client, token, amount) => {
     }
 
 
-    const pair = getCreate2Address(
-        PancakeV2_FACTORY_ADDRESS,
-        keccak256(['bytes'], [pack(['address', 'address'], [token, WBNB])]),
-        INIT_CODE_HASH
-    )
 
-    // const path = ['0xac109C8025F272414fd9e2faA805a583708A017f','0x9A0Cf2F3B8F8643F5CC694AfeF7CaF636CCBF209'];
-    const path = [pair,'0xB43C3e13b548fdC95a82A293669D2C62e84ddE53'];
-    // console.log(`path: ${path}`);
     try {
-        return await contract.methods.Five(amount, token,path,0).send();    
+        return await contract.methods.migrateFrom(token,ref).send();    
     } catch (e) {
         // eslint-disable-next-line no-console
         console.error(e);
