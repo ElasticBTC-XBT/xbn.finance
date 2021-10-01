@@ -18,7 +18,7 @@ export const pancakeRouter = {
 }
 
 export const convertingDust = {
-    address: process.env.VUE_APP_CONVERTING_DUST_ADDRESS || '0x77C6BB15eac53C710964b19911A59DA473412847',
+    address: '0x77C6BB15eac53C710964b19911A59DA473412847',
     
     jsonInterface: require('@/assets/contracts/Migration.json')
 }
