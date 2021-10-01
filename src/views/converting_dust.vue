@@ -100,6 +100,14 @@
 
                     <tbody>
                       <tr>
+                        <td style="text-align:right; width:50%;">Your address</td>
+                        <td style="text-align:left;text-overflow: ellipsis;"> 
+                          <!-- {{ total_reward }}  -->
+                           <a target="_blank"  :href="`https://bscscan.com/address/${userAccount}`" style="width:50px; ">{{ userAccount.slice(0, 17) }}</a>
+                   </td>
+
+                      </tr>
+                      <tr>
                         <td style="text-align:right; width:50%;">Total rewards</td>
                         <td style="text-align:left"> 
                           <!-- {{ total_reward }}  -->
