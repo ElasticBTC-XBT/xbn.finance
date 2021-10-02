@@ -25,6 +25,37 @@
                 <!--h1>{{ $t('airdrop.balance') }}: {{ xbtBalance }} XBN</h1-->
                 <img src="https://i.imgur.com/HAkIiZs.png" class="xbn_rotate" style="width:137px; display:inline; margin-bottom:50px;"/>
 
+                <div id="logo_list">
+                 
+                    <a 
+                       href="https://www.coingecko.com/en/coins/elastic-bnb"
+                       target="_blank">
+                        <img :src="require('@/assets/images/coingecko.webp')"/>
+                    </a>
+                
+                    <a 
+                       href="https://coinmarketcap.com/currencies/xbn/"
+                       target="_blank">
+                        <img  :src="require('@/assets/images/cmc.png')"/>
+                    </a>
+                
+                    <a href="https://bscscan.com/token/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac" target="_blank"
+                       >
+                        <img  :src="require('@/assets/images/bscscan.png')"/>
+                    </a>
+             
+                    <a
+                       href="https://pancakeswap.finance/swap?outputCurrency=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac"
+                       target="_blank">
+                        <img  :src="require('@/assets/images/pancakeswap.png')"/>
+                    </a>
+                
+                    <a href="https://nomics.com/assets/xbn-elastic-bnb" target="_blank">
+                        <img  :src="require('@/assets/images/nomics.png')"/>
+                    </a>
+               
+                  </div>
+
                 <p class="notice"> <a href="javascript:void(0);" @click="isOpenA = !isOpenA">🔑 Why migrate to XBN</a>
                   <collapse-transition>
                     <ul v-show="isOpenA">
@@ -256,6 +287,7 @@ import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
 // import {claimBUSDContract} from "@/libs/staking";
 // import CImage from '@/components/elements/Image.vue'
 // import _ from 'lodash';
+import CImage from '@/components/elements/Image.vue'
 
 export default {
   name: 'AirDrop',
@@ -266,8 +298,8 @@ export default {
     VueGoodshareFacebook,
     VueGoodshareReddit,
     VueGoodshareTwitter,
-    CollapseTransition
-    // CImage
+    CollapseTransition,
+    CImage
   },
   mixins: [SectionProps],
 
@@ -324,7 +356,7 @@ export default {
       return moment.unix(this.next_claim).format('llll');
     },
     availableToClaim() {
-      return new Date() >= new Date(this.next_claim*1000);
+      return new Date() >= new Date(this.next_claim*1000) && this.bonus > 0;
     }
   },
 
@@ -453,5 +485,18 @@ thead {
 .migration button {
   padding: 8px;
   height: auto;
+}
+#logo_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#logo_list img {
+  width: 24px;
+  height: 24px;
+
 }
 </style>

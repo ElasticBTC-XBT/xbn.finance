@@ -5,14 +5,21 @@
                 <li>
                     <a href="https://anyswap.exchange/#/bridge?bridgetoken=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac&bridgetype=bridge" target="_blank"
                        class="flex-center">
-                        <c-image width=24 height=24 :src="require('@/assets/images/anyswap.png')"></c-image>
+                        <img :src="require('@/assets/images/anyswap.png')"/>
+                        <span class="ml-8 mr-12"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://nomics.com/assets/xbn-elastic-bnb" target="_blank"
+                       class="flex-center">
+                        <img :src="require('@/assets/images/nomics.png')"/>
                         <span class="ml-8 mr-12"></span>
                     </a>
                 </li>
                 <li>
                     <a href="https://bscscan.com/token/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac" target="_blank"
                        class="flex-center">
-                        <c-image width=24 height=24 :src="require('@/assets/images/bscscan.png')"></c-image>
+                        <img :src="require('@/assets/images/bscscan.png')"/>
                         <span class="ml-8 mr-12"></span>
                     </a>
                 </li>
@@ -20,7 +27,7 @@
                     <a class="flex-center"
                        href="https://pancakeswap.finance/swap?outputCurrency=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac"
                        target="_blank">
-                        <c-image width=24 height=24 :src="require('@/assets/images/pancakeswap.png')"></c-image>
+                        <img :src="require('@/assets/images/pancakeswap.png')"/>
                         <span class="ml-8"></span>
                     </a>
                 </li>
@@ -36,7 +43,7 @@
                     <a class="flex-center"
                        href="https://dex.guru/token/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac-bsc"
                        target="_blank">
-                        <c-image height=24 :src="require('@/assets/images/dexguru.png')"></c-image>
+                        <img :src="require('@/assets/images/dexguru.png')"/>
 
                     </a>
                 </li>
@@ -52,7 +59,7 @@
                     <a class="flex-center"
                        href="https://1inch.exchange/#/BUSD/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac?network=56"
                        target="_blank">
-                        <c-image width=24 height=24 :src="require('@/assets/images/1inch.png')"></c-image>
+                        <img :src="require('@/assets/images/1inch.png')"/>
                         <span class="ml-8"></span>
                     </a>
                 </li>
@@ -60,7 +67,7 @@
                     <a class="flex-center"
                        href="https://www.coingecko.com/en/coins/elastic-bnb"
                        target="_blank">
-                        <c-image width=24 height=24 :src="require('@/assets/images/coingecko.png')"></c-image>
+                        <img :src="require('@/assets/images/coingecko.webp')"/>
                         <span class="ml-8"></span>
                     </a>
                 </li>
@@ -68,7 +75,7 @@
                     <a class="flex-center"
                        href="https://coinmarketcap.com/currencies/xbn/"
                        target="_blank">
-                        <c-image width=24 height=24 :src="require('@/assets/images/cmc.png')"></c-image>
+                        <img :src="require('@/assets/images/cmc.png')"/>
                         <span class="ml-8"></span>
                     </a>
                 </li>
@@ -76,7 +83,7 @@
                     <a class="flex-center"
                        href="https://github.com/TechRate/Smart-Contract-Audits/blob/main/XBN%20Community%20Token%20Smart%20Contract%20Security%20Audit.pdf"
                        target="_blank">
-                        <c-image width=24 height=24 :src="require('@/assets/images/techrate.png')"></c-image>
+                        <img :src="require('@/assets/images/techrate.png')"/>
                         <span class="ml-8"></span>
                     </a>
                 </li>
