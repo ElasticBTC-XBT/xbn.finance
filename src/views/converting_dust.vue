@@ -331,7 +331,7 @@ export default {
       isOpenA: false,
       isOpenB: false,
       isOpenC: false,
-      isOpenD: false,
+      isOpenD: true,
       ref_link: "https://xbn.elasticbitcoin.org/migration/?r=" + this.userAccount
     }
   },
