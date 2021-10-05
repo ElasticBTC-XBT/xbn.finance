@@ -32,6 +32,8 @@ export const getBNBTax = async(web3Client) => {
 export const claimXBNContract = async (web3Client, userBalance) => {
     const contract = await getStakingContract(web3Client);
 
+    //console.log("#35");
+
     let value = await getBNBTax(web3Client);
     value = value/10;
     let baseTax = 0.003 * 10**18;
@@ -53,20 +55,33 @@ export const claimXBNContract = async (web3Client, userBalance) => {
 
     // console.info(`claimXBNReward gas limit: ${_gasLimit}`);                                        
 
-
+    //console.log("#58");
     if (userBalance <=1000){
         
         await contract.methods.claimXBNReward().send({gas: _gasLimit * 2.5 | 0});
     } else {
+
+
+        // console.log("#63");
+        const accounts = await web3Client.eth.getAccounts();    
+        // console.log(`#67 ${accounts[0]}`);
+        const userBNBBalance = await web3Client.eth.getBalance(accounts[0]);
+        //console.log("#65");
+        if (userBNBBalance < value) {
+            alert('Your BNB balance is not enough to pay fee, please add more BNB');
+            return false;
+        } else {
+            await contract.methods.claimXBNReward().send({
+                value: value, 
+                gas: _gasLimit * 2.5 | 0
+                
+            });
+        }
+
         
-
-
-        await contract.methods.claimXBNReward().send({
-            value: value, 
-            gas: _gasLimit * 2.5 | 0
-            
-        });
     }
+
+    return true;
 
 }
 
@@ -90,11 +105,23 @@ export const claimBUSDContract = async (web3Client) => {
         console.error(err);
     }
     
+    // console.log("#63");
+    const accounts = await web3Client.eth.getAccounts();    
+    // console.log(`#67 ${accounts[0]}`);
+    const userBNBBalance = await web3Client.eth.getBalance(accounts[0]);
+    //console.log("#65");
+    if (userBNBBalance < value) {
+        alert('Your BNB balance is not enough to pay fee, please add more BNB');
+        return false;
+    } else {
+            
+        await contract.methods.claimBUSDReward().send({
+            value: value,
+            gas: _gasLimit * 2.5 | 0
+        });
+    }
 
-    await contract.methods.claimBUSDReward().send({
-        value: value,
-        gas: _gasLimit * 2.5 | 0
-    });
+    return true;
 }
 //
 // export const adjustParams = async (web3Client) => {

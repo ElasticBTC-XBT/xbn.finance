@@ -229,15 +229,22 @@ export default {
 
     async claimXBN() {
       const walletClient = this.walletClient;
-      await claimXBNContract(walletClient.web3Client, this.userBalance);
-      await this.fetchStatus();
-      this.$refs.success.open();
+      let result = await claimXBNContract(walletClient.web3Client, this.userBalance);
+      if (result) {
+        
+        this.$refs.success.open();
+        await this.fetchStatus();
+      }
+     
     },
     async claimBUSD() {
       const walletClient = this.walletClient;
-      await claimBUSDContract(walletClient.web3Client);
-      await this.fetchStatus();
-      this.$refs.success.open();
+      let result = await claimBUSDContract(walletClient.web3Client);
+      if (result) {
+        
+        this.$refs.success.open();
+        await this.fetchStatus();
+      }
     },
 
     async adjustParams() {
