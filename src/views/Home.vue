@@ -1,16 +1,18 @@
 <template>
   <div>
     <section
-        class="signin section illustration-section-01"
-        :class="[
-            hasBgColor && 'has-bg-color',
-            invertColor && 'invert-color'
-        ]">
+      class="signin section home illustration-section-01"
+      :class="[hasBgColor && 'has-bg-color', invertColor && 'invert-color']"
+    >
       <fragment>
-        <c-hero-split image-fill/>
-        <c-features-tiles/>
-<!--        <c-testimonial class="illustration-section-03"/>-->
-        <c-features-split invert-mobile image-fill class="illustration-section-05"/>
+        <c-hero-split image-fill />
+        <c-features-tiles />
+        <!--        <c-testimonial class="illustration-section-03"/>-->
+        <c-features-split
+          invert-mobile
+          image-fill
+          class="illustration-section-05"
+        />
         <!-- <c-generic-section top-divider>
           <div class="container-xs">
             <c-section-header class="center-content"/>
@@ -26,16 +28,15 @@
       </fragment>
     </section>
   </div>
-
 </template>
 
 <script>
 // import layout
-import CLayout from '@/layouts/LayoutDefault.vue'
+import CLayout from "@/layouts/LayoutDefault.vue";
 // import sections
-import CHeroSplit from '@/components/sections/HeroSplit.vue'
+import CHeroSplit from "@/components/sections/HeroSplit.vue";
 // import CFeaturesSplit from '@/components/sections/FeaturesSplit.vue'
-import CFeaturesTiles from '@/components/sections/FeaturesTiles.vue'
+import CFeaturesTiles from "@/components/sections/FeaturesTiles.vue";
 // import CPricing from '@/components/sections/Pricing.vue'
 // import CGenericSection from '@/components/sections/GenericSection.vue'
 // import CAccordion from '@/components/elements/Accordion.vue'
@@ -44,7 +45,7 @@ import CFeaturesTiles from '@/components/sections/FeaturesTiles.vue'
 // import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     CHeroSplit,
     // CFeaturesSplit,
@@ -57,28 +58,28 @@ export default {
     // CTestimonial
   },
   data() {
-    let v = this
+    let v = this;
     return {
       faqData: [
         {
-          "title": v.$t('home.faq_data.item_2.title'),
-          "answer": v.$t('home.faq_data.item_2.answer')
+          title: v.$t("home.faq_data.item_2.title"),
+          answer: v.$t("home.faq_data.item_2.answer"),
         },
         {
-          "title": v.$t('home.faq_data.item_3.title'),
-          "answer": v.$t('home.faq_data.item_3.answer')
+          title: v.$t("home.faq_data.item_3.title"),
+          answer: v.$t("home.faq_data.item_3.answer"),
         },
         {
-          "title": v.$t('home.faq_data.item_4.title'),
-          "answer": v.$t('home.faq_data.item_4.answer')
+          title: v.$t("home.faq_data.item_4.title"),
+          answer: v.$t("home.faq_data.item_4.answer"),
         },
         // {
         //   "title": v.$t('home.faq_data.item_5.title'),
         //   "answer": v.$t('home.faq_data.item_5.answer')
         // },
         {
-          "title": v.$t('home.faq_data.item_6.title'),
-          "answer": v.$t('home.faq_data.item_6.answer')
+          title: v.$t("home.faq_data.item_6.title"),
+          answer: v.$t("home.faq_data.item_6.answer"),
         },
         // {
         //   "title": v.$t('home.faq_data.item_9.title'),
@@ -97,11 +98,11 @@ export default {
         //   "title": v.$t('home.faq_data.item_13.title'),
         //   "answer": v.$t('home.faq_data.item_13.answer')
         // }
-      ]
-    }
+      ],
+    };
   },
   created() {
-    this.$emit('update:layout', CLayout)
-  }
-}
+    this.$emit("update:layout", CLayout);
+  },
+};
 </script>

@@ -1,8 +1,20 @@
 .cta {
 
 	.section-inner {
-		padding-top: $cta--padding-t__mobile;
-		padding-bottom: $cta--padding-b__mobile;
+		padding-top        : $cta--padding-t__mobile;
+		padding-bottom     : $cta--padding-b__mobile;
+		background-image   : url(../images/banner_bg.svg);
+		background-repeat  : no-repeat;
+		background-position: 0 50%;
+		background-size    : cover;
+		border-radius      : 20px;
+		padding-right      : 50px;
+
+		h3 {
+			color       : #fff;
+			font-size   : 40px;
+			padding-left: 50px;
+		}
 	}
 }
 
@@ -10,20 +22,20 @@
 	margin-bottom: $cta-slogan--padding-v__mobile;
 }
 
-@include media( '>medium' ) {
+@include media('>medium') {
 
 	.cta {
 
 		.section-inner {
-			padding-top: $cta--padding-t__desktop;
+			padding-top   : $cta--padding-t__desktop;
 			padding-bottom: $cta--padding-b__desktop;
 		}
 	}
 
 	.cta-split {
-		display: flex;
+		display        : flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items    : center;
 	}
 
 	.cta-slogan {
@@ -31,7 +43,7 @@
 
 		.cta-split & {
 			margin-bottom: 0;
-			margin-right: $cta-slogan--padding-h__desktop;
+			margin-right : $cta-slogan--padding-h__desktop;
 		}
 	}
 }

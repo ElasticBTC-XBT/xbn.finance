@@ -6,7 +6,7 @@
 		svg,
 		video {
 			border-radius: 3px;
-			box-shadow: 0 48px 88px rgba(get-color(dark, 1), .32);
+			box-shadow   : 0 48px 88px rgba(get-color(dark, 1), .32);
 		}
 
 		&.is-3d {
@@ -15,11 +15,11 @@
 			svg,
 			video {
 				will-change: transform;
-				transition: all .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+				transition : all .45s cubic-bezier(0.215, 0.61, 0.355, 1);
 
 				&:hover {
 					box-shadow: 0 48px 88px rgba(get-color(dark, 1), .32) !important;
-					transform: perspective(1000px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scale(1) translateX(0) translateY(0) !important;
+					transform : perspective(1000px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scale(1.03) translateX(-2%) translateY(2%) !important;
 				}
 			}
 		}
@@ -36,7 +36,7 @@
 				svg,
 				video {
 					box-shadow: -24px 48px 88px rgba(get-color(dark, 1), .32);
-					transform: perspective(1000px) rotateY(13deg) rotateX(5deg) rotateZ(-7deg) scaleY(0.9) scaleX(0.95) translateX(3%) translateY(-3%);
+					transform : perspective(1000px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scaleY(0.9) scaleX(0.95) translateX(3%) translateY(-3%);
 				}
 			}
 		}
@@ -53,7 +53,7 @@
 				svg,
 				video {
 					box-shadow: 24px 48px 88px rgba(get-color(dark, 1), .32);
-					transform: perspective(1000px) rotateY(-13deg) rotateX(5deg) rotateZ(7deg) scaleY(0.9) scaleX(0.95) translateX(-3%) translateY(-3%);
+					transform : perspective(1000px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) scale(1) translateX(0%) translateY(0%);
 				}
 			}
 		}

@@ -5,8 +5,8 @@
 
 // Font-size + Line-height + Kerning
 @mixin font-size($elem) {
-	font-size: get-font-size($elem);
-	line-height: get-line-height($elem);
+	font-size     : get-font-size($elem);
+	line-height   : get-line-height($elem);
 	letter-spacing: get-kerning($elem);
 }
 
@@ -17,114 +17,164 @@
 
 // Anchor aspect
 @mixin anchor-aspect($type: 'main', $layout: false) {
-	@if ( $type == 'main' ) { // Base
-		@if ( $layout == 'inverse' ) {
+	@if ($type=='main') {
+
+		// Base
+		@if ($layout=='inverse') {
 			color: color(link-inverse);
-		} @else {
+		}
+
+		@else {
 			color: color(link);
 		}
+
 		text-decoration: $link-main--decoration;
 
 		&:hover,
 		&:active {
-			@if ( $layout == 'inverse' ) {
+			@if ($layout=='inverse') {
 				color: color(link-hover-inverse);
-			} @else {
+			}
+
+			@else {
 				color: color(link-hover);
 			}
-			outline: 0;
+
+			outline        : 0;
 			text-decoration: $link-main--decoration-hover;
 		}
-	} @else if ($type == 'header') {
-		@if ( $layout == 'inverse' ) {
+	}
+
+	@else if ($type=='header') {
+		@if ($layout=='inverse') {
 			color: color(header-link-inverse);
-		} @else {
+		}
+
+		@else {
 			color: color(header-link);
 		}
+
 		text-decoration: $link-header--decoration;
 
 		&:hover,
 		&:active {
-			@if ( $layout == 'inverse' ) {
+			@if ($layout=='inverse') {
 				color: color(header-link-hover-inverse);
-			} @else {
+			}
+
+			@else {
 				color: color(header-link-hover);
 			}
+
 			text-decoration: $link-header--decoration-hover;
 		}
-	} @else if ($type == 'header-mobile') {
+	}
+
+	@else if ($type=='header-mobile') {
 		color: color(header-link-mobile);
 
 		&:hover,
 		&:active {
 			color: color(header-link-mobile-hover);
 		}
-	} @else if ($type == 'footer') {
-		@if ( $layout == 'inverse' ) {
+	}
+
+	@else if ($type=='footer') {
+		@if ($layout=='inverse') {
 			color: color(footer-link-inverse);
-		} @else {
+		}
+
+		@else {
 			color: color(footer-link);
 		}
+
 		text-decoration: $link-footer--decoration;
 
 		&:hover,
 		&:active {
-			@if ( $layout == 'inverse' ) {
+			@if ($layout=='inverse') {
 				color: color(footer-link-hover-inverse);
-			} @else {
+			}
+
+			@else {
 				color: color(footer-link-hover);
 			}
+
 			text-decoration: $link-footer--decoration-hover;
 		}
-	} @else if ($type == 'footer-block') {
-		@if ( $layout == 'inverse' ) {
+	}
+
+	@else if ($type=='footer-block') {
+		@if ($layout=='inverse') {
 			color: color(footer-block-link-inverse);
-		} @else {
+		}
+
+		@else {
 			color: color(footer-block-link);
 		}
+
 		text-decoration: $link-footer-block--decoration;
 
 		&:hover,
 		&:active {
-			@if ( $layout == 'inverse' ) {
+			@if ($layout=='inverse') {
 				color: color(footer-block-link-hover-inverse);
-			} @else {
+			}
+
+			@else {
 				color: color(footer-block-link-hover);
 			}
+
 			text-decoration: $link-footer-block--decoration-hover;
 		}
-	} @else if ($type == 'button-link') {
-		@if ( $layout == 'inverse' ) {
+	}
+
+	@else if ($type=='button-link') {
+		@if ($layout=='inverse') {
 			color: color(button-link-inverse);
-		} @else {
+		}
+
+		@else {
 			color: color(button-link);
 		}
+
 		text-decoration: $link-button--decoration;
 
 		&:hover,
 		&:active {
-			@if ( $layout == 'inverse' ) {
+			@if ($layout=='inverse') {
 				color: color(button-link-hover-inverse);
-			} @else {
+			}
+
+			@else {
 				color: color(button-link-hover);
 			}
+
 			text-decoration: $link-button--decoration-hover;
 		}
-	} @else if ($type == 'func-link') {
-		@if ( $layout == 'inverse' ) {
+	}
+
+	@else if ($type=='func-link') {
+		@if ($layout=='inverse') {
 			color: color(func-link-inverse);
-		} @else {
+		}
+
+		@else {
 			color: color(func-link);
 		}
+
 		text-decoration: $link-func--decoration;
 
 		&:hover,
 		&:active {
-			@if ( $layout == 'inverse' ) {
+			@if ($layout=='inverse') {
 				color: color(func-link-hover-inverse);
-			} @else {
+			}
+
+			@else {
 				color: color(func-link-hover);
 			}
+
 			text-decoration: $link-func--decoration-hover;
 		}
 	}
@@ -132,38 +182,45 @@
 
 @mixin divider-mix($layout: false) {
 	display: block;
-	height: 1px;
-	@if ( $layout == 'inverse' ) {
+	height : 1px;
+
+	@if ($layout=='inverse') {
 		background: color-border(divider-inverse);
-	} @else {
+	}
+
+	@else {
 		background: color-border(divider);
 	}
 }
 
 @mixin divider($type: false, $layout: false) {
-	@if ( $type == 'before' ) {
+	@if ($type=='before') {
 		position: relative;
 
 		&::before {
-			content: '';
+			content : '';
 			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
+			top     : 0;
+			left    : 0;
+			width   : 100%;
 			@include divider-mix($layout);
 		}
-	} @else if ($type == 'after') {
+	}
+
+	@else if ($type=='after') {
 		position: relative;
 
 		&::after {
-			content: '';
+			content : '';
 			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
+			bottom  : 0;
+			left    : 0;
+			width   : 100%;
 			@include divider-mix($layout);
 		}
-	} @else {
+	}
+
+	@else {
 		@include divider-mix($layout);
 	}
 }
@@ -176,46 +233,74 @@
 // $hoffset: horizontal offset
 // $voffset: vertical offset
 @mixin illustration($file, $width, $height, $vpos: null, $hoffset: null, $voffset: null) {
-	content: '';
-	position: absolute;
-	width: $width;
-	max-width: $width;
-	height: $height;
-	background-image: url(../images/#{$file});
+	content          : '';
+	position         : absolute;
+	width            : $width;
+	max-width        : $width;
+	height           : $height;
+	background-image : url(../images/#{$file});
 	background-repeat: no-repeat;
-	@if( unit( $height ) == '%' ) {
+
+	@if(unit($height)=='%') {
 		background-size: contain;
-	} @else {
+	}
+
+	@else {
 		background-size: auto;
 	}
-	@if ( $hoffset ) {
+
+	@if ($hoffset) {
 		left: calc(50% + #{$hoffset});
-	} @else {
+	}
+
+	@else {
 		left: 50%;
 	}
-	@if ( $vpos == 'top' ) {
-		@if ( $voffset ) {
+
+	@if ($vpos=='top') {
+		@if ($voffset) {
 			top: #{$voffset};
-		} @else {
+		}
+
+		@else {
 			top: 0;
 		}
+
 		background-position: center top;
-		transform: translate(-50%);
-	} @else if ( $vpos == 'bottom' ) {
-		@if ( $voffset ) {
+		transform          : translate(-50%);
+	}
+
+	@else if ($vpos=='bottom') {
+		@if ($voffset) {
 			bottom: #{$voffset};
-		} @else {
+		}
+
+		@else {
 			bottom: 0;
 		}
+
 		background-position: center bottom;
-		transform: translate(-50%);
-	} @else {
+		transform          : translate(-50%);
+	}
+
+	@else {
 		background-position: center;
-		@if ( $voffset ) {
+
+		@if ($voffset) {
 			top: calc(50% + #{$voffset});
-		} @else {
+		}
+
+		@else {
 			top: 50%;
 		}
+
 		transform: translate(-50%, -50%);
 	}
+}
+
+@mixin hero-home-bg($file, $with, $height) {
+	background-image   : url(../images/#{$file});
+	background-position: 0 0;
+	background-repeat  : no-repeat;
+	background-size    : #{$with} #{$height};
 }

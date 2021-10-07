@@ -1,19 +1,18 @@
 <template>
-    <section
-            class="features-split section"
-            :class="[
-            hasBgColor && 'has-bg-color',
-            invertColor && 'invert-color'
-        ]">
-        <div class="container">
-            <div
-                    class="features-split-inner section-inner"
-                    :class="[
-                    topDivider && 'has-top-divider',
-                    bottomDivider && 'has-bottom-divider'
-                ]">
-                <c-section-header :data="sectionHeader" class="center-content"/>
-                <!-- <div
+  <section
+    class="features-split section"
+    :class="[hasBgColor && 'has-bg-color', invertColor && 'invert-color']"
+  >
+    <div class="container">
+      <div
+        class="features-split-inner section-inner"
+        :class="[
+          topDivider && 'has-top-divider',
+          bottomDivider && 'has-bottom-divider',
+        ]"
+      >
+        <c-section-header :data="sectionHeader" class="center-content" />
+        <!-- <div
                         class="split-wrap"
                         :class="[
                         invertMobile && 'invert-mobile',
@@ -79,52 +78,51 @@
                         </div>
                     </div>
                 </div> -->
-            </div>
-        </div>
-    </section>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
-    import {SectionSplitProps} from '@/utils/SectionProps.js'
-    import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
-    // import CImage from '@/components/elements/Image.vue'
+import { SectionSplitProps } from "@/utils/SectionProps.js";
+import CSectionHeader from "@/components/sections/partials/SectionHeader.vue";
+// import CImage from '@/components/elements/Image.vue'
 
-    export default {
-        name: 'CFeaturesSplit',
-        components: {
-            CSectionHeader,
-            // CImage
-        },
-        mixins: [SectionSplitProps],
-        data() {
-            let v = this
-            return {
-                sectionHeader: {
-                    title: v.$t('home.features_split.section_header.title'),
-                    paragraph: v.$t('home.features_split.section_header.paragraph'),
-                }
-            }
-        }
-    }
+export default {
+  name: "CFeaturesSplit",
+  components: {
+    CSectionHeader,
+    // CImage
+  },
+  mixins: [SectionSplitProps],
+  data() {
+    let v = this;
+    return {
+      sectionHeader: {
+        title: v.$t("home.features_split.section_header.title"),
+        paragraph: v.$t("home.features_split.section_header.paragraph"),
+      },
+    };
+  },
+};
 </script>
 
 <style scoped>
-    .split-item-image > img {
-        box-shadow: none !important;
-    }
+.split-item-image > img {
+  box-shadow: none !important;
+}
 
-    @media (max-width: 640px) {
-        .features-split .split-wrap.invert-mobile .split-item .split-item-image {
-            margin-bottom: 32px;
-        }
+@media (max-width: 640px) {
+  .features-split .split-wrap.invert-mobile .split-item .split-item-image {
+    margin-bottom: 32px;
+  }
 
-        .split-item {
-            margin-bottom: 32px
-        }
+  .split-item {
+    margin-bottom: 32px;
+  }
 
-        .section-header {
-            margin-bottom: 32px
-        }
-    }
-
+  .section-header {
+    margin-bottom: 32px;
+  }
+}
 </style>

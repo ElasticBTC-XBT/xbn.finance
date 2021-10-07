@@ -19,6 +19,10 @@
 	// @include illustration('illustration-section-01.svg', 100%, 1323px, top);
 }
 
+.hero {
+	@include hero-home-bg('bg.svg', 100%, auto);
+}
+
 // Signin illustration
 .illustration-section-02::after {
 	@include illustration('illustration-section-02.svg', 100%, 1323px, top);
@@ -55,13 +59,13 @@
 
 // Behind hero figure
 .illustration-element-01::after {
-	@include illustration('illustration-element-01.svg', 300%, 200%);
+	// @include illustration('illustration-element-01.svg', 300%, 200%);
 }
 
 .illustration-element-02::after {
 	@include illustration('illustration-element-02-mobile.svg', 300%, 200%);
 
-	@include media( '>medium' ) {
+	@include media('>medium') {
 		@include illustration('illustration-element-02.svg', 300%, 300%);
 	}
 }

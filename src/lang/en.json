@@ -95,7 +95,6 @@
         },
         "item_6": {
           "title": "What is Smart Liquidity Pool?",
-
           "desc": "also known as information markets or virtual markets are exchange-traded markets created for the purpose of trading the outcome of events. "
         }
       }
@@ -148,12 +147,10 @@
         "title": "Has the smart contract been released",
         "answer": "Yes, you can find it <a href='https://github.com/ElasticBTC-XBT/xbn.finance'>here</a>"
       },
-     
       "item_6": {
         "title": "Where to ask questions about XBN?",
         "answer": "You can check more QNA here on <a href='https://twitter.com/elasticbitcoin/status/1366224650536017922'>Twitter</a> "
       },
-     
       "item_9": {
         "title": "How can user balances change without a transaction",
         "answer": "All wallets are updated with a single transaction using Scalar Contract Variables. Your wallet balance is your private supply multiplied by the global split ratio. The more or less it is split, the more or less your balance will be dynamically updated."
@@ -177,7 +174,7 @@
     }
   },
   "cta": {
-    "title": "Hold XBN earn XBN & BUSD",
+    "title": "Hold XBN <br/> earn XBN & BUSD",
     "buy_xbt": "Buy XBN"
   },
   "learn": {
