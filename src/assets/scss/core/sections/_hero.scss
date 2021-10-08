@@ -6,6 +6,10 @@
 	}
 }
 
+.has-animations .hero-inner [class*=reveal-] {
+	opacity: 1;
+}
+
 .hero-inner {
 
 	// Affects only hero full
@@ -24,6 +28,7 @@
 		}
 	}
 }
+
 
 @include media('<=medium') {
 
