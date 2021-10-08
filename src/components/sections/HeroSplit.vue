@@ -35,7 +35,6 @@
                   to="/airdrop"
                   >Get Airdrop</router-link
                 >
-                &nbsp;&nbsp;
                 <router-link
                   class="button violet button-primary button-wide-mobile"
                   to="/xbn/sales"

@@ -57,6 +57,8 @@
 		color           : color(button-disabled);
 		background-color: color-bg(button-disabled) !important;
 		border-color    : color-border(button-disabled);
+		background-image: none !important;
+		box-shadow      : 0px 15px 20px -10px color-bg(button-disabled);
 
 		&.is-loading {
 
@@ -98,7 +100,7 @@
 	border-width    : 1px;
 	border-style    : solid;
 
-	&:hover {
+	&:hover:not(:disabled) {
 		// background-color: color-bg(button-primary-hover);
 		border-color: #FF854D !important;
 	}
@@ -150,6 +152,10 @@
 	}
 }
 
+.button-wide-mobile {
+	margin-right: 10px;
+}
+
 .button-block {
 	display: flex;
 	width  : 100%;
@@ -181,6 +187,10 @@
 	.button-wide-mobile {
 		width    : 100%;
 		max-width: $button--max-size-mobile;
+	}
+
+	td .button-wide-mobile {
+		max-width: 150px;
 	}
 }
 

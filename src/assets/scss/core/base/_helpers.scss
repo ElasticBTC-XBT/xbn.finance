@@ -10,6 +10,61 @@
 	border     : 0;
 }
 
+.section[class*=illustration-]:not(.home) {
+	background-image : url(../images/child_bg.svg);
+	background-repeat: no-repeat;
+	background-size  : cover;
+	padding-top      : 48px;
+	padding-bottom   : 30px;
+	margin-bottom    : 30px;
+
+	&::after {
+		content        : ' ';
+		position       : absolute;
+		bottom         : 0;
+		right          : -50px;
+		background     : url(/img/cartoon.be3fc220.svg) no-repeat 0 100%;
+		background-size: contain;
+		width          : 200px;
+		height         : 200px;
+		z-index        : 999;
+	}
+
+	.container {
+		background-color: #fff;
+		border-radius   : 30px;
+		padding         : 50px 20px;
+
+		.section-inner {
+			padding: 30px 0;
+		}
+	}
+
+	h2 {
+		margin-top: 0px;
+	}
+
+}
+
+.sales.section {
+	padding   : 0;
+	margin-top: 100px;
+
+	.container {
+		padding: 0;
+
+		.section-inner {
+			padding: 0;
+		}
+	}
+}
+
+@media (max-width:1128px) {
+	.section::after {
+		display: none;
+	}
+}
+
 // Reset lists style
 .list-reset {
 	list-style: none;
