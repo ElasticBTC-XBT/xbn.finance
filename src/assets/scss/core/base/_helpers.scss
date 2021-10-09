@@ -649,3 +649,10 @@ img.has-shadow {
 		}
 	}
 }
+
+@media (max-width: 991.98px) {
+	.footer-bottom .footer-copyright {
+		max-width : 100%;
+		text-align: center;
+	}
+}
