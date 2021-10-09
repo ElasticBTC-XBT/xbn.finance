@@ -1,62 +1,64 @@
 .button {
-    display: inline-flex;
+	display: inline-flex;
 	@include font-size(button);
-    @include font-weight(button);
-	padding: (($button-form--height - get-line-height(button) - ($button-form--border-width * 2)) / 2) ($button--padding-h - $button-form--border-width);
-	height: $button-form--height;
-    text-decoration: none !important;
-	text-transform: $button--transform;
-	color: color(button-light);
-    background-color: color-bg(button-light);
-    border-width: $button-form--border-width;
-	border-style: $button-form--border-style;
-	border-color: color-border(button-light);
-    border-radius: $button--radius;
-    cursor: pointer;
-    justify-content: center;
-    text-align: center;
-    letter-spacing: inherit;
-    white-space: nowrap;
-	transition: background .15s ease;
+	@include font-weight(button);
+	padding         : (($button-form--height - get-line-height(button) - ($button-form--border-width * 2)) / 2) ($button--padding-h - $button-form--border-width);
+	height          : $button-form--height;
+	text-decoration : none !important;
+	text-transform  : $button--transform;
+	color           : color(button-light);
+	background-color: color-bg(button-light);
+	border-width    : $button-form--border-width;
+	border-style    : $button-form--border-style;
+	border-color    : color-border(button-light);
+	border-radius   : $button--radius;
+	cursor          : pointer;
+	justify-content : center;
+	text-align      : center;
+	letter-spacing  : inherit;
+	white-space     : nowrap;
+	transition      : background .15s ease;
 
-    &:active {
-        outline: 0;
-    }
+	&:active {
+		outline: 0;
+	}
 
 	&:hover {
 		background-color: color-bg(button-light-hover);
-		border-color: color-border(button-light-hover);
+		border-color    : color-border(button-light-hover);
 	}
 
 	&.is-loading {
-		position: relative;
-		color: transparent!important;
+		position      : relative;
+		color         : transparent !important;
 		pointer-events: none;
 
 		&::after {
-			content: '';
-			display: block;
-			position: absolute;
-			width: get-line-height(button);
-			height: get-line-height(button);
-			margin-left: -(get-line-height(button) / 2);
-			margin-top: -(get-line-height(button) / 2);
-			top: 50%;
-			left: 50%;
-			border: $button-loading--thickness solid color(button-light);
-			border-radius: 50%;
+			content           : '';
+			display           : block;
+			position          : absolute;
+			width             : get-line-height(button);
+			height            : get-line-height(button);
+			margin-left       : -(get-line-height(button) / 2);
+			margin-top        : -(get-line-height(button) / 2);
+			top               : 50%;
+			left              : 50%;
+			border            : $button-loading--thickness solid color(button-light);
+			border-radius     : 50%;
 			border-right-color: transparent !important;
-			border-top-color: transparent !important;
-			z-index: 1;
-			animation: button-loading .6s infinite linear;
+			border-top-color  : transparent !important;
+			z-index           : 1;
+			animation         : button-loading .6s infinite linear;
 		}
 	}
 
 	&[disabled] {
-		cursor: not-allowed;
-		color: color(button-disabled);
+		cursor          : not-allowed;
+		color           : color(button-disabled);
 		background-color: color-bg(button-disabled) !important;
-		border-color: color-border(button-disabled);
+		border-color    : color-border(button-disabled);
+		background-image: none !important;
+		box-shadow      : 0px 15px 20px -10px color-bg(button-disabled);
 
 		&.is-loading {
 
@@ -68,19 +70,19 @@
 }
 
 .button-sm {
-    padding: (($button-form-sm--height - get-line-height(button) - ($button-form--border-width * 2)) / 2) ($button-sm--padding-h - $button-form--border-width);
-	height: $button-form-sm--height;
+	padding: (($button-form-sm--height - get-line-height(button) - ($button-form--border-width * 2)) / 2) ($button-sm--padding-h - $button-form--border-width);
+	height : $button-form-sm--height;
 }
 
 .button-dark {
-	color: color(button-dark);
-    background-color: color-bg(button-dark);
-	border-color: color-border(button-dark);
+	color           : color(button-dark);
+	background-color: color-bg(button-dark);
+	border-color    : color-border(button-dark);
 
-    &:hover {
-        background-color: color-bg(button-dark-hover);
-		border-color: color-border(button-dark-hover);
-    }
+	&:hover {
+		background-color: color-bg(button-dark-hover);
+		border-color    : color-border(button-dark-hover);
+	}
 
 	&.is-loading {
 
@@ -91,14 +93,17 @@
 }
 
 .button-primary {
-	color: color(button-primary) !important;
-    background-color: color-bg(button-primary) !important;
-	border-color: transparent !important;
+	color           : color(button-primary) !important;
+	background-image: linear-gradient(#FFAC66, #FF9766) !important;
+	border-color    : transparent !important;
+	box-shadow      : 0px 15px 20px -10px #ff9766;
+	border-width    : 1px;
+	border-style    : solid;
 
-    &:hover {
-        background-color: color-bg(button-primary-hover);
-		border-color: color-border(button-primary-hover);
-    }
+	&:hover:not(:disabled) {
+		// background-color: color-bg(button-primary-hover);
+		border-color: #FF854D !important;
+	}
 
 	&.is-loading {
 
@@ -110,18 +115,34 @@
 	&.is-disabled {
 		opacity: 0.5;
 	}
+
+	&.white {
+		background-image: linear-gradient(#fff, #fff) !important;
+		background-color: #fff !important;
+		color           : #000 !important;
+		border-radius   : 5px;
+	}
+
+	&.violet {
+		background-image: linear-gradient(#8885CC, #8885CC) !important;
+		box-shadow      : 0px 15px 20px -10px #8885CC;
+
+		&:hover {
+			border-color: #716DD0 !important;
+		}
+	}
 }
 
 
 .button-secondary {
-	color: color(button-secondary);
-    background-color: color-bg(button-secondary);
-	border-color: color-border(button-secondary);
+	color           : color(button-secondary);
+	background-color: color-bg(button-secondary);
+	border-color    : color-border(button-secondary);
 
-    &:hover {
-        background-color: color-bg(button-secondary-hover);
-		border-color: color-border(button-secondary-hover);
-    }
+	&:hover {
+		background-color: color-bg(button-secondary-hover);
+		border-color    : color-border(button-secondary-hover);
+	}
 
 	&.is-loading {
 
@@ -131,18 +152,22 @@
 	}
 }
 
+.button-wide-mobile {
+	margin-right: 10px;
+}
+
 .button-block {
-    display: flex;
-	width: 100%;
+	display: flex;
+	width  : 100%;
 }
 
 .button-group {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
+	display     : flex;
+	flex-wrap   : wrap;
+	align-items : center;
 	margin-right: -($button-group-padding / 2);
-	margin-left: -($button-group-padding / 2);
-	margin-top: -($button-group-padding / 2);
+	margin-left : -($button-group-padding / 2);
+	margin-top  : -($button-group-padding / 2);
 
 	&:last-of-type {
 		margin-bottom: -($button-group-padding / 2);
@@ -152,25 +177,29 @@
 		margin-bottom: ($button-group-padding / 2);
 	}
 
-	> [class*=button] {
+	>[class*=button] {
 		margin: $button-group-padding / 2;
 	}
 }
 
-@include media( '<=medium' ) {
+@include media('<=medium') {
 
 	.button-wide-mobile {
-		width: 100%;
+		width    : 100%;
 		max-width: $button--max-size-mobile;
+	}
+
+	td .button-wide-mobile {
+		max-width: 150px;
 	}
 }
 
 @keyframes button-loading {
-    0% {
-        transform: rotate(0);
-    }
+	0% {
+		transform: rotate(0);
+	}
 
-    100% {
-        transform: rotate(360deg);
-    }
+	100% {
+		transform: rotate(360deg);
+	}
 }

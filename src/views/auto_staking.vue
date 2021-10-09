@@ -1,39 +1,59 @@
 <template>
   <div>
     <section
-        class="signin section illustration-section-01"
-        :class="[
-            hasBgColor && 'has-bg-color',
-            invertColor && 'invert-color'
-        ]">
+      class="signin section illustration-section-01"
+      :class="[hasBgColor && 'has-bg-color', invertColor && 'invert-color']"
+    >
       <div class="container">
         <div
-            class="signin-inner section-inner"
-            :class="[
-                    topDivider && 'has-top-divider',
-                    bottomDivider && 'has-bottom-divider'
-                ]">
-          <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
+          class="signin-inner section-inner"
+          :class="[
+            topDivider && 'has-top-divider',
+            bottomDivider && 'has-bottom-divider',
+          ]"
+        >
+          <c-section-header
+            tag="h1"
+            :data="sectionHeader"
+            class="center-content"
+          />
           <p style="text-align: center">
-            <b>Please follow & retweet pinned tweet at <a href="https://twitter.com/elasticbitcoin" target="_blank">XBN Twitter</a>.
-              <br/>
-              More holders, more earnings!</b>
+            <b
+              >Please follow & retweet pinned tweet at
+              <a href="https://twitter.com/elasticbitcoin" target="_blank"
+                >XBN Twitter</a
+              >.
+              <br />
+              More holders, more earnings!</b
+            >
           </p>
 
           <div v-if="userAccount">
             <div class="flex-center">
-              <div style="text-align:center;">
+              <div style="text-align: center">
                 <!--h1>{{ $t('airdrop.balance') }}: {{ xbtBalance }} XBN</h1-->
-                <img src="https://i.imgur.com/22SblBv.gif" style="width:137px; display:inline;"/>
+                <img
+                  src="https://i.imgur.com/22SblBv.gif"
+                  style="width: 137px; display: inline"
+                />
 
-                <p style="font-size: 0.8em;">
+                <p style="font-size: 0.8em">
                   Your wallet
-                <a target="_blank"  :href="`https://bscscan.com/address/${userAccount}`" style="width:50px; ">{{ userAccount.slice(0, 17) }}..</a></p>
+                  <a
+                    target="_blank"
+                    :href="`https://bscscan.com/address/${userAccount}`"
+                    style="width: 50px"
+                    >{{ userAccount.slice(0, 17) }}..</a
+                  >
+                </p>
 
                 <table>
                   <tr>
                     <td colspan="2">
-                      <p v-if="waitingTime">{{ $t('airdrop.next_claim') }}: {{ nextAvailableClaimDate }}</p>
+                      <p v-if="waitingTime">
+                        {{ $t("airdrop.next_claim") }}:
+                        {{ nextAvailableClaimDate }}
+                      </p>
                     </td>
                   </tr>
                   <tr>
@@ -51,59 +71,93 @@
                   </tr>
 
                   <tr>
-                    <td> <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"
-                                   @click="claimXBN">
-                      Earn XBN
-                    </c-button></td>
                     <td>
-                      <c-button :disabled="!availableToClaim" color="primary" wide-mobile target="_blank"
-                                @click="claimBUSD">
+                      <c-button
+                        :disabled="!availableToClaim"
+                        color="primary"
+                        wide-mobile
+                        target="_blank"
+                        @click="claimXBN"
+                      >
+                        Earn XBN
+                      </c-button>
+                    </td>
+                    <td>
+                      <c-button
+                        :disabled="!availableToClaim"
+                        color="primary"
+                        class="violet"
+                        wide-mobile
+                        target="_blank"
+                        @click="claimBUSD"
+                      >
                         Earn BUSD
                       </c-button>
                     </td>
-
                   </tr>
                   <tr>
-                    <td colspan="2">
-                      Earn $BUSD will have 17% tax.
-                    </td>
+                    <td colspan="2">Earn $BUSD will have 17% tax.</td>
                   </tr>
                 </table>
-
               </div>
             </div>
-
-
           </div>
 
           <div v-else>
             <div class="center-content">
-              <p style="font-size: 14px">{{ $t('hint') }}: {{ $t('dont_have_wallet') }}
-                <a target="_blank" href="https://trustwallet.com/">Trust Wallet</a>
-                {{ $t('or') }} <a target="_blank" href="https://metamask.io/">Metamask</a></p>
               <p style="font-size: 14px">
-                {{ $t('any_questions') }}
-                <a target="_blank" href="https://t.me/elasticbitcoinxbt">{{ $t('here') }}</a>
+                {{ $t("hint") }}: {{ $t("dont_have_wallet") }}
+                <a target="_blank" href="https://trustwallet.com/"
+                  >Trust Wallet</a
+                >
+                {{ $t("or") }}
+                <a target="_blank" href="https://metamask.io/">Metamask</a>
+              </p>
+              <p style="font-size: 14px">
+                {{ $t("any_questions") }}
+                <a target="_blank" href="https://t.me/elasticbitcoinxbt">{{
+                  $t("here")
+                }}</a>
               </p>
             </div>
             <div class="center-content">
-              <c-button color="primary" wide-mobile target="_blank" @click="connectWallet">
-                {{ $t('connect_wallet') }}
+              <c-button
+                color="primary"
+                wide-mobile
+                target="_blank"
+                @click="connectWallet"
+              >
+                {{ $t("connect_wallet") }}
               </c-button>
             </div>
           </div>
 
-
           <sweet-modal ref="success" icon="success">
             <h1>Successful!</h1>
-            {{ $t('airdrop.thank_you') }}
+            {{ $t("airdrop.thank_you") }}
 
             <div class="mt-32">
-              <vue-goodshare-facebook :quote="pageTitle" :page_title="pageTitle" :page_url="pageUrl" has_icon
-                                      has_counter title_social="Facebook"/>
-              <vue-goodshare-reddit :page_title="pageTitle" :page_url="pageUrl" has_icon has_counter
-                                    title_social="Reddit"/>
-              <vue-goodshare-twitter :page_title="pageTitle" :page_url="pageUrl" has_icon title_social="Twitter"/>
+              <vue-goodshare-facebook
+                :quote="pageTitle"
+                :page_title="pageTitle"
+                :page_url="pageUrl"
+                has_icon
+                has_counter
+                title_social="Facebook"
+              />
+              <vue-goodshare-reddit
+                :page_title="pageTitle"
+                :page_url="pageUrl"
+                has_icon
+                has_counter
+                title_social="Reddit"
+              />
+              <vue-goodshare-twitter
+                :page_title="pageTitle"
+                :page_url="pageUrl"
+                has_icon
+                title_social="Twitter"
+              />
             </div>
           </sweet-modal>
         </div>
@@ -114,24 +168,28 @@
 
 <script>
 // import layout
-import CLayout from '@/layouts/LayoutDefault.vue'
+import CLayout from "@/layouts/LayoutDefault.vue";
 // import sections
-import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
-import {SectionProps} from '@/utils/SectionProps.js'
-import moment from 'moment';
+import CSectionHeader from "@/components/sections/partials/SectionHeader.vue";
+import { SectionProps } from "@/utils/SectionProps.js";
+import moment from "moment";
 // import CGenericSection from '@/comTo get XBT, please follow ponents/sections/GenericSection.vue'
-import CButton from '@/components/elements/Button.vue'
-import {getWeb3Client} from "@/libs/web3";
-import {adjustParams} from "@/libs/xbt-airdrop";
-import { getXBNBalance} from "@/libs/xbt";
+import CButton from "@/components/elements/Button.vue";
+import { getWeb3Client } from "@/libs/web3";
+import { adjustParams } from "@/libs/xbt-airdrop";
+import { getXBNBalance } from "@/libs/xbt";
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
 import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
-import {getUserStakeData, claimXBNContract, claimBUSDContract} from "@/libs/staking";
+import {
+  getUserStakeData,
+  claimXBNContract,
+  claimBUSDContract,
+} from "@/libs/staking";
 // import CImage from '@/components/elements/Image.vue'
 
 export default {
-  name: 'AirDrop',
+  name: "AirDrop",
   components: {
     CSectionHeader,
     // CGenericSection,
@@ -144,9 +202,9 @@ export default {
   mixins: [SectionProps],
 
   created() {
-    this.$emit('update:layout', CLayout);
+    this.$emit("update:layout", CLayout);
 
-    this.$root.$emit('updateWalletClient', () => {
+    this.$root.$emit("updateWalletClient", () => {
       this.connectWallet();
     });
   },
@@ -156,31 +214,31 @@ export default {
     return {
       sectionHeader: {
         title: "XBN Auto Staking",
-        paragraph: "Earn $XBN and $BUSD by holding $XBN"
+        paragraph: "Earn $XBN and $BUSD by holding $XBN",
       },
       reward: 0,
       currentPool: 0,
       userBalance: 0,
       waitingTime: 0,
       userAccount: null,
-      walletClient: {}
-    }
+      walletClient: {},
+    };
   },
 
   computed: {
     pageUrl() {
-      return 'https://xbn.finance'
+      return "https://xbn.finance";
     },
     pageTitle() {
-      return this.$t('airdrop.share_page_title')
+      return this.$t("airdrop.share_page_title");
     },
     nextAvailableClaimDate() {
-      const lang = localStorage.getItem('lang') || 'en';
-      return moment(this.waitingTime).lang(lang).format('llll');
+      const lang = localStorage.getItem("lang") || "en";
+      return moment(this.waitingTime).lang(lang).format("llll");
     },
     availableToClaim() {
       return new Date() >= new Date(this.waitingTime);
-    }
+    },
   },
 
   mounted() {
@@ -195,12 +253,12 @@ export default {
 
     async handleGetClient() {
       const walletClient = await getWeb3Client();
-      this.$set(this, 'walletClient', walletClient);
+      this.$set(this, "walletClient", walletClient);
     },
 
     async handleGetInitialData() {
       const accounts = await this.walletClient.web3Client.eth.getAccounts();
-      this.$set(this, 'userAccount', accounts.length > 0 ? accounts[0] : null);
+      this.$set(this, "userAccount", accounts.length > 0 ? accounts[0] : null);
       await this.fetchStatus();
     },
 
@@ -213,14 +271,15 @@ export default {
     async fetchStatus() {
       const walletClient = this.walletClient;
       // Get balance
-      const receipt = Math.round(await getXBNBalance(walletClient.web3Client)*100)/100;
-      this.$set(this, 'userBalance', receipt);
+      const receipt =
+        Math.round((await getXBNBalance(walletClient.web3Client)) * 100) / 100;
+      this.$set(this, "userBalance", receipt);
 
       // Get participant status
       const result = await getUserStakeData(walletClient.web3Client);
-      this.$set(this, 'waitingTime', result.nextClaimTime * 1000);
-      this.$set(this, 'reward', result.reward);
-      this.$set(this, 'currentPool', result.currentPool);
+      this.$set(this, "waitingTime", result.nextClaimTime * 1000);
+      this.$set(this, "reward", result.reward);
+      this.$set(this, "currentPool", result.currentPool);
 
       // // Get participant status
       // const contractFundBalance = await getContractXBNFundBalance(walletClient.web3Client);
@@ -229,19 +288,19 @@ export default {
 
     async claimXBN() {
       const walletClient = this.walletClient;
-      let result = await claimXBNContract(walletClient.web3Client, this.userBalance);
+      let result = await claimXBNContract(
+        walletClient.web3Client,
+        this.userBalance
+      );
       if (result) {
-        
         this.$refs.success.open();
         await this.fetchStatus();
       }
-     
     },
     async claimBUSD() {
       const walletClient = this.walletClient;
       let result = await claimBUSDContract(walletClient.web3Client);
       if (result) {
-        
         this.$refs.success.open();
         await this.fetchStatus();
       }
@@ -252,9 +311,9 @@ export default {
       await adjustParams(walletClient.web3Client);
       await this.fetchStatus();
       this.$refs.success.open();
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style>
