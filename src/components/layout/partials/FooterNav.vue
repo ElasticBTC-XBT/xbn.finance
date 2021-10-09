@@ -17,6 +17,13 @@
                     </a>
                 </li>
                 <li>
+                    <a href="https://cchain.explorer.avax.network/tokens/0x026e91e4C3d35EB31a90FcdBF50313d0290Af3cb/token-transfers" target="_blank"
+                       class="flex-center">
+                        <img :src="require('@/assets/images/avax.png')"/>
+                        <span class="ml-8 mr-12"></span>
+                    </a>
+                </li>
+                <li>
                     <a href="https://bscscan.com/token/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac" target="_blank"
                        class="flex-center">
                         <img :src="require('@/assets/images/bscscan.png')"/>
