@@ -24,6 +24,16 @@
         </li>
         <li>
           <a
+            href="https://cchain.explorer.avax.network/tokens/0x026e91e4C3d35EB31a90FcdBF50313d0290Af3cb/token-transfers"
+            target="_blank"
+            class="flex-center"
+          >
+            <img :src="require('@/assets/images/avax.png')" />
+            <span class="ml-8 mr-12"></span>
+          </a>
+        </li>
+        <li>
+          <a
             href="https://bscscan.com/token/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac"
             target="_blank"
             class="flex-center"
@@ -73,14 +83,6 @@
             <img :src="require('@/assets/images/dexguru.png')" />
           </a>
         </li>
-        <!-- <li>
-                    <a class="flex-center"
-                       href="https://goswapp-bsc.web.app/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac"
-                       target="_blank">
-                        <c-image width=24 height=24 :src="require('@/assets/images/goswap.png')"></c-image>
-                        <span class="ml-8"></span>
-                    </a>
-                </li> -->
         <li>
           <a
             class="flex-center"
@@ -137,12 +139,12 @@
 </template>
 
 <script>
-// import CImage from "@/components/elements/Image.vue";
+// import CImage from '@/components/elements/Image.vue'
 
 export default {
   name: "CFooterNav",
   components: {
-    // CImage,
+    // CImage
   },
 };
 </script>
@@ -152,7 +154,6 @@ export default {
   align-items: center;
 }
 </style>
-
 
 <style scoped>
 @media (max-width: 640px) {

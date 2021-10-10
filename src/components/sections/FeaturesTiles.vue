@@ -115,6 +115,12 @@ export default {
           url: "https://cryptowar.network",
           // description: v.$t('home.features_tiles.section_data_upper.item_6.desc')
         },
+        {
+          image: require("@/assets/images/avax.png"),
+          title: "Avalanche Bridge",
+          url: "https://anyswap.exchange/#/bridge?bridgetoken=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac&bridgetype=bridge",
+          // description: v.$t('home.features_tiles.section_data_upper.item_6.desc')
+        },
       ],
     };
   },
