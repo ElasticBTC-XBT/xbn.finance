@@ -1,4 +1,5 @@
-.button {
+.button,
+.button.violet {
 	display: inline-flex;
 	@include font-size(button);
 	@include font-weight(button);
