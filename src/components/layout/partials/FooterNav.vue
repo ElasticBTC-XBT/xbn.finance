@@ -100,12 +100,12 @@
 </template>
 
 <script>
-    import CImage from '@/components/elements/Image.vue'
+    // import CImage from '@/components/elements/Image.vue'
 
     export default {
         name: 'CFooterNav',
         components: {
-            CImage
+            // CImage
         }
     }
 </script>
