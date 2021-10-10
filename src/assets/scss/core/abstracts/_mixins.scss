@@ -299,8 +299,9 @@
 }
 
 @mixin hero-home-bg($file, $with, $height) {
-	background-image   : url(../images/#{$file});
-	background-position: 0 0;
-	background-repeat  : no-repeat;
-	background-size    : #{$with} #{$height};
+	background-image      : url(../images/#{$file});
+	background-position   : 0 0;
+	background-repeat     : no-repeat;
+	// background-size    : #{$with} #{$height};
+	background-size       : cover;
 }

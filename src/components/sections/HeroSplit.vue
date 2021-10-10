@@ -17,7 +17,7 @@
         >
           <div class="split-item">
             <div class="hero-content split-item-content center-content-mobile">
-              <h1 class="mt-0 mb-16 reveal-from-left">
+              <h1 class="mt-1 mb-16 reveal-from-left">
                 {{ $t("home.hero_split.title_1") }}
               </h1>
               <p class="mt-0 mb-24 reveal-from-left" data-reveal-delay="200">

@@ -16,10 +16,12 @@
 		flex-direction: column;
 
 		.split-item-image {
-			position: absolute;
-			width   : 100%;
-			bottom  : 0;
-			overflow: hidden;
+			position    : absolute;
+			// width   : 100%;
+			bottom      : 0;
+			overflow    : hidden;
+			right       : 0;
+			padding-left: 70px;
 
 			img,
 			svg,
@@ -39,6 +41,17 @@
 				}
 			}
 		}
+	}
+}
+
+@media (max-width: 1025px) {
+	.container .split-wrap .split-item .split-item-image {
+		min-width: auto !important;
+		max-width: 300px;
+	}
+
+	.home .section-inner {
+		padding-bottom: 0px;
 	}
 }
 
