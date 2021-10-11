@@ -28,6 +28,9 @@
 		width          : 200px;
 		height         : 200px;
 		z-index        : 999;
+		top            : auto;
+		left           : auto;
+		transform      : translate(0%);
 	}
 
 	.container {
