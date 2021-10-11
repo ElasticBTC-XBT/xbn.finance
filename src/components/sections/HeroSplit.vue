@@ -21,7 +21,9 @@
                 {{ $t("home.hero_split.title_1") }}
               </h1>
               <p class="mt-0 mb-24 reveal-from-left" data-reveal-delay="200">
-                <span class="subtitle">{{ $t("home.hero_split.desc_1") }}</span>
+                <span class="subtitle">
+                  <b>Power the next Big things</b> on Ethereum Virtual Machine (EVM) Networks
+                  </span>
                 <br />
                 <br />
                 {{ $t("home.hero_split.desc_2") }}
