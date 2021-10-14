@@ -60,7 +60,8 @@ let routers = [
         path: '/buy',
         name: 'buy',
         components: {
-            default: BuyXBN,
+            default: Sales,
+            // default: BuyXBN,
         },
         viShort: '/vi/buy',
         krShort: '/kr/buy',
