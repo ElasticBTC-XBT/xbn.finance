@@ -54,7 +54,7 @@ export const getSaleRule = async (web3Client) => {
     // const decimals = await xbtContract.methods.decimals().call();
     const saleRate = await dealerContract.methods.getAmountsOut(1000,['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c','0x547cbe0f0c25085e7015aa6939b28402eb0ccdac']).call();
     // console.log(`saleRate ${saleRate}`);
-    return Number(saleRate[1]/1000); //10% discount
+    return Number(saleRate[1]/1000)*1.08; //10% discount
 };
 
 
