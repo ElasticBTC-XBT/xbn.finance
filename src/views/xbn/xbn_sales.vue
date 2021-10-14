@@ -14,15 +14,27 @@
                     bottomDivider && 'has-bottom-divider'
                 ]">
           <c-section-header tag="h1" :data="sectionHeader" class="center-content"/>
+         
 
           <div v-if="!isSaleOver">
             <div v-if="userAccount">
-              <p class="center-content mt-0 mb-32">
+              <p class="center-content mt-0 mb-32" style="font-size: 0.7em;">
 
-                {{ $t('sale.connected_as') }} <a
+                  <img src="https://i.imgur.com/jmPNlwr.png" style="width: 20px; display: inline;">Limited reward fund, buy before it run out<br/>
+                   <img :src="require('@/assets/images/pancakeswap.png')"  style="width: 20px; display: inline;"/> Trade XBN at <a target="_blank" href='https://pancakeswap.finance/swap?outputCurrency=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac'>PancakeSwap</a>,
+                   <a target="_blank" href='https://app.1inch.io/#/56/swap/BNB/XBN'>1inch</a>
+                  <br/>🏦 Your wallet: <a
                   target="_blank"
-                  :href="`https://bscscan.com/address/${userAccount}`">{{ truncatedAddress }}</a></p>
+                  :href="`https://bscscan.com/address/${userAccount}`">{{ truncatedAddress }}</a> 
+                  
+                  <br/>📝 XBN Smart Contract: <br/> <a
+                  target="_blank"
+                  :href="`https://bscscan.com/token/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac`">0x547cbe0f0c25085e7015aa6939b28402eb0ccdac</a> <br/>
+                  
+
+                  </p>
               <div>
+                 
                 <sale-input
                     @on-purchase="exchangeToken"
                     :sale-supply="saleSupply"
@@ -31,18 +43,19 @@
                     :min-bid-amount="minBidAmount"
                     :max-bid-amount="maxBidAmount"
                     :user-account="userAccount"
+                    :user-balance="userBalance"
                 />
               </div>
 
 
 
-              <div>
+              <!-- <div>
                 <sale-info
                     :xbt-balance="totalPurchasedXBN"
                     :sale-supply="saleSupply"
                     :sale-rate="saleRate"
                 />
-              </div>
+              </div> -->
 
             </div>
 
@@ -89,20 +102,22 @@ import CLayout from '@/layouts/LayoutDefault.vue'
 // import sections
 import CSectionHeader from '@/components/sections/partials/SectionHeader.vue'
 import {SectionProps} from '@/utils/SectionProps.js'
-import SaleInfo from '@/components/sales/SaleInfo'
+// import SaleInfo from '@/components/sales/SaleInfo'
 import SaleInput from '@/components/sales/SaleInput'
 // import SaleOrderBook from '@/components/sales/SaleOrderBook'
 import WalletNotConnect from "@/components/sections/WalletNotConnect";
 import {getWeb3Client} from "@/libs/web3";
 import {adjustSaleRule,  getSaleRule,  makeBid, withdrawFund} from "@/libs/mystic-dealer";
 import {getXBNBalance} from "@/libs/xbt";
+// import Web3 from "web3";
+
 
 export default {
   name: 'Login',
   components: {
     WalletNotConnect,
     CSectionHeader,
-    SaleInfo,
+    // SaleInfo,
     SaleInput,
     // SaleOrderBook,
     VueGoodshareFacebook,
@@ -120,8 +135,8 @@ export default {
   data() {
     return {
       sectionHeader: {
-        title: this.$t('sale.public_discounted_sale'),
-        paragraph: "<img src=\"https://i.imgur.com/jmPNlwr.png\" style=\"width: 30px; display: inline;\"> Limited offer to buy XBN at discounted price. <br/>BNB from sales go straight to liquidity pool!💰 <br/> You win and XBN holders win ✌️ "
+        title: "Special 10% Discount",
+        // paragraph: ""
       },
       // sale info
       saleSupply: 0,
@@ -132,6 +147,7 @@ export default {
       // current user info
       xbtBalance: 0,
       userAccount: null,
+      userBalance: 1,
       participantWaitTime: 0,
 
       // order book
@@ -181,6 +197,19 @@ export default {
     async handleGetInitialData() {
       const accounts = await this.walletClient.web3Client.eth.getAccounts();
       this.$set(this, 'userAccount', accounts.length > 0 ? accounts[0] : null);
+
+      let userBalance = await this.walletClient.web3Client.eth.getBalance(accounts[0]);
+      userBalance = userBalance / Math.pow(10, 18) -  0.005 ;
+      // console.log(`userBalance ${userBalance}`);
+
+      // debugger;
+
+      if (userBalance <= 0){
+        userBalance = 0.11;
+      }
+      this.$set(this, 'userBalance',userBalance);
+
+
       await this.fetchStatus();
       // this.subscribeOrderBook();
     },

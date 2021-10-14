@@ -35,7 +35,7 @@
 import CLayout from "@/layouts/LayoutDefault.vue";
 // import sections
 import CHeroSplit from "@/components/sections/HeroSplit.vue";
-// import CFeaturesSplit from '@/components/sections/FeaturesSplit.vue'
+import CFeaturesSplit from '@/components/sections/FeaturesSplit.vue'
 import CFeaturesTiles from "@/components/sections/FeaturesTiles.vue";
 // import CPricing from '@/components/sections/Pricing.vue'
 // import CGenericSection from '@/components/sections/GenericSection.vue'
@@ -48,7 +48,7 @@ export default {
   name: "Home",
   components: {
     CHeroSplit,
-    // CFeaturesSplit,
+    CFeaturesSplit,
     CFeaturesTiles,
     // CPricing,
     // CSectionHeader,

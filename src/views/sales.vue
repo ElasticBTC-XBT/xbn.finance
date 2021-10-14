@@ -91,7 +91,7 @@ import SaleInput from '@/components/sales/SaleInput'
 // import SaleOrderBook from '@/components/sales/SaleOrderBook'
 import WalletNotConnect from "@/components/sections/WalletNotConnect";
 import {getWeb3Client} from "@/libs/web3";
-import {adjustSaleRule, getOrderMetaOf, getSaleRule, getSaleSupply, makeBid, withdrawFund} from "@/libs/mystic-dealer";
+import {adjustSaleRule, getSaleRule, getSaleSupply, makeBid, withdrawFund} from "@/libs/mystic-dealer";
 import {getXBNBalance} from "@/libs/xbt";
 
 export default {
@@ -218,9 +218,9 @@ export default {
       this.$set(this, 'minBidAmount', saleRate.minBidAmount);
       this.$set(this, 'maxBidAmount', saleRate.maxBidAmount);
 
-      // get order meta
-      const {participantWaitTime} = await getOrderMetaOf(walletClient.web3Client, this.userAccount);
-      this.$set(this, 'participantWaitTime', participantWaitTime);
+      // // get order meta
+      // const {participantWaitTime} = await getOrderMetaOf(walletClient.web3Client, this.userAccount);
+      // this.$set(this, 'participantWaitTime', participantWaitTime);
     },
 
     async fetchStatus() {

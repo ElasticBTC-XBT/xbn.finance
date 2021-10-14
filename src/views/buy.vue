@@ -42,7 +42,7 @@
                   color="primary"
                   wide-mobile
                   target="_blank"
-                  href="https://1inch.exchange/#/BUSD/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac?network=56"
+                  href="https://app.1inch.io/#/56/swap/BNB/XBN"
                 >
                   Buy XBN on 1inch
                 </c-button>

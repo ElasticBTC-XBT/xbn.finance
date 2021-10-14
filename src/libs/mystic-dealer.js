@@ -6,7 +6,7 @@ export const MysticDealer = {
     jsonInterface: require('@/assets/contracts/Reseller.json')
 }
 export const PancakeRouter = {
-    address: "0x05fF2B0DB69458A0750badebc4f9e13aDd608C7F",
+    address: "0x10ED43C718714eb63d5aA57B78B54704E256024E",
     jsonInterface: require('@/assets/contracts/Router.json')
 }
 
@@ -52,8 +52,9 @@ export const getSaleRule = async (web3Client) => {
     const dealerContract = await getRouterContract(web3Client);
 
     // const decimals = await xbtContract.methods.decimals().call();
-    const saleRate = await dealerContract.methods.getAmountsOut(1,['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c','0x547cbe0f0c25085e7015aa6939b28402eb0ccdac']).call();
-    return Number(saleRate[1])*1.02; //2% discount
+    const saleRate = await dealerContract.methods.getAmountsOut(1000,['0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c','0x547cbe0f0c25085e7015aa6939b28402eb0ccdac']).call();
+    // console.log(`saleRate ${saleRate}`);
+    return Number(saleRate[1]/1000); //10% discount
 };
 
 

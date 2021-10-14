@@ -5,6 +5,10 @@
         <h4>{{ $t('sale.i_want_to_buy') }}</h4>
       </div>
       <div class="mt-32">
+        <div class="mt-16">
+          <h2>{{ displayedSaleRate }} XBN </h2>
+          <p>using</p>
+        </div>
         <div class="flex-row flex-center">
           <input
               v-model="ethPurchaseAmount"
@@ -16,9 +20,7 @@
           />
           <div class="currency">BNB</div>
         </div>
-        <div class="mt-16">
-          <h2> ~ {{ displayedSaleRate }} XBN</h2>
-        </div>
+        
         <div class="mt-16">
           <span style="font-size: 14px">{{ $t('sale.you_can_buy') }} {{ $t('max') }}: <strong>17 BNB</strong> </span>
         </div>
@@ -33,14 +35,20 @@
       </c-button>
 
 
-      <div style="margin-top: 57px">
+      <div style="margin-top: 57px;">
         <hr/>
-        <h5> 💕 Love XBN?  💕<br/> 💸 Make Money with XBN 💸</h5>
-         Get 3% XBN bonus when helping your friends acquire XBN using link below
+        <h5> 💕 Love XBN <br/>💸 Earn XBN</h5>
+        <p style='font-size: 0.8em;'>
+         
+     🤝 Get free XBN by referring your friends 
+      
+      <br/>👇 Your referral link 
+      </p>
       </div>
       <p>
+        
 
-        <input v-model="ref_link" onclick="select()"/>
+        <input style="text-align:left; font-size: small;" v-model="ref_link" onclick="select()"/>
 
       </p>
       <p style="text-align: center">
@@ -80,6 +88,10 @@ export default {
       type: String,
       default: "0x0000000000000000000000000000000000000000"
     },
+    userBalance: {
+      type: Number,
+      default: 0.5
+    },
     minBidAmount: {
       type: Number,
       default: 0
@@ -118,7 +130,7 @@ export default {
   },
   data() {
     return {
-      ethPurchaseAmount: 1,
+      ethPurchaseAmount: this.userBalance,
       submitted: false,
       ref_link: "https://xbn.elasticbitcoin.org/xbn/sales/?r=" + this.userAccount
     }

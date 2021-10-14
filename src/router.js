@@ -3,7 +3,7 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Secondary from './views/Secondary.vue';
 import Basic from './views/basic.vue';
-import BuyXBN from './views/buy.vue';
+// import BuyXBN from './views/buy.vue';
 import Economics from './views/economics.vue';
 import Technology from './views/technology.vue';
 import Staking from './views/auto_staking.vue';
@@ -60,7 +60,7 @@ let routers = [
         path: '/buy',
         name: 'buy',
         components: {
-            default: Sales,
+            default: XBNSales,
             // default: BuyXBN,
         },
         viShort: '/vi/buy',
