@@ -95,7 +95,7 @@
                     <collapse-transition>
                         <div style="margin-top: 0px; font-size:0.8em;" v-if="isOpenD">
                              
-                              Earn XBN by referring to your friends to migrate to XBN using following link
+                              Earn 5% bonus by referring to your friends to migrate to XBN using following link
                             
                             <p>
 
