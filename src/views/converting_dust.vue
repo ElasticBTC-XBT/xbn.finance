@@ -59,7 +59,7 @@
                 <p class="notice"> <a href="javascript:void(0);" @click="isOpenA = !isOpenA">🔑 Why migrate to XBN</a>
                   <collapse-transition>
                     <ul v-show="isOpenA">
-                      <li>Get 20% reward after migrating</li>
+                      <li>Get +15-20% reward after migrating</li>
                       <li>Earn weely <a href="/staking" target="_blank">BUSD passive income</a></li>
                       <li>Join huge Ecosystem with <a href="twitter.com/elasticbitcoin" target="_blank">+50k Twitter followers</a> </li>
                       <li>One of largest coins in BSC in term of holders with <a href="https://bscscan.com/token/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac" target="_blank">+55k holders</a></li>
