@@ -72,7 +72,7 @@
                   <collapse-transition>
                       <ul v-show="isOpenB">
                       <li>Only works on Binance Smart Chain</li>
-                      <li>Max size each time is 1000$</li>
+                      <li>Max size each time is 20000$</li>
                       <li>Reward can be claimed daily 30% until 10XBN left</li>
                       <li>Join <a href="https://t.me/elasticbitcoinxbt" target="_blank">Telegram</a> 
                       & <a href="https://discord.gg/ckEHuezmES" target="_blank">Discord</a> for support</li>
