@@ -96,12 +96,12 @@ export default {
           url: "/staking",
           // description: v.$t('home.features_tiles.section_data_upper.item_3.desc')
         },
-        {
-          image: require("@/assets/images/elasticbitcoin-HOLDINGS-RISE-WITH-MARKET-CAP.svg"),
-          title: "PePe Meme Metaverse",
-          url: "https://pepe.community",
-          // description: v.$t('home.features_tiles.section_data_upper.item_4.desc')
-        },
+        // {
+        //   image: require("@/assets/images/elasticbitcoin-HOLDINGS-RISE-WITH-MARKET-CAP.svg"),
+        //   title: "PePe Meme Metaverse",
+        //   url: "https://pepe.community",
+        //   // description: v.$t('home.features_tiles.section_data_upper.item_4.desc')
+        // },
 
         {
           image: require("@/assets/images/elasticbitcoin-RANDOMIZED-REBASING.svg"),
