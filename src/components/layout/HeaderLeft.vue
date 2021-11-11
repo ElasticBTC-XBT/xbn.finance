@@ -129,12 +129,12 @@
                 </i>
                 <span slot="title">Ecosystem</span>
               </template>
-              <el-menu-item index="2-1">
+              <!-- <el-menu-item index="2-1">
                 <a href="https://elasticbitcoin.org">XBT - Rebase</a>
-              </el-menu-item>
-              <el-menu-item index="2-2">
+              </el-menu-item> -->
+              <!-- <el-menu-item index="2-2">
                 <a href="https://about.xbc.xbn.finance">XBC Community Coin</a>
-              </el-menu-item>
+              </el-menu-item> -->
               <!-- <el-menu-item index="2-3">
                 <a href="https://pepe.community">PePe Metaverse</a>
               </el-menu-item> -->
