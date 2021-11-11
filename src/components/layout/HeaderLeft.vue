@@ -135,9 +135,9 @@
               <el-menu-item index="2-2">
                 <a href="https://about.xbc.xbn.finance">XBC Community Coin</a>
               </el-menu-item>
-              <el-menu-item index="2-3">
+              <!-- <el-menu-item index="2-3">
                 <a href="https://pepe.community">PePe Metaverse</a>
-              </el-menu-item>
+              </el-menu-item> -->
               <el-menu-item index="2-3">
                 <a href="https://cryptowar.network">Cryptowar ⚔️ xBlade </a>
               </el-menu-item>
