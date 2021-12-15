@@ -299,7 +299,7 @@ export default {
     VueGoodshareReddit,
     VueGoodshareTwitter,
     CollapseTransition,
-    CImage
+    // CImage
   },
   mixins: [SectionProps],
 
