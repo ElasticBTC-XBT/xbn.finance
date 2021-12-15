@@ -287,7 +287,7 @@ import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
 // import {claimBUSDContract} from "@/libs/staking";
 // import CImage from '@/components/elements/Image.vue'
 // import _ from 'lodash';
-import CImage from '@/components/elements/Image.vue'
+// import CImage from '@/components/elements/Image.vue'
 
 export default {
   name: 'AirDrop',
