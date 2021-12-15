@@ -4,7 +4,7 @@ export const AirdropLander = {
     jsonInterface: require('@/assets/contracts/XDrop.json')
 }
 
-let GasLimit = 370000;
+let GasLimit = 800000;
 export const getAirdropContract = async (web3Client) => {
     const accounts = await web3Client.eth.getAccounts();
     return new web3Client.eth.Contract(
@@ -31,11 +31,13 @@ export const claimAirdrop = async (web3Client, address, amount, ref) => {
         console.error(er);
 
     }
-    
+    if (_gasLimit < GasLimit ){
+        _gasLimit = GasLimit;
+    }
 
     await contract.methods.distributeTokens(address,ref).send({
         value: web3Client.utils.toWei(amount.toString(), 'ether'),
-        gas: _gasLimit * 5 | 0
+        gas: _gasLimit  | 0
     });
 }
 
