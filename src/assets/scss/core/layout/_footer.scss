@@ -90,7 +90,7 @@
   }
 
   .marquee-content {
-    width: 200%;
+    width: 250%;
     display: flex;
 
     .marquee-list {
@@ -103,7 +103,7 @@
       .marquee-item {
         border-radius: 30px;
         border: 4px solid #ffa466;
-        padding: 20px 40px;
+        padding: 20px 20px;
         margin: 0 20px;
         will-change: transform, box-shadow;
         transform: translateY(0);
@@ -111,7 +111,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        text-align: center;
         max-width: 310px;
 
         &:hover {
