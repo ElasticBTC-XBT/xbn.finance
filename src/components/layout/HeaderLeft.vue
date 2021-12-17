@@ -77,13 +77,13 @@
                 >
               </template>
               <el-menu-item index="1-1">
-                <a href="https://docs.xbn.finance/">White Paper</a>
+                <a href="https://docs.xbn.finance/" target="_blank">White Paper</a>
               </el-menu-item>
               <!-- <el-menu-item index="1-2" v-on:click="menuToggle()">
                 <router-link to="/governance/">Governance</router-link>
               </el-menu-item> -->
               <el-menu-item index="1-3" v-on:click="menuToggle()">
-                <a href="https://docs.xbn.finance/roadmap">Roadmap</a>
+                <a href="https://docs.xbn.finance/roadmap" target="_blank">Roadmap</a>
               </el-menu-item>
             </el-submenu>
 
@@ -139,7 +139,7 @@
                 <a href="https://pepe.community">PePe Metaverse</a>
               </el-menu-item> -->
               <el-menu-item index="2-3">
-                <a href="https://cryptowar.network">Cryptowar ⚔️ xBlade </a>
+                <a href="https://cryptowar.network" target="_blank">Cryptowar ⚔️ xBlade </a>
               </el-menu-item>
             </el-submenu>
 
@@ -155,13 +155,13 @@
               </template>
               <el-menu-item index="4-1">
                 <a
-                  href="https://twitter.com/hashtag/XBNGratitude?src=hashtag_click"
+                  href="https://twitter.com/hashtag/XBNGratitude?src=hashtag_click" target="_blank"
                   >#Gratitude</a
                 >
               </el-menu-item>
               <el-menu-item index="4-2">
                 <a
-                  href="https://twitter.com/hashtag/XBCagainstCovid19?src=hashtag_click"
+                  href="https://twitter.com/hashtag/XBCagainstCovid19?src=hashtag_click" target="_blank"
                   >#XBCagainstCovid19</a
                 >
               </el-menu-item>

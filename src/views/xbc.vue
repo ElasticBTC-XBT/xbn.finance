@@ -24,7 +24,7 @@
 
             </c-accordion>
             <h5 style="text-align: center">
-              <a href="https://xbc.xbn.finance">Launch XBC App</a>
+              <a href="https://xbc.xbn.finance" target='_blank'>Launch XBC App</a>
             </h5>
           </div>
         </c-generic-section>

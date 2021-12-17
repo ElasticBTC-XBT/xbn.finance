@@ -144,11 +144,11 @@
       },
       "item_3": {
         "title": "Tổng cung là bao nhiêu",
-        "answer": "Tổng cung thay đổi liên tục. Bạn có thể xem nguồn cung hiện tại : <a href='https://etherscan.io/token/0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8'>tại đây</a>"
+        "answer": "Tổng cung thay đổi liên tục. Bạn có thể xem nguồn cung hiện tại : <a href='https://etherscan.io/token/0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8' target='_blank'>tại đây</a>"
       },
       "item_4": {
         "title": "Hợp đồng thông minh đã được phát hành chưa",
-        "answer": "Có, bạn có thể tìm thấy nó <a href='https://github.com/ElasticBTC-XBT/elastic-bitcoin-xbt-contract'>ở đây</a>"
+        "answer": "Có, bạn có thể tìm thấy nó <a href='https://github.com/ElasticBTC-XBT/elastic-bitcoin-xbt-contract' target='_blank'>ở đây</a>"
       },
       "item_5": {
         "title": "Khi nào XBN sẽ xuất hiện trên CoinGecko và CoinMarketCap",
@@ -160,7 +160,7 @@
       },
       "item_7": {
         "title": "Thanh khoản PancakeSwap có bị khóa không",
-        "answer": "Có, nó bị khóa qua Unicrypt. Bạn có thể tìm thêm thông tin trên <a href='https://www.dextools.io/app/uniswap/pair-explorer/0x080cf470ea91532bf5e313acc60c4b0d029409d4'>Dextools</a>"
+        "answer": "Có, nó bị khóa qua Unicrypt. Bạn có thể tìm thêm thông tin trên <a href='https://www.dextools.io/app/uniswap/pair-explorer/0x080cf470ea91532bf5e313acc60c4b0d029409d4' target='_blank'>Dextools</a>"
       },
       "item_8": {
         "title": "Rebase hoạt động như thế nào",
