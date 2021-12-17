@@ -1,6 +1,10 @@
 <template>
     <footer class="site-footer center-content-mobile">
         <div class="container">
+            <div class="footer-bnp">
+                <c-footer-backers-and-partners />
+            </div>
+
             <div class="site-footer-inner" :class="topDivider && 'has-top-divider'">
                 <div class="footer-top space-between text-xxs">
                     <c-logo/>
@@ -37,11 +41,13 @@
     import CLogo from '@/components/layout/partials/Logo.vue'
     import CFooterSocial from '@/components/layout/partials/FooterSocial.vue'
     import CFooterNav from '@/components/layout/partials/FooterNav.vue'
+    import CFooterBackersAndPartners from '@/components/layout/partials/FooterBackersAndPartners.vue'
 
     export default {
         name: 'CFooter',
         components: {
             CLogo,
+            CFooterBackersAndPartners,
             CFooterSocial,
             CFooterNav
         },
