@@ -81,6 +81,65 @@
   }
 }
 
+.footer-bnp {
+  overflow: hidden;
+  padding: 10px 0;
+
+  .marquee-wrapper:hover .marquee-list {
+    animation-play-state: paused;
+  }
+
+  .marquee-content {
+    width: 200%;
+    display: flex;
+
+    .marquee-list {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      will-change: transform;
+      animation: marquee 14s linear infinite;
+
+      .marquee-item {
+        border-radius: 30px;
+        border: 4px solid #ffa466;
+        padding: 20px 40px;
+        margin: 0 20px;
+        will-change: transform, box-shadow;
+        transform: translateY(0);
+        transition: all 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        max-width: 310px;
+
+        &:hover {
+          background-color: #fedab6;
+          transform: translateY(-5px);
+          will-change: transform, box-shadow;
+          transition: all 0.5s;
+        }
+
+        .bnp-logo {
+          width: 230px;
+          max-height: 70px;
+        }
+        
+        @keyframes marquee {
+          0% {
+              transform: translateX(0);
+          }
+        
+          100% {
+              transform: translateX(-100%);
+          }
+        }
+      }
+    }
+  }
+}
+
 .footer-social,
 .footer-nav {
 
@@ -151,12 +210,37 @@
 }
 
 @include media('<=medium') {
+  .footer-bnp {
+    .marquee-content {
+      width: 400%;
+    }
+    .marquee-item {
+      padding: 20px 20px;
+      margin: 0 10px;
+      box-sizing: content-box;
+      min-width: 151px;
+    }
+  }
 
   .footer-top,
   .footer-bottom {
 
     > *:not(:last-child) {
       margin-bottom: $footer-inner--padding-v;
+    }
+  }
+}
+
+@include media('<large') {
+  .footer-bnp {
+    .marquee-content {
+      width: 400%;
+    }
+    .marquee-item {
+      padding: 20px 20px;
+      margin: 0 10px;
+      box-sizing: content-box;
+      min-width: 151px;
     }
   }
 }
