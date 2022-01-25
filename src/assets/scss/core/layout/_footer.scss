@@ -86,7 +86,7 @@
   padding: 10px 0;
 
   .marquee-content {
-    width: 250%;
+    width: 328%;
     display: flex;
 
     .marquee-list {
@@ -108,14 +108,14 @@
 
         .bnp-logo {
           width: 230px;
-          max-height: 70px;
+          max-height: 100px;
         }
-        
+
         @keyframes marquee {
           0% {
               transform: translateX(0);
           }
-        
+
           100% {
               transform: translateX(-100%);
           }
@@ -197,7 +197,7 @@
 @include media('<=medium') {
   .footer-bnp {
     .marquee-content {
-      width: 400%;
+      width: 528%;
     }
     .marquee-item {
       padding: 20px 20px;
@@ -219,7 +219,7 @@
 @include media('<large') {
   .footer-bnp {
     .marquee-content {
-      width: 400%;
+      width: 528%;
     }
     .marquee-item {
       padding: 20px 20px;
@@ -240,7 +240,7 @@
       transition: all 0.5s;
 
       &:hover {
-        background-color: #fedab6;
+        background-color: #fae5cff6;
         transform: translateY(-5px);
         will-change: transform, box-shadow;
         transition: all 0.5s;

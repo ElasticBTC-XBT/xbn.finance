@@ -22,6 +22,12 @@
           <a href="https://quarashi.network/" class="marquee-item" target="_blank" rel="noopener noreferrer">
             <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/partners/quarashi.png"  alt="Quarashi logo">
           </a>
+          <a href="https://owldao.io/" class="marquee-item" target="_blank" rel="noopener noreferrer">
+            <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/partners/owl-dao.png"  alt="Owl Dao logo">
+          </a>
+          <a href="https://www.owl.games/" class="marquee-item" target="_blank" rel="noopener noreferrer">
+            <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/partners/owl-game.png"  alt="Owl Games logo">
+          </a>
         </div>
         <div class="marquee-list">
           <!-- Backers -->
@@ -41,6 +47,12 @@
           </a>
           <a href="https://quarashi.network/" class="marquee-item" target="_blank" rel="noopener noreferrer">
             <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/partners/quarashi.png"  alt="Quarashi logo">
+          </a>
+          <a href="https://owldao.io/" class="marquee-item" target="_blank" rel="noopener noreferrer">
+            <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/partners/owl-dao.png"  alt="Owl Dao logo">
+          </a>
+          <a href="https://www.owl.games/" class="marquee-item" target="_blank" rel="noopener noreferrer">
+            <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/partners/owl-game.png"  alt="Owl Games logo">
           </a>
         </div>
       </div>
