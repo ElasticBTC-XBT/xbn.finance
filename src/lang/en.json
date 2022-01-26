@@ -141,15 +141,15 @@
       },
       "item_3": {
         "title": "What is the total supply",
-        "answer": "You can see the current supply here: <a href='https://bscscan.com/token/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac'>here</a>"
+        "answer": "You can see the current supply here: <a href='https://bscscan.com/token/0x547cbe0f0c25085e7015aa6939b28402eb0ccdac' target='_blank'>here</a>"
       },
       "item_4": {
         "title": "Has the smart contract been released",
-        "answer": "Yes, you can find it <a href='https://github.com/ElasticBTC-XBT/xbn.finance'>here</a>"
+        "answer": "Yes, you can find it <a href='https://github.com/ElasticBTC-XBT/xbn.finance' target='_blank'>here</a>"
       },
       "item_6": {
         "title": "Where to ask questions about XBN?",
-        "answer": "You can check more QNA here on <a href='https://twitter.com/elasticbitcoin/status/1366224650536017922'>Twitter</a> "
+        "answer": "You can check more QNA here on <a href='https://twitter.com/elasticbitcoin/status/1366224650536017922' target='_blank'>Twitter</a> "
       },
       "item_9": {
         "title": "How can user balances change without a transaction",

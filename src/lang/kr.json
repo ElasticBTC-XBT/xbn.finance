@@ -144,11 +144,11 @@
       },
       "item_3": {
         "title": "총 공급량은 얼마입니까?",
-        "answer": "총 공급량은 지속적으로 변화하고 있습니다. 여기에서 현재 공급을 볼 수 있습니다 : <a href='https://etherscan.io/token/0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8'>여기</a>"
+        "answer": "총 공급량은 지속적으로 변화하고 있습니다. 여기에서 현재 공급을 볼 수 있습니다 : <a href='https://etherscan.io/token/0x64fb96d0395f6bf105f35233911e3df2c5bf4ce8' target='_blank'>여기</a>"
       },
       "item_4": {
         "title": "스마트 계약이 아직 해제 되었습니까?",
-        "answer": "예, <a href='https://github.com/ElasticBTC-XBT/elastic-bitcoin-xbt-contract'>여기</a> 에서 찾을 수 있습니다."
+        "answer": "예, <a href='https://github.com/ElasticBTC-XBT/elastic-bitcoin-xbt-contract' target='_blank'>여기</a> 에서 찾을 수 있습니다."
       },
       "item_5": {
         "title": "XBN는 CoinGecko 및 CoinMarketCap에 언제 표시됩니까?",
@@ -160,7 +160,7 @@
       },
       "item_7": {
         "title": "PancakeSwap 유동성은 잠겨 있습니까?",
-        "answer": "예, Unicrypt를 통해 잠겨 있습니다. <a href='https://www.dextools.io/app/uniswap/pair-explorer/0x080cf470ea91532bf5e313acc60c4b0d029409d4'>Dextools</a> 에서 더 많은 정보를 찾을 수 있습니다."
+        "answer": "예, Unicrypt를 통해 잠겨 있습니다. <a href='https://www.dextools.io/app/uniswap/pair-explorer/0x080cf470ea91532bf5e313acc60c4b0d029409d4' target='_blank'>Dextools</a> 에서 더 많은 정보를 찾을 수 있습니다."
       },
       "item_8": {
         "title": "Rebase는 어떻게 작동합니까?",

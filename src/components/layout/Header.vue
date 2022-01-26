@@ -39,10 +39,10 @@
                 <div class="list-item-header-child">
                   <ul>
                     <li @click="closeMenu">
-                      <a href="https://docs.xbn.finance/">White Paper</a>
+                      <a href="https://docs.xbn.finance/" target="_blank">White Paper</a>
                     </li>
                     <!--                                <li @click="closeMenu">-->
-                    <!--                                  <a href="https://tothemoon.xbn.finance/xbn-investor-protection-program">Investor Protection</a>-->
+                    <!--                                  <a href="https://tothemoon.xbn.finance/xbn-investor-protection-program" target="_blank">Investor Protection</a>-->
                     <!--                                </li>-->
                     <!-- <li @click="closeMenu">
                       <router-link to="/governance/">Governance</router-link>
@@ -76,7 +76,7 @@
                       >
                     </li>
                     <li @click="closeMenu">
-                      <a href="https://xbc.xbn.finance">Earn BNB</a>
+                      <a href="https://xbc.xbn.finance" target="_blank">Earn BNB</a>
                     </li>
                     <li @click="closeMenu">
                       <router-link to="/converting_dust"
@@ -92,13 +92,13 @@
                 <div class="list-item-header-child">
                   <ul>
                     <li @click="closeMenu">
-                      <a href="https://elasticbitcoin.org">XBT</a>
+                      <a href="https://elasticbitcoin.org" target="_blank">XBT</a>
                     </li>
                     <li @click="closeMenu">
-                      <a href="https://about.xbc.xbn.finance">XBC</a>
+                      <a href="https://about.xbc.xbn.finance" target="_blank">XBC</a>
                     </li>
                     <li @click="closeMenu">
-                      <a href="https://pepe.community">PePe</a>
+                      <a href="https://pepe.community" target="_blank">PePe</a>
                     </li>
                   </ul>
                 </div>
@@ -112,12 +112,14 @@
                     <li @click="closeMenu">
                        <a
                         href="https://twitter.com/hashtag/XBNGratitude?src=hashtag_click"
+                        target="_blank"
                         >#Gratitude</a
                       >
                     </li>
                     <li @click="closeMenu">
                       <a
                         href="https://twitter.com/hashtag/XBCagainstCovid19?src=hashtag_click"
+                        target="_blank"
                         >#XBCagainstCovid19</a
                       >
                     </li>

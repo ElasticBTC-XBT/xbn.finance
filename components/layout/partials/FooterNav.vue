@@ -2,7 +2,7 @@
     <nav class="footer-nav">
         <ul class="list-reset">
             <li>
-                <a href="https://twitter.com">Contact</a>
+                <a href="https://twitter.com" target="_blank">Contact</a>
             </li>
 <!--            <li>-->
 <!--                <router-link to="/#teams">About us</router-link>-->

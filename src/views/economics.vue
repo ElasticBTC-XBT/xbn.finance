@@ -41,7 +41,7 @@
 
                             <p>
                                 {{$t('economic.desc_6')}}
-                                <a href="https://www.ampleforth.org/economics/"> AMPL</a>
+                                <a href="https://www.ampleforth.org/economics/" target='_blank'> AMPL</a>
                             </p>
                         </div>
                     </c-generic-section>

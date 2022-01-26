@@ -15,7 +15,7 @@
 <!--                </a>-->
 <!--            </li>-->
             <li>
-                <a href="https://twitter.com/">
+                <a href="https://twitter.com/" target="_blank">
                     <svg
                         width="16"
                         height="16"
@@ -28,7 +28,7 @@
                 </a>
             </li>
             <li>
-                <a href="https://github.com/">
+                <a href="https://github.com/" target="_blank">
                     <svg   width="16"
                            height="16"
                            role="img"
