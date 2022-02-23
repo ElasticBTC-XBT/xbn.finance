@@ -24,7 +24,7 @@
         </li>
         <li>
           <a
-            href="https://cchain.explorer.avax.network/tokens/0x026e91e4C3d35EB31a90FcdBF50313d0290Af3cb/token-transfers"
+            href="https://snowtrace.io/token/0x026e91e4c3d35eb31a90fcdbf50313d0290af3cb"
             target="_blank"
             class="flex-center"
           >
