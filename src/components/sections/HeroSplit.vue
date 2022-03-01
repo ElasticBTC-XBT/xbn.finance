@@ -22,8 +22,9 @@
               </h1>
               <p class="mt-0 mb-24 reveal-from-left" data-reveal-delay="200">
                 <span class="subtitle">
-                  <b>Power the next Big things</b> on Ethereum Virtual Machine (EVM) Networks
-                  </span>
+                  <b>Power the next Big things</b> on Ethereum Virtual Machine
+                  (EVM) Networks
+                </span>
                 <br />
                 <br />
                 {{ $t("home.hero_split.desc_2") }}
@@ -37,22 +38,17 @@
                   to="/airdrop"
                   >Get Airdrop</router-link
                 >
-                <router-link
+                <a
                   class="button violet button-primary button-wide-mobile"
-                  to="/xbn/sales"
+                  href="https://bond.xbn.finance"
+                  target="_blank"
                 >
                   {{ $t("home.hero_split.buy_xbt") }}
-                </router-link>
+                </a>
               </div>
             </div>
             <div
-              class="
-                hero-figure
-                is-3d
-                split-item-image
-                illustration-element-01
-                reveal-scale-up
-              "
+              class="hero-figure is-3d split-item-image illustration-element-01 reveal-scale-up"
             >
               <c-image
                 id="big-banner-logo"

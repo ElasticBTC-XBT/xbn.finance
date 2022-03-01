@@ -18,7 +18,11 @@
             :key="index"
             class="tiles-item"
           >
-            <a :href="item.url" class="tiles-item-inner">
+            <a
+              :href="item.url"
+              class="tiles-item-inner"
+              :target="item.title === 'XBN Bond' && '_blank'"
+            >
               <div class="tiles-item-inner">
                 <div class="features-tiles-item-header center-content">
                   <div
@@ -80,6 +84,11 @@ export default {
       },
       sectionDataUpper: [
         {
+          image: require("@/assets/images/BOND-XBN.webp"),
+          title: "XBN Bond",
+          url: "https://bond.xbn.finance",
+        },
+        {
           image: require("@/assets/images/elasticbitcoin-A-NEW-DEFI-PROTOCOL.svg"),
           title: "Trade",
           url: "https://pancakeswap.finance/swap?outputCurrency=0x547cbe0f0c25085e7015aa6939b28402eb0ccdac",
@@ -126,7 +135,6 @@ export default {
   },
 };
 </script>
-
 
 <style scoped>
 @media (min-width: 641px) {

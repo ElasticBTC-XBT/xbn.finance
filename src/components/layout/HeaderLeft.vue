@@ -77,13 +77,17 @@
                 >
               </template>
               <el-menu-item index="1-1">
-                <a href="https://docs.xbn.finance/" target="_blank">White Paper</a>
+                <a href="https://docs.xbn.finance/" target="_blank"
+                  >White Paper</a
+                >
               </el-menu-item>
               <!-- <el-menu-item index="1-2" v-on:click="menuToggle()">
                 <router-link to="/governance/">Governance</router-link>
               </el-menu-item> -->
               <el-menu-item index="1-3" v-on:click="menuToggle()">
-                <a href="https://docs.xbn.finance/roadmap" target="_blank">Roadmap</a>
+                <a href="https://docs.xbn.finance/roadmap" target="_blank"
+                  >Roadmap</a
+                >
               </el-menu-item>
             </el-submenu>
 
@@ -117,9 +121,12 @@
               <el-menu-item index="3-6" v-on:click="menuToggle()">
                 <router-link to="/migration">Migrate to XBN</router-link>
               </el-menu-item>
+              <el-menu-item index="3-7">
+                <a href="https://bond.xbn.finance" target="_blank"> XBN Bond</a>
+              </el-menu-item>
             </el-submenu>
 
-             <el-submenu index="2">
+            <el-submenu index="2">
               <template slot="title">
                 <i>
                   <img
@@ -139,7 +146,9 @@
                 <a href="https://pepe.community">PePe Metaverse</a>
               </el-menu-item> -->
               <el-menu-item index="2-3">
-                <a href="https://cryptowar.network" target="_blank">Cryptowar ⚔️ xBlade </a>
+                <a href="https://cryptowar.network" target="_blank"
+                  >Cryptowar ⚔️ xBlade
+                </a>
               </el-menu-item>
             </el-submenu>
 
@@ -273,7 +282,7 @@ export default {
 
 .el-submenu .el-menu-item a {
   padding-left: 1rem;
-  display:block;
+  display: block;
 }
 
 .menu-left-box {
