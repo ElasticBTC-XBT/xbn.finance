@@ -85,7 +85,7 @@
   padding: 10px 0;
 
   .marquee-content {
-    width: calc(46% * 7);
+    width: calc(46% * 9);
     display: flex;
 
     .marquee-list {
@@ -104,7 +104,7 @@
         align-items: center;
         justify-content: center;
         max-width: 310px;
-        width: calc(100% / 7);
+        width: calc(100% / 9);
 
         .bnp-logo {
           max-height: 60px;
@@ -193,18 +193,6 @@
 }
 
 @include media("<=medium") {
-  .footer-bnp {
-    .marquee-content {
-      width: 528%;
-    }
-    .marquee-item {
-      padding: 20px 20px;
-      margin: 0 10px;
-      box-sizing: content-box;
-      min-width: 151px;
-    }
-  }
-
   .footer-top,
   .footer-bottom {
     > *:not(:last-child) {
@@ -216,7 +204,7 @@
 @include media("<large") {
   .footer-bnp {
     .marquee-content {
-      width: 528%;
+      width: calc(75% * 9);
     }
     .marquee-item {
       padding: 20px 20px;
