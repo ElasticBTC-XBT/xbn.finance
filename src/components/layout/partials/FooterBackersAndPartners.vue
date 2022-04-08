@@ -11,8 +11,8 @@
           <a href="https://altair-alpha.com/" class="marquee-item" target="_blank" rel="noopener noreferrer">
             <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/backers/altair-alpha.png"  alt="Altair Alpha logo">
           </a>
-          <a href="https://cryptowar.network/" class="marquee-item" target="_blank" rel="noopener noreferrer">
-            <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/backers/cryptowar.png"  alt="Altair Alpha logo">
+          <a href="https://openworld.vision/" class="marquee-item" target="_blank" rel="noopener noreferrer">
+            <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/backers/ow-logo.png"  alt="Open World">
           </a>
 
           <!-- Partners -->
@@ -33,6 +33,9 @@
           </a>
           <a href="https://play.hyperjump.app/" class="marquee-item" target="_blank" rel="noopener noreferrer">
             <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/partners/hyperjump.png"  alt="Hyperjump">
+          </a>
+          <a href="https://www.tribeone.io/" class="marquee-item" target="_blank" rel="noopener noreferrer">
+            <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/partners/tribeone-logo.png"  alt="Tribeone">
           </a>
         </div>
         <div class="marquee-list">
@@ -43,8 +46,8 @@
           <a href="https://altair-alpha.com/" class="marquee-item" target="_blank" rel="noopener noreferrer">
             <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/backers/altair-alpha.png"  alt="Altair Alpha logo">
           </a>
-           <a href="https://cryptowar.network/" class="marquee-item" target="_blank" rel="noopener noreferrer">
-            <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/backers/cryptowar.png"  alt="Altair Alpha logo">
+          <a href="https://openworld.vision/" class="marquee-item" target="_blank" rel="noopener noreferrer">
+            <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/backers/ow-logo.png"  alt="Open World">
           </a>
 
           <!-- Partners -->
@@ -65,6 +68,9 @@
           </a>
           <a href="https://play.hyperjump.app/" class="marquee-item" target="_blank" rel="noopener noreferrer">
             <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/partners/hyperjump.png"  alt="Hyperjump">
+          </a>
+          <a href="https://www.tribeone.io/" class="marquee-item" target="_blank" rel="noopener noreferrer">
+            <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/partners/tribeone-logo.png"  alt="Tribeone">
           </a>
         </div>
       </div>
