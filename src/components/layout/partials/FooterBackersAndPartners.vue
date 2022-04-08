@@ -34,6 +34,9 @@
           <a href="https://play.hyperjump.app/" class="marquee-item" target="_blank" rel="noopener noreferrer">
             <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/partners/hyperjump.png"  alt="Hyperjump">
           </a>
+          <a href="https://www.tribeone.io/" class="marquee-item" target="_blank" rel="noopener noreferrer">
+            <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/partners/tribeone-logo.png"  alt="Tribeone">
+          </a>
         </div>
         <div class="marquee-list">
           <!-- Backers -->
@@ -65,6 +68,9 @@
           </a>
           <a href="https://play.hyperjump.app/" class="marquee-item" target="_blank" rel="noopener noreferrer">
             <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/partners/hyperjump.png"  alt="Hyperjump">
+          </a>
+          <a href="https://www.tribeone.io/" class="marquee-item" target="_blank" rel="noopener noreferrer">
+            <img class="bnp-logo" loading="lazy" src="../../../assets/images/backers-and-partners/partners/tribeone-logo.png"  alt="Tribeone">
           </a>
         </div>
       </div>
