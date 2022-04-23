@@ -126,7 +126,7 @@
               </el-menu-item>
             </el-submenu>
 
-            <el-submenu index="2">
+            <!-- <el-submenu index="2">
               <template slot="title">
                 <i>
                   <img
@@ -136,21 +136,12 @@
                 </i>
                 <span slot="title">Ecosystem</span>
               </template>
-              <!-- <el-menu-item index="2-1">
-                <a href="https://elasticbitcoin.org">XBT - Rebase</a>
-              </el-menu-item> -->
-              <!-- <el-menu-item index="2-2">
-                <a href="https://about.xbc.xbn.finance">XBC Community Coin</a>
-              </el-menu-item> -->
-              <!-- <el-menu-item index="2-3">
-                <a href="https://pepe.community">PePe Metaverse</a>
-              </el-menu-item> -->
               <el-menu-item index="2-3">
                 <a href="https://cryptowar.network" target="_blank"
                   >Cryptowar ⚔️ xBlade
                 </a>
               </el-menu-item>
-            </el-submenu>
+            </el-submenu> -->
 
             <!-- <el-submenu index="4">
               <template slot="title">
