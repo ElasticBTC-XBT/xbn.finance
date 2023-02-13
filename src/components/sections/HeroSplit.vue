@@ -37,6 +37,9 @@
 
                 We are excited to welcome XBN Token holders to the AI Nexus community and invite everyone to join us on this exciting journey. Get ready to unlock the full potential of AI technology with $GENIUS!
                 <br/>
+                <br/> 
+                $GENIUS will be launched on Arbitrum Nova Network on 17th of March 2023.
+                <br/>
                 <br/>
 
                 Learn more about AI NEXUS here: 
